@@ -1,6 +1,12 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+/// Tek örnek — `main` init ile Riverpod aynı oturumu paylaşır.
 class AuthService {
+  AuthService._();
+  static final AuthService instance = AuthService._();
+
+  factory AuthService() => instance;
+
   bool _initialized = false;
 
   bool get isConfigured {
@@ -33,12 +39,13 @@ class AuthService {
   }
 
   Future<void> init() async {
+    if (_initialized) return;
     if (!isConfigured) {
       _initialized = false;
       return;
     }
-    final url = const String.fromEnvironment('SUPABASE_URL');
-    final anon = const String.fromEnvironment('SUPABASE_ANON_KEY');
+    const url = String.fromEnvironment('SUPABASE_URL');
+    const anon = String.fromEnvironment('SUPABASE_ANON_KEY');
     await Supabase.initialize(url: url, anonKey: anon);
     _initialized = true;
   }

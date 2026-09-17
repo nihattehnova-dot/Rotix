@@ -11,15 +11,16 @@ import 'package:sanal_ogretmen/core/models/user_mistake.dart';
 import 'package:sanal_ogretmen/core/network/api_client.dart';
 import 'package:sanal_ogretmen/core/network/api_config.dart';
 
-final authServiceProvider = Provider<AuthService>((ref) => AuthService());
+final authServiceProvider = Provider<AuthService>((ref) => AuthService.instance);
 
 final authSessionProvider = StreamProvider((ref) {
   return ref.watch(authServiceProvider).authChanges;
 });
 
 final apiConfigProvider = Provider<ApiConfig>((ref) {
+  // Oturum değişince token’ı yenile
+  ref.watch(authSessionProvider);
   final auth = ref.watch(authServiceProvider);
-  // Demo / header-auth: USER_ID dart-define. Supabase oturumu varsa token kullan.
   final token = auth.isReady ? auth.accessToken : null;
   final userId = (auth.isReady && auth.user != null)
       ? ''
