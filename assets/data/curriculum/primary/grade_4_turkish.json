@@ -1,0 +1,348 @@
+{
+  "grade": 4,
+  "subject": "Türkçe",
+  "program_ref": "MEB Türkçe Dersi Öğretim Programı (İlkokul) — dinleme, konuşma, okuma, yazma, dil bilgisi",
+  "units": [
+    {
+      "unit_code": "T.4.1",
+      "unit_name": "Dinleme / İzleme",
+      "topics": [
+        {
+          "topic_name": "Dinlenen / İzlenen Metni Anlama",
+          "outcomes": [
+            {
+              "code": "T.4.1.1",
+              "description": "Dinlediği / izlediği metindeki olay örgüsü, kişiler ve mekân-zaman ilişkisini belirler.",
+              "keywords": ["olay örgüsü", "dinleme"]
+            },
+            {
+              "code": "T.4.1.2",
+              "description": "Dinlediği / izlediği metnin konusunu, ana fikrini ve yardımcı fikirlerini belirler.",
+              "keywords": ["ana fikir", "yardımcı fikir"]
+            },
+            {
+              "code": "T.4.1.3",
+              "description": "Dinlediği / izlediği metne eleştirel sorular sorar ve cevaplar.",
+              "keywords": ["eleştirel dinleme"]
+            },
+            {
+              "code": "T.4.1.4",
+              "description": "Dinlediği / izlediği metni özetler ve değerlendirir.",
+              "keywords": ["özet", "değerlendirme"]
+            },
+            {
+              "code": "T.4.1.5",
+              "description": "Konuşmacının / metnin amacını ve tutumunu fark eder.",
+              "keywords": ["amaç", "tutum"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Söz Varlığı",
+          "outcomes": [
+            {
+              "code": "T.4.1.6",
+              "description": "Dinlediği metindeki bilinmeyen kelimeleri sözlük ve bağlamla öğrenir.",
+              "keywords": ["sözlük", "bağlam"]
+            },
+            {
+              "code": "T.4.1.7",
+              "description": "Görsel-işitsel ögelerle mesaj arasındaki ilişkiyi yorumlar.",
+              "keywords": ["medya", "görsel okuryazarlık"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.4.2",
+      "unit_name": "Konuşma",
+      "topics": [
+        {
+          "topic_name": "Sözlü Anlatım",
+          "outcomes": [
+            {
+              "code": "T.4.2.1",
+              "description": "Hazırlıksız konuşmada konu dışına çıkmadan kendini ifade eder.",
+              "keywords": ["hazırlıksız konuşma"]
+            },
+            {
+              "code": "T.4.2.2",
+              "description": "Hazırlıklı konuşma planlar, sunar ve dinleyici sorularına cevap verir.",
+              "keywords": ["sunum", "soru-cevap"]
+            },
+            {
+              "code": "T.4.2.3",
+              "description": "Tartışma ve grup konuşmalarında sıraya girer, görüşünü gerekçelendirir.",
+              "keywords": ["tartışma", "gerekçe"]
+            },
+            {
+              "code": "T.4.2.4",
+              "description": "Konuşmalarında etkili beden dili, vurgu ve ses tonu kullanır.",
+              "keywords": ["etkili konuşma"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.4.3",
+      "unit_name": "Okuma",
+      "topics": [
+        {
+          "topic_name": "Akıcı ve Anlamlı Okuma",
+          "outcomes": [
+            {
+              "code": "T.4.3.1",
+              "description": "Farklı türlerdeki metinleri akıcı ve anlamlı okur.",
+              "keywords": ["akıcı okuma", "metin türü"]
+            },
+            {
+              "code": "T.4.3.2",
+              "description": "Okuma amacına göre okuma hızını ve stratejisini ayarlar.",
+              "keywords": ["okuma stratejisi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Okuduğunu Anlama",
+          "outcomes": [
+            {
+              "code": "T.4.3.3",
+              "description": "Metnin konusunu, ana fikrini ve yardımcı fikirlerini belirler.",
+              "keywords": ["ana fikir"]
+            },
+            {
+              "code": "T.4.3.4",
+              "description": "Metindeki sebep-sonuç, amaç-sonuç ve karşılaştırma ilişkilerini çözümler.",
+              "keywords": ["metin ilişkileri"]
+            },
+            {
+              "code": "T.4.3.5",
+              "description": "Metindeki açık ve örtük mesajları ayırt eder.",
+              "keywords": ["örtük mesaj"]
+            },
+            {
+              "code": "T.4.3.6",
+              "description": "Metni özetler, değerlendirir ve kendi yaşamıyla ilişkilendirir.",
+              "keywords": ["özet", "ilişkilendirme"]
+            },
+            {
+              "code": "T.4.3.7",
+              "description": "Bilgilendirici ve öyküleyici metinleri ayırt eder.",
+              "keywords": ["bilgilendirici", "öyküleyici"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Dağarcığı",
+          "outcomes": [
+            {
+              "code": "T.4.3.8",
+              "description": "Eş, zıt, eş sesli kelimeler ile deyim ve atasözlerini metin içinde kullanır.",
+              "keywords": ["deyim", "atasözü"]
+            },
+            {
+              "code": "T.4.3.9",
+              "description": "Gerçek, mecaz ve terim anlamı ayırt eder.",
+              "keywords": ["mecaz", "terim"]
+            },
+            {
+              "code": "T.4.3.10",
+              "description": "Sözcüklerin kök ve ek yapılarını basit düzeyde fark eder.",
+              "keywords": ["kök", "ek"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.4.4",
+      "unit_name": "Yazma",
+      "topics": [
+        {
+          "topic_name": "Metin Yazma",
+          "outcomes": [
+            {
+              "code": "T.4.4.1",
+              "description": "Olay örgüsü, kişiler ve mekân-zaman unsurlarını içeren öyküleyici metin yazar.",
+              "keywords": ["öykü yazma"]
+            },
+            {
+              "code": "T.4.4.2",
+              "description": "Betimleyici ve bilgilendirici kısa metinler yazar.",
+              "keywords": ["betimleme", "bilgilendirme"]
+            },
+            {
+              "code": "T.4.4.3",
+              "description": "Mektup, dilekçe, duyuru, haber ve günlük türlerinde yazar.",
+              "keywords": ["mektup", "dilekçe", "günlük"]
+            },
+            {
+              "code": "T.4.4.4",
+              "description": "Yazma sürecinde planlar, taslak oluşturur, düzeltir ve paylaşır.",
+              "keywords": ["yazma süreci", "taslak"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım Düzeni",
+          "outcomes": [
+            {
+              "code": "T.4.4.5",
+              "description": "Paragraf bütünlüğüne ve bağdaşıklığa dikkat eder.",
+              "keywords": ["paragraf", "bağdaşıklık"]
+            },
+            {
+              "code": "T.4.4.6",
+              "description": "Başlık, giriş-gelişme-sonuç düzenine uygun yazar.",
+              "keywords": ["metin düzeni"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.4.5",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Kelime Türleri",
+          "outcomes": [
+            {
+              "code": "T.4.5.1",
+              "description": "İsim, sıfat, zamir, zarf, edat, bağlaç ve ünlüleri ayırt eder.",
+              "keywords": ["kelime türleri", "zarf", "sıfat"]
+            },
+            {
+              "code": "T.4.5.2",
+              "description": "Fiilleri ve basit kip kullanımlarını ayırt eder.",
+              "keywords": ["fiil", "kip"]
+            },
+            {
+              "code": "T.4.5.3",
+              "description": "Niteleme ve belirtme sıfatlarını ayırt eder.",
+              "keywords": ["niteleme sıfatı", "belirtme sıfatı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Bilgisi",
+          "outcomes": [
+            {
+              "code": "T.4.5.4",
+              "description": "Özne, yüklem, nesne ve dolaylı tümleci basit düzeyde belirler.",
+              "keywords": ["cümle ögeleri"]
+            },
+            {
+              "code": "T.4.5.5",
+              "description": "Basit ve birleşik cümleyi ayırt eder.",
+              "keywords": ["basit cümle", "birleşik cümle"]
+            },
+            {
+              "code": "T.4.5.6",
+              "description": "Olumlu, olumsuz, soru ve emir cümlelerini ayırt eder.",
+              "keywords": ["cümle türleri"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım ve Noktalama",
+          "outcomes": [
+            {
+              "code": "T.4.5.7",
+              "description": "Noktalama işaretlerini metin türüne uygun kullanır.",
+              "keywords": ["noktalama"]
+            },
+            {
+              "code": "T.4.5.8",
+              "description": "“de/da”, “ki” ve “mi” soru ekinin yazımına dikkat eder.",
+              "keywords": ["de da", "ki", "mi"]
+            },
+            {
+              "code": "T.4.5.9",
+              "description": "Kısaltma, sayı ve tarih yazım kurallarını uygular.",
+              "keywords": ["kısaltma", "tarih yazımı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.4.6",
+      "unit_name": "Temalar (Metin Bağlamı)",
+      "topics": [
+        {
+          "topic_name": "Erdemler",
+          "outcomes": [
+            {
+              "code": "T.4.6.1",
+              "description": "Erdemler temalı metinlerde değer, tutum ve davranış örneklerini yorumlar.",
+              "keywords": ["erdem", "değer"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Millî Mücadele ve Atatürk",
+          "outcomes": [
+            {
+              "code": "T.4.6.2",
+              "description": "Atatürk ve Millî Mücadele temalı metinlerde önemli olay ve kişileri belirler.",
+              "keywords": ["Atatürk", "Millî Mücadele"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğa ve İnsan",
+          "outcomes": [
+            {
+              "code": "T.4.6.3",
+              "description": "Doğa-insan ilişkisini metinden çıkarıp çevre bilinciyle ilişkilendirir.",
+              "keywords": ["doğa", "çevre"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kütüphanemiz / Okuma Kültürü",
+          "outcomes": [
+            {
+              "code": "T.4.6.4",
+              "description": "Kütüphane ve okuma kültürü temalı metinlerde bilgilendirici ögeleri seçer.",
+              "keywords": ["kütüphane", "okuma kültürü"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kendimizi Geliştiriyoruz",
+          "outcomes": [
+            {
+              "code": "T.4.6.5",
+              "description": "Kişisel gelişim ve öğrenme alışkanlıkları temalı metinleri yorumlar.",
+              "keywords": ["kişisel gelişim"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bilim ve Teknoloji",
+          "outcomes": [
+            {
+              "code": "T.4.6.6",
+              "description": "Bilim ve teknoloji temalı metinlerde keşif ve icat ögelerini belirler.",
+              "keywords": ["bilim", "icat"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Geçmişten Geleceğe Mirasımız",
+          "outcomes": [
+            {
+              "code": "T.4.6.7",
+              "description": "Kültürel miras temalı metinlerde gelenek, sanat ve tarih ögelerini ayırt eder.",
+              "keywords": ["kültürel miras", "gelenek"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

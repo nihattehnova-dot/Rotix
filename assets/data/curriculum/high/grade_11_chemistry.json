@@ -1,0 +1,173 @@
+{
+  "grade": 11,
+  "subject": "Kimya",
+  "program_ref": "MEB Kimya Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "KİM.11.1",
+      "unit_name": "Modern Atom Teorisi",
+      "topics": [
+        {
+          "topic_name": "Kuantum Modeli",
+          "outcomes": [
+            {
+              "code": "KİM.11.1.1.1",
+              "description": "Bohr atom modelinin sınırlılıklarını açıklar.",
+              "keywords": [
+                "Bohr"
+              ]
+            },
+            {
+              "code": "KİM.11.1.1.2",
+              "description": "Kuantum sayılarını tanır; elektron dizilimini yazar.",
+              "keywords": [
+                "kuantum sayısı",
+                "orbital"
+              ]
+            },
+            {
+              "code": "KİM.11.1.1.3",
+              "description": "Periyodik özelliklerdeki eğilimleri elektron dizilimiyle ilişkilendirir.",
+              "keywords": [
+                "periyodik özellik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.11.2",
+      "unit_name": "Gazlar",
+      "topics": [
+        {
+          "topic_name": "Gaz Yasaları",
+          "outcomes": [
+            {
+              "code": "KİM.11.2.1.1",
+              "description": "Boyle, Charles ve Gay-Lussac yasalarını uygular.",
+              "keywords": [
+                "Boyle",
+                "Charles"
+              ]
+            },
+            {
+              "code": "KİM.11.2.1.2",
+              "description": "İdeal gaz denklemini kullanır.",
+              "keywords": [
+                "ideal gaz"
+              ]
+            },
+            {
+              "code": "KİM.11.2.1.3",
+              "description": "Graham difüzyon yasasını açıklar.",
+              "keywords": [
+                "difüzyon"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.11.3",
+      "unit_name": "Sıvı Çözeltiler",
+      "topics": [
+        {
+          "topic_name": "Çözünürlük",
+          "outcomes": [
+            {
+              "code": "KİM.11.3.1.1",
+              "description": "Çözünürlük kavramını tanır; derişim hesaplar.",
+              "keywords": [
+                "çözünürlük"
+              ]
+            },
+            {
+              "code": "KİM.11.3.1.2",
+              "description": "Kolligatif özellikleri açıklar.",
+              "keywords": [
+                "kolligatif"
+              ]
+            },
+            {
+              "code": "KİM.11.3.1.3",
+              "description": "Koligatif özelliklerle ilgili hesaplamalar yapar.",
+              "keywords": [
+                "donma noktası",
+                "kaynama noktası"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.11.4",
+      "unit_name": "Kimyasal Tepkimelerde Enerji, Hız ve Denge",
+      "topics": [
+        {
+          "topic_name": "Tepkime Termodinamiği",
+          "outcomes": [
+            {
+              "code": "KİM.11.4.1.1",
+              "description": "Entalpi değişimini hesaplar; Hess yasasını uygular.",
+              "keywords": [
+                "entalpi",
+                "Hess"
+              ]
+            },
+            {
+              "code": "KİM.11.4.1.2",
+              "description": "Aktivasyon enerjisi ve tepkime hızını açıklar.",
+              "keywords": [
+                "aktivasyon enerjisi"
+              ]
+            },
+            {
+              "code": "KİM.11.4.1.3",
+              "description": "Kimyasal denge kavramını tanır; Le Chatelier ilkesini uygular.",
+              "keywords": [
+                "denge",
+                "Le Chatelier"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.11.5",
+      "unit_name": "Elektrokimya",
+      "topics": [
+        {
+          "topic_name": "Redoks ve Pil",
+          "outcomes": [
+            {
+              "code": "KİM.11.5.1.1",
+              "description": "Yükseltgenme ve indirgenme tepkimelerini tanır.",
+              "keywords": [
+                "redoks"
+              ]
+            },
+            {
+              "code": "KİM.11.5.1.2",
+              "description": "Pil ve elektroliz olaylarını açıklar.",
+              "keywords": [
+                "pil",
+                "elektroliz"
+              ]
+            },
+            {
+              "code": "KİM.11.5.1.3",
+              "description": "Standart elektrot potansiyellerini yorumlar.",
+              "keywords": [
+                "elektrot potansiyeli"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

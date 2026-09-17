@@ -1,0 +1,174 @@
+{
+  "grade": 10,
+  "subject": "Biyoloji",
+  "program_ref": "MEB Biyoloji Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "BİY.10.1",
+      "unit_name": "Hücre Bölünmeleri",
+      "topics": [
+        {
+          "topic_name": "Mitoz ve Mayoz",
+          "outcomes": [
+            {
+              "code": "BİY.10.1.1.1",
+              "description": "Mitoz bölünme evrelerini sıralar ve hücre çeşidine göre yorumlar.",
+              "keywords": [
+                "mitoz"
+              ]
+            },
+            {
+              "code": "BİY.10.1.1.2",
+              "description": "Mayoz bölünme evrelerini açıklar; genetik çeşitlilikle ilişkilendirir.",
+              "keywords": [
+                "mayoz"
+              ]
+            },
+            {
+              "code": "BİY.10.1.1.3",
+              "description": "Crossing-over ve bağımsız dağılım kavramlarını kullanır.",
+              "keywords": [
+                "crossing-over"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.10.2",
+      "unit_name": "Kalıtım",
+      "topics": [
+        {
+          "topic_name": "Mendel Genetiği",
+          "outcomes": [
+            {
+              "code": "BİY.10.2.1.1",
+              "description": "Mendel'in kalıtım yasalarını uygular.",
+              "keywords": [
+                "Mendel",
+                "kalıtım"
+              ]
+            },
+            {
+              "code": "BİY.10.2.1.2",
+              "description": "Monohibrit ve dihibrit çaprazlamaları çözer.",
+              "keywords": [
+                "çaprazlama"
+              ]
+            },
+            {
+              "code": "BİY.10.2.1.3",
+              "description": "Punnett karesi ile olası fenotip ve genotip oranlarını hesaplar.",
+              "keywords": [
+                "Punnett"
+              ]
+            },
+            {
+              "code": "BİY.10.2.1.4",
+              "description": "Eş baskınlık, çok alellilik ve bağlı gen kavramlarını açıklar.",
+              "keywords": [
+                "alel",
+                "eş baskınlık"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.10.3",
+      "unit_name": "Ekosistem Ekolojisi",
+      "topics": [
+        {
+          "topic_name": "Ekosistem Dinamikleri",
+          "outcomes": [
+            {
+              "code": "BİY.10.3.1.1",
+              "description": "Popülasyon dinamiklerini (büyüme, taşıma kapasitesi) açıklar.",
+              "keywords": [
+                "popülasyon"
+              ]
+            },
+            {
+              "code": "BİY.10.3.1.2",
+              "description": "Komünite etkileşimlerini (av-avcı, rekabet, simbiyoz) tanır.",
+              "keywords": [
+                "komünite",
+                "simbiyoz"
+              ]
+            },
+            {
+              "code": "BİY.10.3.1.3",
+              "description": "Enerji piramidi ve biyokütle ilişkilerini yorumlar.",
+              "keywords": [
+                "enerji piramidi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.10.4",
+      "unit_name": "Güncel Biyolojik Konular",
+      "topics": [
+        {
+          "topic_name": "Biyoteknoloji",
+          "outcomes": [
+            {
+              "code": "BİY.10.4.1.1",
+              "description": "Genetik mühendisliği ve biyoteknoloji uygulamalarını açıklar.",
+              "keywords": [
+                "biyoteknoloji",
+                "GMO"
+              ]
+            },
+            {
+              "code": "BİY.10.4.1.2",
+              "description": "Klonlama ve kök hücre araştırmalarının etik boyutunu değerlendirir.",
+              "keywords": [
+                "klonlama",
+                "kök hücre"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.10.5",
+      "unit_name": "Genetik Uygulamalar",
+      "topics": [
+        {
+          "topic_name": "Genetik Mühendisliği",
+          "outcomes": [
+            {
+              "code": "BİY.10.5.1.1",
+              "description": "DNA analizi ve gen haritalama yöntemlerini açıklar.",
+              "keywords": [
+                "DNA",
+                "gen haritası"
+              ]
+            },
+            {
+              "code": "BİY.10.5.1.2",
+              "description": "Genetik hastalıkların tanı ve tedavisindeki gelişmeleri değerlendirir.",
+              "keywords": [
+                "genetik hastalık"
+              ]
+            },
+            {
+              "code": "BİY.10.5.1.3",
+              "description": "Biyogüvenlik ve etik konularını tartışır.",
+              "keywords": [
+                "biyogüvenlik",
+                "etik"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

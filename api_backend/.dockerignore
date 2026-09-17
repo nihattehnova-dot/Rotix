@@ -1,0 +1,13 @@
+**/node_modules
+**/dist
+**/.env
+**/.env.*
+!**/.env.example
+**/.git
+**/.dart_tool
+**/build
+**/*.log
+app_frontend
+docs
+supabase
+*.md

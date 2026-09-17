@@ -1,0 +1,171 @@
+{
+  "grade": 12,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "M.12.1",
+      "unit_name": "Limit, Türev ve İntegral",
+      "topics": [
+        {
+          "topic_name": "Türev",
+          "outcomes": [
+            {
+              "code": "M.12.1.1.1",
+              "description": "Türev kavramını tanır; türev alma kurallarını uygular.",
+              "keywords": [
+                "türev"
+              ]
+            },
+            {
+              "code": "M.12.1.1.2",
+              "description": "Türevin geometrik anlamını (teğet eğimi) yorumlar.",
+              "keywords": [
+                "teğet"
+              ]
+            },
+            {
+              "code": "M.12.1.1.3",
+              "description": "Türevin fiziksel anlamını (anlık hız) açıklar.",
+              "keywords": [
+                "anlık hız"
+              ]
+            },
+            {
+              "code": "M.12.1.1.4",
+              "description": "Maksimum-minimum problemlerini türevle çözer.",
+              "keywords": [
+                "optimizasyon"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "İntegral",
+          "outcomes": [
+            {
+              "code": "M.12.1.2.1",
+              "description": "Belirsiz integral kavramını tanır; temel integralleri bulur.",
+              "keywords": [
+                "integral"
+              ]
+            },
+            {
+              "code": "M.12.1.2.2",
+              "description": "Belirli integral ile alan hesabı yapar.",
+              "keywords": [
+                "belirli integral",
+                "alan"
+              ]
+            },
+            {
+              "code": "M.12.1.2.3",
+              "description": "İntegral uygulamalarını (hacim, hız-yol) çözer.",
+              "keywords": [
+                "integral uygulama"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.12.2",
+      "unit_name": "Olasılık",
+      "topics": [
+        {
+          "topic_name": "Olasılık Hesabı",
+          "outcomes": [
+            {
+              "code": "M.12.2.1.1",
+              "description": "Koşullu olasılık kavramını uygular.",
+              "keywords": [
+                "koşullu olasılık"
+              ]
+            },
+            {
+              "code": "M.12.2.1.2",
+              "description": "Bağımsız olayları tanır; çarpım kuralını kullanır.",
+              "keywords": [
+                "bağımsız olay"
+              ]
+            },
+            {
+              "code": "M.12.2.1.3",
+              "description": "Permütasyon ve kombinasyon problemlerini çözer.",
+              "keywords": [
+                "permütasyon",
+                "kombinasyon"
+              ]
+            },
+            {
+              "code": "M.12.2.1.4",
+              "description": "Binom açılımını uygular.",
+              "keywords": [
+                "binom"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.12.3",
+      "unit_name": "Diziler ve Seriler",
+      "topics": [
+        {
+          "topic_name": "Dizi Uygulamaları",
+          "outcomes": [
+            {
+              "code": "M.12.3.1.1",
+              "description": "Aritmetik ve geometrik dizilerin limit davranışını inceler.",
+              "keywords": [
+                "dizi limiti"
+              ]
+            },
+            {
+              "code": "M.12.3.1.2",
+              "description": "Serilerin yakınsaklık kavramını tanır.",
+              "keywords": [
+                "seri",
+                "yakınsaklık"
+              ]
+            },
+            {
+              "code": "M.12.3.1.3",
+              "description": "Dizi ve serilerle ilgili problemleri çözer.",
+              "keywords": [
+                "dizi problemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.12.4",
+      "unit_name": "Fonksiyon Uygulamaları",
+      "topics": [
+        {
+          "topic_name": "Modelleme",
+          "outcomes": [
+            {
+              "code": "M.12.4.1.1",
+              "description": "Üstel ve logaritmik fonksiyonlarla büyüme modelleri kurar.",
+              "keywords": [
+                "büyüme modeli"
+              ]
+            },
+            {
+              "code": "M.12.4.1.2",
+              "description": "Türev ve integral ile optimizasyon problemlerini çözer.",
+              "keywords": [
+                "optimizasyon"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

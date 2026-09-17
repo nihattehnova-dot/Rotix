@@ -1,0 +1,88 @@
+{
+  "grade": 4,
+  "subject": "Sosyal Bilgiler",
+  "program_ref": "MEB Sosyal Bilgiler (İlkokul)",
+  "units": [
+    {
+      "unit_code": "SB.4.1",
+      "unit_name": "Birey ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Kimlik ve Kültür",
+          "outcomes": [
+            {
+              "code": "SB.4.1.1.1",
+              "description": "Kültürel ögeleri tanır ve saygı duyar.",
+              "keywords": [
+                "kültür",
+                "kimlik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.4.2",
+      "unit_name": "Yaşadığım Yer",
+      "topics": [
+        {
+          "topic_name": "Harita ve Yön",
+          "outcomes": [
+            {
+              "code": "SB.4.2.1.1",
+              "description": "Harita sembollerini okur; yön bulma yöntemlerini kullanır.",
+              "keywords": [
+                "harita",
+                "yön"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yaşadığım İl ve Bölge",
+          "outcomes": [
+            {
+              "code": "SB.4.2.2.1",
+              "description": "Yaşadığı il ve bölgenin fiziki ve beşerî özelliklerini açıklar.",
+              "keywords": [
+                "il",
+                "bölge"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.4.3",
+      "unit_name": "Sosyal Yaşam",
+      "topics": [
+        {
+          "topic_name": "Ekonomik Faaliyetler",
+          "outcomes": [
+            {
+              "code": "SB.4.3.1.1",
+              "description": "Temel ekonomik faaliyet türlerini (tarım, sanayi, hizmet) ayırt eder.",
+              "keywords": [
+                "ekonomi"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Demokratik Yaşam",
+          "outcomes": [
+            {
+              "code": "SB.4.3.2.1",
+              "description": "Demokratik değerleri ve katılımın önemini açıklar.",
+              "keywords": [
+                "demokrasi"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

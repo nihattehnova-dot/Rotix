@@ -1,0 +1,188 @@
+{
+  "grade": 10,
+  "subject": "Coğrafya",
+  "program_ref": "MEB Coğrafya Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "COĞ.10.1",
+      "unit_name": "Türkiye'nin Coğrafi Konumu",
+      "topics": [
+        {
+          "topic_name": "Konum Özellikleri",
+          "outcomes": [
+            {
+              "code": "COĞ.10.1.1.1",
+              "description": "Türkiye'nin matematik ve özel konumunun sonuçlarını açıklar.",
+              "keywords": [
+                "matematik konum",
+                "özel konum"
+              ]
+            },
+            {
+              "code": "COĞ.10.1.1.2",
+              "description": "Komşu ülkelerle ilişkileri harita üzerinde gösterir.",
+              "keywords": [
+                "komşu ülkeler"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.10.2",
+      "unit_name": "Türkiye'nin Fiziki Coğrafyası",
+      "topics": [
+        {
+          "topic_name": "Yer Şekilleri ve Akarsular",
+          "outcomes": [
+            {
+              "code": "COĞ.10.2.1.1",
+              "description": "Türkiye'nin dağ, ova ve plato dağılışını harita üzerinde analiz eder.",
+              "keywords": [
+                "dağ",
+                "ova",
+                "plato"
+              ]
+            },
+            {
+              "code": "COĞ.10.2.1.2",
+              "description": "Akarsu rejimlerini ve barajların önemini açıklar.",
+              "keywords": [
+                "akarsu",
+                "baraj"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.10.3",
+      "unit_name": "Türkiye'nin İklimi",
+      "topics": [
+        {
+          "topic_name": "İklim Tipleri",
+          "outcomes": [
+            {
+              "code": "COĞ.10.3.1.1",
+              "description": "Türkiye'de görülen iklim tiplerini (Akdeniz, Karadeniz, step) karşılaştırır.",
+              "keywords": [
+                "Akdeniz iklimi"
+              ]
+            },
+            {
+              "code": "COĞ.10.3.1.2",
+              "description": "Mikroklima örneklerini tanır.",
+              "keywords": [
+                "mikroklima"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.10.4",
+      "unit_name": "Beşerî Coğrafya",
+      "topics": [
+        {
+          "topic_name": "Nüfus ve Yerleşme",
+          "outcomes": [
+            {
+              "code": "COĞ.10.4.1.1",
+              "description": "Türkiye'nin nüfus özelliklerini (yoğunluk, yaş yapısı) yorumlar.",
+              "keywords": [
+                "nüfus yoğunluğu"
+              ]
+            },
+            {
+              "code": "COĞ.10.4.1.2",
+              "description": "Kırsal-kentsel yerleşme tiplerini ayırt eder.",
+              "keywords": [
+                "yerleşme"
+              ]
+            },
+            {
+              "code": "COĞ.10.4.1.3",
+              "description": "Göç hareketlerinin neden ve sonuçlarını analiz eder.",
+              "keywords": [
+                "iç göç",
+                "dış göç"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.10.5",
+      "unit_name": "Harita Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Harita Okuma",
+          "outcomes": [
+            {
+              "code": "COĞ.10.5.1.1",
+              "description": "Harita projeksiyonlarını ve ölçek türlerini tanır.",
+              "keywords": [
+                "projeksiyon",
+                "ölçek"
+              ]
+            },
+            {
+              "code": "COĞ.10.5.1.2",
+              "description": "Topografya haritalarını okur; eş yükselti eğrilerini yorumlar.",
+              "keywords": [
+                "topografya",
+                "eş yükselti"
+              ]
+            },
+            {
+              "code": "COĞ.10.5.1.3",
+              "description": "Coğrafi bilgi sistemlerinin (CBS) temel işlevlerini açıklar.",
+              "keywords": [
+                "CBS",
+                "GIS"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.10.6",
+      "unit_name": "Doğal Kaynaklar",
+      "topics": [
+        {
+          "topic_name": "Kaynak Kullanımı",
+          "outcomes": [
+            {
+              "code": "COĞ.10.6.1.1",
+              "description": "Türkiye'nin maden ve enerji kaynaklarının dağılışını harita üzerinde gösterir.",
+              "keywords": [
+                "maden",
+                "enerji"
+              ]
+            },
+            {
+              "code": "COĞ.10.6.1.2",
+              "description": "Doğal kaynakların sürdürülebilir kullanımını değerlendirir.",
+              "keywords": [
+                "sürdürülebilirlik"
+              ]
+            },
+            {
+              "code": "COĞ.10.6.1.3",
+              "description": "Su kaynaklarının yönetimi ve kuraklık sorununu analiz eder.",
+              "keywords": [
+                "su kaynağı",
+                "kuraklık"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "grade": "AYT",
+  "subject": "Fizik",
+  "program_ref": "ÖSYM AYT Fizik soru dağılımı (yaklaşık 14 soru)",
+  "exam_meta": {
+    "total_questions": 14,
+    "notes": "Soru sayıları yıllara göre değişebilir; modern fizik ve elektromanyetizma konuları ağırlıklı olabilir."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.FIZ.01",
+      "unit_name": "Kuvvet ve Hareket",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Newton Yasaları",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.01.01.01",
+              "description": "Newton'un hareket yasalarını serbest cisim diyagramları ile uygular.",
+              "keywords": ["Newton", "kuvvet", "serbest cisim diyagramı"]
+            },
+            {
+              "code": "AYT.FIZ.01.01.02",
+              "description": "Sürtünme kuvveti, eğik düzlem ve bağlı cisim problemlerini çözer.",
+              "keywords": ["sürtünme", "eğik düzlem", "bağlı cisim"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İtme-Momentum ve Enerji",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.01.02.01",
+              "description": "İtme-momentum teoremini ve çizgisel momentum korunumunu uygular.",
+              "keywords": ["itme", "momentum", "korunum"]
+            },
+            {
+              "code": "AYT.FIZ.01.02.02",
+              "description": "Kinetik-potansiyel enerji dönüşümlerini ve iş-güç ilişkisini hesaplar.",
+              "keywords": ["enerji", "iş", "güç", "korunum"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.FIZ.02",
+      "unit_name": "Elektrik ve Manyetizma",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Elektrik Alan ve Potansiyel",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.02.01.01",
+              "description": "Noktasal yüklerde elektrik alan ve potansiyel hesaplar.",
+              "keywords": ["elektrik alan", "potansiyel", "Coulomb"]
+            },
+            {
+              "code": "AYT.FIZ.02.01.02",
+              "description": "Kondansatörlerde enerji depolama ve bağlantı türlerini yorumlar.",
+              "keywords": ["kondansatör", "kapasitans", "enerji"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Manyetizma",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.02.02.01",
+              "description": "Akım taşıyan iletkende manyetik alan ve Ampere kuvvetini hesaplar.",
+              "keywords": ["manyetik alan", "Ampere", "Biot-Savart"]
+            },
+            {
+              "code": "AYT.FIZ.02.02.02",
+              "description": "Faraday indüksiyon yasasını ve Lenz kuralını uygular.",
+              "keywords": ["indüksiyon", "Faraday", "Lenz"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Alternatif Akım",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.02.03.01",
+              "description": "Alternatif akım devrelerinde direnç, indüktans ve kapasitans etkilerini yorumlar.",
+              "keywords": ["alternatif akım", "AC", "empedans"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.FIZ.03",
+      "unit_name": "Dalgalar ve Optik",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Dalgalar",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.03.01.01",
+              "description": "Mekanik dalgalarda hız, frekans, dalga boyu ve periyot ilişkisini hesaplar.",
+              "keywords": ["dalga", "frekans", "dalga boyu", "hız"]
+            },
+            {
+              "code": "AYT.FIZ.03.01.02",
+              "description": "Girişim, kırınım ve Doppler etkisini yorumlar.",
+              "keywords": ["girişim", "kırınım", "Doppler"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Optik",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.03.02.01",
+              "description": "Yansıma, kırılma ve merceklerde görüntü oluşumunu hesaplar.",
+              "keywords": ["yansıma", "kırılma", "mercek", "Snell"]
+            },
+            {
+              "code": "AYT.FIZ.03.02.02",
+              "description": "Mercek ve aynalarda odak uzaklığı, büyütme ve görüntü özelliklerini belirler.",
+              "keywords": ["odak", "büyütme", "görüntü"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.FIZ.04",
+      "unit_name": "Modern Fizik",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Fotoelektrik ve Compton",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.04.01.01",
+              "description": "Fotoelektrik olay ve Compton saçılmasını foton enerjisi bağlamında açıklar.",
+              "keywords": ["fotoelektrik", "Compton", "foton"]
+            },
+            {
+              "code": "AYT.FIZ.04.01.02",
+              "description": "Planck-Einstein ilişkisini (E=hf) hesap sorularında uygular.",
+              "keywords": ["Planck", "E=hf", "kuantum"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Atom Modelleri ve Radyoaktivite",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.04.02.01",
+              "description": "Bohr atom modeli ve hidrojen spektrumunu yorumlar.",
+              "keywords": ["Bohr", "atom modeli", "spektrum"]
+            },
+            {
+              "code": "AYT.FIZ.04.02.02",
+              "description": "Radyoaktif bozunma, yarı ömür ve nükleer tepkimeleri hesaplar.",
+              "keywords": ["radyoaktivite", "yarı ömür", "bozunma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Özel Görelilik",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.04.03.01",
+              "description": "Özel görelilikte zaman genişlemesi ve uzunluk kısalması kavramlarını yorumlar.",
+              "keywords": ["görelilik", "zaman genişlemesi", "Einstein"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.FIZ.05",
+      "unit_name": "Çembersel Hareket ve Basit Harmonik",
+      "typical_questions": "2",
+      "topics": [
+        {
+          "topic_name": "Çembersel Hareket",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.05.01.01",
+              "description": "Merkezcil kuvvet, açısal hız ve çembersel hareket parametrelerini hesaplar.",
+              "keywords": ["merkezcil kuvvet", "çembersel hareket", "açısal hız"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Basit Harmonik Hareket",
+          "outcomes": [
+            {
+              "code": "AYT.FIZ.05.02.01",
+              "description": "Yay ve sarkaç sistemlerinde periyot ve enerji dönüşümlerini hesaplar.",
+              "keywords": ["basit harmonik", "yay", "sarkaç", "periyot"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

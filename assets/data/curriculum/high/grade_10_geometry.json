@@ -1,0 +1,189 @@
+{
+  "grade": 10,
+  "subject": "Geometri",
+  "program_ref": "MEB Geometri Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "GEO.10.1",
+      "unit_name": "Üçgenler",
+      "topics": [
+        {
+          "topic_name": "Üçgende İleri Konular",
+          "outcomes": [
+            {
+              "code": "GEO.10.1.1.1",
+              "description": "Üçgende açıortay ve kenarortay teoremlerini uygular.",
+              "keywords": [
+                "açıortay",
+                "kenarortay"
+              ]
+            },
+            {
+              "code": "GEO.10.1.1.2",
+              "description": "Üçgende eşlik ve benzerlik ispatları yapar.",
+              "keywords": [
+                "eşlik ispatı"
+              ]
+            },
+            {
+              "code": "GEO.10.1.1.3",
+              "description": "Üçgende alan formüllerini farklı yöntemlerle türetir.",
+              "keywords": [
+                "alan"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.10.2",
+      "unit_name": "Dörtgenler",
+      "topics": [
+        {
+          "topic_name": "Dörtgen Özellikleri",
+          "outcomes": [
+            {
+              "code": "GEO.10.2.1.1",
+              "description": "Dörtgenlerin açı ve kenar ilişkilerini ispatlar.",
+              "keywords": [
+                "dörtgen"
+              ]
+            },
+            {
+              "code": "GEO.10.2.1.2",
+              "description": "Özel dörtgenlerin (yamuk, paralelkenar) alan formüllerini uygular.",
+              "keywords": [
+                "yamuk",
+                "alan"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.10.3",
+      "unit_name": "Çokgenler",
+      "topics": [
+        {
+          "topic_name": "Düzgün Çokgenler",
+          "outcomes": [
+            {
+              "code": "GEO.10.3.1.1",
+              "description": "Düzgün çokgenlerin iç ve dış açı ölçülerini hesaplar.",
+              "keywords": [
+                "düzgün çokgen"
+              ]
+            },
+            {
+              "code": "GEO.10.3.1.2",
+              "description": "Çokgenlerde köşegen sayısı ve simetri özelliklerini belirler.",
+              "keywords": [
+                "köşegen"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.10.4",
+      "unit_name": "Çember",
+      "topics": [
+        {
+          "topic_name": "Çember ve Daire",
+          "outcomes": [
+            {
+              "code": "GEO.10.4.1.1",
+              "description": "Çemberde teğet, kiriş ve yay özelliklerini uygular.",
+              "keywords": [
+                "çember",
+                "teğet",
+                "kiriş"
+              ]
+            },
+            {
+              "code": "GEO.10.4.1.2",
+              "description": "Çemberde açı teoremlerini (merkez, çevre açı) kullanır.",
+              "keywords": [
+                "merkez açı",
+                "çevre açı"
+              ]
+            },
+            {
+              "code": "GEO.10.4.1.3",
+              "description": "Dairenin alanını ve yay uzunluğunu hesaplar.",
+              "keywords": [
+                "daire alanı",
+                "yay"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.10.5",
+      "unit_name": "Katı Cisimler",
+      "topics": [
+        {
+          "topic_name": "Uzay Geometri",
+          "outcomes": [
+            {
+              "code": "GEO.10.5.1.1",
+              "description": "Prizma ve piramitlerin hacim ve yüzey alanını hesaplar.",
+              "keywords": [
+                "prizma",
+                "piramit"
+              ]
+            },
+            {
+              "code": "GEO.10.5.1.2",
+              "description": "Silindir, koni ve kürenin elemanlarını tanır; formüllerini uygular.",
+              "keywords": [
+                "silindir",
+                "koni",
+                "küre"
+              ]
+            },
+            {
+              "code": "GEO.10.5.1.3",
+              "description": "Katı cisimler arasındaki benzerlik oranlarını kullanır.",
+              "keywords": [
+                "benzerlik",
+                "hacim oranı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.10.6",
+      "unit_name": "Geometrik İspat",
+      "topics": [
+        {
+          "topic_name": "İspat Teknikleri",
+          "outcomes": [
+            {
+              "code": "GEO.10.6.1.1",
+              "description": "Geometrik ispatlarda aksiyom ve teorem kullanımını uygular.",
+              "keywords": [
+                "ispat",
+                "teorem"
+              ]
+            },
+            {
+              "code": "GEO.10.6.1.2",
+              "description": "Üçgen ve dörtgenlerde simetri özelliklerini ispatlar.",
+              "keywords": [
+                "simetri"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

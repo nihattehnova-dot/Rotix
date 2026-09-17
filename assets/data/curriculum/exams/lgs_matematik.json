@@ -1,0 +1,303 @@
+{
+  "grade": "LGS",
+  "subject": "Matematik",
+  "program_ref": "MEB LGS Sayısal Bölüm Matematik soru dağılımı (8. sınıf ağırlıklı, yaklaşık 20 soru)",
+  "exam_meta": {
+    "total_questions": 20,
+    "notes": "Soru sayıları yıllara göre değişebilir; 8. sınıf konuları ağırlıklı olmak üzere 5–7. sınıf konuları da dahil edilebilir."
+  },
+  "units": [
+    {
+      "unit_code": "LGS.MAT.01",
+      "unit_name": "Çarpanlar ve Katlar – Üslü İfadeler",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Çarpanlar ve Katlar",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.01.01.01",
+              "description": "Bir sayının pozitif tam sayı çarpanlarını bulur ve çarpan sayısını hesaplar.",
+              "keywords": ["çarpan", "çarpan sayısı", "asal çarpan"]
+            },
+            {
+              "code": "LGS.MAT.01.01.02",
+              "description": "EBOB ve EKOK problemlerini günlük hayat durumlarında çözer.",
+              "keywords": ["EBOB", "EKOK", "ortak bölen", "ortak kat"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üslü İfadeler",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.01.02.01",
+              "description": "Tam sayı kuvvetli üslü ifadelerde çarpma, bölme ve üssün üssü kurallarını uygular.",
+              "keywords": ["üs", "üslü sayı", "negatif üs"]
+            },
+            {
+              "code": "LGS.MAT.01.02.02",
+              "description": "Üslü ifadeleri sadeleştirir ve üslü denklemleri çözer.",
+              "keywords": ["sadeleştirme", "üslü denklem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Köklü İfadeler",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.01.03.01",
+              "description": "Kareköklü ifadelerde dört işlem ve sadeleştirme yapar.",
+              "keywords": ["karekök", "köklü ifade", "sadeleştirme"]
+            },
+            {
+              "code": "LGS.MAT.01.03.02",
+              "description": "Kareköklü sayıları sayı doğrusunda gösterir ve karşılaştırır.",
+              "keywords": ["sayı doğrusu", "köklü karşılaştırma"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.MAT.02",
+      "unit_name": "Cebirsel İfadeler ve Denklemler",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Cebirsel İfadeler",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.02.01.01",
+              "description": "Cebirsel ifadelerde dört işlem ve özdeşlikleri uygular.",
+              "keywords": ["cebirsel ifade", "özdeşlik", "çarpanlara ayırma"]
+            },
+            {
+              "code": "LGS.MAT.02.01.02",
+              "description": "Cebirsel ifadeleri sadeleştirir ve değer hesaplar.",
+              "keywords": ["sadeleştirme", "değer bulma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Denklem ve Eşitsizlikler",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.02.02.01",
+              "description": "Birinci dereceden bir bilinmeyenli denklemleri çözer.",
+              "keywords": ["denklem", "bilinmeyen", "lineer denklem"]
+            },
+            {
+              "code": "LGS.MAT.02.02.02",
+              "description": "Birinci dereceden bir bilinmeyenli eşitsizlikleri çözer ve sayı doğrusunda gösterir.",
+              "keywords": ["eşitsizlik", "sayı doğrusu", "aralık"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğrusal Denklem Sistemleri",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.02.03.01",
+              "description": "İki bilinmeyenli doğrusal denklem sistemlerini çözer.",
+              "keywords": ["denklem sistemi", "iki bilinmeyen"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.MAT.03",
+      "unit_name": "Üçgenler ve Dönüşüm Geometrisi",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Üçgenler",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.03.01.01",
+              "description": "Üçgende açı-kenar ilişkilerini ve üçgen eşitsizliğini uygular.",
+              "keywords": ["üçgen", "açı", "kenar", "eşitsizlik"]
+            },
+            {
+              "code": "LGS.MAT.03.01.02",
+              "description": "Pisagor teoremini ve benzerlik oranlarını üçgen sorularında kullanır.",
+              "keywords": ["Pisagor", "benzerlik", "oran"]
+            },
+            {
+              "code": "LGS.MAT.03.01.03",
+              "description": "Üçgenin alanını farklı yükseklik ve taban seçimleriyle hesaplar.",
+              "keywords": ["üçgen alanı", "yükseklik", "taban"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eşlik ve Benzerlik",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.03.02.01",
+              "description": "Üçgenlerde eşlik ve benzerlik koşullarını belirler.",
+              "keywords": ["eşlik", "benzerlik", "AA", "SSS"]
+            },
+            {
+              "code": "LGS.MAT.03.02.02",
+              "description": "Benzer üçgenlerde kenar ve alan oranlarını hesaplar.",
+              "keywords": ["benzerlik oranı", "alan oranı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Dönüşüm Geometrisi",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.03.03.01",
+              "description": "Öteleme, yansıma ve dönme dönüşümlerini koordinat düzleminde uygular.",
+              "keywords": ["öteleme", "yansıma", "dönme", "dönüşüm"]
+            },
+            {
+              "code": "LGS.MAT.03.03.02",
+              "description": "Ardışık dönüşümlerin sonucunu ve simetri özelliklerini yorumlar.",
+              "keywords": ["simetri", "ardışık dönüşüm"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.MAT.04",
+      "unit_name": "Geometrik Cisimler",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Prizmalar ve Piramitler",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.04.01.01",
+              "description": "Dikdörtgenler prizması ve üçgen prizmada hacim ve yüzey alanı hesaplar.",
+              "keywords": ["prizma", "hacim", "yüzey alanı"]
+            },
+            {
+              "code": "LGS.MAT.04.01.02",
+              "description": "Piramit ve koni türü cisimlerde hacim hesaplarını yapar.",
+              "keywords": ["piramit", "koni", "hacim"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Silindir, Koni ve Küre",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.04.02.01",
+              "description": "Silindir, koni ve kürede hacim ve yüzey alanı formüllerini uygular.",
+              "keywords": ["silindir", "küre", "yüzey alanı"]
+            },
+            {
+              "code": "LGS.MAT.04.02.02",
+              "description": "Geometrik cisimlerin açınımlarını yorumlar ve kesit sorularını çözer.",
+              "keywords": ["açınım", "kesit"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.MAT.05",
+      "unit_name": "Veri Analizi ve Olasılık",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Veri Analizi",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.05.01.01",
+              "description": "Aritmetik ortalama, ortanca, tepe değer ve açıklığı hesaplar.",
+              "keywords": ["ortalama", "ortanca", "mod", "açıklık"]
+            },
+            {
+              "code": "LGS.MAT.05.01.02",
+              "description": "Sütun, daire ve çizgi grafiklerinden veri okur ve yorumlar.",
+              "keywords": ["grafik", "veri okuma", "istatistik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Olasılık",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.05.02.01",
+              "description": "Basit olayların olasılığını uygun durum / tüm durum oranıyla hesaplar.",
+              "keywords": ["olasılık", "uygun durum", "tüm durum"]
+            },
+            {
+              "code": "LGS.MAT.05.02.02",
+              "description": "Tümleyen olay ve birleşik olay olasılıklarını yorumlar.",
+              "keywords": ["tümleyen olay", "birleşik olay"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.MAT.06",
+      "unit_name": "Problemler",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Sayı ve Yaş Problemleri",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.06.01.01",
+              "description": "Ardışık sayılar, basamak ve sayı ilişkileri içeren problemleri çözer.",
+              "keywords": ["sayı problemi", "basamak", "ardışık"]
+            },
+            {
+              "code": "LGS.MAT.06.01.02",
+              "description": "Yaş problemlerinde zaman ilişkilerini denklem kurarak çözer.",
+              "keywords": ["yaş problemi", "denklem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Oran, Yüzde ve Karışım",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.06.02.01",
+              "description": "Oran-orantı, yüzde artış-azalış ve kâr-zarar problemlerini çözer.",
+              "keywords": ["oran", "yüzde", "kâr", "zarar"]
+            },
+            {
+              "code": "LGS.MAT.06.02.02",
+              "description": "Karışım ve alaşım problemlerinde oran ilişkilerini kullanır.",
+              "keywords": ["karışım", "alaşım", "derişim"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Hareket ve İş Problemleri",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.06.03.01",
+              "description": "Yol-hız-zaman ilişkisini kullanarak hareket problemlerini çözer.",
+              "keywords": ["hız", "yol", "zaman", "karşılaşma"]
+            },
+            {
+              "code": "LGS.MAT.06.03.02",
+              "description": "İşçi-havuz tipi problemlerde birim iş kavramını uygular.",
+              "keywords": ["işçi", "havuz", "birim iş"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Grafik ve Tablo Problemleri",
+          "outcomes": [
+            {
+              "code": "LGS.MAT.06.04.01",
+              "description": "Tablo ve grafik verilerini kullanarak çok adımlı problemleri çözer.",
+              "keywords": ["grafik problemi", "tablo", "çok adımlı"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

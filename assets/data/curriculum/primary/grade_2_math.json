@@ -1,0 +1,356 @@
+{
+  "grade": 2,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (İlkokul) — Sayılar ve İşlemler, Geometri, Ölçme, Veri",
+  "units": [
+    {
+      "unit_code": "M.2.1",
+      "unit_name": "Sayılar ve İşlemler",
+      "topics": [
+        {
+          "topic_name": "Doğal Sayılar",
+          "outcomes": [
+            {
+              "code": "M.2.1.1.1",
+              "description": "Nesne sayısı 100’e kadar (100 dâhil) olan bir topluluktaki nesnelerin sayısını belirler ve bu sayıyı rakamlarla yazar.",
+              "keywords": ["100'e kadar sayma", "doğal sayı", "rakamlarla yazma"]
+            },
+            {
+              "code": "M.2.1.1.2",
+              "description": "Nesne sayısı 100’den az olan bir çokluğu model kullanarak onluk ve birlik gruplara ayırır, sayı ile ifade eder.",
+              "keywords": ["onluk", "birlik", "basamak modeli", "gruplama"]
+            },
+            {
+              "code": "M.2.1.1.3",
+              "description": "Verilen bir çokluktaki nesne sayısını tahmin eder, tahminini sayarak kontrol eder.",
+              "keywords": ["tahmin", "sayma", "kontrol"]
+            },
+            {
+              "code": "M.2.1.1.4",
+              "description": "100’den küçük doğal sayıların basamaklarını modeller üzerinde adlandırır, basamaklardaki rakamların basamak değerlerini belirtir.",
+              "keywords": ["basamak", "basamak değeri", "onlar", "birler"]
+            },
+            {
+              "code": "M.2.1.1.5",
+              "description": "100 içinde ikişer, beşer ve onar; 30 içinde üçer; 40 içinde dörder ileriye ve geriye doğru sayar.",
+              "keywords": ["ritmik sayma", "ikişer", "beşer", "onar"]
+            },
+            {
+              "code": "M.2.1.1.6",
+              "description": "Aralarındaki fark sabit olan sayı örüntülerini tanır, örüntünün kuralını bulur ve eksik bırakılan ögeyi belirleyerek örüntüyü tamamlar.",
+              "keywords": ["sayı örüntüsü", "kural", "eksik öge"]
+            },
+            {
+              "code": "M.2.1.1.7",
+              "description": "100’den küçük doğal sayılar arasında karşılaştırma ve sıralama yapar.",
+              "keywords": ["karşılaştırma", "sıralama", "büyük küçük"]
+            },
+            {
+              "code": "M.2.1.1.8",
+              "description": "100’den küçük doğal sayıların hangi onluğa daha yakın olduğunu belirler.",
+              "keywords": ["yuvarlama", "yakın onluk"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla Toplama İşlemi",
+          "outcomes": [
+            {
+              "code": "M.2.1.2.1",
+              "description": "Toplamları 100’e kadar (100 dâhil) olan doğal sayılarla eldesiz ve eldeli toplama işlemini yapar.",
+              "keywords": ["toplama", "eldeli", "eldesiz", "100'e kadar"]
+            },
+            {
+              "code": "M.2.1.2.2",
+              "description": "İki sayının toplamında verilmeyen toplananı bulur.",
+              "keywords": ["eksik toplanan", "toplama ilişkisi"]
+            },
+            {
+              "code": "M.2.1.2.3",
+              "description": "İki doğal sayının toplamını tahmin eder ve tahminini işlem sonucuyla karşılaştırır.",
+              "keywords": ["toplam tahmini", "karşılaştırma"]
+            },
+            {
+              "code": "M.2.1.2.4",
+              "description": "Zihinden toplama işlemi yapar.",
+              "keywords": ["zihinden toplama"]
+            },
+            {
+              "code": "M.2.1.2.5",
+              "description": "Doğal sayılarla toplama işlemini gerektiren problemleri çözer.",
+              "keywords": ["problem çözme", "toplama problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla Çıkarma İşlemi",
+          "outcomes": [
+            {
+              "code": "M.2.1.3.1",
+              "description": "100’e kadar olan doğal sayılarla onluk bozmayı gerektiren ve gerektirmeyen çıkarma işlemini yapar.",
+              "keywords": ["çıkarma", "onluk bozma", "ödünç alma"]
+            },
+            {
+              "code": "M.2.1.3.2",
+              "description": "100 içinde 10’un katı olan iki doğal sayının farkını zihinden bulur.",
+              "keywords": ["zihinden çıkarma", "10'un katları"]
+            },
+            {
+              "code": "M.2.1.3.3",
+              "description": "Doğal sayılarla yapılan çıkarma işleminin sonucunu tahmin eder ve tahminini işlem sonucuyla karşılaştırır.",
+              "keywords": ["fark tahmini"]
+            },
+            {
+              "code": "M.2.1.3.4",
+              "description": "Toplama ve çıkarma işlemleri arasındaki ilişkiyi fark eder.",
+              "keywords": ["ters işlem", "toplama-çıkarma ilişkisi"]
+            },
+            {
+              "code": "M.2.1.3.5",
+              "description": "Eşit işaretinin matematiksel ifadeler arasındaki eşitlik anlamını fark eder.",
+              "keywords": ["eşittir", "eşitlik"]
+            },
+            {
+              "code": "M.2.1.3.6",
+              "description": "Doğal sayılarla toplama ve çıkarma işlemini gerektiren problemleri çözer.",
+              "keywords": ["karma problem", "toplama çıkarma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla Çarpma İşlemi",
+          "outcomes": [
+            {
+              "code": "M.2.1.4.1",
+              "description": "Çarpma işleminin tekrarlı toplama anlamına geldiğini açıklar.",
+              "keywords": ["çarpma", "tekrarlı toplama"]
+            },
+            {
+              "code": "M.2.1.4.2",
+              "description": "Doğal sayılarla çarpma işlemi yapar.",
+              "keywords": ["çarpım", "çarpma işlemi"]
+            },
+            {
+              "code": "M.2.1.4.3",
+              "description": "Doğal sayılarla çarpma işlemi gerektiren problemler çözer.",
+              "keywords": ["çarpma problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla Bölme İşlemi",
+          "outcomes": [
+            {
+              "code": "M.2.1.5.1",
+              "description": "Bölme işleminde gruplama ve paylaştırma anlamlarını kullanır.",
+              "keywords": ["bölme", "gruplama", "paylaştırma"]
+            },
+            {
+              "code": "M.2.1.5.2",
+              "description": "Bölme işlemini yapar, bölme işleminin işaretini (÷) kullanır.",
+              "keywords": ["bölme işareti", "÷"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kesirler",
+          "outcomes": [
+            {
+              "code": "M.2.1.6.1",
+              "description": "Bütün, yarım ve çeyreği uygun modeller ile gösterir; bütün, yarım ve çeyrek arasındaki ilişkiyi açıklar.",
+              "keywords": ["bütün", "yarım", "çeyrek", "kesir modeli"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.2.2",
+      "unit_name": "Geometri",
+      "topics": [
+        {
+          "topic_name": "Geometrik Cisimler ve Şekiller",
+          "outcomes": [
+            {
+              "code": "M.2.2.1.1",
+              "description": "Geometrik şekilleri kenar ve köşe sayılarına göre sınıflandırır.",
+              "keywords": ["kenar", "köşe", "şekil sınıflama"]
+            },
+            {
+              "code": "M.2.2.1.2",
+              "description": "Şekil modelleri kullanarak yapılar oluşturur, oluşturduğu yapıları çizer.",
+              "keywords": ["şekil modeli", "yapı oluşturma"]
+            },
+            {
+              "code": "M.2.2.1.3",
+              "description": "Küp, kare prizma, dikdörtgen prizma, üçgen prizma, silindir ve küreyi modeller üstünde tanır ve ayırt eder.",
+              "keywords": ["küp", "prizma", "silindir", "küre"]
+            },
+            {
+              "code": "M.2.2.1.4",
+              "description": "Geometrik cisim ve şekillerin yön, konum veya büyüklükleri değiştiğinde biçimsel özelliklerinin değişmediğini fark eder.",
+              "keywords": ["değişmez özellik", "yön konum"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Uzamsal İlişkiler",
+          "outcomes": [
+            {
+              "code": "M.2.2.2.1",
+              "description": "Yer, yön ve hareket belirtmek için matematiksel dil kullanır.",
+              "keywords": ["yer", "yön", "hareket", "uzamsal dil"]
+            },
+            {
+              "code": "M.2.2.2.2",
+              "description": "Çevresindeki simetrik şekilleri fark eder.",
+              "keywords": ["simetri", "simetrik şekil"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Geometrik Örüntüler",
+          "outcomes": [
+            {
+              "code": "M.2.2.3.1",
+              "description": "Tekrarlayan bir geometrik örüntüde eksik bırakılan ögeleri belirleyerek tamamlar.",
+              "keywords": ["geometrik örüntü", "eksik öge"]
+            },
+            {
+              "code": "M.2.2.3.2",
+              "description": "Bir geometrik örüntüdeki ilişkiyi kullanarak farklı malzemelerle aynı ilişkiye sahip yeni örüntüler oluşturur.",
+              "keywords": ["örüntü kuralı", "yeni örüntü"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.2.3",
+      "unit_name": "Ölçme",
+      "topics": [
+        {
+          "topic_name": "Uzunluk Ölçme",
+          "outcomes": [
+            {
+              "code": "M.2.3.1.1",
+              "description": "Standart olmayan farklı uzunluk ölçme birimlerini birlikte kullanarak bir uzunluğu ölçer.",
+              "keywords": ["standart olmayan ölçü", "uzunluk"]
+            },
+            {
+              "code": "M.2.3.1.2",
+              "description": "Standart uzunluk ölçme birimlerini tanır ve kullanım yerlerini açıklar.",
+              "keywords": ["metre", "santimetre", "standart birim"]
+            },
+            {
+              "code": "M.2.3.1.3",
+              "description": "Uzunlukları standart araçlar kullanarak metre veya santimetre cinsinden ölçer.",
+              "keywords": ["cetvel", "ölçme"]
+            },
+            {
+              "code": "M.2.3.1.4",
+              "description": "Uzunlukları metre veya santimetre birimleri türünden tahmin eder ve tahminini ölçme sonucuyla karşılaştırır.",
+              "keywords": ["uzunluk tahmini"]
+            },
+            {
+              "code": "M.2.3.1.5",
+              "description": "Standart olan veya olmayan uzunluk ölçme birimleriyle uzunluk modelleri oluşturur.",
+              "keywords": ["uzunluk modeli"]
+            },
+            {
+              "code": "M.2.3.1.6",
+              "description": "Uzunluk ölçme birimi kullanılan problemleri çözer.",
+              "keywords": ["uzunluk problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Paralarımız",
+          "outcomes": [
+            {
+              "code": "M.2.3.2.1",
+              "description": "Kuruş ve lira arasındaki ilişkiyi fark eder.",
+              "keywords": ["kuruş", "lira", "para"]
+            },
+            {
+              "code": "M.2.3.2.2",
+              "description": "Değeri 100 lirayı geçmeyecek biçimde farklı miktarlardaki paraları karşılaştırır.",
+              "keywords": ["para karşılaştırma"]
+            },
+            {
+              "code": "M.2.3.2.3",
+              "description": "Paralarımızla ilgili problemleri çözer.",
+              "keywords": ["para problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Zaman Ölçme",
+          "outcomes": [
+            {
+              "code": "M.2.3.3.1",
+              "description": "Tam, yarım ve çeyrek saatleri okur ve gösterir.",
+              "keywords": ["saat", "tam", "yarım", "çeyrek"]
+            },
+            {
+              "code": "M.2.3.3.2",
+              "description": "Zaman ölçme birimleri arasındaki ilişkiyi açıklar.",
+              "keywords": ["saat", "dakika", "gün"]
+            },
+            {
+              "code": "M.2.3.3.3",
+              "description": "Zaman ölçme birimleriyle ilgili problemleri çözer.",
+              "keywords": ["zaman problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Tartma",
+          "outcomes": [
+            {
+              "code": "M.2.3.4.1",
+              "description": "Nesneleri standart araçlar kullanarak kilogram cinsinden tartar ve karşılaştırır.",
+              "keywords": ["kilogram", "tartma", "kütle"]
+            },
+            {
+              "code": "M.2.3.4.2",
+              "description": "Kütle ölçme birimiyle ilgili problemleri çözer.",
+              "keywords": ["kütle problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sıvı Ölçme",
+          "outcomes": [
+            {
+              "code": "M.2.3.5.1",
+              "description": "Standart olmayan sıvı ölçme birimlerini kullanarak sıvıların miktarını ölçer ve karşılaştırır.",
+              "keywords": ["sıvı ölçme", "kap"]
+            },
+            {
+              "code": "M.2.3.5.2",
+              "description": "Standart olmayan sıvı ölçme birimleriyle ilgili problemleri çözer.",
+              "keywords": ["sıvı problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.2.4",
+      "unit_name": "Veri İşleme",
+      "topics": [
+        {
+          "topic_name": "Veri Toplama ve Değerlendirme",
+          "outcomes": [
+            {
+              "code": "M.2.4.1.1",
+              "description": "Sorular sorarak veri toplar; sınıflandırır; ağaç şeması, çetele veya sıklık tablosu şeklinde düzenler; nesne ve şekil grafiği oluşturur.",
+              "keywords": ["veri", "çetele", "şekil grafiği", "nesne grafiği"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

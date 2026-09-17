@@ -1,0 +1,156 @@
+{
+  "grade": 12,
+  "subject": "Kimya",
+  "program_ref": "MEB Kimya Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "KİM.12.1",
+      "unit_name": "Karbon Kimyası",
+      "topics": [
+        {
+          "topic_name": "Karbon Bağları",
+          "outcomes": [
+            {
+              "code": "KİM.12.1.1.1",
+              "description": "Karbon atomunun bağ yapma özelliklerini açıklar.",
+              "keywords": [
+                "karbon"
+              ]
+            },
+            {
+              "code": "KİM.12.1.1.2",
+              "description": "Hibritleşme kavramını tanır (sp, sp², sp³).",
+              "keywords": [
+                "hibritleşme"
+              ]
+            },
+            {
+              "code": "KİM.12.1.1.3",
+              "description": "Allotrop modellerini (grafit, elmas, fullerene) tanır.",
+              "keywords": [
+                "allotrop"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.12.2",
+      "unit_name": "Organik Bileşikler",
+      "topics": [
+        {
+          "topic_name": "Fonksiyonel Gruplar",
+          "outcomes": [
+            {
+              "code": "KİM.12.2.1.1",
+              "description": "Hidrokarbon türlerini (alkan, alken, alkin, aromatik) tanır.",
+              "keywords": [
+                "hidrokarbon"
+              ]
+            },
+            {
+              "code": "KİM.12.2.1.2",
+              "description": "Alkol, eter, aldehit, keton, karboksilik asit gruplarını ayırt eder.",
+              "keywords": [
+                "fonksiyonel grup"
+              ]
+            },
+            {
+              "code": "KİM.12.2.1.3",
+              "description": "Organik bileşiklerin adlandırma kurallarını (IUPAC) uygular.",
+              "keywords": [
+                "IUPAC"
+              ]
+            },
+            {
+              "code": "KİM.12.2.1.4",
+              "description": "Polimerlerin yapısını ve günlük kullanımını açıklar.",
+              "keywords": [
+                "polimer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.12.3",
+      "unit_name": "Enerji Kaynakları",
+      "topics": [
+        {
+          "topic_name": "Enerji ve Çevre",
+          "outcomes": [
+            {
+              "code": "KİM.12.3.1.1",
+              "description": "Fosil yakıtların yanma tepkimelerini açıklar.",
+              "keywords": [
+                "fosil yakıt"
+              ]
+            },
+            {
+              "code": "KİM.12.3.1.2",
+              "description": "Alternatif enerji kaynaklarını (güneş, rüzgâr, hidrojen) karşılaştırır.",
+              "keywords": [
+                "alternatif enerji"
+              ]
+            },
+            {
+              "code": "KİM.12.3.1.3",
+              "description": "Kimyasal enerjinin dönüşümünü ve verimliliğini değerlendirir.",
+              "keywords": [
+                "enerji dönüşümü"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.12.4",
+      "unit_name": "Analitik Kimya",
+      "topics": [
+        {
+          "topic_name": "Titrasyon ve pH",
+          "outcomes": [
+            {
+              "code": "KİM.12.4.1.1",
+              "description": "Asit-baz titrasyonlarını hesaplar.",
+              "keywords": [
+                "titrasyon"
+              ]
+            },
+            {
+              "code": "KİM.12.4.1.2",
+              "description": "Tampon çözeltilerin özelliklerini açıklar.",
+              "keywords": [
+                "tampon"
+              ]
+            },
+            {
+              "code": "KİM.12.4.1.3",
+              "description": "Kimyasal analiz yöntemlerini (spektroskopi, kromatografi) tanır.",
+              "keywords": [
+                "spektroskopi"
+              ]
+            },
+            {
+              "code": "KİM.12.4.1.4",
+              "description": "Su analizi ve kalite parametrelerini yorumlar.",
+              "keywords": [
+                "su analizi"
+              ]
+            },
+            {
+              "code": "KİM.12.4.1.5",
+              "description": "Kimyasal atık yönetimini değerlendirir.",
+              "keywords": [
+                "atık yönetimi"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "grade": 6,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Ortaokul, 6. Sınıf) — Sayılar ve İşlemler, Geometri, Ölçme, Cebir, Veri İşleme",
+  "units": [
+    {
+      "unit_code": "M.6.1",
+      "unit_name": "Sayılar ve İşlemler",
+      "topics": [
+        {
+          "topic_name": "Doğal Sayılar",
+          "outcomes": [
+            {
+              "code": "M.6.1.1.1",
+              "description": "Asal sayıları tanır; bir doğal sayının asal çarpanlarını bulur.",
+              "keywords": ["asal sayı", "asal çarpan"]
+            },
+            {
+              "code": "M.6.1.1.2",
+              "description": "İki veya daha fazla doğal sayının ortak bölenlerini ve ortak katlarını bulur.",
+              "keywords": ["ortak bölen", "ortak kat"]
+            },
+            {
+              "code": "M.6.1.1.3",
+              "description": "EBOB ve EKOK problemlerini çözer.",
+              "keywords": ["EBOB", "EKOK", "problem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kesirlerle İşlemler",
+          "outcomes": [
+            {
+              "code": "M.6.1.2.1",
+              "description": "Paydaları farklı kesirleri karşılaştırır ve sıralar.",
+              "keywords": ["farklı payda", "kesir sıralama"]
+            },
+            {
+              "code": "M.6.1.2.2",
+              "description": "Paydaları farklı kesirlerle toplama ve çıkarma işlemi yapar.",
+              "keywords": ["kesir toplama", "kesir çıkarma"]
+            },
+            {
+              "code": "M.6.1.2.3",
+              "description": "Kesirlerle çarpma ve bölme işlemi yapar.",
+              "keywords": ["kesir çarpma", "kesir bölme"]
+            },
+            {
+              "code": "M.6.1.2.4",
+              "description": "Kesirlerle dört işlem gerektiren problemleri çözer.",
+              "keywords": ["kesir problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ondalık Gösterimlerle İşlemler",
+          "outcomes": [
+            {
+              "code": "M.6.1.3.1",
+              "description": "Ondalık gösterimlerle çarpma ve bölme işlemi yapar.",
+              "keywords": ["ondalık çarpma", "ondalık bölme"]
+            },
+            {
+              "code": "M.6.1.3.2",
+              "description": "Ondalık gösterimlerle dört işlem gerektiren problemleri çözer.",
+              "keywords": ["ondalık problem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Oran",
+          "outcomes": [
+            {
+              "code": "M.6.1.4.1",
+              "description": "İki niceliğin birbirine oranını farklı biçimlerde ifade eder.",
+              "keywords": ["oran", "nicelik"]
+            },
+            {
+              "code": "M.6.1.4.2",
+              "description": "Oranı sadeleştirir; eşit oranları belirler.",
+              "keywords": ["oran sadeleştirme", "eşit oran"]
+            },
+            {
+              "code": "M.6.1.4.3",
+              "description": "Oran ve orantı içeren problemleri çözer.",
+              "keywords": ["orantı", "oran problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.6.2",
+      "unit_name": "Geometri",
+      "topics": [
+        {
+          "topic_name": "Çember ve Daire",
+          "outcomes": [
+            {
+              "code": "M.6.2.1.1",
+              "description": "Çemberin merkez, yarıçap ve çap kavramlarını kullanarak problemler çözer.",
+              "keywords": ["çember", "yarıçap", "çap"]
+            },
+            {
+              "code": "M.6.2.1.2",
+              "description": "Dairenin alanını hesaplar.",
+              "keywords": ["daire alanı", "π"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Açılar",
+          "outcomes": [
+            {
+              "code": "M.6.2.2.1",
+              "description": "Komşu, tümler, bütünler ve ters açıları tanır.",
+              "keywords": ["komşu açı", "tümler", "bütünler", "ters açı"]
+            },
+            {
+              "code": "M.6.2.2.2",
+              "description": "Paralel doğrular ve kesen doğru ile oluşan açıları belirler.",
+              "keywords": ["paralel doğru", "kesen", "iç ters", "yöndeş"]
+            },
+            {
+              "code": "M.6.2.2.3",
+              "description": "Üçgenin iç açılarının toplamının 180° olduğunu gösterir.",
+              "keywords": ["üçgen iç açı", "180 derece"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çokgenler",
+          "outcomes": [
+            {
+              "code": "M.6.2.3.1",
+              "description": "Düzgün çokgenlerin iç ve dış açı ölçülerini hesaplar.",
+              "keywords": ["iç açı", "dış açı", "düzgün çokgen"]
+            },
+            {
+              "code": "M.6.2.3.2",
+              "description": "Paralelkenar, eşkenar dörtgen, dikdörtgen, kare ve yamuğun özelliklerini belirler.",
+              "keywords": ["paralelkenar", "yamuk", "eşkenar dörtgen"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.6.3",
+      "unit_name": "Ölçme",
+      "topics": [
+        {
+          "topic_name": "Alan Ölçme",
+          "outcomes": [
+            {
+              "code": "M.6.3.1.1",
+              "description": "Paralelkenar, üçgen ve yamuğun alanını hesaplar.",
+              "keywords": ["paralelkenar alanı", "üçgen alanı", "yamuk alanı"]
+            },
+            {
+              "code": "M.6.3.1.2",
+              "description": "Alan hesaplamayla ilgili problemleri çözer.",
+              "keywords": ["alan problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çevre Ölçme",
+          "outcomes": [
+            {
+              "code": "M.6.3.2.1",
+              "description": "Düzlemsel şekillerin çevre uzunluklarını hesaplar.",
+              "keywords": ["çevre", "düzlem şekil"]
+            },
+            {
+              "code": "M.6.3.2.2",
+              "description": "Çevre uzunluğu hesaplamayla ilgili problemleri çözer.",
+              "keywords": ["çevre problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Hacim Ölçme",
+          "outcomes": [
+            {
+              "code": "M.6.3.3.1",
+              "description": "Dikdörtgenler prizmasının hacmini hesaplar.",
+              "keywords": ["hacim", "dikdörtgenler prizması"]
+            },
+            {
+              "code": "M.6.3.3.2",
+              "description": "Hacim ölçme birimleri arasındaki ilişkileri açıklar; dönüştürür.",
+              "keywords": ["cm³", "m³", "L", "dönüşüm"]
+            },
+            {
+              "code": "M.6.3.3.3",
+              "description": "Hacim hesaplamayla ilgili problemleri çözer.",
+              "keywords": ["hacim problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.6.4",
+      "unit_name": "Cebir",
+      "topics": [
+        {
+          "topic_name": "Cebirsel İfadeler",
+          "outcomes": [
+            {
+              "code": "M.6.4.1.1",
+              "description": "Cebirsel ifadeleri tanır; harf ve sayıların çarpımını gösterir.",
+              "keywords": ["cebirsel ifade", "değişken"]
+            },
+            {
+              "code": "M.6.4.1.2",
+              "description": "Cebirsel ifadelerde toplama ve çıkarma işlemi yapar.",
+              "keywords": ["cebirsel toplama", "cebirsel çıkarma"]
+            },
+            {
+              "code": "M.6.4.1.3",
+              "description": "Cebirsel ifadelerin değerini verilen sayı yerine koyarak hesaplar.",
+              "keywords": ["ifade değeri"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Denklemler",
+          "outcomes": [
+            {
+              "code": "M.6.4.2.1",
+              "description": "Birinci dereceden bir bilinmeyenli denklemleri çözer.",
+              "keywords": ["denklem", "bilinmeyen"]
+            },
+            {
+              "code": "M.6.4.2.2",
+              "description": "Denklem kurmayı ve çözmeyi gerektiren problemleri çözer.",
+              "keywords": ["denklem problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.6.5",
+      "unit_name": "Veri İşleme",
+      "topics": [
+        {
+          "topic_name": "Veri Toplama ve Değerlendirme",
+          "outcomes": [
+            {
+              "code": "M.6.5.1.1",
+              "description": "Sütun, daire ve çizgi grafiklerini inceler; yorum ve tahminler yapar.",
+              "keywords": ["sütun grafiği", "daire grafiği", "çizgi grafiği"]
+            },
+            {
+              "code": "M.6.5.1.2",
+              "description": "Verileri uygun grafik türleriyle gösterir.",
+              "keywords": ["grafik çizme"]
+            },
+            {
+              "code": "M.6.5.1.3",
+              "description": "Verilerin aritmetik ortalamasını, ortancasını ve tepe değerini hesaplar.",
+              "keywords": ["ortalama", "ortanca", "tepe değeri"]
+            },
+            {
+              "code": "M.6.5.1.4",
+              "description": "Grafik ve tablolardan yararlanarak günlük hayat problemleri çözer.",
+              "keywords": ["veri problemi"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

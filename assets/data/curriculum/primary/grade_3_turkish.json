@@ -1,0 +1,338 @@
+{
+  "grade": 3,
+  "subject": "Türkçe",
+  "program_ref": "MEB Türkçe Dersi Öğretim Programı (İlkokul) — dinleme, konuşma, okuma, yazma, dil bilgisi",
+  "units": [
+    {
+      "unit_code": "T.3.1",
+      "unit_name": "Dinleme / İzleme",
+      "topics": [
+        {
+          "topic_name": "Dinlenen / İzlenen Metni Anlama",
+          "outcomes": [
+            {
+              "code": "T.3.1.1",
+              "description": "Dinlediği / izlediği metindeki olay, yer, zaman ve kişileri belirler.",
+              "keywords": ["dinleme", "olay", "kişi yer zaman"]
+            },
+            {
+              "code": "T.3.1.2",
+              "description": "Dinlediği / izlediği metnin konusunu ve ana fikrini belirler.",
+              "keywords": ["konu", "ana fikir"]
+            },
+            {
+              "code": "T.3.1.3",
+              "description": "Dinlediği / izlediği metne yönelik sorular sorar ve cevaplar.",
+              "keywords": ["soru-cevap"]
+            },
+            {
+              "code": "T.3.1.4",
+              "description": "Dinlediği / izlediği metni özetler.",
+              "keywords": ["özet"]
+            },
+            {
+              "code": "T.3.1.5",
+              "description": "Dinlediklerini / izlediklerini kendi cümleleriyle anlatır.",
+              "keywords": ["anlatma", "aktarma"]
+            },
+            {
+              "code": "T.3.1.6",
+              "description": "Dinlediği / izlediği metindeki duygu ve düşünceleri fark eder.",
+              "keywords": ["duygu", "düşünce"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Söz Varlığı",
+          "outcomes": [
+            {
+              "code": "T.3.1.7",
+              "description": "Dinlediği metindeki bilinmeyen kelimelerin anlamını bağlamdan tahmin eder.",
+              "keywords": ["kelime tahmini", "bağlam"]
+            },
+            {
+              "code": "T.3.1.8",
+              "description": "Görsel ve işitsel ögelerle metin arasında ilişki kurar.",
+              "keywords": ["görsel", "işitsel"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.3.2",
+      "unit_name": "Konuşma",
+      "topics": [
+        {
+          "topic_name": "Hazırlıksız ve Hazırlıklı Konuşma",
+          "outcomes": [
+            {
+              "code": "T.3.2.1",
+              "description": "Belirli bir konuda hazırlıksız konuşur.",
+              "keywords": ["hazırlıksız konuşma"]
+            },
+            {
+              "code": "T.3.2.2",
+              "description": "Kısa bir konuşma hazırlar ve sunar.",
+              "keywords": ["hazırlıklı konuşma", "sunum"]
+            },
+            {
+              "code": "T.3.2.3",
+              "description": "Konuşmalarında beden dili, ses tonu ve nezaket kurallarına uyar.",
+              "keywords": ["beden dili", "nezaket"]
+            },
+            {
+              "code": "T.3.2.4",
+              "description": "Dinleyicinin ilgisini dikkate alarak konuşur.",
+              "keywords": ["dinleyici odaklı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.3.3",
+      "unit_name": "Okuma",
+      "topics": [
+        {
+          "topic_name": "Akıcı Okuma",
+          "outcomes": [
+            {
+              "code": "T.3.3.1",
+              "description": "Noktalama ve vurguya dikkat ederek akıcı okur.",
+              "keywords": ["akıcı okuma", "vurgu"]
+            },
+            {
+              "code": "T.3.3.2",
+              "description": "Farklı türlerdeki metinleri sesli ve sessiz okur.",
+              "keywords": ["metin türü", "sessiz okuma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Okuduğunu Anlama",
+          "outcomes": [
+            {
+              "code": "T.3.3.3",
+              "description": "Okuduğu metindeki olay, kişi, yer ve zamanı belirler.",
+              "keywords": ["olay örgüsü"]
+            },
+            {
+              "code": "T.3.3.4",
+              "description": "Okuduğu metnin konusunu ve ana fikrini belirler.",
+              "keywords": ["ana fikir"]
+            },
+            {
+              "code": "T.3.3.5",
+              "description": "Metindeki sebep-sonuç ve karşılaştırma ilişkilerini fark eder.",
+              "keywords": ["sebep-sonuç", "karşılaştırma"]
+            },
+            {
+              "code": "T.3.3.6",
+              "description": "Okuduğu metne yönelik sorular sorar, cevaplar ve özetler.",
+              "keywords": ["soru", "özet"]
+            },
+            {
+              "code": "T.3.3.7",
+              "description": "Metindeki gerçek ve hayalî ögeleri ayırt eder.",
+              "keywords": ["gerçek", "hayal"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Dağarcığı",
+          "outcomes": [
+            {
+              "code": "T.3.3.8",
+              "description": "Eş, zıt ve eş sesli kelimeleri ayırt eder.",
+              "keywords": ["eş anlamlı", "zıt", "eş sesli"]
+            },
+            {
+              "code": "T.3.3.9",
+              "description": "Gerçek, mecaz ve terim anlamı basit örneklerle ayırt eder.",
+              "keywords": ["mecaz", "terim"]
+            },
+            {
+              "code": "T.3.3.10",
+              "description": "Atasözü ve deyimleri metin içinde fark eder.",
+              "keywords": ["atasözü", "deyim"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.3.4",
+      "unit_name": "Yazma",
+      "topics": [
+        {
+          "topic_name": "Metin Yazma",
+          "outcomes": [
+            {
+              "code": "T.3.4.1",
+              "description": "Olay, kişi ve mekânı içeren kısa bir anlatı yazar.",
+              "keywords": ["hikâye yazma", "anlatı"]
+            },
+            {
+              "code": "T.3.4.2",
+              "description": "Betimleyici kısa metinler yazar.",
+              "keywords": ["betimleme"]
+            },
+            {
+              "code": "T.3.4.3",
+              "description": "Mektup, kartpostal, duyuru ve kısa haber metni yazar.",
+              "keywords": ["mektup", "duyuru"]
+            },
+            {
+              "code": "T.3.4.4",
+              "description": "Yazdıklarını gözden geçirir; yazım ve noktalama hatalarını düzeltir.",
+              "keywords": ["düzeltme", "yazım"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım Düzeni",
+          "outcomes": [
+            {
+              "code": "T.3.4.5",
+              "description": "Paragraf düzenine dikkat ederek yazar.",
+              "keywords": ["paragraf"]
+            },
+            {
+              "code": "T.3.4.6",
+              "description": "Başlık seçer ve metinle ilişkilendirir.",
+              "keywords": ["başlık"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.3.5",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Kelime Türleri",
+          "outcomes": [
+            {
+              "code": "T.3.5.1",
+              "description": "İsim, fiil ve sıfatı ayırt eder.",
+              "keywords": ["isim", "fiil", "sıfat"]
+            },
+            {
+              "code": "T.3.5.2",
+              "description": "Zamirleri basit düzeyde tanır ve kullanır.",
+              "keywords": ["zamir"]
+            },
+            {
+              "code": "T.3.5.3",
+              "description": "Edat ve bağlaçları basit örneklerde fark eder.",
+              "keywords": ["edat", "bağlaç"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Bilgisi",
+          "outcomes": [
+            {
+              "code": "T.3.5.4",
+              "description": "Özne ve yüklemi belirler.",
+              "keywords": ["özne", "yüklem"]
+            },
+            {
+              "code": "T.3.5.5",
+              "description": "Olumlu, olumsuz ve soru cümlelerini ayırt eder.",
+              "keywords": ["olumlu", "olumsuz", "soru cümlesi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım ve Noktalama",
+          "outcomes": [
+            {
+              "code": "T.3.5.6",
+              "description": "Nokta, virgül, soru, ünlem, iki nokta ve tırnak işaretini yerinde kullanır.",
+              "keywords": ["noktalama"]
+            },
+            {
+              "code": "T.3.5.7",
+              "description": "Özel isimleri ve cümle başlarını büyük harfle yazar.",
+              "keywords": ["büyük harf"]
+            },
+            {
+              "code": "T.3.5.8",
+              "description": "“de/da” ve “ki” bağlacı ile ek olanları basit düzeyde ayırt etmeye başlar.",
+              "keywords": ["de da", "ki"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.3.6",
+      "unit_name": "Temalar (Metin Bağlamı)",
+      "topics": [
+        {
+          "topic_name": "Erdemler",
+          "outcomes": [
+            {
+              "code": "T.3.6.1",
+              "description": "Erdemler temalı metinlerde değer mesajını belirler.",
+              "keywords": ["erdem", "değer"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Millî Mücadele ve Atatürk",
+          "outcomes": [
+            {
+              "code": "T.3.6.2",
+              "description": "Atatürk ve Millî Mücadele temalı metinleri anlar, önemli bilgileri seçer.",
+              "keywords": ["Atatürk", "Millî Mücadele"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğa ve İnsan",
+          "outcomes": [
+            {
+              "code": "T.3.6.3",
+              "description": "Doğa ve insan ilişkisini metinden çıkarır.",
+              "keywords": ["doğa", "çevre bilinci"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sağlıklı Yaşam",
+          "outcomes": [
+            {
+              "code": "T.3.6.4",
+              "description": "Sağlık, spor ve beslenme temalı metinlerde önemli bilgileri belirler.",
+              "keywords": ["sağlık", "beslenme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bilim ve Teknoloji",
+          "outcomes": [
+            {
+              "code": "T.3.6.5",
+              "description": "Bilim ve teknoloji temalı metinlerde merak ve keşif unsurlarını fark eder.",
+              "keywords": ["bilim", "keşif"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sanat ve Edebiyat",
+          "outcomes": [
+            {
+              "code": "T.3.6.6",
+              "description": "Şiir, masal ve hikâye türlerini ayırt eder.",
+              "keywords": ["şiir", "masal", "hikâye"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

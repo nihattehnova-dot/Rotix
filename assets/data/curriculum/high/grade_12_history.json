@@ -1,0 +1,174 @@
+{
+  "grade": 12,
+  "subject": "Tarih",
+  "program_ref": "MEB Tarih Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TAR.12.1",
+      "unit_name": "Atatürk İlkeleri ve İnkılap Tarihi",
+      "topics": [
+        {
+          "topic_name": "İnkılap Tarihi",
+          "outcomes": [
+            {
+              "code": "TAR.12.1.1.1",
+              "description": "Atatürk dönemi inkılaplarını kategorilere ayırarak açıklar.",
+              "keywords": [
+                "inkılap"
+              ]
+            },
+            {
+              "code": "TAR.12.1.1.2",
+              "description": "Atatürk'ün dış politikasını (Lozan, Hatay, Montreux) değerlendirir.",
+              "keywords": [
+                "dış politika"
+              ]
+            },
+            {
+              "code": "TAR.12.1.1.3",
+              "description": "Atatürk ilkelerinin güncelliğini tartışır.",
+              "keywords": [
+                "Atatürk ilkeleri"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.12.2",
+      "unit_name": "Çağdaş Türk ve Dünya Tarihi",
+      "topics": [
+        {
+          "topic_name": "Soğuk Savaş Dönemi",
+          "outcomes": [
+            {
+              "code": "TAR.12.2.1.1",
+              "description": "Soğuk Savaş döneminde Türkiye'nin konumunu açıklar.",
+              "keywords": [
+                "Soğuk Savaş"
+              ]
+            },
+            {
+              "code": "TAR.12.2.1.2",
+              "description": "NATO'ya giriş ve Kore Savaşı'nın önemini değerlendirir.",
+              "keywords": [
+                "NATO",
+                "Kore"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Demokrat Parti Dönemi",
+          "outcomes": [
+            {
+              "code": "TAR.12.2.2.1",
+              "description": "1950 sonrası siyasi gelişmeleri sıralar.",
+              "keywords": [
+                "Demokrat Parti"
+              ]
+            },
+            {
+              "code": "TAR.12.2.2.2",
+              "description": "27 Mayıs ve sonrası siyasi süreçleri yorumlar.",
+              "keywords": [
+                "27 Mayıs"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.12.3",
+      "unit_name": "XXI. Yüzyıl",
+      "topics": [
+        {
+          "topic_name": "Güncel Tarih",
+          "outcomes": [
+            {
+              "code": "TAR.12.3.1.1",
+              "description": "Türkiye'nin Avrupa Birliği sürecini değerlendirir.",
+              "keywords": [
+                "AB süreci"
+              ]
+            },
+            {
+              "code": "TAR.12.3.1.2",
+              "description": "Küreselleşmenin Türkiye üzerindeki etkilerini analiz eder.",
+              "keywords": [
+                "küreselleşme"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.12.4",
+      "unit_name": "Türkiye Cumhuriyeti Tarihi",
+      "topics": [
+        {
+          "topic_name": "Cumhuriyet Dönemi",
+          "outcomes": [
+            {
+              "code": "TAR.12.4.1.1",
+              "description": "1960, 1971 ve 1980 darbelerinin neden ve sonuçlarını analiz eder.",
+              "keywords": [
+                "darbe"
+              ]
+            },
+            {
+              "code": "TAR.12.4.1.2",
+              "description": "Türkiye'nin AB ile ilişkilerini kronolojik sıralar.",
+              "keywords": [
+                "AB"
+              ]
+            },
+            {
+              "code": "TAR.12.4.1.3",
+              "description": "Türkiye'nin bölgesel politikasını değerlendirir.",
+              "keywords": [
+                "bölgesel politika"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.12.5",
+      "unit_name": "Atatürk İlkeleri",
+      "topics": [
+        {
+          "topic_name": "İlke ve İnkılaplar",
+          "outcomes": [
+            {
+              "code": "TAR.12.5.1.1",
+              "description": "Cumhuriyetçilik ilkesinin uygulamalarını örnekler.",
+              "keywords": [
+                "Cumhuriyetçilik"
+              ]
+            },
+            {
+              "code": "TAR.12.5.1.2",
+              "description": "Laiklik ilkesinin toplumsal dönüşümdeki rolünü açıklar.",
+              "keywords": [
+                "Laiklik"
+              ]
+            },
+            {
+              "code": "TAR.12.5.1.3",
+              "description": "Halkçılık ve Devletçilik ilkelerini karşılaştırır.",
+              "keywords": [
+                "Halkçılık",
+                "Devletçilik"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

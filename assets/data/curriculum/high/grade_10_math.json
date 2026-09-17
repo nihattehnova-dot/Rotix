@@ -1,0 +1,212 @@
+{
+  "grade": 10,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "M.10.1",
+      "unit_name": "Fonksiyonlar",
+      "topics": [
+        {
+          "topic_name": "Fonksiyon Kavramı",
+          "outcomes": [
+            {
+              "code": "M.10.1.1.1",
+              "description": "Fonksiyon tanımını kullanır; tanım ve değer kümelerini belirler.",
+              "keywords": [
+                "fonksiyon",
+                "tanım kümesi"
+              ]
+            },
+            {
+              "code": "M.10.1.1.2",
+              "description": "Fonksiyon grafiklerini çizer ve yorumlar.",
+              "keywords": [
+                "fonksiyon grafiği"
+              ]
+            },
+            {
+              "code": "M.10.1.1.3",
+              "description": "Bileşke fonksiyon ve ters fonksiyon kavramlarını uygular.",
+              "keywords": [
+                "bileşke",
+                "ters fonksiyon"
+              ]
+            },
+            {
+              "code": "M.10.1.1.4",
+              "description": "Doğrusal, parçalı ve mutlak değer fonksiyonlarını inceler.",
+              "keywords": [
+                "doğrusal fonksiyon",
+                "mutlak değer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.10.2",
+      "unit_name": "Polinomlar",
+      "topics": [
+        {
+          "topic_name": "Polinom İşlemleri",
+          "outcomes": [
+            {
+              "code": "M.10.2.1.1",
+              "description": "Polinom kavramını tanır; derece ve katsayıları belirler.",
+              "keywords": [
+                "polinom",
+                "derece"
+              ]
+            },
+            {
+              "code": "M.10.2.1.2",
+              "description": "Polinomlarla toplama, çıkarma ve çarpma işlemlerini yapar.",
+              "keywords": [
+                "polinom işlem"
+              ]
+            },
+            {
+              "code": "M.10.2.1.3",
+              "description": "Polinom bölme ve bölünebilme algoritmasını uygular.",
+              "keywords": [
+                "polinom bölme"
+              ]
+            },
+            {
+              "code": "M.10.2.1.4",
+              "description": "Horner yöntemi ve kalan teoremini kullanır.",
+              "keywords": [
+                "Horner",
+                "kalan teoremi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.10.3",
+      "unit_name": "İkinci Dereceden Denklemler",
+      "topics": [
+        {
+          "topic_name": "Denklem Çözme",
+          "outcomes": [
+            {
+              "code": "M.10.3.1.1",
+              "description": "İkinci dereceden bir bilinmeyenli denklemleri çözüm yöntemlerini uygular.",
+              "keywords": [
+                "ikinci derece",
+                "denklem"
+              ]
+            },
+            {
+              "code": "M.10.3.1.2",
+              "description": "Diskriminant kavramını kullanarak kök sayısını belirler.",
+              "keywords": [
+                "diskriminant"
+              ]
+            },
+            {
+              "code": "M.10.3.1.3",
+              "description": "Kökler toplamı ve çarpımı ilişkilerini uygular.",
+              "keywords": [
+                "Vieta",
+                "kökler"
+              ]
+            },
+            {
+              "code": "M.10.3.1.4",
+              "description": "İkinci dereceden denklemlerle ilgili problemleri çözer.",
+              "keywords": [
+                "problem"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.10.4",
+      "unit_name": "Dörtgenler ve Çokgenler",
+      "topics": [
+        {
+          "topic_name": "Dörtgenler",
+          "outcomes": [
+            {
+              "code": "M.10.4.1.1",
+              "description": "Paralelkenar, dikdörtgen, eşkenar dörtgen, yamuk ve deltoid özelliklerini kullanır.",
+              "keywords": [
+                "dörtgen",
+                "paralelkenar"
+              ]
+            },
+            {
+              "code": "M.10.4.1.2",
+              "description": "Dörtgenlerin açı ve kenar özelliklerini ispatlar.",
+              "keywords": [
+                "ispat"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çokgenler",
+          "outcomes": [
+            {
+              "code": "M.10.4.2.1",
+              "description": "Düzgün çokgenlerin iç ve dış açılarını hesaplar.",
+              "keywords": [
+                "çokgen",
+                "iç açı"
+              ]
+            },
+            {
+              "code": "M.10.4.2.2",
+              "description": "Çokgenlerin alanını hesaplar.",
+              "keywords": [
+                "alan"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.10.5",
+      "unit_name": "Uzay Geometri Başlangıç",
+      "topics": [
+        {
+          "topic_name": "Katı Cisimler",
+          "outcomes": [
+            {
+              "code": "M.10.5.1.1",
+              "description": "Prizma, piramit, silindir, koni ve kürenin elemanlarını tanır.",
+              "keywords": [
+                "prizma",
+                "piramit",
+                "silindir"
+              ]
+            },
+            {
+              "code": "M.10.5.1.2",
+              "description": "Katı cisimlerin yüzey alanı ve hacmini hesaplar.",
+              "keywords": [
+                "yüzey alanı",
+                "hacim"
+              ]
+            },
+            {
+              "code": "M.10.5.1.3",
+              "description": "Gerçek yaşam problemlerinde hacim hesaplar.",
+              "keywords": [
+                "hacim problemi"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

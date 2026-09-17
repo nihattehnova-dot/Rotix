@@ -1,0 +1,144 @@
+{
+  "grade": "AYT",
+  "subject": "Coğrafya",
+  "program_ref": "ÖSYM AYT Coğrafya-1 / Coğrafya-2 soru dağılımı (yaklaşık 6–17 soru)",
+  "exam_meta": {
+    "total_questions": 6,
+    "notes": "Coğrafya-1 (Sosyal Bilimler-1) ve Coğrafya-2 (Sosyal Bilimler-2) testlerinde soru sayıları farklıdır; yıllara göre değişebilir."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.COG.01",
+      "unit_name": "Doğal Sistemler",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Atmosfer ve İklim",
+          "outcomes": [
+            {
+              "code": "AYT.COG.01.01.01",
+              "description": "Atmosfer katmanlarını, iklim elemanlarını ve iklim tiplerini harita üzerinde yorumlar.",
+              "keywords": ["atmosfer", "iklim", "iklim tipi"]
+            },
+            {
+              "code": "AYT.COG.01.01.02",
+              "description": "Küresel iklim değişikliği ve doğal afetlerin (deprem, sel, kuraklık) etkilerini açıklar.",
+              "keywords": ["iklim değişikliği", "doğal afet", "deprem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yer Şekilleri ve Su",
+          "outcomes": [
+            {
+              "code": "AYT.COG.01.02.01",
+              "description": "İç ve dış kuvvetlerin yer şekilleri üzerindeki etkilerini açıklar.",
+              "keywords": ["iç kuvvet", "dış kuvvet", "yer şekli"]
+            },
+            {
+              "code": "AYT.COG.01.02.02",
+              "description": "Akarsu, göl, yeraltı suları ve karstik şekilleri harita ve kesitlerle yorumlar.",
+              "keywords": ["akarsu", "göl", "karst", "yeraltı suyu"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.COG.02",
+      "unit_name": "Beşeri ve Ekonomik Coğrafya",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Nüfus ve Yerleşme",
+          "outcomes": [
+            {
+              "code": "AYT.COG.02.01.01",
+              "description": "Nüfus artışı, göç, yaşlanma ve kentleşme süreçlerini grafik ve haritalarla yorumlar.",
+              "keywords": ["nüfus", "göç", "kentleşme", "yaşlanma"]
+            },
+            {
+              "code": "AYT.COG.02.01.02",
+              "description": "Yerleşme tiplerini (kır, kasaba, kent) fiziki ve beşeri faktörlerle ilişkilendirir.",
+              "keywords": ["yerleşme", "kır", "kent"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ekonomik Faaliyetler",
+          "outcomes": [
+            {
+              "code": "AYT.COG.02.02.01",
+              "description": "Tarım, sanayi, madencilik ve hizmet sektörlerinin dağılışını harita üzerinde yorumlar.",
+              "keywords": ["tarım", "sanayi", "madencilik", "hizmet"]
+            },
+            {
+              "code": "AYT.COG.02.02.02",
+              "description": "Ulaşım, ticaret ve turizm faaliyetlerinin bölgesel gelişime etkisini açıklar.",
+              "keywords": ["ulaşım", "ticaret", "turizm"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.COG.03",
+      "unit_name": "Türkiye Coğrafyası",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Türkiye'nin Fiziki Coğrafyası",
+          "outcomes": [
+            {
+              "code": "AYT.COG.03.01.01",
+              "description": "Türkiye'nin yer şekilleri, iklim çeşitliliği ve bitki örtüsü dağılışını yorumlar.",
+              "keywords": ["Türkiye", "iklim", "bitki örtüsü", "yer şekli"]
+            },
+            {
+              "code": "AYT.COG.03.01.02",
+              "description": "Türkiye'nin su kaynakları, enerji potansiyeli ve doğal kaynaklarını harita üzerinde değerlendirir.",
+              "keywords": ["su kaynakları", "enerji", "doğal kaynak"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Türkiye'nin Beşeri Coğrafyası",
+          "outcomes": [
+            {
+              "code": "AYT.COG.03.02.01",
+              "description": "Türkiye'de nüfus dağılışı, göç hareketleri ve bölgesel kalkınma projelerini yorumlar.",
+              "keywords": ["nüfus dağılışı", "göç", "GAP", "DAP"]
+            },
+            {
+              "code": "AYT.COG.03.02.02",
+              "description": "Türkiye'nin tarım, sanayi ve turizm bölgelerini coğrafi faktörlerle ilişkilendirir.",
+              "keywords": ["tarım bölgesi", "sanayi bölgesi", "turizm"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.COG.04",
+      "unit_name": "Küresel Ortam ve Bölgeler",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Bölgeler ve Küresel Sorunlar",
+          "outcomes": [
+            {
+              "code": "AYT.COG.04.01.01",
+              "description": "Dünya'nın ana coğrafi bölgelerini fiziki ve beşeri özellikleriyle karşılaştırır.",
+              "keywords": ["bölge", "Avrupa", "Asya", "Afrika"]
+            },
+            {
+              "code": "AYT.COG.04.01.02",
+              "description": "Çevre sorunları, sürdürülebilir kalkınma ve küresel eşitsizlikleri yorumlar.",
+              "keywords": ["çevre", "sürdürülebilirlik", "eşitsizlik"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

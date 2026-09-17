@@ -1,0 +1,391 @@
+{
+  "grade": "TYT",
+  "subject": "Türkçe",
+  "program_ref": "ÖSYM TYT Temel Yeterlilik Türkçe soru dağılımı (yaklaşık 40 soru)",
+  "exam_meta": {
+    "total_questions": 40,
+    "notes": "Soru sayıları yıllara göre değişebilir; paragraf ve dil bilgisi ağırlıklı dağılım son yılların ÖSYM kapsamına göredir."
+  },
+  "units": [
+    {
+      "unit_code": "TYT.TR.01",
+      "unit_name": "Sözcükte Anlam",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Gerçek, Mecaz ve Yan Anlam",
+          "outcomes": [
+            {
+              "code": "TYT.TR.01.01.01",
+              "description": "Sözcüklerin cümle içinde gerçek, mecaz ve yan anlamda kullanıldığı durumları ayırt eder.",
+              "keywords": ["gerçek anlam", "mecaz anlam", "yan anlam"]
+            },
+            {
+              "code": "TYT.TR.01.01.02",
+              "description": "Terim, deyim ve atasözlerinin anlam özelliklerini bağlam içinde yorumlar.",
+              "keywords": ["deyim", "atasözü", "terim anlam"]
+            },
+            {
+              "code": "TYT.TR.01.01.03",
+              "description": "Sözcüklerin anlam genişlemesi, daralması ve köken değişimini örneklerle açıklar.",
+              "keywords": ["anlam genişlemesi", "anlam daralması", "anlam kayması"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eş Anlam, Zıt Anlam ve Eş Seslilik",
+          "outcomes": [
+            {
+              "code": "TYT.TR.01.02.01",
+              "description": "Sözcükler arasındaki eş anlam, zıt anlam ve eş seslilik ilişkilerini belirler.",
+              "keywords": ["eş anlam", "zıt anlam", "eş seslilik"]
+            },
+            {
+              "code": "TYT.TR.01.02.02",
+              "description": "Anlam ilişkilerini cümle ve paragraf bağlamında kullanarak doğru seçeneği bulur.",
+              "keywords": ["anlam ilişkisi", "bağlam"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Türleri ve Anlam Özellikleri",
+          "outcomes": [
+            {
+              "code": "TYT.TR.01.03.01",
+              "description": "Somut-soyut, olumlu-olumsuz ve nicel-nitel anlam özelliklerini ayırt eder.",
+              "keywords": ["somut", "soyut", "nicel", "nitel"]
+            },
+            {
+              "code": "TYT.TR.01.03.02",
+              "description": "Sözcüklerin anlam alanı ve kullanım alanına göre yorum yapar.",
+              "keywords": ["anlam alanı", "kullanım alanı", "bağlam"]
+            },
+            {
+              "code": "TYT.TR.01.03.03",
+              "description": "Sözcük gruplarının (tamlama, birleşik sözcük) anlam özelliklerini belirler.",
+              "keywords": ["tamlama", "birleşik sözcük", "sözcük grubu"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.TR.02",
+      "unit_name": "Cümlede Anlam",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Cümle Türleri ve Yargı",
+          "outcomes": [
+            {
+              "code": "TYT.TR.02.01.01",
+              "description": "Olumlu, olumsuz, soru, ünlem ve emir cümlelerini ayırt eder.",
+              "keywords": ["olumlu cümle", "olumsuz cümle", "soru cümlesi"]
+            },
+            {
+              "code": "TYT.TR.02.01.02",
+              "description": "Basit, birleşik, sıralı ve bağlı cümle yapılarını cümlede anlam sorularında kullanır.",
+              "keywords": ["basit cümle", "birleşik cümle", "sıralı cümle", "bağlı cümle"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Anlam İlişkileri",
+          "outcomes": [
+            {
+              "code": "TYT.TR.02.02.01",
+              "description": "Neden-sonuç, amaç-sonuç, koşul, karşılaştırma ve karşıtlık ilişkilerini belirler.",
+              "keywords": ["neden sonuç", "amaç sonuç", "koşul", "karşıtlık"]
+            },
+            {
+              "code": "TYT.TR.02.02.02",
+              "description": "Cümleler arası anlam ilişkisine göre boşluk doldurma ve tamamlama sorularını çözer.",
+              "keywords": ["cümle tamamlama", "anlam ilişkisi"]
+            },
+            {
+              "code": "TYT.TR.02.02.03",
+              "description": "Örnekleme, açıklama, tanımlama ve sonuç çıkarma ilişkilerini cümle düzeyinde yorumlar.",
+              "keywords": ["örnekleme", "açıklama", "tanımlama"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Yorumlama",
+          "outcomes": [
+            {
+              "code": "TYT.TR.02.03.01",
+              "description": "Cümlelerin ana düşüncesi, yardımcı düşünce ve vurgu noktasını tespit eder.",
+              "keywords": ["ana düşünce", "vurgu", "yardımcı düşünce"]
+            },
+            {
+              "code": "TYT.TR.02.03.02",
+              "description": "Anlamca birbirine en yakın veya en uzak cümleyi seçer.",
+              "keywords": ["anlamca yakın", "anlamca uzak"]
+            },
+            {
+              "code": "TYT.TR.02.03.03",
+              "description": "Cümlede anlatılanın öznel veya nesnel yönünü ayırt eder.",
+              "keywords": ["öznel", "nesnel", "yorum"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.TR.03",
+      "unit_name": "Paragraf",
+      "typical_questions": "12-16",
+      "topics": [
+        {
+          "topic_name": "Ana Düşünce ve Yardımcı Düşünce",
+          "outcomes": [
+            {
+              "code": "TYT.TR.03.01.01",
+              "description": "Paragrafın ana düşüncesini ve yardımcı düşüncelerini ayırt eder.",
+              "keywords": ["ana düşünce", "yardımcı düşünce", "paragraf"]
+            },
+            {
+              "code": "TYT.TR.03.01.02",
+              "description": "Paragrafın konusu, başlığı ve iletisini doğru şekilde belirler.",
+              "keywords": ["konu", "başlık", "ileti"]
+            },
+            {
+              "code": "TYT.TR.03.01.03",
+              "description": "Paragrafta savunulan görüş ile karşıt görüşü ayırt eder.",
+              "keywords": ["savunulan görüş", "karşıt görüş", "tez"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Paragraf Yapısı ve Akış",
+          "outcomes": [
+            {
+              "code": "TYT.TR.03.02.01",
+              "description": "Paragrafın giriş, gelişme ve sonuç bölümlerini yapısal olarak yorumlar.",
+              "keywords": ["giriş", "gelişme", "sonuç"]
+            },
+            {
+              "code": "TYT.TR.03.02.02",
+              "description": "Paragrafın anlam bütünlüğünü bozan cümleyi veya eksik cümleyi tespit eder.",
+              "keywords": ["anlam bütünlüğü", "paragraf tamamlama"]
+            },
+            {
+              "code": "TYT.TR.03.02.03",
+              "description": "Paragrafın akışını sağlayan bağlaç ve geçiş ifadelerini yorumlar.",
+              "keywords": ["bağlaç", "geçiş ifadesi", "akış"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Paragraf Yorumlama",
+          "outcomes": [
+            {
+              "code": "TYT.TR.03.03.01",
+              "description": "Paragrafta anlatılanları çıkarım yaparak yorumlar ve sonuç çıkarır.",
+              "keywords": ["çıkarım", "yorum", "sonuç"]
+            },
+            {
+              "code": "TYT.TR.03.03.02",
+              "description": "Paragrafta geçen düşünceyi destekleyen, örnekleyen veya karşıt görüşleri ayırt eder.",
+              "keywords": ["destekleyici", "örnekleme", "karşıt görüş"]
+            },
+            {
+              "code": "TYT.TR.03.03.03",
+              "description": "Paragrafın anlatım biçimi ve düşünceyi geliştirme yollarını belirler.",
+              "keywords": ["anlatım biçimi", "düşünceyi geliştirme"]
+            },
+            {
+              "code": "TYT.TR.03.03.04",
+              "description": "Paragrafta yazarın tutum ve duygusunu ifade eden unsurları tespit eder.",
+              "keywords": ["yazar tutumu", "duygu", "ton"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Görsel Okuma ve Metin Türleri",
+          "outcomes": [
+            {
+              "code": "TYT.TR.03.04.01",
+              "description": "Grafik, tablo ve şemalardan veri okur, karşılaştırır ve yorumlar.",
+              "keywords": ["grafik okuma", "tablo", "şema"]
+            },
+            {
+              "code": "TYT.TR.03.04.02",
+              "description": "Karikatür, afiş ve ilan gibi görsel metinlerin iletisini yorumlar.",
+              "keywords": ["karikatür", "afiş", "görsel metin"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.TR.04",
+      "unit_name": "Anlatım Özellikleri",
+      "typical_questions": "3-5",
+      "topics": [
+        {
+          "topic_name": "Anlatım Türleri",
+          "outcomes": [
+            {
+              "code": "TYT.TR.04.01.01",
+              "description": "Öyküleyici, betimleyici, açıklayıcı ve tartışmacı anlatım türlerini ayırt eder.",
+              "keywords": ["öyküleyici", "betimleyici", "açıklayıcı", "tartışmacı"]
+            },
+            {
+              "code": "TYT.TR.04.01.02",
+              "description": "Metinde kullanılan anlatım türünün özelliklerini örneklerle ilişkilendirir.",
+              "keywords": ["anlatım türü", "metin türü"]
+            },
+            {
+              "code": "TYT.TR.04.01.03",
+              "description": "Aynı metinde birden fazla anlatım türünün bir arada kullanıldığı durumları yorumlar.",
+              "keywords": ["karma anlatım", "anlatım karışımı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Düşünceyi Geliştirme Yolları",
+          "outcomes": [
+            {
+              "code": "TYT.TR.04.02.01",
+              "description": "Tanımlama, örneklendirme, karşılaştırma, tanık gösterme ve sayısal veri kullanımını belirler.",
+              "keywords": ["tanımlama", "örneklendirme", "karşılaştırma", "tanık gösterme"]
+            },
+            {
+              "code": "TYT.TR.04.02.02",
+              "description": "Metinde düşünceyi geliştirme yollarının hangi amaçla kullanıldığını yorumlar.",
+              "keywords": ["düşünceyi geliştirme", "anlatım tekniği"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Anlatım Bozuklukları",
+          "outcomes": [
+            {
+              "code": "TYT.TR.04.03.01",
+              "description": "Anlam ve yapı bozukluklarını ayırt eder ve düzeltme yollarını uygular.",
+              "keywords": ["anlam bozukluğu", "yapı bozukluğu", "düzeltme"]
+            },
+            {
+              "code": "TYT.TR.04.03.02",
+              "description": "Gereksiz sözcük kullanımı, özne-yüklem uyumsuzluğu ve mantık hatalarını tespit eder.",
+              "keywords": ["gereksiz sözcük", "özne yüklem", "mantık hatası"]
+            },
+            {
+              "code": "TYT.TR.04.03.03",
+              "description": "Anlatım bozukluğu içeren cümlelerde doğru düzeltme seçeneğini belirler.",
+              "keywords": ["anlatım düzeltme", "cümle düzenleme"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.TR.05",
+      "unit_name": "Dil Bilgisi",
+      "typical_questions": "8-12",
+      "topics": [
+        {
+          "topic_name": "Ses Bilgisi",
+          "outcomes": [
+            {
+              "code": "TYT.TR.05.01.01",
+              "description": "Türkçedeki ses olaylarını (ünsüz yumuşaması, sertleşme, ünsüz düşmesi, türemesi) ayırt eder.",
+              "keywords": ["ünsüz yumuşaması", "sertleşme", "ses olayları"]
+            },
+            {
+              "code": "TYT.TR.05.01.02",
+              "description": "Ses düşmesi, ses türemesi ve kaynaşma olaylarını örneklerle açıklar.",
+              "keywords": ["ses düşmesi", "ses türemesi", "kaynaşma"]
+            },
+            {
+              "code": "TYT.TR.05.01.03",
+              "description": "Ses bilgisi kurallarını yazım ve sözcük türetme sorularında uygular.",
+              "keywords": ["ses bilgisi", "yazım kuralı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım Kuralları",
+          "outcomes": [
+            {
+              "code": "TYT.TR.05.02.01",
+              "description": "Büyük harf, birleşik kelime, pekiştirme ve kısaltma yazım kurallarını uygular.",
+              "keywords": ["büyük harf", "birleşik kelime", "kısaltma"]
+            },
+            {
+              "code": "TYT.TR.05.02.02",
+              "description": "Eklerin ayrı ve bitişik yazımı ile yabancı kelimelerin yazımını doğru kullanır.",
+              "keywords": ["bitişik yazım", "ayrı yazım", "yabancı kelime"]
+            },
+            {
+              "code": "TYT.TR.05.02.03",
+              "description": "Sayıların, tarihlerin ve özel adların yazım kurallarını uygular.",
+              "keywords": ["sayı yazımı", "tarih", "özel ad"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Noktalama İşaretleri",
+          "outcomes": [
+            {
+              "code": "TYT.TR.05.03.01",
+              "description": "Nokta, virgül, noktalı virgül, iki nokta ve üç noktanın kullanım yerlerini belirler.",
+              "keywords": ["virgül", "nokta", "noktalı virgül", "üç nokta"]
+            },
+            {
+              "code": "TYT.TR.05.03.02",
+              "description": "Tırnak, parantez, kısa çizgi ve soru-ünlem işaretlerinin kullanımını uygular.",
+              "keywords": ["tırnak işareti", "parantez", "soru işareti"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Türleri",
+          "outcomes": [
+            {
+              "code": "TYT.TR.05.04.01",
+              "description": "İsim, sıfat, zamir, zarf, edat, bağlaç, ünlem ve fiil türlerini cümle içinde ayırt eder.",
+              "keywords": ["isim", "sıfat", "fiil", "sözcük türü"]
+            },
+            {
+              "code": "TYT.TR.05.04.02",
+              "description": "Fiilimsileri (isim-fiil, sıfat-fiil, zarf-fiil) tür ve görev bakımından belirler.",
+              "keywords": ["isim-fiil", "sıfat-fiil", "zarf-fiil", "fiilimsi"]
+            },
+            {
+              "code": "TYT.TR.05.04.03",
+              "description": "Sözcük türlerinin cümledeki görev ve anlam ilişkilerini sorularda kullanır.",
+              "keywords": ["sözcük görevi", "tür belirleme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Bilgisi",
+          "outcomes": [
+            {
+              "code": "TYT.TR.05.05.01",
+              "description": "Özne, yüklem, nesne, dolaylı tümleç ve zarf tümleci ögelerini ayırt eder.",
+              "keywords": ["özne", "yüklem", "nesne", "tümleç"]
+            },
+            {
+              "code": "TYT.TR.05.05.02",
+              "description": "Cümle türlerini (yüklemin türü, öge dizilişi, yapı) bakımından sınıflandırır.",
+              "keywords": ["cümle türü", "öge dizilişi", "yapı"]
+            },
+            {
+              "code": "TYT.TR.05.05.03",
+              "description": "Cümlede anlam ve yapı ilişkilerini dil bilgisi sorularında uygular.",
+              "keywords": ["cümle analizi", "yapı", "anlam"]
+            },
+            {
+              "code": "TYT.TR.05.05.04",
+              "description": "Fiil çatısı, kip-zaman ve kişi eklerini cümle içinde doğru yorumlar.",
+              "keywords": ["fiil çatısı", "kip", "zaman", "kişi eki"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

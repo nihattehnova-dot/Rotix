@@ -1,0 +1,35 @@
+# Render Blueprint — https://dashboard.render.com → New → Blueprint
+# Repo kökünü bağla. İlk deploy’dan sonra Environment’a secret’ları ekle.
+
+services:
+  - type: web
+    name: rotix-api
+    runtime: docker
+    dockerfilePath: ./api_backend/Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
+      - key: ALLOW_HEADER_AUTH
+        value: "false"
+      - key: BILLING_GATE_ENABLED
+        value: "true"
+      - key: PARENT_REPORT_CRON
+        value: "false"
+      # Aşağıdakileri Dashboard → Environment’ta sen doldur (sync: false = Blueprint ezmesin)
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PUBLIC_WEB_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

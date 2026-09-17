@@ -1,0 +1,177 @@
+{
+  "grade": 9,
+  "subject": "Coğrafya",
+  "program_ref": "MEB Coğrafya Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "COĞ.9.1",
+      "unit_name": "Doğa ve İnsan",
+      "topics": [
+        {
+          "topic_name": "Coğrafyanın Konusu",
+          "outcomes": [
+            {
+              "code": "COĞ.9.1.1.1",
+              "description": "Coğrafyanın tanımını ve alt dallarını (fiziki, beşerî) açıklar.",
+              "keywords": [
+                "coğrafya",
+                "fiziki",
+                "beşerî"
+              ]
+            },
+            {
+              "code": "COĞ.9.1.1.2",
+              "description": "Coğrafyanın günlük yaşamdaki işlevlerini örnekler.",
+              "keywords": [
+                "coğrafya uygulaması"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.9.2",
+      "unit_name": "Dünya'nın Şekli ve Hareketleri",
+      "topics": [
+        {
+          "topic_name": "Dünya'nın Konumu",
+          "outcomes": [
+            {
+              "code": "COĞ.9.2.1.1",
+              "description": "Dünya'nın şeklini ve sonuçlarını açıklar.",
+              "keywords": [
+                "geoit",
+                "Dünya şekli"
+              ]
+            },
+            {
+              "code": "COĞ.9.2.1.2",
+              "description": "Dünya'nın dönme ve dolanma hareketlerinin etkilerini yorumlar.",
+              "keywords": [
+                "dönme",
+                "dolanma"
+              ]
+            },
+            {
+              "code": "COĞ.9.2.1.3",
+              "description": "Koordinat sistemini (enlem, boylam) kullanır.",
+              "keywords": [
+                "enlem",
+                "boylam"
+              ]
+            },
+            {
+              "code": "COĞ.9.2.1.4",
+              "description": "Saat dilimlerini açıklar.",
+              "keywords": [
+                "saat dilimi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.9.3",
+      "unit_name": "Atmosfer ve İklim",
+      "topics": [
+        {
+          "topic_name": "İklim Elemanları",
+          "outcomes": [
+            {
+              "code": "COĞ.9.3.1.1",
+              "description": "Sıcaklık, basınç, nem, rüzgâr ve yağış kavramlarını açıklar.",
+              "keywords": [
+                "sıcaklık",
+                "basınç",
+                "yağış"
+              ]
+            },
+            {
+              "code": "COĞ.9.3.1.2",
+              "description": "İklim tiplerini (tropikal, ılıman, kutup) ayırt eder.",
+              "keywords": [
+                "iklim tipi"
+              ]
+            },
+            {
+              "code": "COĞ.9.3.1.3",
+              "description": "Türkiye'de görülen iklim tiplerini tanır.",
+              "keywords": [
+                "Türkiye iklimi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.9.4",
+      "unit_name": "Yer Şekilleri",
+      "topics": [
+        {
+          "topic_name": "Dış ve İç Kuvvetler",
+          "outcomes": [
+            {
+              "code": "COĞ.9.4.1.1",
+              "description": "Dış kuvvetlerin (akarsu, rüzgâr, buzul) yer şekilleri oluşturma süreçlerini açıklar.",
+              "keywords": [
+                "dış kuvvet",
+                "erozyon"
+              ]
+            },
+            {
+              "code": "COĞ.9.4.1.2",
+              "description": "İç kuvvetlerin (deprem, volkanizma, dağ oluşumu) etkilerini yorumlar.",
+              "keywords": [
+                "deprem",
+                "volkanizma"
+              ]
+            },
+            {
+              "code": "COĞ.9.4.1.3",
+              "description": "Türkiye'nin yer şekillerini harita üzerinde gösterir.",
+              "keywords": [
+                "Türkiye yer şekilleri"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.9.5",
+      "unit_name": "Nüfus",
+      "topics": [
+        {
+          "topic_name": "Nüfus Özellikleri",
+          "outcomes": [
+            {
+              "code": "COĞ.9.5.1.1",
+              "description": "Nüfus artış hızı ve piramitlerini yorumlar.",
+              "keywords": [
+                "nüfus artışı",
+                "nüfus piramidi"
+              ]
+            },
+            {
+              "code": "COĞ.9.5.1.2",
+              "description": "Göç türlerini ve nedenlerini açıklar.",
+              "keywords": [
+                "göç"
+              ]
+            },
+            {
+              "code": "COĞ.9.5.1.3",
+              "description": "Türkiye'nin nüfus dağılışını harita üzerinde analiz eder.",
+              "keywords": [
+                "nüfus dağılışı"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

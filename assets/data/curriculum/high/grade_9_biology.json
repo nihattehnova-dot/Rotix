@@ -1,0 +1,187 @@
+{
+  "grade": 9,
+  "subject": "Biyoloji",
+  "program_ref": "MEB Biyoloji Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "BİY.9.1",
+      "unit_name": "Yaşam Bilimi Biyoloji",
+      "topics": [
+        {
+          "topic_name": "Biyolojinin Kapsamı",
+          "outcomes": [
+            {
+              "code": "BİY.9.1.1.1",
+              "description": "Biyolojinin tanımını ve alt dallarını açıklar.",
+              "keywords": [
+                "biyoloji",
+                "alt dal"
+              ]
+            },
+            {
+              "code": "BİY.9.1.1.2",
+              "description": "Canlıların ortak özelliklerini sıralar.",
+              "keywords": [
+                "canlı özellikleri"
+              ]
+            },
+            {
+              "code": "BİY.9.1.1.3",
+              "description": "Bilimsel yöntemi biyolojide uygular.",
+              "keywords": [
+                "bilimsel yöntem"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.9.2",
+      "unit_name": "Hücre",
+      "topics": [
+        {
+          "topic_name": "Hücre Yapısı",
+          "outcomes": [
+            {
+              "code": "BİY.9.2.1.1",
+              "description": "Prokaryot ve ökaryot hücre ayrımını yapar.",
+              "keywords": [
+                "prokaryot",
+                "ökaryot"
+              ]
+            },
+            {
+              "code": "BİY.9.2.1.2",
+              "description": "Hücre zarının yapısını ve madde geçişlerini açıklar.",
+              "keywords": [
+                "hücre zarı",
+                "osmos"
+              ]
+            },
+            {
+              "code": "BİY.9.2.1.3",
+              "description": "Organellerin (mitokondri, ribozom, ER, Golgi, kloroplast) yapı ve işlevlerini tanır.",
+              "keywords": [
+                "organeller"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Hücre Bölünmesi",
+          "outcomes": [
+            {
+              "code": "BİY.9.2.2.1",
+              "description": "Mitoz ve mayoz bölünme aşamalarını karşılaştırır.",
+              "keywords": [
+                "mitoz",
+                "mayoz"
+              ]
+            },
+            {
+              "code": "BİY.9.2.2.2",
+              "description": "Hücre döngüsünü açıklar.",
+              "keywords": [
+                "hücre döngüsü"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.9.3",
+      "unit_name": "Canlılar Dünyası",
+      "topics": [
+        {
+          "topic_name": "Canlıların Sınıflandırılması",
+          "outcomes": [
+            {
+              "code": "BİY.9.3.1.1",
+              "description": "Beş âlem sistemini (Monera, Protista, Fungi, Plantae, Animalia) tanır.",
+              "keywords": [
+                "âlem",
+                "sınıflandırma"
+              ]
+            },
+            {
+              "code": "BİY.9.3.1.2",
+              "description": "Virüslerin özelliklerini ve canlı- cansız sınırındaki konumunu açıklar.",
+              "keywords": [
+                "virüs"
+              ]
+            },
+            {
+              "code": "BİY.9.3.1.3",
+              "description": "Taksonomi basamaklarını (cins, tür, familya) sıralar.",
+              "keywords": [
+                "taksonomi"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bitki ve Hayvan Çeşitliliği",
+          "outcomes": [
+            {
+              "code": "BİY.9.3.2.1",
+              "description": "Bitki gruplarının (yosun, ot, çalı, ağaç) temel özelliklerini ayırt eder.",
+              "keywords": [
+                "bitki grupları"
+              ]
+            },
+            {
+              "code": "BİY.9.3.2.2",
+              "description": "Omurgalı ve omurgasız hayvan gruplarını tanır.",
+              "keywords": [
+                "omurgalı",
+                "omurgasız"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.9.4",
+      "unit_name": "Dünya'mız",
+      "topics": [
+        {
+          "topic_name": "Ekosistem",
+          "outcomes": [
+            {
+              "code": "BİY.9.4.1.1",
+              "description": "Ekosistem bileşenlerini (biyotik, abiyotik) tanır.",
+              "keywords": [
+                "ekosistem",
+                "biyotik"
+              ]
+            },
+            {
+              "code": "BİY.9.4.1.2",
+              "description": "Besin zinciri ve besin ağını çizer.",
+              "keywords": [
+                "besin zinciri"
+              ]
+            },
+            {
+              "code": "BİY.9.4.1.3",
+              "description": "Madde döngülerini (karbon, azot, su) açıklar.",
+              "keywords": [
+                "madde döngüsü"
+              ]
+            },
+            {
+              "code": "BİY.9.4.1.4",
+              "description": "Biyoçeşitliliğin önemini ve tehditlerini değerlendirir.",
+              "keywords": [
+                "biyoçeşitlilik"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

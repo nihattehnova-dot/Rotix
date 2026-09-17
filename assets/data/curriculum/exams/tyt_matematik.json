@@ -1,0 +1,530 @@
+{
+  "grade": "TYT",
+  "subject": "Matematik",
+  "program_ref": "ÖSYM TYT Temel Matematik + Geometri soru dağılımı (yaklaşık 30 + 10 soru)",
+  "exam_meta": {
+    "total_questions": 40,
+    "math_questions": 30,
+    "geometry_questions": 10,
+    "notes": "Soru sayıları yıllara göre değişebilir; aralıklar son yılların ÖSYM dağılımına göredir."
+  },
+  "units": [
+    {
+      "unit_code": "TYT.MAT.01",
+      "unit_name": "Sayılar ve Temel Kavramlar",
+      "typical_questions": "4-8",
+      "topics": [
+        {
+          "topic_name": "Temel Kavramlar",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.01.01",
+              "description": "Doğal, tam, asal, tek-çift ve ardışık sayı kavramlarını problemlerde kullanır.",
+              "keywords": ["asal", "tek çift", "ardışık", "tam sayı"]
+            },
+            {
+              "code": "TYT.MAT.01.01.02",
+              "description": "Pozitif-negatif, bölen-kat ve sayı kümeleri arasındaki ilişkileri yorumlar.",
+              "keywords": ["bölen", "kat", "sayı kümeleri"]
+            },
+            {
+              "code": "TYT.MAT.01.01.03",
+              "description": "Temel kavram sorularında işlem önceliği ve özelliklerini uygular.",
+              "keywords": ["işlem önceliği", "özellikler"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sayı Basamakları",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.02.01",
+              "description": "Bir sayının basamak değerlerini ve rakam değerlerini ayırt eder.",
+              "keywords": ["basamak değeri", "rakam değeri"]
+            },
+            {
+              "code": "TYT.MAT.01.02.02",
+              "description": "İki veya daha çok basamaklı sayılarla kurulan basamak problemlerini çözer.",
+              "keywords": ["basamak problemi", "abc sayısı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bölme ve Bölünebilme",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.03.01",
+              "description": "2, 3, 4, 5, 8, 9, 10 ve 11 ile bölünebilme kurallarını uygular.",
+              "keywords": ["bölünebilme", "kalan"]
+            },
+            {
+              "code": "TYT.MAT.01.03.02",
+              "description": "Bölme algoritması, bölüm-kalan ilişkisi ve kalanlı bölme problemlerini çözer.",
+              "keywords": ["bölünen", "bölen", "bölüm", "kalan"]
+            }
+          ]
+        },
+        {
+          "topic_name": "EBOB – EKOK",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.04.01",
+              "description": "İki veya daha fazla sayının EBOB ve EKOK değerlerini bulur.",
+              "keywords": ["EBOB", "EKOK", "OBEB", "OKEK"]
+            },
+            {
+              "code": "TYT.MAT.01.04.02",
+              "description": "EBOB-EKOK ilişkilerini günlük hayat ve problem durumlarında kullanır.",
+              "keywords": ["ortak bölen", "ortak kat"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Rasyonel Sayılar",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.05.01",
+              "description": "Rasyonel sayılarda dört işlemi ve sıralamayı yapar.",
+              "keywords": ["kesir", "rasyonel", "dört işlem"]
+            },
+            {
+              "code": "TYT.MAT.01.05.02",
+              "description": "Ondalık gösterim, sonsuz tekrarlı ondalık ve kesir dönüşümlerini uygular.",
+              "keywords": ["ondalık", "dönüşüm", "tekrarlı"]
+            },
+            {
+              "code": "TYT.MAT.01.05.03",
+              "description": "Rasyonel sayılarla kurulan işlem ve karşılaştırma sorularını çözer.",
+              "keywords": ["karşılaştırma", "işlem sorusu"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Mutlak Değer",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.06.01",
+              "description": "Mutlak değer tanımını sayı doğrusu ve işlemlerde kullanır.",
+              "keywords": ["mutlak değer", "|x|"]
+            },
+            {
+              "code": "TYT.MAT.01.06.02",
+              "description": "Mutlak değer içeren denklem ve eşitsizlikleri çözer.",
+              "keywords": ["mutlak değer denklem", "eşitsizlik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üslü Sayılar",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.07.01",
+              "description": "Üslü sayı kurallarını (çarpma, bölme, üssün üssü, sıfır ve negatif üs) uygular.",
+              "keywords": ["üs", "üslü sayı kuralları"]
+            },
+            {
+              "code": "TYT.MAT.01.07.02",
+              "description": "Üslü ifadeleri sadeleştirir ve basit üslü denklemleri çözer.",
+              "keywords": ["sadeleştirme", "üslü denklem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Köklü Sayılar",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.01.08.01",
+              "description": "Kök alma, çarpma-bölme ve kök içinde sadeleştirme işlemlerini yapar.",
+              "keywords": ["karekök", "kök sadeleştirme"]
+            },
+            {
+              "code": "TYT.MAT.01.08.02",
+              "description": "Eşlenik çarpan ve köklü ifadelerde işlem yapar.",
+              "keywords": ["eşlenik", "köklü işlem"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.MAT.02",
+      "unit_name": "Cebir",
+      "typical_questions": "3-6",
+      "topics": [
+        {
+          "topic_name": "Basit Eşitsizlikler",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.02.01.01",
+              "description": "Birinci dereceden eşitsizlikleri çözer ve sayı doğrusunda gösterir.",
+              "keywords": ["eşitsizlik", "sayı doğrusu"]
+            },
+            {
+              "code": "TYT.MAT.02.01.02",
+              "description": "Aralık gösterimi ve bileşik eşitsizlikleri yorumlar.",
+              "keywords": ["aralık", "bileşik eşitsizlik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çarpanlara Ayırma",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.02.02.01",
+              "description": "Ortak çarpan, gruplandırma ve özdeşliklerle çarpanlara ayırır.",
+              "keywords": ["ortak çarpan", "özdeşlik"]
+            },
+            {
+              "code": "TYT.MAT.02.02.02",
+              "description": "Çarpanlara ayırmayı sadeleştirme ve denklem çözmede kullanır.",
+              "keywords": ["sadeleştirme", "kök bulma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Oran – Orantı",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.02.03.01",
+              "description": "Doğru ve ters orantıyı ayırt eder, orantı problemlerini çözer.",
+              "keywords": ["doğru orantı", "ters orantı"]
+            },
+            {
+              "code": "TYT.MAT.02.03.02",
+              "description": "Oran-orantıyı yüzde, karışım ve benzerlik bağlamında kullanır.",
+              "keywords": ["oran", "yüzde"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Denklem Çözme",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.02.04.01",
+              "description": "Birinci dereceden bir bilinmeyenli denklemleri çözer.",
+              "keywords": ["lineer denklem", "bilinmeyen"]
+            },
+            {
+              "code": "TYT.MAT.02.04.02",
+              "description": "Basit iki bilinmeyenli denklem sistemlerini çözer.",
+              "keywords": ["denklem sistemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Polinomlar",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.02.05.01",
+              "description": "Polinomlarda toplama, çıkarma, çarpma ve değer bulma işlemlerini yapar.",
+              "keywords": ["polinom", "derece", "katsayı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İkinci Dereceden Denklemler",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.02.06.01",
+              "description": "İkinci dereceden denklemleri çarpanlara ayırma veya diskriminant ile çözer.",
+              "keywords": ["diskriminant", "kökler", "ax²+bx+c"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.MAT.03",
+      "unit_name": "Problemler",
+      "typical_questions": "10-14",
+      "topics": [
+        {
+          "topic_name": "Sayı Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.01.01",
+              "description": "Sayıların toplamı, farkı, çarpımı ve ardışıklığı ile ilgili problemleri çözer.",
+              "keywords": ["sayı problemi", "ardışık"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yaş Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.02.01",
+              "description": "Şimdiki, geçmiş ve gelecek yaş ilişkilerini kurarak yaş problemlerini çözer.",
+              "keywords": ["yaş problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Hareket Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.03.01",
+              "description": "Yol-hız-zaman ilişkisini kullanarak hareket problemlerini çözer.",
+              "keywords": ["hız", "yol", "zaman", "karşılaşma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İşçi Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.04.01",
+              "description": "İşçi-havuz tipi problemlerde birim iş ve süre ilişkilerini kullanır.",
+              "keywords": ["işçi", "havuz", "birim iş"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yüzde Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.05.01",
+              "description": "Yüzde artışı-azalışı ve yüzde problemlerini çözer.",
+              "keywords": ["yüzde", "artış azalış"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kâr – Zarar Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.06.01",
+              "description": "Alış, satış, kâr, zarar ve indirim problemlerini çözer.",
+              "keywords": ["kâr", "zarar", "indirim"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Karışım Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.07.01",
+              "description": "Karışım, alaşım ve derişim problemlerini oran-orantı ile çözer.",
+              "keywords": ["karışım", "alaşım", "derişim"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Oran–Orantı ve Grafik Problemleri",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.03.08.01",
+              "description": "Tablo, grafik ve oran içeren çok adımlı problemleri yorumlayarak çözer.",
+              "keywords": ["grafik okuma", "çok adımlı problem"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.MAT.04",
+      "unit_name": "Kümeler, Mantık ve Fonksiyonlar",
+      "typical_questions": "3-5",
+      "topics": [
+        {
+          "topic_name": "Kümeler – Kartezyen Çarpım",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.04.01.01",
+              "description": "Küme işlemlerini (birleşim, kesişim, fark, tümleyen) uygular.",
+              "keywords": ["birleşim", "kesişim", "tümleyen"]
+            },
+            {
+              "code": "TYT.MAT.04.01.02",
+              "description": "Kartezyen çarpım ve Venn şeması sorularını çözer.",
+              "keywords": ["kartezyen", "Venn"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Mantık",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.04.02.01",
+              "description": "Önerme, değili, ve/veya bağlaçları ile doğruluk değeri hesaplar.",
+              "keywords": ["önerme", "doğruluk tablosu"]
+            },
+            {
+              "code": "TYT.MAT.04.02.02",
+              "description": "Gerek-yeter şart ve koşullu önerme sorularını yorumlar.",
+              "keywords": ["gerek şart", "yeter şart", "ise"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Fonksiyonlar",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.04.03.01",
+              "description": "Fonksiyon tanımı, tanım-görüntü kümesi ve değer bulmayı uygular.",
+              "keywords": ["fonksiyon", "f(x)", "tanım kümesi"]
+            },
+            {
+              "code": "TYT.MAT.04.03.02",
+              "description": "Fonksiyon grafiklerini ve temel dönüşümleri yorumlar.",
+              "keywords": ["grafik", "bileşke", "ters fonksiyon"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.MAT.05",
+      "unit_name": "Sayma, Olasılık ve Veri",
+      "typical_questions": "3-5",
+      "topics": [
+        {
+          "topic_name": "Permütasyon – Kombinasyon",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.05.01.01",
+              "description": "Sıralı ve sırasız seçimleri ayırt ederek permütasyon-kombinasyon hesaplar.",
+              "keywords": ["permütasyon", "kombinasyon", "P", "C"]
+            },
+            {
+              "code": "TYT.MAT.05.01.02",
+              "description": "Çarpma kuralı ve sayma teknikleriyle problem çözer.",
+              "keywords": ["sayma", "çarpma kuralı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Olasılık",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.05.02.01",
+              "description": "Klasik olasılıkta uygun durum / tüm durum oranını hesaplar.",
+              "keywords": ["olasılık", "uygun durum"]
+            },
+            {
+              "code": "TYT.MAT.05.02.02",
+              "description": "Bağımsız olay ve basit koşullu olasılık sorularını çözer.",
+              "keywords": ["bağımsız olay", "koşullu olasılık"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Veri – İstatistik",
+          "outcomes": [
+            {
+              "code": "TYT.MAT.05.03.01",
+              "description": "Ortalama, medyan, mod ve açıklık kavramlarını kullanır.",
+              "keywords": ["ortalama", "medyan", "mod"]
+            },
+            {
+              "code": "TYT.MAT.05.03.02",
+              "description": "Tablo ve grafiklerden veri okur, yorumlar ve karşılaştırır.",
+              "keywords": ["istatistik", "veri grafiği"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.GEO.01",
+      "unit_name": "Geometri",
+      "typical_questions": "9-10",
+      "topics": [
+        {
+          "topic_name": "Temel Geometri ve Açılar",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.01.01",
+              "description": "Nokta, doğru, ışın, doğru parçası ve açı kavramlarını kullanır.",
+              "keywords": ["açı", "doğru", "ışın"]
+            },
+            {
+              "code": "TYT.GEO.01.01.02",
+              "description": "Komşu, bütünler, ters ve yöndeş açı ilişkilerini uygular.",
+              "keywords": ["ters açılar", "bütünler açı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üçgenler",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.02.01",
+              "description": "Üçgen eşitsizliği, açı-kenar ilişkileri ve özel üçgenleri kullanır.",
+              "keywords": ["üçgen", "özel üçgen", "eşitsizlik"]
+            },
+            {
+              "code": "TYT.GEO.01.02.02",
+              "description": "Benzerlik, Pisagor ve alan hesaplarını üçgen sorularında uygular.",
+              "keywords": ["benzerlik", "Pisagor", "alan"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çokgenler",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.03.01",
+              "description": "Düzgün çokgenlerde iç-dış açı ve kenar ilişkilerini çözer.",
+              "keywords": ["çokgen", "iç açı", "dış açı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Dörtgenler",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.04.01",
+              "description": "Paralelkenar, dikdörtgen, kare, eşkenar dörtgen ve yamuk özelliklerini kullanır.",
+              "keywords": ["paralelkenar", "yamuk", "kare", "dikdörtgen"]
+            },
+            {
+              "code": "TYT.GEO.01.04.02",
+              "description": "Dörtgenlerde çevre ve alan hesaplarını yapar.",
+              "keywords": ["dörtgen alanı", "çevre"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çember ve Daire",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.05.01",
+              "description": "Çemberde kiriş, teğet, merkez-çevre açı ilişkilerini uygular.",
+              "keywords": ["çember", "teğet", "kiriş"]
+            },
+            {
+              "code": "TYT.GEO.01.05.02",
+              "description": "Dairede alan ve yay uzunluğu hesaplarını yapar.",
+              "keywords": ["daire alanı", "yay"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Katı Cisimler",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.06.01",
+              "description": "Küp, dikdörtgenler prizması, silindir, koni ve kürede hacim-alan hesaplar.",
+              "keywords": ["hacim", "yüzey alanı", "prizma", "silindir"]
+            },
+            {
+              "code": "TYT.GEO.01.06.02",
+              "description": "Katı cisimlerin açınımı ve kesit sorularını yorumlar.",
+              "keywords": ["açınım", "kesit"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Analitik Geometri (Temel)",
+          "outcomes": [
+            {
+              "code": "TYT.GEO.01.07.01",
+              "description": "Dik koordinat düzleminde nokta, doğru eğimi ve uzaklık hesaplarını yapar.",
+              "keywords": ["koordinat", "eğim", "uzaklık"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

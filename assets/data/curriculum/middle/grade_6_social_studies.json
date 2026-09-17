@@ -1,0 +1,164 @@
+{
+  "grade": 6,
+  "subject": "Sosyal Bilgiler",
+  "program_ref": "MEB Sosyal Bilgiler Dersi Öğretim Programı (Ortaokul, 6. Sınıf)",
+  "units": [
+    {
+      "unit_code": "SB.6.1",
+      "unit_name": "Birey ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Toplumsal Değerler ve Dayanışma",
+          "outcomes": [
+            {"code": "SB.6.1.1.1", "description": "Toplumsal dayanışmanın birey ve toplum sağlığına katkısını açıklar.", "keywords": ["dayanışma", "yardımlaşma", "toplum"]},
+            {"code": "SB.6.1.1.2", "description": "Empati kurmanın iletişim ve çatışma çözümündeki rolünü değerlendirir.", "keywords": ["empati", "iletişim", "çatışma çözümü"]},
+            {"code": "SB.6.1.1.3", "description": "Toplumsal değerlerin (dürüstlük, adalet, saygı) günlük yaşamdaki yansımalarını örnekler.", "keywords": ["değer", "dürüstlük", "adalet"]},
+            {"code": "SB.6.1.1.4", "description": "Sivil toplum kuruluşlarının toplumsal sorunlara çözüm üretmedeki rolünü açıklar.", "keywords": ["STK", "gönüllülük", "sivil toplum"]}
+          ]
+        },
+        {
+          "topic_name": "Kültürlerarası İletişim",
+          "outcomes": [
+            {"code": "SB.6.1.2.1", "description": "Farklı kültürlerin zenginliğini tanır; önyargılardan kaçınmanın önemini açıklar.", "keywords": ["kültür", "önyargı", "zenginlik"]},
+            {"code": "SB.6.1.2.2", "description": "Göç ve kültürel etkileşimin toplumsal sonuçlarını değerlendirir.", "keywords": ["göç", "kültürel etkileşim", "uyum"]},
+            {"code": "SB.6.1.2.3", "description": "İnsan hakları ihlallerine karşı duyarlılık geliştirir.", "keywords": ["insan hakları", "ayrımcılık", "duyarlılık"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.6.2",
+      "unit_name": "Kültür ve Miras",
+      "topics": [
+        {
+          "topic_name": "İslam Medeniyeti ve Türk-İslam Devletleri",
+          "outcomes": [
+            {"code": "SB.6.2.1.1", "description": "İslam dininin doğuşu ve yayılışını temel özellikleriyle açıklar.", "keywords": ["İslam", "Hz. Muhammed", "yayılış"]},
+            {"code": "SB.6.2.1.2", "description": "Karahanlı, Gazneli ve Büyük Selçuklu devletlerinin kuruluş ve gelişim süreçlerini sıralar.", "keywords": ["Karahanlı", "Gazneli", "Selçuklu"]},
+            {"code": "SB.6.2.1.3", "description": "Malazgirt Savaşı'nın Anadolu'nun kapılarının Türklere açılmasındaki rolünü açıklar.", "keywords": ["Malazgirt", "1071", "Anadolu"]},
+            {"code": "SB.6.2.1.4", "description": "Türk-İslam devletlerinde bilim, sanat ve mimarinin gelişimini örneklerle açıklar.", "keywords": ["medrese", "mimari", "bilim"]}
+          ]
+        },
+        {
+          "topic_name": "Anadolu'da İlk Türk Beylikleri",
+          "outcomes": [
+            {"code": "SB.6.2.2.1", "description": "Anadolu Selçuklu Devleti'nin kuruluşunu ve önemli sultanlarını tanır.", "keywords": ["Anadolu Selçuklu", "Sultan", "Konya"]},
+            {"code": "SB.6.2.2.2", "description": "Moğol istilası sonrası Anadolu'da kurulan beylikleri (Osmanlı, Karamanoğulları vb.) harita üzerinde gösterir.", "keywords": ["beylik", "Moğol", "Anadolu"]},
+            {"code": "SB.6.2.2.3", "description": "Anadolu'da ticaret yollarının (İpek Yolu, kervansaray) kültürel etkileşime katkısını açıklar.", "keywords": ["İpek Yolu", "kervansaray", "ticaret"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.6.3",
+      "unit_name": "İnsanlar, Yerler ve Çevreler",
+      "topics": [
+        {
+          "topic_name": "Harita Bilgisi ve Becerileri",
+          "outcomes": [
+            {"code": "SB.6.3.1.1", "description": "Harita türlerini (fiziki, siyasi, iklim, nüfus) kullanım amaçlarına göre ayırt eder.", "keywords": ["harita türü", "fiziki harita", "siyasi harita"]},
+            {"code": "SB.6.3.1.2", "description": "Harita ölçeği, yön, lejant ve grid sistemini kullanarak konum belirler.", "keywords": ["ölçek", "lejant", "grid", "koordinat"]},
+            {"code": "SB.6.3.1.3", "description": "Türkiye'nin bölgesel coğrafya haritalarını yorumlar.", "keywords": ["bölge", "coğrafya", "harita okuma"]}
+          ]
+        },
+        {
+          "topic_name": "Türkiye'nin Bölgeleri",
+          "outcomes": [
+            {"code": "SB.6.3.2.1", "description": "Türkiye'nin coğrafi bölgelerini (Marmara, Ege, Akdeniz, İç Anadolu, Karadeniz, Doğu Anadolu, Güneydoğu Anadolu) harita üzerinde tanır.", "keywords": ["coğrafi bölge", "Marmara", "Ege", "Akdeniz"]},
+            {"code": "SB.6.3.2.2", "description": "Bölgelerin iklim, bitki örtüsü ve tarım ürünleri arasındaki ilişkiyi karşılaştırır.", "keywords": ["iklim", "tarım", "bölge karşılaştırma"]},
+            {"code": "SB.6.3.2.3", "description": "Nüfus dağılışının doğal ve beşerî faktörlerle ilişkisini açıklar.", "keywords": ["nüfus", "dağılış", "göç"]},
+            {"code": "SB.6.3.2.4", "description": "Bölgeler arası ulaşım ve ticaret bağlantılarını değerlendirir.", "keywords": ["ulaşım", "ticaret", "bölgesel bağlantı"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.6.4",
+      "unit_name": "Bilim, Teknoloji ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Tarihte Bilim ve Teknoloji",
+          "outcomes": [
+            {"code": "SB.6.4.1.1", "description": "İslam medeniyetinde bilim insanlarının (İbn Sina, El-Biruni, Farabi) katkılarını tanır.", "keywords": ["İbn Sina", "El-Biruni", "Farabi", "bilim"]},
+            {"code": "SB.6.4.1.2", "description": "Osmanlı döneminde matbaa, barut ve denizcilik alanındaki gelişmeleri açıklar.", "keywords": ["matbaa", "barut", "denizcilik", "Osmanlı"]},
+            {"code": "SB.6.4.1.3", "description": "Bilimsel gelişmelerin toplumsal yaşamı dönüştürme gücünü tarihsel örneklerle açıklar.", "keywords": ["bilimsel devrim", "teknoloji", "değişim"]}
+          ]
+        },
+        {
+          "topic_name": "Kaynaklar ve Bilgi Okuryazarlığı",
+          "outcomes": [
+            {"code": "SB.6.4.2.1", "description": "Birincil ve ikincil kaynakları ayırt eder; tarihsel araştırmada kullanır.", "keywords": ["birincil kaynak", "ikincil kaynak", "arşiv"]},
+            {"code": "SB.6.4.2.2", "description": "Kaynakların güvenilirliğini değerlendirme ölçütlerini uygular.", "keywords": ["güvenilirlik", "doğrulama", "kaynak"]},
+            {"code": "SB.6.4.2.3", "description": "Araştırma sürecinde not alma, kaynak gösterme ve alıntı kurallarını uygular.", "keywords": ["kaynak gösterme", "alıntı", "araştırma"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.6.5",
+      "unit_name": "Üretim, Dağıtım ve Tüketim",
+      "topics": [
+        {
+          "topic_name": "Ekonomik Sistemler",
+          "outcomes": [
+            {"code": "SB.6.5.1.1", "description": "Geleneksel, sanayi ve hizmet toplumlarının temel özelliklerini karşılaştırır.", "keywords": ["geleneksel toplum", "sanayi toplumu", "hizmet toplumu"]},
+            {"code": "SB.6.5.1.2", "description": "Üretim faktörlerini (doğal kaynak, emek, sermaye, girişimcilik) tanımlar.", "keywords": ["üretim faktörü", "sermaye", "girişimcilik"]},
+            {"code": "SB.6.5.1.3", "description": "Türkiye ekonomisinde tarım, sanayi ve hizmet sektörlerinin payını değerlendirir.", "keywords": ["sektör", "GSYİH", "ekonomi"]}
+          ]
+        },
+        {
+          "topic_name": "Ticaret ve Tüketim",
+          "outcomes": [
+            {"code": "SB.6.5.2.1", "description": "İç ve dış ticaret kavramlarını ayırt eder; Türkiye'nin dış ticaret partnerlerini tanır.", "keywords": ["iç ticaret", "dış ticaret", "ihracat", "ithalat"]},
+            {"code": "SB.6.5.2.2", "description": "Tüketici haklarını tanır; bilinçli alışveriş yapmanın önemini açıklar.", "keywords": ["tüketici hakkı", "garanti", "bilinçli alışveriş"]},
+            {"code": "SB.6.5.2.3", "description": "Küresel tedarik zincirlerinin üretim ve tüketime etkisini değerlendirir.", "keywords": ["tedarik zinciri", "küresel ticaret", "lojistik"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.6.6",
+      "unit_name": "Etkin Vatandaşlık",
+      "topics": [
+        {
+          "topic_name": "Yönetim Biçimleri ve Katılım",
+          "outcomes": [
+            {"code": "SB.6.6.1.1", "description": "Monarşi, oligarşi, demokrasi gibi yönetim biçimlerini temel özellikleriyle karşılaştırır.", "keywords": ["monarşi", "demokrasi", "yönetim biçimi"]},
+            {"code": "SB.6.6.1.2", "description": "Yerel yönetimlerin (belediye, il genel meclisi) görev ve sorumluluklarını açıklar.", "keywords": ["yerel yönetim", "belediye", "katılım"]},
+            {"code": "SB.6.6.1.3", "description": "Demokratik katılım yollarını (seçim, anket, sivil toplum) tanır.", "keywords": ["demokratik katılım", "seçim", "oy"]}
+          ]
+        },
+        {
+          "topic_name": "Hukuk ve Adalet",
+          "outcomes": [
+            {"code": "SB.6.6.2.1", "description": "Anayasanın devletin temel yapısını ve vatandaş haklarını düzenlediğini açıklar.", "keywords": ["anayasa", "temel hak", "hukuk"]},
+            {"code": "SB.6.6.2.2", "description": "Hukukun üstünlüğü ilkesini örneklerle açıklar.", "keywords": ["hukukun üstünlüğü", "adalet", "eşitlik"]},
+            {"code": "SB.6.6.2.3", "description": "Çocukların adalete erişim haklarını ve koruma mekanizmalarını tanır.", "keywords": ["çocuk koruma", "adalet", "hak"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.6.7",
+      "unit_name": "Küresel Bağlantılar",
+      "topics": [
+        {
+          "topic_name": "Kültürel Etkileşim ve Ticaret Yolları",
+          "outcomes": [
+            {"code": "SB.6.7.1.1", "description": "Tarih boyunca kültürler arası etkileşimi sağlayan ticaret yollarını (İpek Yolu, Baharat Yolu) harita üzerinde gösterir.", "keywords": ["İpek Yolu", "Baharat Yolu", "kültürel etkileşim"]},
+            {"code": "SB.6.7.1.2", "description": "Ticaret yollarının şehirleşme ve medeniyet gelişimine katkısını açıklar.", "keywords": ["ticaret", "şehirleşme", "medeniyet"]},
+            {"code": "SB.6.7.1.3", "description": "Günümüzde küresel ticaret ağlarının ülkeler arası bağımlılığı artırdığını değerlendirir.", "keywords": ["küresel ticaret", "bağımlılık", "ekonomi"]}
+          ]
+        },
+        {
+          "topic_name": "Uluslararası İş Birliği",
+          "outcomes": [
+            {"code": "SB.6.7.2.1", "description": "Birleşmiş Milletler'in kuruluş amacını ve temel organlarını tanır.", "keywords": ["BM", "barış", "iş birliği"]},
+            {"code": "SB.6.7.2.2", "description": "UNESCO'nun kültürel miras koruma çalışmalarını örneklerle açıklar.", "keywords": ["UNESCO", "Dünya Mirası", "koruma"]},
+            {"code": "SB.6.7.2.3", "description": "Küresel sorunlara (savaş, açlık, iklim) karşı uluslararası dayanışmanın gerekliliğini savunur.", "keywords": ["küresel sorun", "dayanışma", "insani yardım"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

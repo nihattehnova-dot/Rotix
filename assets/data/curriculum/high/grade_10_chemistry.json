@@ -1,0 +1,177 @@
+{
+  "grade": 10,
+  "subject": "Kimya",
+  "program_ref": "MEB Kimya Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "KİM.10.1",
+      "unit_name": "Asitler, Bazlar ve Tuzlar",
+      "topics": [
+        {
+          "topic_name": "Asit-Baz Teorisi",
+          "outcomes": [
+            {
+              "code": "KİM.10.1.1.1",
+              "description": "Arrhenius, Bronsted-Lowry asit-baz tanımlarını açıklar.",
+              "keywords": [
+                "asit",
+                "baz",
+                "Arrhenius"
+              ]
+            },
+            {
+              "code": "KİM.10.1.1.2",
+              "description": "pH ve pOH kavramlarını kullanır; hesaplamalar yapar.",
+              "keywords": [
+                "pH",
+                "pOH"
+              ]
+            },
+            {
+              "code": "KİM.10.1.1.3",
+              "description": "Nötrleşme tepkimelerini denkleştirir.",
+              "keywords": [
+                "nötrleşme"
+              ]
+            },
+            {
+              "code": "KİM.10.1.1.4",
+              "description": "Tuzların oluşumunu ve özelliklerini açıklar.",
+              "keywords": [
+                "tuz"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.10.2",
+      "unit_name": "Karışımlar",
+      "topics": [
+        {
+          "topic_name": "Homojen ve Heterojen Karışımlar",
+          "outcomes": [
+            {
+              "code": "KİM.10.2.1.1",
+              "description": "Çözelti, süspansiyon ve emülsiyon ayrımını yapar.",
+              "keywords": [
+                "çözelti",
+                "süspansiyon"
+              ]
+            },
+            {
+              "code": "KİM.10.2.1.2",
+              "description": "Derişim birimlerini (% m/m, molarite) kullanır.",
+              "keywords": [
+                "derişim",
+                "molarite"
+              ]
+            },
+            {
+              "code": "KİM.10.2.1.3",
+              "description": "Ayırma ve saflaştırma tekniklerini (damıtma, kristallendirme, kromatografi) açıklar.",
+              "keywords": [
+                "ayırma"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.10.3",
+      "unit_name": "Kimya Endüstrisi",
+      "topics": [
+        {
+          "topic_name": "Endüstriyel Süreçler",
+          "outcomes": [
+            {
+              "code": "KİM.10.3.1.1",
+              "description": "Haber-Bosch, Contact ve Solvay proseslerini açıklar.",
+              "keywords": [
+                "Haber-Bosch",
+                "endüstri"
+              ]
+            },
+            {
+              "code": "KİM.10.3.1.2",
+              "description": "Petrokimya ve polimer üretiminin temellerini tanır.",
+              "keywords": [
+                "petrokimya",
+                "polimer"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.10.4",
+      "unit_name": "Kimya Her Yerde",
+      "topics": [
+        {
+          "topic_name": "Günlük Yaşamda Kimya",
+          "outcomes": [
+            {
+              "code": "KİM.10.4.1.1",
+              "description": "Temizlik maddelerinin kimyasal etkilerini açıklar.",
+              "keywords": [
+                "deterjan",
+                "sabun"
+              ]
+            },
+            {
+              "code": "KİM.10.4.1.2",
+              "description": "Gıda katkı maddelerini ve koruyucuları değerlendirir.",
+              "keywords": [
+                "gıda katkı"
+              ]
+            },
+            {
+              "code": "KİM.10.4.1.3",
+              "description": "İlaç ve kozmetik ürünlerdeki kimyasal bileşenleri tanır.",
+              "keywords": [
+                "ilaç",
+                "kozmetik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.10.5",
+      "unit_name": "Kimyasal Hesaplamalar",
+      "topics": [
+        {
+          "topic_name": "Mol ve Stokiyometri",
+          "outcomes": [
+            {
+              "code": "KİM.10.5.1.1",
+              "description": "Mol kavramını kullanarak kütle-hacim dönüşümleri yapar.",
+              "keywords": [
+                "mol",
+                "stokiyometri"
+              ]
+            },
+            {
+              "code": "KİM.10.5.1.2",
+              "description": "Tepkime denklemlerinden mol hesaplamaları yapar.",
+              "keywords": [
+                "mol hesabı"
+              ]
+            },
+            {
+              "code": "KİM.10.5.1.3",
+              "description": "Sınırlayıcı bileşen problemlerini çözer.",
+              "keywords": [
+                "sınırlayıcı bileşen"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

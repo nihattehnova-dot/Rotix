@@ -1,0 +1,191 @@
+{
+  "grade": "AYT",
+  "subject": "Tarih",
+  "program_ref": "ÖSYM AYT Tarih-1 / Tarih-2 soru dağılımı (yaklaşık 10–21 soru)",
+  "exam_meta": {
+    "total_questions": 10,
+    "notes": "Tarih-1 (Sosyal Bilimler-1) ve Tarih-2 (Sosyal Bilimler-2) testlerinde soru sayıları farklıdır; yıllara göre değişebilir."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.TAR.01",
+      "unit_name": "Tarih Bilimi ve Uygarlıklar",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Tarih Biliminin Yöntemi",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.01.01.01",
+              "description": "Tarih biliminin kaynak türlerini (yazılı, sözlü, arkeolojik) ayırt eder.",
+              "keywords": ["kaynak", "arkeoloji", "tarih bilimi"]
+            },
+            {
+              "code": "AYT.TAR.01.01.02",
+              "description": "Tarih yazıcılığı ve kronoloji kavramlarını yorumlar.",
+              "keywords": ["kronoloji", "tarih yazıcılığı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İlk Uygarlıklar",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.01.02.01",
+              "description": "Mezopotamya, Mısır, Hint ve Çin uygarlıklarının temel özelliklerini karşılaştırır.",
+              "keywords": ["Mezopotamya", "Mısır", "uygarlık"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.TAR.02",
+      "unit_name": "İslam Tarihi ve Türk-İslam Devletleri",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "İslamiyet'in Doğuşu",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.02.01.01",
+              "description": "Hz. Muhammed dönemi ve Dört Halife döneminin temel olaylarını kronolojik sıralar.",
+              "keywords": ["Hz. Muhammed", "Dört Halife", "İslam"]
+            },
+            {
+              "code": "AYT.TAR.02.01.02",
+              "description": "Emevi ve Abbasi dönemlerinin İslam medeniyetine katkılarını açıklar.",
+              "keywords": ["Emevi", "Abbasi", "medeniyet"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Türk-İslam Devletleri",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.02.02.01",
+              "description": "Karahanlı, Gazneli ve Büyük Selçuklu devletlerinin siyasi ve kültürel özelliklerini karşılaştırır.",
+              "keywords": ["Karahanlı", "Gazneli", "Selçuklu"]
+            },
+            {
+              "code": "AYT.TAR.02.02.02",
+              "description": "Anadolu Selçuklu Devleti'nin kuruluşu ve medeniyet mirasını açıklar.",
+              "keywords": ["Anadolu Selçuklu", "medeniyet"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.TAR.03",
+      "unit_name": "Osmanlı Tarihi",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Osmanlı Kuruluş ve Yükselme",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.03.01.01",
+              "description": "Osmanlı Beyliği'nin kuruluşu ve yükselme dönemi siyasi gelişmelerini açıklar.",
+              "keywords": ["Osmanlı", "kuruluş", "yükselme"]
+            },
+            {
+              "code": "AYT.TAR.03.01.02",
+              "description": "Osmanlı devlet teşkilatı, timar sistemi ve askeri yapıyı yorumlar.",
+              "keywords": ["devlet teşkilatı", "timar", "askeri yapı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Osmanlı Duraklama ve Gerileme",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.03.02.01",
+              "description": "Duraklama ve gerileme dönemlerinin nedenlerini ve ıslahat hareketlerini açıklar.",
+              "keywords": ["duraklama", "gerileme", "ıslahat"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Osmanlı Dağılma ve Milli Mücadele",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.03.03.01",
+              "description": "Trablusgarp, Balkan Savaşları ve I. Dünya Savaşı'nın Osmanlı üzerindeki etkilerini yorumlar.",
+              "keywords": ["Trablusgarp", "Balkan Savaşları", "I. Dünya Savaşı"]
+            },
+            {
+              "code": "AYT.TAR.03.03.02",
+              "description": "Milli Mücadele sürecini kongreler, cepheler ve antlaşmalarla kronolojik değerlendirir.",
+              "keywords": ["Milli Mücadele", "Lozan", "TBMM"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.TAR.04",
+      "unit_name": "Atatürk İlkeleri ve İnkılap Tarihi",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Atatürk İlkeleri",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.04.01.01",
+              "description": "Altı Ok ilkelerini (cumhuriyetçilik, milliyetçilik, halkçılık, devletçilik, laiklik, inkılapçılık) açıklar.",
+              "keywords": ["Altı Ok", "Atatürk ilkeleri", "laiklik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İnkılaplar ve Dış Politika",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.04.02.01",
+              "description": "Siyasi, hukuk, eğitim ve toplumsal inkılapları kronolojik olarak değerlendirir.",
+              "keywords": ["inkılap", "Harf İnkılabı", "Medeni Kanun"]
+            },
+            {
+              "code": "AYT.TAR.04.02.02",
+              "description": "Atatürk dönemi dış politikasını (Lozan, Montrö, Hatay) barışçılık ilkesiyle ilişkilendirir.",
+              "keywords": ["dış politika", "Montrö", "Hatay", "Lozan"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.TAR.05",
+      "unit_name": "XX. Yüzyıl Dünya Tarihi",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Dünya Savaşları ve Soğuk Savaş",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.05.01.01",
+              "description": "I. ve II. Dünya Savaşlarının nedenlerini ve sonuçlarını karşılaştırır.",
+              "keywords": ["I. Dünya Savaşı", "II. Dünya Savaşı", "Versailles"]
+            },
+            {
+              "code": "AYT.TAR.05.01.02",
+              "description": "Soğuk Savaş dönemi bloklaşmasını ve Türkiye'nin konumunu yorumlar.",
+              "keywords": ["Soğuk Savaş", "NATO", "blok"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Küreselleşme ve Çağdaş Dünya",
+          "outcomes": [
+            {
+              "code": "AYT.TAR.05.02.01",
+              "description": "Küreselleşme, bölgesel örgütler ve çağdaş uluslararası ilişkileri yorumlar.",
+              "keywords": ["küreselleşme", "AB", "BM", "uluslararası ilişkiler"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

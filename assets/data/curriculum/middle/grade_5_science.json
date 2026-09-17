@@ -1,0 +1,180 @@
+{
+  "grade": 5,
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB Fen Bilimleri Dersi Öğretim Programı (Ortaokul, 5. Sınıf)",
+  "units": [
+    {
+      "unit_code": "F.5.1",
+      "unit_name": "Güneş, Dünya ve Ay",
+      "topics": [
+        {
+          "topic_name": "Dünya'nın Şekli ve Hareketleri",
+          "outcomes": [
+            {"code": "F.5.1.1.1", "description": "Dünya'nın şeklini ve yüzeyindeki temel yapıları (okyanus, kıta, dağ) tanımlar.", "keywords": ["Dünya", "küre", "okyanus", "kıta"]},
+            {"code": "F.5.1.1.2", "description": "Dünya'nın kendi ekseni etrafındaki dönme hareketinin gece-gündüz oluşumuna etkisini açıklar.", "keywords": ["dönme", "gece gündüz", "eksen"]},
+            {"code": "F.5.1.1.3", "description": "Dünya'nın Güneş etrafındaki dolanma hareketinin mevsimlerin oluşumuna etkisini açıklar.", "keywords": ["dolanma", "mevsim", "Güneş"]},
+            {"code": "F.5.1.1.4", "description": "Dünya'nın hareketlerini model veya şema kullanarak gösterir.", "keywords": ["model", "şema", "hareket"]}
+          ]
+        },
+        {
+          "topic_name": "Ay'ın Evreleri ve Hareketleri",
+          "outcomes": [
+            {"code": "F.5.1.2.1", "description": "Ay'ın Dünya etrafındaki dolanma hareketini açıklar.", "keywords": ["Ay", "dolanma", "Dünya"]},
+            {"code": "F.5.1.2.2", "description": "Ay'ın evrelerini (yeni ay, hilal, ilk dördün, dolunay vb.) tanır ve sıralar.", "keywords": ["evre", "dolunay", "hilal"]},
+            {"code": "F.5.1.2.3", "description": "Ay'ın evrelerinin Dünya, Ay ve Güneş'in konumlarına bağlı olduğunu açıklar.", "keywords": ["evre", "konum", "Güneş"]},
+            {"code": "F.5.1.2.4", "description": "Ay'ın yüzeyindeki krater, deniz ve dağ gibi yapıları tanır.", "keywords": ["krater", "Ay yüzeyi"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.5.2",
+      "unit_name": "Canlılar Dünyası",
+      "topics": [
+        {
+          "topic_name": "Canlıları Sınıflandırma",
+          "outcomes": [
+            {"code": "F.5.2.1.1", "description": "Canlıları ortak özelliklerine göre sınıflandırır.", "keywords": ["sınıflandırma", "canlı", "özellik"]},
+            {"code": "F.5.2.1.2", "description": "Bitki ve hayvan gruplarının temel ayırt edici özelliklerini karşılaştırır.", "keywords": ["bitki", "hayvan", "grup"]},
+            {"code": "F.5.2.1.3", "description": "Mantarları diğer canlı gruplarından ayırt eder.", "keywords": ["mantar", "saprofit"]}
+          ]
+        },
+        {
+          "topic_name": "Mikroskobik Canlılar",
+          "outcomes": [
+            {"code": "F.5.2.2.1", "description": "Mikroskobik canlıların gözle görülemeyecek kadar küçük olduklarını açıklar.", "keywords": ["mikroskobik", "mikroskop"]},
+            {"code": "F.5.2.2.2", "description": "Bakterilerin yapısını ve çevredeki rollerini açıklar.", "keywords": ["bakteri", "tek hücreli"]},
+            {"code": "F.5.2.2.3", "description": "Mikroskobik canlıların insan sağlığı ve çevre üzerindeki etkilerini değerlendirir.", "keywords": ["hastalık", "fermentasyon", "çevre"]}
+          ]
+        },
+        {
+          "topic_name": "Bitki ve Hayvanlarda Yaşam Süreçleri",
+          "outcomes": [
+            {"code": "F.5.2.3.1", "description": "Bitkilerde besin, solunum, boşaltım, taşıma ve üreme olaylarını açıklar.", "keywords": ["fotosentez", "solunum", "bitki"]},
+            {"code": "F.5.2.3.2", "description": "Hayvanlarda besin, solunum, boşaltım, taşıma ve üreme olaylarını açıklar.", "keywords": ["sindirim", "dolaşım", "hayvan"]},
+            {"code": "F.5.2.3.3", "description": "Canlılarda duyu organlarının çevreyle etkileşimdeki rolünü açıklar.", "keywords": ["duyu organı", "uyarı"]},
+            {"code": "F.5.2.3.4", "description": "Canlıların hareket biçimlerini örneklerle açıklar.", "keywords": ["hareket", "kas", "iskelet"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.5.3",
+      "unit_name": "Kuvvetin Ölçülmesi ve Sürtünme",
+      "topics": [
+        {
+          "topic_name": "Kuvvetin Ölçülmesi",
+          "outcomes": [
+            {"code": "F.5.3.1.1", "description": "Kuvvetin cisimlerin hareketini, şeklini ve yönünü değiştirebileceğini açıklar.", "keywords": ["kuvvet", "hareket", "şekil değişimi"]},
+            {"code": "F.5.3.1.2", "description": "Dinamometre kullanarak kuvveti ölçer; birimi newton (N) olarak ifade eder.", "keywords": ["dinamometre", "newton", "ölçme"]},
+            {"code": "F.5.3.1.3", "description": "Basit makinelerin kuvvetten kazanç sağladığını deneylerle gösterir.", "keywords": ["basit makine", "kuvvet kazancı"]}
+          ]
+        },
+        {
+          "topic_name": "Sürtünme Kuvveti",
+          "outcomes": [
+            {"code": "F.5.3.2.1", "description": "Sürtünme kuvvetinin tanımını yapar; harekete zıt yönde etki ettiğini açıklar.", "keywords": ["sürtünme", "zıt yön"]},
+            {"code": "F.5.3.2.2", "description": "Yüzey pürüzlülüğü ve temas alanının sürtünme kuvvetine etkisini deneylerle inceler.", "keywords": ["pürüzlülük", "temas alanı"]},
+            {"code": "F.5.3.2.3", "description": "Sürtünmenin günlük yaşamdaki faydalı ve zararlı etkilerini örneklerle açıklar.", "keywords": ["fren", "yağlama", "ayakkabı"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.5.4",
+      "unit_name": "Madde ve Değişim",
+      "topics": [
+        {
+          "topic_name": "Maddenin Tanecikli Yapısı",
+          "outcomes": [
+            {"code": "F.5.4.1.1", "description": "Maddenin tanecikli yapısını açıklar.", "keywords": ["tanecik", "atom", "molekül"]},
+            {"code": "F.5.4.1.2", "description": "Isı etkisiyle maddenin genleşme ve büzülme olaylarını deneylerle gösterir.", "keywords": ["genleşme", "büzülme", "ısı"]},
+            {"code": "F.5.4.1.3", "description": "Maddenin hâl değiştirmesini tanecikler arası boşluk ve hareket açısından yorumlar.", "keywords": ["katı", "sıvı", "gaz", "hâl değişimi"]}
+          ]
+        },
+        {
+          "topic_name": "Isı ve Sıcaklık",
+          "outcomes": [
+            {"code": "F.5.4.2.1", "description": "Isı ile sıcaklık kavramlarını ayırt eder.", "keywords": ["ısı", "sıcaklık", "termometre"]},
+            {"code": "F.5.4.2.2", "description": "Isı alışverişinin sıcaklık değişimine etkisini açıklar.", "keywords": ["ısı alışverişi", "denge"]},
+            {"code": "F.5.4.2.3", "description": "Erime, donma, buharlaşma ve yoğuşma olaylarını günlük yaşamdan örneklerle açıklar.", "keywords": ["erime", "donma", "buharlaşma", "yoğuşma"]}
+          ]
+        },
+        {
+          "topic_name": "Saf Madde ve Karışımlar",
+          "outcomes": [
+            {"code": "F.5.4.3.1", "description": "Saf maddeleri (element ve bileşik) tanımlar; örnekler verir.", "keywords": ["element", "bileşik", "saf madde"]},
+            {"code": "F.5.4.3.2", "description": "Homojen ve heterojen karışımları ayırt eder.", "keywords": ["homojen", "heterojen", "karışım"]},
+            {"code": "F.5.4.3.3", "description": "Karışımları ayırma yöntemlerini (süzme, buharlaştırma, mıknatıs vb.) açıklar.", "keywords": ["süzme", "ayırt etme", "mıknatıs"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.5.5",
+      "unit_name": "Işığın Yayılması",
+      "topics": [
+        {
+          "topic_name": "Işığın Doğrusal Yayılması",
+          "outcomes": [
+            {"code": "F.5.5.1.1", "description": "Işığın doğrusal yayıldığını deneylerle gösterir.", "keywords": ["ışık", "doğrusal yayılma"]},
+            {"code": "F.5.5.1.2", "description": "Saydam, yarı saydam ve opak maddeleri ışık geçirgenliğine göre sınıflandırır.", "keywords": ["saydam", "opak", "yarı saydam"]},
+            {"code": "F.5.5.1.3", "description": "Gölge oluşumunu ışığın doğrusal yayılması ile açıklar.", "keywords": ["gölge", "ışık kaynağı"]}
+          ]
+        },
+        {
+          "topic_name": "Aynalarda Yansıma",
+          "outcomes": [
+            {"code": "F.5.5.2.1", "description": "Işığın düz aynada yansımasını çizer; gelen ışın, yansıyan ışın ve normal kavramlarını kullanır.", "keywords": ["yansıma", "düz ayna", "normal"]},
+            {"code": "F.5.5.2.2", "description": "Düz aynada görüntünün özelliklerini (sanal, düz, cisimle eşit boy) açıklar.", "keywords": ["görüntü", "sanal", "düz ayna"]},
+            {"code": "F.5.5.2.3", "description": "Küresel aynalarda (çukur ve tümsek) odak noktası ve merkez kavramlarını tanır.", "keywords": ["çukur ayna", "tümsek ayna", "odak"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.5.6",
+      "unit_name": "İnsan ve Çevre",
+      "topics": [
+        {
+          "topic_name": "Besin Zinciri ve Ekolojik Denge",
+          "outcomes": [
+            {"code": "F.5.6.1.1", "description": "Besin zincirinde üretici, tüketici ve ayrıştırıcı kavramlarını açıklar.", "keywords": ["besin zinciri", "üretici", "tüketici", "ayrıştırıcı"]},
+            {"code": "F.5.6.1.2", "description": "Besin ağını oluşturur; besin zincirleri arasındaki ilişkiyi yorumlar.", "keywords": ["besin ağı", "ekosistem"]},
+            {"code": "F.5.6.1.3", "description": "Enerji aktarımının besin zincirinde azaldığını açıklar.", "keywords": ["enerji aktarımı", "besin piramidi"]}
+          ]
+        },
+        {
+          "topic_name": "Çevre Sorunları ve Sürdürülebilirlik",
+          "outcomes": [
+            {"code": "F.5.6.2.1", "description": "Hava, su ve toprak kirliliğinin nedenlerini ve sonuçlarını açıklar.", "keywords": ["kirlilik", "hava", "su", "toprak"]},
+            {"code": "F.5.6.2.2", "description": "Doğal kaynakların bilinçli kullanımının önemini değerlendirir.", "keywords": ["doğal kaynak", "tüketim", "koruma"]},
+            {"code": "F.5.6.2.3", "description": "Geri dönüşüm ve enerji tasarrufu uygulamalarını çevre koruma açısından yorumlar.", "keywords": ["geri dönüşüm", "enerji tasarrufu", "sürdürülebilirlik"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.5.7",
+      "unit_name": "Elektrik Devre Elemanları",
+      "topics": [
+        {
+          "topic_name": "Basit Elektrik Devresi",
+          "outcomes": [
+            {"code": "F.5.7.1.1", "description": "Basit elektrik devresinin bileşenlerini (pil, anahtar, ampul, iletken) tanır.", "keywords": ["devre", "pil", "anahtar", "ampul"]},
+            {"code": "F.5.7.1.2", "description": "Seri ve paralel bağlı devreleri kurar; ampul parlaklığındaki farkı gözlemler.", "keywords": ["seri devre", "paralel devre"]},
+            {"code": "F.5.7.1.3", "description": "Devredeki bir elemanın çıkarılmasının devrenin çalışmasına etkisini açıklar.", "keywords": ["devre elemanı", "açık devre", "kapalı devre"]}
+          ]
+        },
+        {
+          "topic_name": "İletken ve Yalıtkan Maddeler",
+          "outcomes": [
+            {"code": "F.5.7.2.1", "description": "Maddeleri elektriği iletme durumuna göre iletken ve yalıtkan olarak sınıflandırır.", "keywords": ["iletken", "yalıtkan", "bakır", "plastik"]},
+            {"code": "F.5.7.2.2", "description": "Elektrik akımının iletken maddelerden geçtiğini deneylerle gösterir.", "keywords": ["elektrik akımı", "devre"]},
+            {"code": "F.5.7.2.3", "description": "Elektrikli cihazlarda yalıtkan maddelerin güvenlik rolünü açıklar.", "keywords": ["güvenlik", "yalıtkan", "izolasyon"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

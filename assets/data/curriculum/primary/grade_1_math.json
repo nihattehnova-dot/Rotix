@@ -1,0 +1,246 @@
+{
+  "grade": 1,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (İlkokul) — Sayılar ve İşlemler, Geometri, Ölçme, Veri",
+  "units": [
+    {
+      "unit_code": "M.1.1",
+      "unit_name": "Sayılar ve İşlemler",
+      "topics": [
+        {
+          "topic_name": "Doğal Sayılar",
+          "outcomes": [
+            {
+              "code": "M.1.1.1.1",
+              "description": "Rakamları okur, yazar ve nesne sayısı ile eşleştirir.",
+              "keywords": ["rakam", "sayı", "eşleştirme"]
+            },
+            {
+              "code": "M.1.1.1.2",
+              "description": "Nesne sayısı 20’ye kadar (20 dâhil) olan bir topluluktaki nesnelerin sayısını belirler ve rakamla yazar.",
+              "keywords": ["20'ye kadar", "sayma", "yazma"]
+            },
+            {
+              "code": "M.1.1.1.3",
+              "description": "20’ye kadar ritmik sayar; önce, sonra ve arasında ilişkilerini kullanır.",
+              "keywords": ["ritmik sayma", "önce sonra"]
+            },
+            {
+              "code": "M.1.1.1.4",
+              "description": "20’ye kadar olan sayıları büyüklük-küçüklük bakımından karşılaştırır.",
+              "keywords": ["karşılaştırma", "daha çok", "daha az"]
+            },
+            {
+              "code": "M.1.1.1.5",
+              "description": "10 ile 20 arasındaki sayıları onluk-birlik modeliyle gösterir, okur ve yazar.",
+              "keywords": ["onluk", "birlik", "10-20"]
+            },
+            {
+              "code": "M.1.1.1.6",
+              "description": "Nesne sayılarını tahmin eder ve sayarak kontrol eder.",
+              "keywords": ["tahmin", "kontrol"]
+            },
+            {
+              "code": "M.1.1.1.7",
+              "description": "Basit sayı örüntülerini tanır ve eksik ögeyi tamamlar.",
+              "keywords": ["sayı örüntüsü"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla Toplama İşlemi",
+          "outcomes": [
+            {
+              "code": "M.1.1.2.1",
+              "description": "Toplama işleminin bir araya getirme ve ekleme anlamlarını modelleyerek açıklar.",
+              "keywords": ["toplama anlamı", "ekleme"]
+            },
+            {
+              "code": "M.1.1.2.2",
+              "description": "Toplamları 20’ye kadar (20 dâhil) olan doğal sayılarla (eldesiz) toplama işlemi yapar.",
+              "keywords": ["toplama", "+", "=", "eldesiz"]
+            },
+            {
+              "code": "M.1.1.2.3",
+              "description": "Toplama işleminde sıfırın etkisini fark eder.",
+              "keywords": ["sıfır", "etkisiz eleman"]
+            },
+            {
+              "code": "M.1.1.2.4",
+              "description": "Verilmeyen toplananı bulur.",
+              "keywords": ["eksik toplanan"]
+            },
+            {
+              "code": "M.1.1.2.5",
+              "description": "Zihinden basit toplama işlemleri yapar.",
+              "keywords": ["zihinden toplama"]
+            },
+            {
+              "code": "M.1.1.2.6",
+              "description": "Tek işlemli toplama problemlerini çözer.",
+              "keywords": ["toplama problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla Çıkarma İşlemi",
+          "outcomes": [
+            {
+              "code": "M.1.1.3.1",
+              "description": "Çıkarma işleminin ayırma, eksiltme ve fark anlamlarını modelleyerek açıklar.",
+              "keywords": ["çıkarma anlamı", "eksiltme"]
+            },
+            {
+              "code": "M.1.1.3.2",
+              "description": "20’ye kadar olan doğal sayılarla (onluk bozmasız) çıkarma işlemi yapar.",
+              "keywords": ["çıkarma", "−"]
+            },
+            {
+              "code": "M.1.1.3.3",
+              "description": "Toplama ve çıkarma arasındaki ilişkiyi fark eder.",
+              "keywords": ["ters işlem"]
+            },
+            {
+              "code": "M.1.1.3.4",
+              "description": "Tek işlemli çıkarma problemlerini çözer.",
+              "keywords": ["çıkarma problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kesirler",
+          "outcomes": [
+            {
+              "code": "M.1.1.4.1",
+              "description": "Bütün ve yarımı uygun modellerle gösterir; bütün-yarım ilişkisini açıklar.",
+              "keywords": ["bütün", "yarım"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.1.2",
+      "unit_name": "Geometri",
+      "topics": [
+        {
+          "topic_name": "Geometrik Cisimler ve Şekiller",
+          "outcomes": [
+            {
+              "code": "M.1.2.1.1",
+              "description": "Geometrik şekilleri köşe ve kenar sayılarına göre sınıflandırarak adlandırır (üçgen, kare, dikdörtgen, çember).",
+              "keywords": ["üçgen", "kare", "dikdörtgen", "çember"]
+            },
+            {
+              "code": "M.1.2.1.2",
+              "description": "Günlük hayattaki basit cisimleri özelliklerine göre sınıflandırır ve geometrik şekillerle ilişkilendirir.",
+              "keywords": ["günlük cisim", "şekil ilişkisi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Uzamsal İlişkiler",
+          "outcomes": [
+            {
+              "code": "M.1.2.2.1",
+              "description": "Yer-yön ve konum belirten ifadeleri (üstünde, altında, yanında, önünde, arkasında) kullanır.",
+              "keywords": ["yer yön", "konum"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Geometrik Örüntüler",
+          "outcomes": [
+            {
+              "code": "M.1.2.3.1",
+              "description": "Tekrarlayan şekil örüntülerinde eksik ögeyi tamamlar.",
+              "keywords": ["şekil örüntüsü"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.1.3",
+      "unit_name": "Ölçme",
+      "topics": [
+        {
+          "topic_name": "Uzunluk Ölçme",
+          "outcomes": [
+            {
+              "code": "M.1.3.1.1",
+              "description": "Nesnelerin uzunluklarını standart olmayan birimlerle karşılaştırır ve sıralar.",
+              "keywords": ["uzunluk", "karşılaştırma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Paralarımız",
+          "outcomes": [
+            {
+              "code": "M.1.3.2.1",
+              "description": "Günlük hayatta kullanılan paraları tanır ve basit miktarları karşılaştırır.",
+              "keywords": ["para", "lira"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Zaman Ölçme",
+          "outcomes": [
+            {
+              "code": "M.1.3.3.1",
+              "description": "Tam ve yarım saatleri analog saatte okur.",
+              "keywords": ["saat", "tam", "yarım"]
+            },
+            {
+              "code": "M.1.3.3.2",
+              "description": "Günü, haftayı ve ayı belirtir.",
+              "keywords": ["gün", "hafta", "ay"]
+            },
+            {
+              "code": "M.1.3.3.3",
+              "description": "Olayları önce-sonra, bugün-dün-yarın, sabah-öğle-akşam gibi ifadelerle sıralar.",
+              "keywords": ["zaman sırası", "kronoloji"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Tartma",
+          "outcomes": [
+            {
+              "code": "M.1.3.4.1",
+              "description": "Nesneleri ağırlık-hafiflik bakımından karşılaştırır.",
+              "keywords": ["ağır", "hafif"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sıvı Ölçme",
+          "outcomes": [
+            {
+              "code": "M.1.3.5.1",
+              "description": "Kaplardaki sıvı miktarlarını azlık-çokluk bakımından karşılaştırır.",
+              "keywords": ["sıvı", "az çok"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.1.4",
+      "unit_name": "Veri İşleme",
+      "topics": [
+        {
+          "topic_name": "Veri Toplama ve Değerlendirme",
+          "outcomes": [
+            {
+              "code": "M.1.4.1.1",
+              "description": "Basit sorularla veri toplar; nesne veya şekil grafiğiyle gösterir.",
+              "keywords": ["veri", "nesne grafiği"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

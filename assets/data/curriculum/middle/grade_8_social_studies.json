@@ -1,0 +1,174 @@
+{
+  "grade": 8,
+  "subject": "T.C. İnkılap Tarihi ve Atatürkçülük",
+  "program_ref": "MEB T.C. İnkılap Tarihi ve Atatürkçülük Dersi Öğretim Programı (Ortaokul, 8. Sınıf)",
+  "units": [
+    {
+      "unit_code": "İA.8.1",
+      "unit_name": "Bir Kahraman Doğuyor",
+      "topics": [
+        {
+          "topic_name": "Mustafa Kemal'in Çocukluk ve Eğitim Yılları",
+          "outcomes": [
+            {"code": "İA.8.1.1.1", "description": "Mustafa Kemal Atatürk'ün doğduğu çevrenin (Selanik) sosyal ve kültürel özelliklerini açıklar.", "keywords": ["Selanik", "doğum", "çevre"]},
+            {"code": "İA.8.1.1.2", "description": "Mustafa Kemal'in eğitim hayatını (Şemsi Efendi, Askeri Rüştiye, Harp Okulu) kronolojik sıralar.", "keywords": ["eğitim", "askeri okul", "Harp Okulu"]},
+            {"code": "İA.8.1.1.3", "description": "Mustafa Kemal'in gençlik yıllarındaki kişilik özelliklerini (vatanseverlik, bilime önem verme) değerlendirir.", "keywords": ["vatanseverlik", "bilim", "kişilik"]},
+            {"code": "İA.8.1.1.4", "description": "Mustafa Kemal'in fikir hayatını etkileyen kişi ve olayları tanır.", "keywords": ["fikir hayatı", "etki", "gençlik"]}
+          ]
+        },
+        {
+          "topic_name": "Mustafa Kemal'in Askeri Hayatı",
+          "outcomes": [
+            {"code": "İA.8.1.2.1", "description": "Mustafa Kemal'in Trablusgarp Savaşı'ndaki görevlerini ve katkılarını açıklar.", "keywords": ["Trablusgarp", "1911", "askeri görev"]},
+            {"code": "İA.8.1.2.2", "description": "Balkan Savaşları'nda Mustafa Kemal'in görev aldığı cepheleri tanır.", "keywords": ["Balkan Savaşları", "cephe", "görev"]},
+            {"code": "İA.8.1.2.3", "description": "Çanakkale Savaşı'nda Mustafa Kemal'in komuta ettiği birlikleri ve savaşın önemini açıklar.", "keywords": ["Çanakkale", "1915", "Anafartalar"]},
+            {"code": "İA.8.1.2.4", "description": "Mustafa Kemal'in I. Dünya Savaşı'ndaki diğer cephelerdeki (Kafkas, Suriye) görevlerini sıralar.", "keywords": ["I. Dünya Savaşı", "Kafkas", "Suriye"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "İA.8.2",
+      "unit_name": "Milli Uyanış",
+      "topics": [
+        {
+          "topic_name": "Mondros Ateşkes Antlaşması ve İşgaller",
+          "outcomes": [
+            {"code": "İA.8.2.1.1", "description": "Mondros Ateşkes Antlaşması'nın (1918) maddelerini ve Osmanlı Devleti üzerindeki etkilerini açıklar.", "keywords": ["Mondros", "1918", "ateşkes"]},
+            {"code": "İA.8.2.1.2", "description": "İtilaf Devletleri'nin Anadolu'yu işgal nedenlerini ve işgal bölgelerini harita üzerinde gösterir.", "keywords": ["işgal", "İtilaf", "Anadolu"]},
+            {"code": "İA.8.2.1.3", "description": "İşgaller karşısında halkın tepkilerini (protesto mitingleri, direniş) örneklerle açıklar.", "keywords": ["protesto", "direniş", "işgal"]},
+            {"code": "İA.8.2.1.4", "description": "Wilson Prensipleri'nin Türk halkının beklentileriyle ilişkisini değerlendirir.", "keywords": ["Wilson", "prensipler", "self-determinasyon"]}
+          ]
+        },
+        {
+          "topic_name": "Kurtuluş Yolunda Atılan Adımlar",
+          "outcomes": [
+            {"code": "İA.8.2.2.1", "description": "Mustafa Kemal'in Samsun'a çıkışını (19 Mayıs 1919) ve Amasya Genelgesi'ni açıklar.", "keywords": ["Samsun", "19 Mayıs", "Amasya Genelgesi"]},
+            {"code": "İA.8.2.2.2", "description": "Erzurum ve Sivas Kongrelerinin aldığı kararları ve milli birliğe katkısını açıklar.", "keywords": ["Erzurum Kongresi", "Sivas Kongresi", "milli birlik"]},
+            {"code": "İA.8.2.2.3", "description": "TBMM'nin açılışını (23 Nisan 1920) ve ilk icraatlarını değerlendirir.", "keywords": ["TBMM", "23 Nisan", "1920"]},
+            {"code": "İA.8.2.2.4", "description": "Sevr Antlaşması'nın (1920) maddelerini ve Türk milletinin tepkisini açıklar.", "keywords": ["Sevr", "1920", "antlaşma"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "İA.8.3",
+      "unit_name": "Milli Bir Destan",
+      "topics": [
+        {
+          "topic_name": "Doğu ve Güney Cepheleri",
+          "outcomes": [
+            {"code": "İA.8.3.1.1", "description": "Doğu Cephesi'nde Ermeni tehdidine karşı Kazım Karabekir komutasındaki mücadeleyi açıklar.", "keywords": ["Doğu Cephesi", "Kazım Karabekir", "Ermeni"]},
+            {"code": "İA.8.3.1.2", "description": "Güney Cephesi'nde Fransız ve Ermeni işgaline karşı direnişi (Maraş, Antep, Urfa) örneklerle açıklar.", "keywords": ["Güney Cephesi", "Maraş", "Antep", "direniş"]},
+            {"code": "İA.8.3.1.3", "description": "Doğu ve Güney cephelerinde imzalanan antlaşmaları (Gümrü, Ankara) tanır.", "keywords": ["Gümrü Antlaşması", "Ankara Antlaşması"]}
+          ]
+        },
+        {
+          "topic_name": "Kurtuluş Savaşı ve Lozan",
+          "outcomes": [
+            {"code": "İA.8.3.2.1", "description": "TBMM'nin açılması sonrası isyanları (Kuvâ-yi Milliye, düzenli ordu) bastırma sürecini açıklar.", "keywords": ["isyan", "Kuvâ-yi Milliye", "düzenli ordu"]},
+            {"code": "İA.8.3.2.2", "description": "I. İnönü, II. İnönü ve Kütahya-Eskişehir muharebelerinin önemini açıklar.", "keywords": ["I. İnönü", "II. İnönü", "Kütahya-Eskişehir"]},
+            {"code": "İA.8.3.2.3", "description": "Sakarya Meydan Muharebesi ve Büyük Taarruz'un (Başkomutanlık Meydan Muharebesi) sonuçlarını değerlendirir.", "keywords": ["Sakarya", "Büyük Taarruz", "Dumlupınar"]},
+            {"code": "İA.8.3.2.4", "description": "Lozan Barış Antlaşması'nın (1923) maddelerini ve Türk milleti için önemini açıklar.", "keywords": ["Lozan", "1923", "barış"]},
+            {"code": "İA.8.3.2.5", "description": "Kurtuluş Savaşı'nda halkın (kadın, genç, köylü) katkılarını örneklerle açıklar.", "keywords": ["halk", "kadın", "destek", "Kurtuluş Savaşı"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "İA.8.4",
+      "unit_name": "Atatürkçülük ve Çağdaşlaşan Türkiye",
+      "topics": [
+        {
+          "topic_name": "Atatürk İlkeleri",
+          "outcomes": [
+            {"code": "İA.8.4.1.1", "description": "Cumhuriyetçilik ilkesinin anlamını ve Türk devlet yapısındaki yerini açıklar.", "keywords": ["cumhuriyetçilik", "halk egemenliği", "cumhuriyet"]},
+            {"code": "İA.8.4.1.2", "description": "Milliyetçilik ilkesinin Türk milletinin birlik ve beraberliğindeki rolünü açıklar.", "keywords": ["milliyetçilik", "milli birlik", "vatan"]},
+            {"code": "İA.8.4.1.3", "description": "Halkçılık ilkesinin toplumsal eşitlik ve adalet anlayışındaki yerini açıklar.", "keywords": ["halkçılık", "eşitlik", "adalet"]},
+            {"code": "İA.8.4.1.4", "description": "Devletçilik, Laiklik ve İnkılapçılık ilkelerini temel özellikleriyle tanır.", "keywords": ["devletçilik", "laiklik", "inkılapçılık"]}
+          ]
+        },
+        {
+          "topic_name": "Atatürk İnkılapları",
+          "outcomes": [
+            {"code": "İA.8.4.2.1", "description": "Siyasi inkılapları (Saltanatın kaldırılması, Cumhuriyet'in ilanı, Halifeliğin kaldırılması) kronolojik sıralar.", "keywords": ["saltanat", "cumhuriyet", "halifelik", "inkılap"]},
+            {"code": "İA.8.4.2.2", "description": "Hukuk inkılaplarını (Medeni Kanun, Ceza Kanunu) toplumsal yaşamdaki etkileriyle açıklar.", "keywords": ["Medeni Kanun", "hukuk", "inkılap"]},
+            {"code": "İA.8.4.2.3", "description": "Eğitim ve kültür inkılaplarını (Tevhid-i Tedrisat, Harf Devrimi, Türk Tarih Kurumu) açıklar.", "keywords": ["Tevhid-i Tedrisat", "Harf Devrimi", "eğitim"]},
+            {"code": "İA.8.4.2.4", "description": "Toplumsal inkılapları (kılık kıyafet, takvim, ölçü birimleri) çağdaşlaşma bağlamında değerlendirir.", "keywords": ["kılık kıyafet", "takvim", "çağdaşlaşma"]},
+            {"code": "İA.8.4.2.5", "description": "Ekonomik inkılapları (İzmir İktisat Kongresi, devletçilik uygulamaları) açıklar.", "keywords": ["İzmir İktisat Kongresi", "devletçilik", "ekonomi"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "İA.8.5",
+      "unit_name": "Demokratikleşme",
+      "topics": [
+        {
+          "topic_name": "Çok Partili Hayata Geçiş",
+          "outcomes": [
+            {"code": "İA.8.5.1.1", "description": "Türkiye'de çok partili hayata geçiş sürecinin temel aşamalarını kronolojik sıralar.", "keywords": ["çok partili", "demokrasi", "geçiş"]},
+            {"code": "İA.8.5.1.2", "description": "Terakkiperver Cumhuriyet Fırkası'nın kuruluşunu ve kapatılma nedenlerini açıklar.", "keywords": ["Terakkiperver", "muhalefet", "1924"]},
+            {"code": "İA.8.5.1.3", "description": "Serbest Cumhuriyet Fırkası'nın kuruluşunu ve kısa sürede kapanmasının nedenlerini değerlendirir.", "keywords": ["Serbest Fırka", "1924", "demokrasi"]},
+            {"code": "İA.8.5.1.4", "description": "1950 seçimlerinin demokratikleşme sürecindeki dönüm noktası olduğunu açıklar.", "keywords": ["1950 seçimi", "Demokrat Parti", "demokrasi"]}
+          ]
+        },
+        {
+          "topic_name": "Demokratikleşme ve Toplum",
+          "outcomes": [
+            {"code": "İA.8.5.2.1", "description": "Kadınlara seçme ve seçilme hakkının verilmesinin (1934) demokratikleşmedeki yerini açıklar.", "keywords": ["kadın hakları", "1934", "seçme seçilme"]},
+            {"code": "İA.8.5.2.2", "description": "Basın özgürlüğünün demokratik toplumdaki rolünü Atatürk dönemi örnekleriyle açıklar.", "keywords": ["basın", "özgürlük", "demokrasi"]},
+            {"code": "İA.8.5.2.3", "description": "Demokratikleşme sürecinde karşılaşılan zorlukları tarihsel bağlamda değerlendirir.", "keywords": ["zorluk", "demokrasi", "süreç"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "İA.8.6",
+      "unit_name": "Atatürk Dönemi Türk Dış Politikası",
+      "topics": [
+        {
+          "topic_name": "Atatürk Dönemi Dış Politika İlkeleri",
+          "outcomes": [
+            {"code": "İA.8.6.1.1", "description": "Atatürk dönemi dış politikanın temel ilkelerini (Yurtta sulh, cihanda sulh) açıklar.", "keywords": ["Yurtta sulh cihanda sulh", "dış politika", "barış"]},
+            {"code": "İA.8.6.1.2", "description": "Lozan sonrası Türkiye'nin komşularıyla imzaladığı antlaşmaları tanır.", "keywords": ["antlaşma", "komşu", "Lozan sonrası"]},
+            {"code": "İA.8.6.1.3", "description": "Hatay'ın anavatana katılma sürecini açıklar.", "keywords": ["Hatay", "anavatan", "1939"]},
+            {"code": "İA.8.6.1.4", "description": "Montreux Boğazlar Sözleşmesi'nin Türkiye'nin egemenlik hakları açısından önemini değerlendirir.", "keywords": ["Montreux", "Boğazlar", "egemenlik"]}
+          ]
+        },
+        {
+          "topic_name": "Uluslararası İlişkiler",
+          "outcomes": [
+            {"code": "İA.8.6.2.1", "description": "Türkiye'nin Milletler Cemiyeti'ne (1923) ve Birleşmiş Milletler'e katılımını açıklar.", "keywords": ["Milletler Cemiyeti", "BM", "uluslararası"]},
+            {"code": "İA.8.6.2.2", "description": "Balkan Antantı ve Sadabat Paktı'nın bölgesel barışa katkısını değerlendirir.", "keywords": ["Balkan Antantı", "Sadabat", "barış"]},
+            {"code": "İA.8.6.2.3", "description": "Atatürk döneminde Türkiye'nin uluslararası alandaki itibarını örneklerle açıklar.", "keywords": ["itibar", "diplomasi", "Atatürk"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "İA.8.7",
+      "unit_name": "Atatürk'ün Ölümü ve Sonrası",
+      "topics": [
+        {
+          "topic_name": "Atatürk'ün Vefatı",
+          "outcomes": [
+            {"code": "İA.8.7.1.1", "description": "Mustafa Kemal Atatürk'ün vefat tarihini (10 Kasım 1938) ve Türk milletinin tepkisini açıklar.", "keywords": ["10 Kasım", "1938", "vefat"]},
+            {"code": "İA.8.7.1.2", "description": "Atatürk'ün Türk ve dünya tarihindeki yerini değerlendirir.", "keywords": ["Atatürk", "tarih", "lider"]},
+            {"code": "İA.8.7.1.3", "description": "Anıtkabir'in yapılma sürecini ve sembolik anlamını açıklar.", "keywords": ["Anıtkabir", "anıt", "Ankara"]},
+            {"code": "İA.8.7.1.4", "description": "Atatürk'ün manevi mirasını (ilkeler, inkılaplar) günümüze taşımanın önemini savunur.", "keywords": ["manevi miras", "Atatürkçülük", "ilkeler"]}
+          ]
+        },
+        {
+          "topic_name": "Atatürk İlkelerinin Günümüzdeki Yansımaları",
+          "outcomes": [
+            {"code": "İA.8.7.2.1", "description": "Atatürk ilkelerinin günümüz Türkiye Cumhuriyeti'nin temel değerleri olduğunu açıklar.", "keywords": ["Atatürk ilkeleri", "cumhuriyet", "değer"]},
+            {"code": "İA.8.7.2.2", "description": "Atatürk'ün bilim, eğitim ve çağdaşlaşmaya verdiği önemin günümüzdeki karşılığını değerlendirir.", "keywords": ["bilim", "eğitim", "çağdaşlaşma"]},
+            {"code": "İA.8.7.2.3", "description": "Atatürk'ün 'Nutuk' eserinin Kurtuluş Savaşı ve inkılapların belgesi olduğunu açıklar.", "keywords": ["Nutuk", "belge", "Kurtuluş Savaşı"]},
+            {"code": "İA.8.7.2.4", "description": "Atatürkçü düşünce sistemini yaşatmak için bireysel sorumlulukları değerlendirir.", "keywords": ["sorumluluk", "Atatürkçülük", "gençlik"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

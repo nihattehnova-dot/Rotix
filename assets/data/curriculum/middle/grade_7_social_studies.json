@@ -1,0 +1,165 @@
+{
+  "grade": 7,
+  "subject": "Sosyal Bilgiler",
+  "program_ref": "MEB Sosyal Bilgiler Dersi Öğretim Programı (Ortaokul, 7. Sınıf)",
+  "units": [
+    {
+      "unit_code": "SB.7.1",
+      "unit_name": "Birey ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Toplumsal Değişim ve Birey",
+          "outcomes": [
+            {"code": "SB.7.1.1.1", "description": "Toplumsal değişimin bireyin yaşam tarzı ve değerleri üzerindeki etkisini açıklar.", "keywords": ["toplumsal değişim", "modernleşme", "birey"]},
+            {"code": "SB.7.1.1.2", "description": "Kentsel ve kırsal yaşam arasındaki farkları sosyal, ekonomik ve kültürel boyutlarıyla karşılaştırır.", "keywords": ["kent", "kırsal", "yaşam tarzı"]},
+            {"code": "SB.7.1.1.3", "description": "Toplumsal cinsiyet eşitliği kavramını açıklar; ayrımcılığa karşı duyarlılık geliştirir.", "keywords": ["cinsiyet eşitliği", "ayrımcılık", "hak"]},
+            {"code": "SB.7.1.1.4", "description": "Engelli bireylerin toplumsal yaşama katılımının önemini değerlendirir.", "keywords": ["engelli hakları", "erişilebilirlik", "katılım"]}
+          ]
+        },
+        {
+          "topic_name": "Demografi ve Nüfus",
+          "outcomes": [
+            {"code": "SB.7.1.2.1", "description": "Nüfus artış hızı, doğum ve ölüm oranlarını grafik ve tablo kullanarak yorumlar.", "keywords": ["nüfus artışı", "doğum oranı", "demografi"]},
+            {"code": "SB.7.1.2.2", "description": "Göçün nedenlerini (ekonomik, siyasi, doğal afet) ve sonuçlarını açıklar.", "keywords": ["göç", "iç göç", "dış göç"]},
+            {"code": "SB.7.1.2.3", "description": "Türkiye'nin nüfus yapısını (yaş piramidi, kent-kır dağılımı) değerlendirir.", "keywords": ["yaş piramidi", "nüfus yapısı", "Türkiye"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.7.2",
+      "unit_name": "Kültür ve Miras",
+      "topics": [
+        {
+          "topic_name": "Osmanlı Devleti'nin Kuruluşu",
+          "outcomes": [
+            {"code": "SB.7.2.1.1", "description": "Osmanlı Beyliği'nin kuruluş sürecini ve Osman Gazi dönemini açıklar.", "keywords": ["Osman Gazi", "kuruluş", "beylik"]},
+            {"code": "SB.7.2.1.2", "description": "Osmanlı'nın Anadolu'daki beyliklerle ilişkilerini ve toprak birleşmesini kronolojik sıralar.", "keywords": ["beylik", "fetih", "birleşme"]},
+            {"code": "SB.7.2.1.3", "description": "Osmanlı devlet teşkilatının (padişah, divan, tımar) temel yapısını tanır.", "keywords": ["devlet teşkilatı", "padişah", "divan", "tımar"]},
+            {"code": "SB.7.2.1.4", "description": "İstanbul'un fethinin (1453) dünya tarihindeki önemini açıklar.", "keywords": ["İstanbul'un Fethi", "1453", "Fatih"]}
+          ]
+        },
+        {
+          "topic_name": "Osmanlı'nın Yükseliş Dönemi",
+          "outcomes": [
+            {"code": "SB.7.2.2.1", "description": "Yükseliş dönemi padişahlarını (Fatih, Yavuz, Kanuni) dönem özellikleriyle tanır.", "keywords": ["Fatih", "Yavuz", "Kanuni", "yükseliş"]},
+            {"code": "SB.7.2.2.2", "description": "Osmanlı'nın üç kıtaya yayılan sınırlarını harita üzerinde gösterir.", "keywords": ["sınır", "fetih", "harita"]},
+            {"code": "SB.7.2.2.3", "description": "Osmanlı'da bilim, sanat ve mimarinin (Mimar Sinan, Evliya Çelebi) gelişimini örneklerle açıklar.", "keywords": ["Mimar Sinan", "Evliya Çelebi", "sanat"]},
+            {"code": "SB.7.2.2.4", "description": "Millet sisteminin Osmanlı'da farklı toplulukların bir arada yaşamasına katkısını değerlendirir.", "keywords": ["millet sistemi", "hoşgörü", "çokkültürlülük"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.7.3",
+      "unit_name": "İnsanlar, Yerler ve Çevreler",
+      "topics": [
+        {
+          "topic_name": "Türkiye'nin Fiziki Coğrafyası",
+          "outcomes": [
+            {"code": "SB.7.3.1.1", "description": "Türkiye'nin dağ, ova, plato ve akarsu sistemlerini harita üzerinde tanır.", "keywords": ["dağ", "ova", "akarsu", "fiziki harita"]},
+            {"code": "SB.7.3.1.2", "description": "Türkiye'nin iklim tiplerini ve iklimin tarım, yerleşme ve ulaşıma etkisini açıklar.", "keywords": ["iklim", "tarım", "yerleşme"]},
+            {"code": "SB.7.3.1.3", "description": "Doğal afet risk haritalarını yorumlar; afetlere karşı alınacak önlemleri değerlendirir.", "keywords": ["afet riski", "deprem", "önlem"]}
+          ]
+        },
+        {
+          "topic_name": "Beşerî Coğrafya ve Yerleşme",
+          "outcomes": [
+            {"code": "SB.7.3.2.1", "description": "Türkiye'de nüfusun dağılışını etkileyen doğal ve beşerî faktörleri analiz eder.", "keywords": ["nüfus dağılışı", "faktör", "analiz"]},
+            {"code": "SB.7.3.2.2", "description": "Kentleşme sürecinin sosyal ve ekonomik sonuçlarını değerlendirir.", "keywords": ["kentleşme", "metropol", "göç"]},
+            {"code": "SB.7.3.2.3", "description": "Türkiye'nin komşu ülkelerle sınır ve deniz bağlantılarını harita üzerinde gösterir.", "keywords": ["sınır", "komşu", "deniz"]},
+            {"code": "SB.7.3.2.4", "description": "Turizm potansiyelinin bölgesel coğrafya ile ilişkisini açıklar.", "keywords": ["turizm", "bölge", "potansiyel"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.7.4",
+      "unit_name": "Bilim, Teknoloji ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Osmanlı'da Bilim ve Teknoloji",
+          "outcomes": [
+            {"code": "SB.7.4.1.1", "description": "Osmanlı'da matbaanın geç kullanılmasının toplumsal sonuçlarını tartışır.", "keywords": ["matbaa", "Osmanlı", "bilgi yayılımı"]},
+            {"code": "SB.7.4.1.2", "description": "Osmanlı'da denizcilik, hendese ve tıp alanındaki gelişmeleri açıklar.", "keywords": ["denizcilik", "tıp", "hendese"]},
+            {"code": "SB.7.4.1.3", "description": "Avrupa'daki bilimsel devrimlerin Osmanlı'ya etkisini değerlendirir.", "keywords": ["bilimsel devrim", "Rönesans", "etki"]}
+          ]
+        },
+        {
+          "topic_name": "Günümüzde Bilim ve Etik",
+          "outcomes": [
+            {"code": "SB.7.4.2.1", "description": "Bilimsel araştırmada etik kuralların önemini açıklar.", "keywords": ["bilim etiği", "dürüstlük", "araştırma"]},
+            {"code": "SB.7.4.2.2", "description": "Yapay zekâ ve dijital teknolojilerin toplumsal etkilerini tartışır.", "keywords": ["yapay zekâ", "dijital", "teknoloji"]},
+            {"code": "SB.7.4.2.3", "description": "Türk bilim insanlarının günümüzdeki katkılarını tanır.", "keywords": ["Türk bilim", "keşif", "inovasyon"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.7.5",
+      "unit_name": "Üretim, Dağıtım ve Tüketim",
+      "topics": [
+        {
+          "topic_name": "Osmanlı Ekonomisi",
+          "outcomes": [
+            {"code": "SB.7.5.1.1", "description": "Osmanlı'da tarım, zanaat ve ticaretin temel özelliklerini açıklar.", "keywords": ["tarım", "zanaat", "ticaret", "Osmanlı"]},
+            {"code": "SB.7.5.1.2", "description": "Kapitülasyonların Osmanlı ekonomisine etkisini değerlendirir.", "keywords": ["kapitülasyon", "ekonomi", "dış ticaret"]},
+            {"code": "SB.7.5.1.3", "description": "Osmanlı'da para sisteminin ve vergi yapısının temel özelliklerini tanır.", "keywords": ["akçe", "vergi", "para"]}
+          ]
+        },
+        {
+          "topic_name": "Günümüz Ekonomisi",
+          "outcomes": [
+            {"code": "SB.7.5.2.1", "description": "Türkiye'nin sanayi, tarım ve hizmet sektörlerindeki dağılımını grafik ve tablo ile yorumlar.", "keywords": ["sektör", "GSYİH", "dağılım"]},
+            {"code": "SB.7.5.2.2", "description": "Enflasyon, işsizlik ve büyüme kavramlarını temel düzeyde açıklar.", "keywords": ["enflasyon", "işsizlik", "büyüme"]},
+            {"code": "SB.7.5.2.3", "description": "Girişimciliğin ekonomik kalkınmadaki rolünü değerlendirir.", "keywords": ["girişimcilik", "KOBİ", "kalkınma"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.7.6",
+      "unit_name": "Etkin Vatandaşlık",
+      "topics": [
+        {
+          "topic_name": "Demokrasi ve Katılım",
+          "outcomes": [
+            {"code": "SB.7.6.1.1", "description": "Demokrasinin temel ilkelerini (çok partili sistem, seçim, muhalefet) açıklar.", "keywords": ["demokrasi", "çok partili", "seçim"]},
+            {"code": "SB.7.6.1.2", "description": "Türkiye'de demokratikleşme sürecinin temel aşamalarını kronolojik sıralar.", "keywords": ["demokratikleşme", "çok partili hayat", "1950"]},
+            {"code": "SB.7.6.1.3", "description": "Medya ve sivil toplum kuruluşlarının demokratik denetimdeki rolünü değerlendirir.", "keywords": ["medya", "STK", "denetim"]}
+          ]
+        },
+        {
+          "topic_name": "Temel Hak ve Özgürlükler",
+          "outcomes": [
+            {"code": "SB.7.6.2.1", "description": "Anayasa'da güvence altına alınan temel hak ve özgürlükleri sınıflandırır.", "keywords": ["temel hak", "özgürlük", "anayasa"]},
+            {"code": "SB.7.6.2.2", "description": "İfade, basın ve örgütlenme özgürlüklerinin demokratik toplumdaki yerini açıklar.", "keywords": ["ifade özgürlüğü", "basın", "örgütlenme"]},
+            {"code": "SB.7.6.2.3", "description": "Hak ihlallerine karşı başvuru yollarını (idari, yargı) tanır.", "keywords": ["hak ihlali", "başvuru", "yargı"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.7.7",
+      "unit_name": "Küresel Bağlantılar",
+      "topics": [
+        {
+          "topic_name": "Osmanlı Dış Politikası",
+          "outcomes": [
+            {"code": "SB.7.7.1.1", "description": "Osmanlı'nın Avrupa devletleriyle ilişkilerini (antlaşmalar, ittifaklar) temel özellikleriyle açıklar.", "keywords": ["dış politika", "antlaşma", "ittifak"]},
+            {"code": "SB.7.7.1.2", "description": "Osmanlı'nın denizcilik ve ticaret politikalarını (kapitana-derya, kapitülasyon) değerlendirir.", "keywords": ["denizcilik", "kapitülasyon", "ticaret"]},
+            {"code": "SB.7.7.1.3", "description": "Osmanlı'nın üç kıtadaki varlığının küresel etkileşime katkısını açıklar.", "keywords": ["küresel etkileşim", "Osmanlı", "medeniyet"]}
+          ]
+        },
+        {
+          "topic_name": "Günümüzde Küresel İlişkiler",
+          "outcomes": [
+            {"code": "SB.7.7.2.1", "description": "Türkiye'nin üye olduğu uluslararası örgütleri (NATO, BM, AGİT) tanır.", "keywords": ["NATO", "BM", "AGİT", "üyelik"]},
+            {"code": "SB.7.7.2.2", "description": "Küresel göç hareketlerinin nedenlerini ve sonuçlarını değerlendirir.", "keywords": ["göç", "mülteci", "küresel"]},
+            {"code": "SB.7.7.2.3", "description": "Küresel sorunlara (terör, iklim, salgın) karşı uluslararası iş birliğinin gerekliliğini savunur.", "keywords": ["terör", "iklim", "salgın", "iş birliği"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

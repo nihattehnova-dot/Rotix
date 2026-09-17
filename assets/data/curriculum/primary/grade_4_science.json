@@ -1,0 +1,103 @@
+{
+  "grade": 4,
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB Fen Bilimleri (İlkokul)",
+  "units": [
+    {
+      "unit_code": "F.4.1",
+      "unit_name": "Canlılar ve Yaşam",
+      "topics": [
+        {
+          "topic_name": "Besin Zinciri",
+          "outcomes": [
+            {
+              "code": "F.4.1.1.1",
+              "description": "Besin zincirindeki canlıları ve ilişkileri açıklar.",
+              "keywords": [
+                "besin zinciri",
+                "ekosistem"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Vücut Sistemleri",
+          "outcomes": [
+            {
+              "code": "F.4.1.2.1",
+              "description": "Destek-hareket, sindirim ve dolaşım sistemlerinin işlevlerini açıklar.",
+              "keywords": [
+                "vücut sistemleri"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.4.2",
+      "unit_name": "Madde ve Değişim",
+      "topics": [
+        {
+          "topic_name": "Maddenin Özellikleri",
+          "outcomes": [
+            {
+              "code": "F.4.2.1.1",
+              "description": "Maddenin ölçülebilir özelliklerini (kütle, hacim) kullanır.",
+              "keywords": [
+                "kütle",
+                "hacim"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Isı ve Maddenin Hal Değişimi",
+          "outcomes": [
+            {
+              "code": "F.4.2.2.1",
+              "description": "Isı alışverişinde maddenin hal değişimini açıklar.",
+              "keywords": [
+                "erime",
+                "donma",
+                "buharlaşma"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.4.3",
+      "unit_name": "Dünya ve Evren",
+      "topics": [
+        {
+          "topic_name": "Dünya ve Hareketleri",
+          "outcomes": [
+            {
+              "code": "F.4.3.1.1",
+              "description": "Dünya'nın dönme ve dolanma hareketlerinin sonuçlarını açıklar.",
+              "keywords": [
+                "gece gündüz",
+                "mevsim"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Basit Elektrik Devreleri",
+          "outcomes": [
+            {
+              "code": "F.4.3.2.1",
+              "description": "Basit elektrik devresi kurar ve bileşenlerini tanır.",
+              "keywords": [
+                "elektrik",
+                "devre"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

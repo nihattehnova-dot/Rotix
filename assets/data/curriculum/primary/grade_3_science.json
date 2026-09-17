@@ -1,0 +1,110 @@
+{
+  "grade": 3,
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB Fen Bilimleri (İlkokul)",
+  "units": [
+    {
+      "unit_code": "F.3.1",
+      "unit_name": "Canlılar ve Yaşam",
+      "topics": [
+        {
+          "topic_name": "Canlıları Tanıma",
+          "outcomes": [
+            {
+              "code": "F.3.1.1.1",
+              "description": "Canlıların ortak özelliklerini açıklar.",
+              "keywords": [
+                "canlı",
+                "özellik"
+              ]
+            },
+            {
+              "code": "F.3.1.1.2",
+              "description": "Bitki ve hayvanları gözleme dayalı sınıflandırır.",
+              "keywords": [
+                "sınıflama"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Vücudumuz",
+          "outcomes": [
+            {
+              "code": "F.3.1.2.1",
+              "description": "Vücut sistemlerinin temel işlevlerini açıklar.",
+              "keywords": [
+                "vücut",
+                "sağlık"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.3.2",
+      "unit_name": "Madde ve Doğa",
+      "topics": [
+        {
+          "topic_name": "Maddenin Halleri",
+          "outcomes": [
+            {
+              "code": "F.3.2.1.1",
+              "description": "Maddenin katı, sıvı ve gaz hallerini örnekler.",
+              "keywords": [
+                "madde",
+                "hal"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Isı ve Sıcaklık",
+          "outcomes": [
+            {
+              "code": "F.3.2.2.1",
+              "description": "Isı ve sıcaklık kavramlarını ayırt eder.",
+              "keywords": [
+                "ısı",
+                "sıcaklık"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.3.3",
+      "unit_name": "Fiziksel Olaylar",
+      "topics": [
+        {
+          "topic_name": "Işık ve Ses",
+          "outcomes": [
+            {
+              "code": "F.3.3.1.1",
+              "description": "Işığın ve sesin yayılma özelliklerini açıklar.",
+              "keywords": [
+                "ışık",
+                "ses"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kuvvet ve Hareket",
+          "outcomes": [
+            {
+              "code": "F.3.3.2.1",
+              "description": "Kuvvetin cisimler üzerindeki etkilerini gözlemler.",
+              "keywords": [
+                "kuvvet",
+                "hareket"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

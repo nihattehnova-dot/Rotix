@@ -1,0 +1,165 @@
+{
+  "grade": 8,
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB Fen Bilimleri Dersi Öğretim Programı (Ortaokul, 8. Sınıf)",
+  "units": [
+    {
+      "unit_code": "F.8.1",
+      "unit_name": "Mevsimler ve İklim",
+      "topics": [
+        {
+          "topic_name": "Mevsimlerin Oluşumu",
+          "outcomes": [
+            {"code": "F.8.1.1.1", "description": "Dünya'nın eksen eğikliği ve Güneş etrafındaki dolanma hareketinin mevsimleri oluşturduğunu açıklar.", "keywords": ["eksen eğikliği", "mevsim", "dolanma"]},
+            {"code": "F.8.1.1.2", "description": "Kuzey ve Güney yarımkürede mevsimlerin zıt olduğunu açıklar.", "keywords": ["yarımküre", "mevsim", "Güneş ışınları"]},
+            {"code": "F.8.1.1.3", "description": "Mevsimlerin gündüz süresi ve Güneş ışınlarının geliş açısıyla ilişkisini yorumlar.", "keywords": ["gündüz süresi", "geliş açısı", "mevsim"]}
+          ]
+        },
+        {
+          "topic_name": "İklim ve Hava Olayları",
+          "outcomes": [
+            {"code": "F.8.1.2.1", "description": "Hava olayları ile iklim kavramlarını ayırt eder.", "keywords": ["hava olayı", "iklim", "meteoroloji"]},
+            {"code": "F.8.1.2.2", "description": "Türkiye'deki iklim tiplerini (Akdeniz, Karadeniz, karasal) özellikleriyle tanır.", "keywords": ["Akdeniz iklimi", "Karadeniz iklimi", "karasal iklim"]},
+            {"code": "F.8.1.2.3", "description": "İklim değişikliğinin nedenlerini ve olası sonuçlarını değerlendirir.", "keywords": ["iklim değişikliği", "sera gazı", "küresel ısınma"]},
+            {"code": "F.8.1.2.4", "description": "İklim verilerini grafik ve tablo kullanarak yorumlar.", "keywords": ["grafik", "iklim verisi", "analiz"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.8.2",
+      "unit_name": "DNA ve Genetik Kod",
+      "topics": [
+        {
+          "topic_name": "Kalıtım ve DNA",
+          "outcomes": [
+            {"code": "F.8.2.1.1", "description": "DNA'nın kalıtsal bilgiyi taşıyan molekül olduğunu açıklar.", "keywords": ["DNA", "kalıtım", "genetik bilgi"]},
+            {"code": "F.8.2.1.2", "description": "Gen, kromozom ve alel kavramlarını tanımlar.", "keywords": ["gen", "kromozom", "alel"]},
+            {"code": "F.8.2.1.3", "description": "Mendel'in bezelye deneylerinden yola çıkarak baskın ve çekinik özellik kavramlarını açıklar.", "keywords": ["Mendel", "baskın", "çekinik"]},
+            {"code": "F.8.2.1.4", "description": "Basit kalıtım problemlerini çözer (monohibrit çaprazlama).", "keywords": ["çaprazlama", "kalıtım", "Punnett karesi"]}
+          ]
+        },
+        {
+          "topic_name": "Mutasyon ve Biyoteknoloji",
+          "outcomes": [
+            {"code": "F.8.2.2.1", "description": "Mutasyonun kalıtsal materyalde meydana gelen değişiklik olduğunu açıklar.", "keywords": ["mutasyon", "gen değişimi", "çevre"]},
+            {"code": "F.8.2.2.2", "description": "Modifikasyonun çevresel etkilerle ortaya çıktığını mutasyondan ayırt eder.", "keywords": ["modifikasyon", "mutasyon", "fark"]},
+            {"code": "F.8.2.2.3", "description": "Biyoteknoloji uygulamalarının (aşı, GDO, klonlama) fayda ve risklerini tartışır.", "keywords": ["biyoteknoloji", "GDO", "klonlama"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.8.3",
+      "unit_name": "Basınç",
+      "topics": [
+        {
+          "topic_name": "Katı Basıncı",
+          "outcomes": [
+            {"code": "F.8.3.1.1", "description": "Katı basıncını ağırlık ve yüzey alanı ile ilişkilendirerek açıklar.", "keywords": ["katı basıncı", "ağırlık", "yüzey alanı"]},
+            {"code": "F.8.3.1.2", "description": "Basınç birimini pascal (Pa) olarak tanır.", "keywords": ["pascal", "basınç birimi", "Pa"]},
+            {"code": "F.8.3.1.3", "description": "Günlük yaşamda basıncı artırma veya azaltma örneklerini açıklar.", "keywords": ["bıçak", "kayak", "basınç"]}
+          ]
+        },
+        {
+          "topic_name": "Sıvı ve Gaz Basıncı",
+          "outcomes": [
+            {"code": "F.8.3.2.1", "description": "Sıvı basıncının derinlik ve sıvı yoğunluğu ile arttığını açıklar.", "keywords": ["sıvı basıncı", "derinlik", "yoğunluk"]},
+            {"code": "F.8.3.2.2", "description": "Açık hava basıncını deneylerle gösterir.", "keywords": ["açık hava basıncı", "barometre", "Torricelli"]},
+            {"code": "F.8.3.2.3", "description": "Basınç farkından yararlanan araçları (pipet, emme pompası) açıklar.", "keywords": ["pipet", "basınç farkı", "emme"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.8.4",
+      "unit_name": "Madde ve Endüstri",
+      "topics": [
+        {
+          "topic_name": "Periyodik Tablo ve Elementler",
+          "outcomes": [
+            {"code": "F.8.4.1.1", "description": "Periyodik tabloda elementlerin periyot ve gruplara göre sınıflandırıldığını açıklar.", "keywords": ["periyodik tablo", "periyot", "grup"]},
+            {"code": "F.8.4.1.2", "description": "Metal, ametal ve yarı metal elementlerin genel özelliklerini karşılaştırır.", "keywords": ["metal", "ametal", "yarı metal"]},
+            {"code": "F.8.4.1.3", "description": "Asit ve bazların genel özelliklerini ve pH kavramını açıklar.", "keywords": ["asit", "baz", "pH"]}
+          ]
+        },
+        {
+          "topic_name": "Kimyasal Tepkimeler ve Endüstri",
+          "outcomes": [
+            {"code": "F.8.4.2.1", "description": "Kimyasal tepkime ile fiziksel değişim arasındaki farkı açıklar.", "keywords": ["kimyasal tepkime", "fiziksel değişim", "yeni madde"]},
+            {"code": "F.8.4.2.2", "description": "Kimyasal tepkimelerde kütle korunumu ilkesini açıklar.", "keywords": ["kütle korunumu", "tepkime", "denge"]},
+            {"code": "F.8.4.2.3", "description": "Türkiye'deki temel endüstri kollarını (demir-çelik, petrokimya, tekstil) örneklerle tanır.", "keywords": ["endüstri", "petrokimya", "demir-çelik"]},
+            {"code": "F.8.4.2.4", "description": "Endüstriyel üretimin çevre üzerindeki etkilerini değerlendirir.", "keywords": ["kirlilik", "endüstri", "çevre"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.8.5",
+      "unit_name": "Basit Makineler",
+      "topics": [
+        {
+          "topic_name": "Basit Makineler ve Kazanç",
+          "outcomes": [
+            {"code": "F.8.5.1.1", "description": "Kaldıraç, makara, eğik düzlem, vida, çıkrık ve dişli çarkı tanır.", "keywords": ["kaldıraç", "makara", "vida", "çıkrık"]},
+            {"code": "F.8.5.1.2", "description": "Basit makinelerde kuvvet kazancı ve yol kaybı ilişkisini açıklar.", "keywords": ["kuvvet kazancı", "yol kaybı", "verim"]},
+            {"code": "F.8.5.1.3", "description": "Basit makinelerin bileşke olarak kullanıldığı sistemleri örneklerle açıklar.", "keywords": ["bileşke makine", "bisiklet", "asansör"]}
+          ]
+        },
+        {
+          "topic_name": "Enerji ve Verim",
+          "outcomes": [
+            {"code": "F.8.5.2.1", "description": "Basit makinelerde iş yapma ve enerji dönüşümünü açıklar.", "keywords": ["iş", "enerji", "basit makine"]},
+            {"code": "F.8.5.2.2", "description": "Verim kavramını hesaplar; enerji kayıplarını yorumlar.", "keywords": ["verim", "enerji kaybı", "sürtünme"]},
+            {"code": "F.8.5.2.3", "description": "Teknolojide basit makinelerin gelişmiş uygulamalarını değerlendirir.", "keywords": ["teknoloji", "mekanizma", "uygulama"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.8.6",
+      "unit_name": "Enerji Dönüşümleri ve Çevre Bilimi",
+      "topics": [
+        {
+          "topic_name": "Enerji Kaynakları",
+          "outcomes": [
+            {"code": "F.8.6.1.1", "description": "Yenilenebilir (güneş, rüzgâr, hidroelektrik) ve yenilenemez (kömür, petrol, doğal gaz) enerji kaynaklarını sınıflandırır.", "keywords": ["yenilenebilir", "yenilenemez", "enerji kaynağı"]},
+            {"code": "F.8.6.1.2", "description": "Fosil yakıtların kullanımının çevresel sonuçlarını açıklar.", "keywords": ["fosil yakıt", "sera gazı", "kirlilik"]},
+            {"code": "F.8.6.1.3", "description": "Enerji dönüşüm zincirlerini (güneş → bitki → kömür → elektrik) örneklerle açıklar.", "keywords": ["enerji dönüşümü", "zincir", "fosil"]}
+          ]
+        },
+        {
+          "topic_name": "Çevre Bilimi ve Sürdürülebilirlik",
+          "outcomes": [
+            {"code": "F.8.6.2.1", "description": "Ekosistem bileşenlerini (canlı, cansız, enerji akışı) bütüncül olarak açıklar.", "keywords": ["ekosistem", "biodiversite", "enerji akışı"]},
+            {"code": "F.8.6.2.2", "description": "İnsan faaliyetlerinin ekolojik dengeye etkisini değerlendirir.", "keywords": ["insan etkisi", "ekolojik denge", "tahribat"]},
+            {"code": "F.8.6.2.3", "description": "Sürdürülebilir kalkınma ve çevre koruma uygulamalarını önerir.", "keywords": ["sürdürülebilirlik", "koruma", "yeşil enerji"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.8.7",
+      "unit_name": "Elektrik Yükleri ve Elektrik Enerjisi",
+      "topics": [
+        {
+          "topic_name": "Elektrik Yükleri ve Akım",
+          "outcomes": [
+            {"code": "F.8.7.1.1", "description": "Elektrik yüklerinin birimini (coulomb) tanır; yük miktarını açıklar.", "keywords": ["coulomb", "elektrik yükü", "birim"]},
+            {"code": "F.8.7.1.2", "description": "Elektrik akımını, gerilimi ve direnci birbirleriyle ilişkilendirir.", "keywords": ["akım", "gerilim", "direnç", "Ohm"]},
+            {"code": "F.8.7.1.3", "description": "Seri ve paralel bağlı dirençlerin eşdeğer direncini hesaplar.", "keywords": ["seri direnç", "paralel direnç", "eşdeğer direnç"]}
+          ]
+        },
+        {
+          "topic_name": "Elektrik Enerjisi ve Güvenlik",
+          "outcomes": [
+            {"code": "F.8.7.2.1", "description": "Elektrik gücünü (P = V × I) hesaplar.", "keywords": ["elektrik gücü", "watt", "formül"]},
+            {"code": "F.8.7.2.2", "description": "Elektrik enerjisi tüketimini kilowatt-saat cinsinden hesaplar.", "keywords": ["kilowatt-saat", "enerji", "tüketim"]},
+            {"code": "F.8.7.2.3", "description": "Elektrik tesisatında sigorta, topraklama ve kaçak akım rölesi gibi güvenlik önlemlerini açıklar.", "keywords": ["sigorta", "topraklama", "kaçak akım rölesi"]},
+            {"code": "F.8.7.2.4", "description": "Statik elektrik ve yıldırım gibi doğal elektrik olaylarının korunma yöntemlerini açıklar.", "keywords": ["statik elektrik", "yıldırım", "paratoner"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

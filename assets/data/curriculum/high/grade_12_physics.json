@@ -1,0 +1,162 @@
+{
+  "grade": 12,
+  "subject": "Fizik",
+  "program_ref": "MEB Fizik Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "FİZ.12.1",
+      "unit_name": "Modern Fizik",
+      "topics": [
+        {
+          "topic_name": "Özel Görelilik",
+          "outcomes": [
+            {
+              "code": "FİZ.12.1.1.1",
+              "description": "Einstein'ın özel görelilik teorisinin temel postulatlarını açıklar.",
+              "keywords": [
+                "görelilik"
+              ]
+            },
+            {
+              "code": "FİZ.12.1.1.2",
+              "description": "Zaman genişlemesi ve uzunluk büzülmesi kavramlarını yorumlar.",
+              "keywords": [
+                "zaman genişlemesi"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kuantum Fiziği",
+          "outcomes": [
+            {
+              "code": "FİZ.12.1.2.1",
+              "description": "Fotoelektrik olayını açıklar.",
+              "keywords": [
+                "fotoelektrik"
+              ]
+            },
+            {
+              "code": "FİZ.12.1.2.2",
+              "description": "De Broglie dalga-parçacık dualitesini tanır.",
+              "keywords": [
+                "de Broglie"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.12.2",
+      "unit_name": "Dalgalar",
+      "topics": [
+        {
+          "topic_name": "Elektromanyetik Dalgalar",
+          "outcomes": [
+            {
+              "code": "FİZ.12.2.1.1",
+              "description": "Elektromanyetik spektrumu tanır; dalga türlerini sıralar.",
+              "keywords": [
+                "EM spektrum"
+              ]
+            },
+            {
+              "code": "FİZ.12.2.1.2",
+              "description": "Işığın dalga ve parçacık özelliklerini karşılaştırır.",
+              "keywords": [
+                "foton"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.12.3",
+      "unit_name": "Atom Fiziği",
+      "topics": [
+        {
+          "topic_name": "Atom ve Çekirdek",
+          "outcomes": [
+            {
+              "code": "FİZ.12.3.1.1",
+              "description": "Atom modellerinin gelişimini açıklar.",
+              "keywords": [
+                "atom modeli"
+              ]
+            },
+            {
+              "code": "FİZ.12.3.1.2",
+              "description": "Radyoaktivite türlerini (alfa, beta, gama) tanır.",
+              "keywords": [
+                "radyoaktivite"
+              ]
+            },
+            {
+              "code": "FİZ.12.3.1.3",
+              "description": "Kütle-enerji eşdeğerliğini (E=mc²) yorumlar.",
+              "keywords": [
+                "E=mc²"
+              ]
+            },
+            {
+              "code": "FİZ.12.3.1.4",
+              "description": "Nükleer enerji ve fisyon-füzyon süreçlerini açıklar.",
+              "keywords": [
+                "fisyon",
+                "füzyon"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.12.4",
+      "unit_name": "Modern Fizik Uygulamaları",
+      "topics": [
+        {
+          "topic_name": "Teknoloji ve Fizik",
+          "outcomes": [
+            {
+              "code": "FİZ.12.4.1.1",
+              "description": "Lazer teknolojisinin fiziksel prensiplerini açıklar.",
+              "keywords": [
+                "lazer"
+              ]
+            },
+            {
+              "code": "FİZ.12.4.1.2",
+              "description": "Yarı iletken teknolojisinin temellerini tanır.",
+              "keywords": [
+                "yarı iletken"
+              ]
+            },
+            {
+              "code": "FİZ.12.4.1.3",
+              "description": "Nanoteknolojinin fizik temellerini yorumlar.",
+              "keywords": [
+                "nanoteknoloji"
+              ]
+            },
+            {
+              "code": "FİZ.12.4.1.4",
+              "description": "Tıpta kullanılan radyasyon türlerini ayırt eder.",
+              "keywords": [
+                "radyasyon"
+              ]
+            },
+            {
+              "code": "FİZ.12.4.1.5",
+              "description": "Modern fizik buluşlarının günlük yaşamdaki etkilerini değerlendirir.",
+              "keywords": [
+                "modern fizik"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

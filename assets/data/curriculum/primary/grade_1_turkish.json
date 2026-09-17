@@ -1,0 +1,263 @@
+{
+  "grade": 1,
+  "subject": "Türkçe",
+  "program_ref": "MEB Türkçe Dersi Öğretim Programı (İlkokul) — dinleme, konuşma, okuma, yazma, dil bilgisi",
+  "units": [
+    {
+      "unit_code": "T.1.1",
+      "unit_name": "Dinleme / İzleme",
+      "topics": [
+        {
+          "topic_name": "Dinlenen / İzlenen Metni Anlama",
+          "outcomes": [
+            {
+              "code": "T.1.1.1",
+              "description": "Dinlediği / izlediği kısa metindeki kişi, yer ve olayları ayırt eder.",
+              "keywords": ["dinleme", "kişi", "olay"]
+            },
+            {
+              "code": "T.1.1.2",
+              "description": "Dinlediği / izlediği metnin konusunu basit düzeyde belirler.",
+              "keywords": ["konu"]
+            },
+            {
+              "code": "T.1.1.3",
+              "description": "Dinlediği / izlediği metne yönelik basit sorulara cevap verir.",
+              "keywords": ["soru-cevap"]
+            },
+            {
+              "code": "T.1.1.4",
+              "description": "Dinlediklerini / izlediklerini kendi cümleleriyle anlatır.",
+              "keywords": ["anlatma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Söz Varlığı",
+          "outcomes": [
+            {
+              "code": "T.1.1.5",
+              "description": "Dinlediği metindeki yeni kelimeleri fark eder ve anlamını sorar.",
+              "keywords": ["yeni kelime"]
+            },
+            {
+              "code": "T.1.1.6",
+              "description": "Görsellerle dinlenen içerik arasında bağ kurar.",
+              "keywords": ["görsel"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.1.2",
+      "unit_name": "Konuşma",
+      "topics": [
+        {
+          "topic_name": "Sözlü İfade",
+          "outcomes": [
+            {
+              "code": "T.1.2.1",
+              "description": "Kendini, ailesini ve yakın çevresini kısa cümlelerle tanıtır.",
+              "keywords": ["tanıtma", "konuşma"]
+            },
+            {
+              "code": "T.1.2.2",
+              "description": "Günlük olayları sırayla anlatır.",
+              "keywords": ["olay anlatma"]
+            },
+            {
+              "code": "T.1.2.3",
+              "description": "Konuşurken nezaket ifadelerini kullanır.",
+              "keywords": ["lütfen", "teşekkür", "nezaket"]
+            },
+            {
+              "code": "T.1.2.4",
+              "description": "Soru sorar ve sorulara cevap verir.",
+              "keywords": ["soru sorma"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.1.3",
+      "unit_name": "Okuma",
+      "topics": [
+        {
+          "topic_name": "Okumaya Hazırlık ve İlk Okuma",
+          "outcomes": [
+            {
+              "code": "T.1.3.1",
+              "description": "Sesleri tanır, harflerle eşleştirir.",
+              "keywords": ["ses", "harf"]
+            },
+            {
+              "code": "T.1.3.2",
+              "description": "Hece, kelime ve kısa cümleleri okur.",
+              "keywords": ["hece", "kelime", "cümle"]
+            },
+            {
+              "code": "T.1.3.3",
+              "description": "Kısa metinleri sesli ve anlaşılır okur.",
+              "keywords": ["sesli okuma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Okuduğunu Anlama",
+          "outcomes": [
+            {
+              "code": "T.1.3.4",
+              "description": "Okuduğu kısa metindeki kişileri ve olayları belirler.",
+              "keywords": ["metin anlama"]
+            },
+            {
+              "code": "T.1.3.5",
+              "description": "Okuduğu metne yönelik basit sorulara cevap verir.",
+              "keywords": ["soru"]
+            },
+            {
+              "code": "T.1.3.6",
+              "description": "Görsellerle okunan metin arasında ilişki kurar.",
+              "keywords": ["görsel okuma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Dağarcığı",
+          "outcomes": [
+            {
+              "code": "T.1.3.7",
+              "description": "Eş ve zıt anlamlı basit kelime çiftlerini fark eder.",
+              "keywords": ["eş anlamlı", "zıt"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.1.4",
+      "unit_name": "Yazma",
+      "topics": [
+        {
+          "topic_name": "Yazmaya Hazırlık ve Yazma",
+          "outcomes": [
+            {
+              "code": "T.1.4.1",
+              "description": "Harfleri doğru biçim ve yönde yazar.",
+              "keywords": ["harf yazma"]
+            },
+            {
+              "code": "T.1.4.2",
+              "description": "Hece, kelime ve kısa cümleler yazar.",
+              "keywords": ["kelime yazma", "cümle"]
+            },
+            {
+              "code": "T.1.4.3",
+              "description": "Cümleye büyük harfle başlar, nokta koyar.",
+              "keywords": ["büyük harf", "nokta"]
+            },
+            {
+              "code": "T.1.4.4",
+              "description": "Kısa bir not veya kartpostal yazar.",
+              "keywords": ["not", "kartpostal"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.1.5",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Ses, Harf ve Cümle",
+          "outcomes": [
+            {
+              "code": "T.1.5.1",
+              "description": "Türk alfabesindeki harfleri tanır.",
+              "keywords": ["alfabe"]
+            },
+            {
+              "code": "T.1.5.2",
+              "description": "Anlamlı kısa cümleler kurar.",
+              "keywords": ["cümle"]
+            },
+            {
+              "code": "T.1.5.3",
+              "description": "Tekil-çoğul ve soru ifadelerini basit düzeyde kullanır.",
+              "keywords": ["çoğul", "soru"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Noktalama",
+          "outcomes": [
+            {
+              "code": "T.1.5.4",
+              "description": "Nokta ve soru işaretini yerinde kullanır.",
+              "keywords": ["nokta", "soru işareti"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.1.6",
+      "unit_name": "Temalar (Metin Bağlamı)",
+      "topics": [
+        {
+          "topic_name": "Ben ve Okulum",
+          "outcomes": [
+            {
+              "code": "T.1.6.1",
+              "description": "Okul ve ben temalı metinlerde kendini ve çevresini tanır.",
+              "keywords": ["okul", "ben"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Değerlerimiz",
+          "outcomes": [
+            {
+              "code": "T.1.6.2",
+              "description": "Sevgi, saygı ve yardımlaşma mesajlarını metinden fark eder.",
+              "keywords": ["değerler"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Atatürk",
+          "outcomes": [
+            {
+              "code": "T.1.6.3",
+              "description": "Atatürk’le ilgili yaş düzeyine uygun kısa metinleri anlar.",
+              "keywords": ["Atatürk"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğa",
+          "outcomes": [
+            {
+              "code": "T.1.6.4",
+              "description": "Doğa ve hayvan temalı metinlerde temel bilgileri belirler.",
+              "keywords": ["doğa", "hayvan"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sağlık",
+          "outcomes": [
+            {
+              "code": "T.1.6.5",
+              "description": "Temizlik ve sağlıklı yaşam temalı kısa metinleri anlar.",
+              "keywords": ["sağlık", "temizlik"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

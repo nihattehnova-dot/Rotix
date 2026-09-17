@@ -1,0 +1,186 @@
+{
+  "grade": 9,
+  "subject": "Türk Dili ve Edebiyatı",
+  "program_ref": "MEB Türk Dili ve Edebiyatı Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TDE.9.1",
+      "unit_name": "Giriş",
+      "topics": [
+        {
+          "topic_name": "Dil ve Edebiyat",
+          "outcomes": [
+            {
+              "code": "TDE.9.1.1.1",
+              "description": "Dilin tanımını, işlevlerini ve edebiyatla ilişkisini açıklar.",
+              "keywords": [
+                "dil",
+                "edebiyat"
+              ]
+            },
+            {
+              "code": "TDE.9.1.1.2",
+              "description": "Edebi metin ile bilgi metni ayrımını yapar.",
+              "keywords": [
+                "edebi metin"
+              ]
+            },
+            {
+              "code": "TDE.9.1.1.3",
+              "description": "Türk edebiyatının dönemlerini kronolojik sıralar.",
+              "keywords": [
+                "edebiyat dönemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.9.2",
+      "unit_name": "Hikâye",
+      "topics": [
+        {
+          "topic_name": "Hikâye Türü",
+          "outcomes": [
+            {
+              "code": "TDE.9.2.1.1",
+              "description": "Hikâyenin yapı unsurlarını (olay, kişi, yer, zaman, anlatıcı) belirler.",
+              "keywords": [
+                "hikâye",
+                "anlatıcı"
+              ]
+            },
+            {
+              "code": "TDE.9.2.1.2",
+              "description": "Hikâye türlerini (olay, durum, modern) ayırt eder.",
+              "keywords": [
+                "hikâye türü"
+              ]
+            },
+            {
+              "code": "TDE.9.2.1.3",
+              "description": "Seçilen hikâyelerde tema ve anlatım tekniklerini analiz eder.",
+              "keywords": [
+                "tema",
+                "anlatım"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.9.3",
+      "unit_name": "Şiir",
+      "topics": [
+        {
+          "topic_name": "Şiir Türü",
+          "outcomes": [
+            {
+              "code": "TDE.9.3.1.1",
+              "description": "Şiirin yapı unsurlarını (dize, bent, kafiye, redif, ölçü) tanır.",
+              "keywords": [
+                "şiir",
+                "kafiye",
+                "ölçü"
+              ]
+            },
+            {
+              "code": "TDE.9.3.1.2",
+              "description": "Şiir türlerini (lirik, epik, didaktik) ayırt eder.",
+              "keywords": [
+                "şiir türü"
+              ]
+            },
+            {
+              "code": "TDE.9.3.1.3",
+              "description": "Söz sanatlarını (benzetme, kişileştirme, abartma) metinde tespit eder.",
+              "keywords": [
+                "söz sanatı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.9.4",
+      "unit_name": "Masal, Fabl ve Destan",
+      "topics": [
+        {
+          "topic_name": "Sözlü Anlatı Türleri",
+          "outcomes": [
+            {
+              "code": "TDE.9.4.1.1",
+              "description": "Masal, fabl ve destanın özelliklerini karşılaştırır.",
+              "keywords": [
+                "masal",
+                "fabl",
+                "destan"
+              ]
+            },
+            {
+              "code": "TDE.9.4.1.2",
+              "description": "Bu türlerdeki kalıp ifadeleri ve anlatım özelliklerini belirler.",
+              "keywords": [
+                "kalıp ifade"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.9.5",
+      "unit_name": "Öğretici Metinler",
+      "topics": [
+        {
+          "topic_name": "Deneme ve Makale",
+          "outcomes": [
+            {
+              "code": "TDE.9.5.1.1",
+              "description": "Deneme ve makale türlerinin özelliklerini açıklar.",
+              "keywords": [
+                "deneme",
+                "makale"
+              ]
+            },
+            {
+              "code": "TDE.9.5.1.2",
+              "description": "Öğretici metinlerde ana düşünce ve yardımcı düşünceleri belirler.",
+              "keywords": [
+                "ana düşünce"
+              ]
+            },
+            {
+              "code": "TDE.9.5.1.3",
+              "description": "Eleştiri yazısının temel özelliklerini tanır.",
+              "keywords": [
+                "eleştiri"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.9.6",
+      "unit_name": "Dil Bilgisi ve Yazım",
+      "topics": [
+        {
+          "topic_name": "Dil Bilgisi",
+          "outcomes": [
+            {
+              "code": "TDE.9.6.1.1",
+              "description": "Cümle ögelerini (özne, yüklem, nesne, dolaylı tümleç, zarf tümleci) belirler.",
+              "keywords": [
+                "cümle ögesi"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "grade": 7,
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB Fen Bilimleri Dersi Öğretim Programı (Ortaokul, 7. Sınıf)",
+  "units": [
+    {
+      "unit_code": "F.7.1",
+      "unit_name": "Güneş Sistemi ve Ötesi",
+      "topics": [
+        {
+          "topic_name": "Güneş Sistemi Ötesi",
+          "outcomes": [
+            {"code": "F.7.1.1.1", "description": "Samanyolu Galaksisi'nin yapısını ve Güneş Sistemi'nin konumunu açıklar.", "keywords": ["Samanyolu", "galaksi", "yıldız"]},
+            {"code": "F.7.1.1.2", "description": "Yıldızların yaşam döngüsünü (doğuş, olgunluk, ölüm) temel düzeyde açıklar.", "keywords": ["yıldız", "yaşam döngüsü", "enerji"]},
+            {"code": "F.7.1.1.3", "description": "Teleskop ve uzay teknolojilerinin evren gözlemlerindeki rolünü değerlendirir.", "keywords": ["teleskop", "uzay teknolojisi", "gözlem"]},
+            {"code": "F.7.1.1.4", "description": "Evrenin genişlediği bilgisini temel düzeyde açıklar.", "keywords": ["evren", "genişleme", "Big Bang"]}
+          ]
+        },
+        {
+          "topic_name": "Uzay Araştırmaları",
+          "outcomes": [
+            {"code": "F.7.1.2.1", "description": "Türkiye'nin uzay ve uydu çalışmalarına katkılarını örneklerle açıklar.", "keywords": ["Türksat", "Göktürk", "uzay"]},
+            {"code": "F.7.1.2.2", "description": "Uzay araştırmalarının bilim ve teknolojiye katkılarını değerlendirir.", "keywords": ["araştırma", "teknoloji", "keşif"]},
+            {"code": "F.7.1.2.3", "description": "Uzay çöpünün ve uzay kirliliğinin olası sonuçlarını tartışır.", "keywords": ["uzay çöpü", "kirlilik", "uydu"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.7.2",
+      "unit_name": "Hücre ve Bölünmeler",
+      "topics": [
+        {
+          "topic_name": "Hücre Yapısı",
+          "outcomes": [
+            {"code": "F.7.2.1.1", "description": "Bitki ve hayvan hücrelerinin temel organellerini (çekirdek, sitoplazma, hücre zarı) tanır.", "keywords": ["hücre", "organeller", "çekirdek"]},
+            {"code": "F.7.2.1.2", "description": "Bitki hücresine özgü organelleri (kloroplast, hücre duvarı, koful) tanır.", "keywords": ["kloroplast", "hücre duvarı", "koful"]},
+            {"code": "F.7.2.1.3", "description": "Hücre zarından madde geçişini (difüzyon, osmoz) açıklar.", "keywords": ["difüzyon", "osmoz", "hücre zarı"]}
+          ]
+        },
+        {
+          "topic_name": "Hücre Bölünmeleri",
+          "outcomes": [
+            {"code": "F.7.2.2.1", "description": "Mitoz bölünmenin amacını ve aşamalarını açıklar.", "keywords": ["mitoz", "bölünme", "büyüme"]},
+            {"code": "F.7.2.2.2", "description": "Mayoz bölünmenin amacını ve kalıtsal çeşitliliğe katkısını açıklar.", "keywords": ["mayoz", "gamet", "çeşitlilik"]},
+            {"code": "F.7.2.2.3", "description": "Mitoz ve mayoz bölünme arasındaki temel farkları karşılaştırır.", "keywords": ["mitoz", "mayoz", "karşılaştırma"]},
+            {"code": "F.7.2.2.4", "description": "Kontrolsüz hücre bölünmesinin kanserle ilişkisini temel düzeyde açıklar.", "keywords": ["kanser", "hücre bölünmesi", "sağlık"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.7.3",
+      "unit_name": "Kuvvet ve Enerji",
+      "topics": [
+        {
+          "topic_name": "Kuvvet, İş ve Enerji",
+          "outcomes": [
+            {"code": "F.7.3.1.1", "description": "İş kavramını kuvvet ve yer değiştirme ilişkisiyle açıklar.", "keywords": ["iş", "kuvvet", "mesafe"]},
+            {"code": "F.7.3.1.2", "description": "Mekanik enerjinin kinetik ve potansiyel enerji bileşenlerinden oluştuğunu açıklar.", "keywords": ["kinetik enerji", "potansiyel enerji", "mekanik enerji"]},
+            {"code": "F.7.3.1.3", "description": "Enerjinin korunumu ilkesini basit örneklerle açıklar.", "keywords": ["enerji korunumu", "dönüşüm"]},
+            {"code": "F.7.3.1.4", "description": "Enerji dönüşümlerinde verim kavramını yorumlar.", "keywords": ["verim", "enerji kaybı", "ısı"]}
+          ]
+        },
+        {
+          "topic_name": "Basit Makineler",
+          "outcomes": [
+            {"code": "F.7.3.2.1", "description": "Kaldıraç, makara, eğik düzlem gibi basit makineleri tanır.", "keywords": ["kaldıraç", "makara", "eğik düzlem"]},
+            {"code": "F.7.3.2.2", "description": "Basit makinelerin kuvvetten, yoldan veya yönden kazanç sağlayabileceğini açıklar.", "keywords": ["kuvvet kazancı", "yol kazancı", "basit makine"]},
+            {"code": "F.7.3.2.3", "description": "Günlük yaşamdaki basit makine uygulamalarını örneklerle açıklar.", "keywords": ["makas", "bisiklet", "vida"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.7.4",
+      "unit_name": "Saf Madde ve Karışımlar",
+      "topics": [
+        {
+          "topic_name": "Saf Maddeler",
+          "outcomes": [
+            {"code": "F.7.4.1.1", "description": "Elementlerin sembollerle gösterildiğini açıklar; periyodik tabloyu tanır.", "keywords": ["element", "sembol", "periyodik tablo"]},
+            {"code": "F.7.4.1.2", "description": "Bileşiklerin formülle gösterildiğini açıklar; su, karbondioksit gibi örnekler verir.", "keywords": ["bileşik", "formül", "H2O"]},
+            {"code": "F.7.4.1.3", "description": "Atom, molekül ve iyon kavramlarını ayırt eder.", "keywords": ["atom", "molekül", "iyon"]}
+          ]
+        },
+        {
+          "topic_name": "Karışımlar ve Ayırma",
+          "outcomes": [
+            {"code": "F.7.4.2.1", "description": "Çözelti, süspansiyon ve koloid kavramlarını ayırt eder.", "keywords": ["çözelti", "süspansiyon", "kolloid"]},
+            {"code": "F.7.4.2.2", "description": "Tanecik boyutuna göre ayırma (süzme, süzgeçleme) yöntemlerini uygular.", "keywords": ["süzme", "süzgeçleme", "tanecik boyutu"]},
+            {"code": "F.7.4.2.3", "description": "Yoğunluk farkına dayalı ayırma yöntemlerini (decantasyon, separasyon) açıklar.", "keywords": ["decantasyon", "separasyon", "yoğunluk"]},
+            {"code": "F.7.4.2.4", "description": "Damıtma ve kristallendirme yöntemlerini açıklar.", "keywords": ["damıtma", "kristallendirme", "ayırt etme"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.7.5",
+      "unit_name": "Işığın Madde ile Etkileşimi",
+      "topics": [
+        {
+          "topic_name": "Işığın Kırılması",
+          "outcomes": [
+            {"code": "F.7.5.1.1", "description": "Işığın farklı yoğunluktaki ortamlarda kırıldığını deneylerle gösterir.", "keywords": ["kırılma", "yoğunluk", "ışık"]},
+            {"code": "F.7.5.1.2", "description": "Gelen ışın, kırılan ışın ve normal kavramlarını kullanarak kırılma olayını çizer.", "keywords": ["normal", "kırılan ışın", "açı"]},
+            {"code": "F.7.5.1.3", "description": "Prizma ile beyaz ışığın renklere ayrılmasını açıklar.", "keywords": ["prizma", "spektrum", "renk"]}
+          ]
+        },
+        {
+          "topic_name": "Mercekler",
+          "outcomes": [
+            {"code": "F.7.5.2.1", "description": "İnce kenarlı ve kalın kenarlı merceklerin ışığı kırma biçimini açıklar.", "keywords": ["mercek", "ince kenarlı", "kalın kenarlı"]},
+            {"code": "F.7.5.2.2", "description": "Merceklerin odak noktası ve odak uzaklığı kavramlarını tanır.", "keywords": ["odak", "odak uzaklığı", "mercek"]},
+            {"code": "F.7.5.2.3", "description": "Merceklerin günlük yaşamdaki kullanım alanlarını (gözlük, büyüteç, fotoğraf makinesi) açıklar.", "keywords": ["gözlük", "büyüteç", "mercek uygulaması"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.7.6",
+      "unit_name": "Canlılarda Üreme, Büyüme, Gelişme",
+      "topics": [
+        {
+          "topic_name": "Eşeyli Üreme",
+          "outcomes": [
+            {"code": "F.7.6.1.1", "description": "Eşeyli üremenin kalıtsal çeşitlilik sağladığını açıklar.", "keywords": ["eşeyli üreme", "çeşitlilik", "döllenme"]},
+            {"code": "F.7.6.1.2", "description": "İnsanda üreme organlarının temel işlevlerini açıklar.", "keywords": ["üreme organı", "gamet", "insan"]},
+            {"code": "F.7.6.1.3", "description": "Döllenme, zigot oluşumu ve embriyonik gelişme sürecini sıralar.", "keywords": ["döllenme", "zigot", "embriyo"]}
+          ]
+        },
+        {
+          "topic_name": "Eşeysiz Üreme ve Büyüme Hormonları",
+          "outcomes": [
+            {"code": "F.7.6.2.1", "description": "Eşeysiz üreme türlerini (bölünme, tomurcuklanma, rejenerasyon) örneklerle açıklar.", "keywords": ["eşeysiz üreme", "bölünme", "rejenerasyon"]},
+            {"code": "F.7.6.2.2", "description": "Bitki büyüme hormonlarının (oksin, gibberellin) etkilerini açıklar.", "keywords": ["oksin", "gibberellin", "bitki hormonu"]},
+            {"code": "F.7.6.2.3", "description": "Ergenlik dönemindeki fiziksel ve duygusal değişimleri sağlıklı yaşam bağlamında değerlendirir.", "keywords": ["ergenlik", "büyüme", "hormon"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.7.7",
+      "unit_name": "Elektrik Enerjisi",
+      "topics": [
+        {
+          "topic_name": "Elektrik Yükleri",
+          "outcomes": [
+            {"code": "F.7.7.1.1", "description": "Pozitif ve negatif elektrik yüklerini tanımlar.", "keywords": ["elektrik yükü", "pozitif", "negatif"]},
+            {"code": "F.7.7.1.2", "description": "Aynı yüklü cisimlerin birbirini ittiğini, zıt yüklü cisimlerin birbirini çektiğini açıklar.", "keywords": ["itme", "çekme", "elektrostatik"]},
+            {"code": "F.7.7.1.3", "description": "Elektriklenme türlerini (sürtünme, etki, indüksiyon) örneklerle açıklar.", "keywords": ["elektriklenme", "sürtünme", "indüksiyon"]}
+          ]
+        },
+        {
+          "topic_name": "Elektrik Enerjisi ve Güvenlik",
+          "outcomes": [
+            {"code": "F.7.7.2.1", "description": "Elektrik enerjisinin ısı, ışık ve hareket enerjisine dönüştürülebildiğini açıklar.", "keywords": ["enerji dönüşümü", "elektrik", "ampul"]},
+            {"code": "F.7.7.2.2", "description": "Elektrik tüketimini (güç, enerji, birim fiyat) hesaplar.", "keywords": ["kilowatt-saat", "fatura", "tüketim"]},
+            {"code": "F.7.7.2.3", "description": "Ev ve okul ortamında elektrik güvenliği kurallarını uygular.", "keywords": ["güvenlik", "sigorta", "topraklama"]},
+            {"code": "F.7.7.2.4", "description": "Enerji tasarrufunun çevresel ve ekonomik önemini değerlendirir.", "keywords": ["tasarruf", "enerji verimliliği", "çevre"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

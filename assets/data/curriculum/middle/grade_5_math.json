@@ -1,0 +1,406 @@
+{
+  "grade": 5,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Ortaokul, 5. Sınıf) — Sayılar ve İşlemler, Geometri, Ölçme, Veri İşleme",
+  "units": [
+    {
+      "unit_code": "M.5.1",
+      "unit_name": "Sayılar ve İşlemler",
+      "topics": [
+        {
+          "topic_name": "Doğal Sayılar",
+          "outcomes": [
+            {
+              "code": "M.5.1.1.1",
+              "description": "En çok dokuz basamaklı doğal sayıları okur ve yazar.",
+              "keywords": ["doğal sayı", "okuma yazma", "dokuz basamak"]
+            },
+            {
+              "code": "M.5.1.1.2",
+              "description": "En çok dokuz basamaklı doğal sayıların bölüklerini, basamaklarını ve basamak değerlerini belirler; çözümler.",
+              "keywords": ["bölük", "basamak değeri", "çözümleme"]
+            },
+            {
+              "code": "M.5.1.1.3",
+              "description": "Doğal sayıları en yakın onluğa veya yüzlüğe yuvarlar.",
+              "keywords": ["yuvarlama"]
+            },
+            {
+              "code": "M.5.1.1.4",
+              "description": "En çok dokuz basamaklı doğal sayıları büyük/küçük sembolü kullanarak sıralar.",
+              "keywords": ["sıralama", "< >"]
+            },
+            {
+              "code": "M.5.1.1.5",
+              "description": "Belli bir kurala göre artan veya azalan sayı örüntüleri oluşturur ve kuralını açıklar.",
+              "keywords": ["sayı örüntüsü", "kural"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğal Sayılarla İşlemler",
+          "outcomes": [
+            {
+              "code": "M.5.1.2.1",
+              "description": "En çok beş basamaklı doğal sayılarla toplama ve çıkarma işlemlerini yapar.",
+              "keywords": ["toplama", "çıkarma", "beş basamak"]
+            },
+            {
+              "code": "M.5.1.2.2",
+              "description": "Toplama ve çıkarma işlemlerinin sonucunu tahmin eder; tahminini işlem sonucuyla karşılaştırır.",
+              "keywords": ["tahmin", "toplama", "çıkarma"]
+            },
+            {
+              "code": "M.5.1.2.3",
+              "description": "En çok üç basamaklı doğal sayılarla en çok iki basamaklı doğal sayıları çarpar.",
+              "keywords": ["çarpma", "çok basamaklı"]
+            },
+            {
+              "code": "M.5.1.2.4",
+              "description": "En çok dört basamaklı bir doğal sayıyı en çok iki basamaklı bir doğal sayıya böler.",
+              "keywords": ["bölme", "uzun bölme"]
+            },
+            {
+              "code": "M.5.1.2.5",
+              "description": "Doğal sayılarla dört işlem gerektiren problemleri çözer.",
+              "keywords": ["problem çözme", "dört işlem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bölünebilme Kuralları",
+          "outcomes": [
+            {
+              "code": "M.5.1.3.1",
+              "description": "2, 3, 4, 5, 6, 9 ve 10 ile bölünebilme kurallarını açıklar; uygular.",
+              "keywords": ["bölünebilme", "kural"]
+            },
+            {
+              "code": "M.5.1.3.2",
+              "description": "Bölünebilme kurallarını kullanarak bir sayının asal olup olmadığını belirler.",
+              "keywords": ["asal sayı"]
+            },
+            {
+              "code": "M.5.1.3.3",
+              "description": "Bir doğal sayının çarpanlarını bulur; çarpanları listeler.",
+              "keywords": ["çarpan", "bölen"]
+            },
+            {
+              "code": "M.5.1.3.4",
+              "description": "İki doğal sayının ortak çarpanlarını ve ortak katlarını bulur.",
+              "keywords": ["ortak çarpan", "ortak kat"]
+            },
+            {
+              "code": "M.5.1.3.5",
+              "description": "EBOB ve EKOK kavramlarını açıklar; hesaplar.",
+              "keywords": ["EBOB", "EKOK"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kesirler",
+          "outcomes": [
+            {
+              "code": "M.5.1.4.1",
+              "description": "Basit, bileşik ve tam sayılı kesirleri tanır; modellerle gösterir.",
+              "keywords": ["basit kesir", "bileşik kesir", "tam sayılı kesir"]
+            },
+            {
+              "code": "M.5.1.4.2",
+              "description": "Kesirleri sayı doğrusunda gösterir.",
+              "keywords": ["sayı doğrusu", "kesir"]
+            },
+            {
+              "code": "M.5.1.4.3",
+              "description": "Birim kesirleri karşılaştırır ve sıralar.",
+              "keywords": ["birim kesir", "sıralama"]
+            },
+            {
+              "code": "M.5.1.4.4",
+              "description": "Paydaları eşit kesirleri karşılaştırır ve sıralar.",
+              "keywords": ["eşit payda", "kesir karşılaştırma"]
+            },
+            {
+              "code": "M.5.1.4.5",
+              "description": "Basit kesirleri bileşik kesre, bileşik kesirleri basit kesre dönüştürür.",
+              "keywords": ["kesir dönüşümü"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kesirlerle İşlemler",
+          "outcomes": [
+            {
+              "code": "M.5.1.5.1",
+              "description": "Paydaları eşit kesirlerle toplama ve çıkarma işlemi yapar.",
+              "keywords": ["kesir toplama", "kesir çıkarma"]
+            },
+            {
+              "code": "M.5.1.5.2",
+              "description": "Bir doğal sayı ile bir kesri çarpar.",
+              "keywords": ["kesir çarpma", "doğal sayı"]
+            },
+            {
+              "code": "M.5.1.5.3",
+              "description": "Kesirlerle toplama, çıkarma ve çarpma işlemlerini gerektiren problemleri çözer.",
+              "keywords": ["kesir problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ondalık Gösterim",
+          "outcomes": [
+            {
+              "code": "M.5.1.6.1",
+              "description": "Kesirleri ondalık gösterimle ifade eder; ondalık gösterimleri okur ve yazar.",
+              "keywords": ["ondalık", "kesir dönüşümü"]
+            },
+            {
+              "code": "M.5.1.6.2",
+              "description": "Ondalık gösterimleri sayı doğrusunda gösterir.",
+              "keywords": ["sayı doğrusu", "ondalık"]
+            },
+            {
+              "code": "M.5.1.6.3",
+              "description": "Ondalık gösterimleri karşılaştırır ve sıralar.",
+              "keywords": ["ondalık sıralama"]
+            },
+            {
+              "code": "M.5.1.6.4",
+              "description": "Ondalık gösterimleri en yakın bir doğal sayıya yuvarlar.",
+              "keywords": ["ondalık yuvarlama"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ondalık Gösterimle İşlemler",
+          "outcomes": [
+            {
+              "code": "M.5.1.7.1",
+              "description": "Ondalık gösterimlerle toplama ve çıkarma işlemi yapar.",
+              "keywords": ["ondalık toplama", "ondalık çıkarma"]
+            },
+            {
+              "code": "M.5.1.7.2",
+              "description": "Ondalık gösterimlerle toplama ve çıkarma işlemlerini gerektiren problemleri çözer.",
+              "keywords": ["ondalık problem"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.5.2",
+      "unit_name": "Geometri",
+      "topics": [
+        {
+          "topic_name": "Temel Geometrik Kavramlar",
+          "outcomes": [
+            {
+              "code": "M.5.2.1.1",
+              "description": "Nokta, doğru, ışın ve doğru parçasını tanır; sembollerle gösterir.",
+              "keywords": ["nokta", "doğru", "ışın", "doğru parçası"]
+            },
+            {
+              "code": "M.5.2.1.2",
+              "description": "Açıları standart birimlerle ölçer; dar, dik, geniş ve doğru açı olarak sınıflandırır.",
+              "keywords": ["açı ölçme", "açı türleri"]
+            },
+            {
+              "code": "M.5.2.1.3",
+              "description": "Açıları sayı doğrusu veya açı modelleriyle gösterir.",
+              "keywords": ["açı modeli"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çokgenler",
+          "outcomes": [
+            {
+              "code": "M.5.2.2.1",
+              "description": "Üçgen, kare, dikdörtgen, paralelkenar ve yamuk gibi çokgenleri tanır.",
+              "keywords": ["çokgen", "paralelkenar", "yamuk"]
+            },
+            {
+              "code": "M.5.2.2.2",
+              "description": "Düzgün çokgenlerin kenar ve açı özelliklerini belirler.",
+              "keywords": ["düzgün çokgen", "eşkenar"]
+            },
+            {
+              "code": "M.5.2.2.3",
+              "description": "Çokgenlerin köşe, kenar ve açı sayılarını belirler.",
+              "keywords": ["köşe", "kenar", "iç açı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çember ve Daire",
+          "outcomes": [
+            {
+              "code": "M.5.2.3.1",
+              "description": "Çemberin merkez, yarıçap ve çap kavramlarını tanır.",
+              "keywords": ["çember", "yarıçap", "çap"]
+            },
+            {
+              "code": "M.5.2.3.2",
+              "description": "Pergel yardımıyla verilen yarıçap uzunluğunda çember çizer.",
+              "keywords": ["pergel", "çember çizme"]
+            },
+            {
+              "code": "M.5.2.3.3",
+              "description": "Daire ile çember arasındaki farkı açıklar.",
+              "keywords": ["daire", "çember"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Simetri",
+          "outcomes": [
+            {
+              "code": "M.5.2.4.1",
+              "description": "Verilen şeklin doğruya göre simetriğini çizer.",
+              "keywords": ["ayna simetrisi", "simetrik çizim"]
+            },
+            {
+              "code": "M.5.2.4.2",
+              "description": "Simetri doğrusunu belirler ve simetrik şekiller oluşturur.",
+              "keywords": ["simetri doğrusu"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.5.3",
+      "unit_name": "Ölçme",
+      "topics": [
+        {
+          "topic_name": "Uzunluk Ölçme",
+          "outcomes": [
+            {
+              "code": "M.5.3.1.1",
+              "description": "Uzunluk ölçme birimleri arasındaki ilişkileri açıklar ve dönüştürür.",
+              "keywords": ["km", "m", "cm", "mm", "dönüşüm"]
+            },
+            {
+              "code": "M.5.3.1.2",
+              "description": "Uzunluk birimleriyle en çok üç işlem gerektiren problemleri çözer.",
+              "keywords": ["uzunluk problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çevre Ölçme",
+          "outcomes": [
+            {
+              "code": "M.5.3.2.1",
+              "description": "Düzlemsel şekillerin çevre uzunluklarını hesaplar.",
+              "keywords": ["çevre", "düzlem şekil"]
+            },
+            {
+              "code": "M.5.3.2.2",
+              "description": "Aynı çevre uzunluğuna sahip farklı geometrik şekiller oluşturur.",
+              "keywords": ["eş çevre"]
+            },
+            {
+              "code": "M.5.3.2.3",
+              "description": "Çevre uzunluğu hesaplamayla ilgili problemleri çözer.",
+              "keywords": ["çevre problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Alan Ölçme",
+          "outcomes": [
+            {
+              "code": "M.5.3.3.1",
+              "description": "Kare ve dikdörtgenin alanını hesaplar; birimkare kavramını kullanır.",
+              "keywords": ["alan", "birimkare", "kare", "dikdörtgen"]
+            },
+            {
+              "code": "M.5.3.3.2",
+              "description": "Alan hesaplamayla ilgili problemleri çözer.",
+              "keywords": ["alan problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Zaman Ölçme",
+          "outcomes": [
+            {
+              "code": "M.5.3.4.1",
+              "description": "Zaman ölçme birimleri arasındaki ilişkiyi açıklar; dönüştürür.",
+              "keywords": ["saat", "dakika", "saniye", "dönüşüm"]
+            },
+            {
+              "code": "M.5.3.4.2",
+              "description": "Zaman ölçme birimlerinin kullanıldığı problemleri çözer.",
+              "keywords": ["zaman problemi", "süre"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Tartma",
+          "outcomes": [
+            {
+              "code": "M.5.3.5.1",
+              "description": "Ton, kilogram, gram ve miligram arasındaki ilişkileri açıklar; dönüştürür.",
+              "keywords": ["ton", "kg", "g", "mg", "kütle"]
+            },
+            {
+              "code": "M.5.3.5.2",
+              "description": "Kütle birimleriyle ilgili problemleri çözer.",
+              "keywords": ["kütle problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sıvı Ölçme",
+          "outcomes": [
+            {
+              "code": "M.5.3.6.1",
+              "description": "Litre, desilitre, santilitre, mililitre ve kilolitre arasındaki ilişkileri açıklar.",
+              "keywords": ["litre", "mL", "dL", "hacim"]
+            },
+            {
+              "code": "M.5.3.6.2",
+              "description": "Sıvı ölçme birimleriyle ilgili problemleri çözer.",
+              "keywords": ["sıvı problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.5.4",
+      "unit_name": "Veri İşleme",
+      "topics": [
+        {
+          "topic_name": "Veri Toplama ve Değerlendirme",
+          "outcomes": [
+            {
+              "code": "M.5.4.1.1",
+              "description": "Sütun ve daire grafiklerini inceler; grafik üzerinde yorum ve tahminler yapar.",
+              "keywords": ["sütun grafiği", "daire grafiği", "yorum"]
+            },
+            {
+              "code": "M.5.4.1.2",
+              "description": "Verileri sütun ve daire grafiğiyle gösterir.",
+              "keywords": ["grafik çizme"]
+            },
+            {
+              "code": "M.5.4.1.3",
+              "description": "Verilerin aritmetik ortalamasını hesaplar.",
+              "keywords": ["ortalama", "aritmetik ortalama"]
+            },
+            {
+              "code": "M.5.4.1.4",
+              "description": "Grafik ve tablolardan yararlanarak günlük hayat problemleri çözer.",
+              "keywords": ["veri problemi"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,312 @@
+{
+  "grade": "LGS",
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB LGS Sayısal Bölüm Fen Bilimleri soru dağılımı (8. sınıf ağırlıklı, yaklaşık 20 soru)",
+  "exam_meta": {
+    "total_questions": 20,
+    "notes": "Soru sayıları yıllara göre değişebilir; fizik, kimya ve biyoloji konuları birlikte değerlendirilir."
+  },
+  "units": [
+    {
+      "unit_code": "LGS.FEN.01",
+      "unit_name": "Mevsimler ve İklim",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Mevsimlerin Oluşumu",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.01.01.01",
+              "description": "Dünya'nın eksen eğikliği ve Güneş ışınlarının geliş açısı ile mevsimlerin oluşumunu açıklar.",
+              "keywords": ["mevsim", "eksen eğikliği", "Güneş ışınları"]
+            },
+            {
+              "code": "LGS.FEN.01.01.02",
+              "description": "Mevsim başlangıç tarihleri ve gündüz-gece sürelerindeki değişimleri yorumlar.",
+              "keywords": ["gündönümü", "gündüz gece", "mevsim başlangıcı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İklim ve Hava Olayları",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.01.02.01",
+              "description": "İklim ve hava olayları arasındaki farkı örneklerle ayırt eder.",
+              "keywords": ["iklim", "hava olayı", "fark"]
+            },
+            {
+              "code": "LGS.FEN.01.02.02",
+              "description": "İklim elemanlarını (sıcaklık, yağış, nem, basınç) yorumlar.",
+              "keywords": ["sıcaklık", "yağış", "basınç", "iklim elemanı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.02",
+      "unit_name": "DNA ve Genetik Kod",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Kalıtım ve Genetik",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.02.01.01",
+              "description": "DNA, gen ve kromozom kavramlarını kalıtım bağlamında ilişkilendirir.",
+              "keywords": ["DNA", "gen", "kromozom", "kalıtım"]
+            },
+            {
+              "code": "LGS.FEN.02.01.02",
+              "description": "Baskın ve çekinik özellikler ile genotip-fenotip ayrımını yorumlar.",
+              "keywords": ["baskın", "çekinik", "genotip", "fenotip"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Mutasyon ve Modifikasyon",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.02.02.01",
+              "description": "Mutasyon ve modifikasyon arasındaki farkı örneklerle açıklar.",
+              "keywords": ["mutasyon", "modifikasyon", "çevresel etki"]
+            },
+            {
+              "code": "LGS.FEN.02.02.02",
+              "description": "Genetik mühendisliği ve biyoteknoloji uygulamalarını günlük hayatla ilişkilendirir.",
+              "keywords": ["genetik mühendisliği", "biyoteknoloji", "klonlama"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.03",
+      "unit_name": "Basınç",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Katı Basıncı",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.03.01.01",
+              "description": "Katılarda basınç-kuvvet-yüzey alanı ilişkisini hesaplar.",
+              "keywords": ["katı basıncı", "kuvvet", "yüzey alanı"]
+            },
+            {
+              "code": "LGS.FEN.03.01.02",
+              "description": "Basıncı artırma ve azaltma yöntemlerini günlük hayat örnekleriyle açıklar.",
+              "keywords": ["basınç artırma", "basınç azaltma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sıvı ve Gaz Basıncı",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.03.02.01",
+              "description": "Sıvılarda derinlik ve yoğunluğa bağlı basınç değişimini yorumlar.",
+              "keywords": ["sıvı basıncı", "derinlik", "yoğunluk"]
+            },
+            {
+              "code": "LGS.FEN.03.02.02",
+              "description": "Açık hava basıncı ve Pascal prensibini basit sistemlerde uygular.",
+              "keywords": ["açık hava basıncı", "Pascal", "gaz basıncı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.04",
+      "unit_name": "Madde ve Endüstri",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Periyodik Sistem",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.04.01.01",
+              "description": "Periyodik tabloda grup ve periyot düzenini element özellikleriyle ilişkilendirir.",
+              "keywords": ["periyodik tablo", "grup", "periyot"]
+            },
+            {
+              "code": "LGS.FEN.04.01.02",
+              "description": "Metal, ametal ve yarı metal sınıflandırmasını element örnekleriyle yapar.",
+              "keywords": ["metal", "ametal", "yarı metal"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kimyasal Tepkimeler",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.04.02.01",
+              "description": "Kimyasal tepkime denklemlerini denkleştirme kurallarıyla yazar.",
+              "keywords": ["kimyasal tepkime", "denkleştirme"]
+            },
+            {
+              "code": "LGS.FEN.04.02.02",
+              "description": "Asit-baz tepkimeleri ve tuz oluşumunu günlük hayat örnekleriyle açıklar.",
+              "keywords": ["asit", "baz", "nötrleşme", "tuz"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Endüstriyel Süreçler",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.04.03.01",
+              "description": "Demir-çelik, petrokimya ve çimento gibi temel endüstri süreçlerini yorumlar.",
+              "keywords": ["demir çelik", "petrokimya", "endüstri"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.05",
+      "unit_name": "Basit Makineler",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Kaldıraç ve Makara",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.05.01.01",
+              "description": "Kaldıraçlarda kuvvet-kuvvet kolu-yük-yük kolu ilişkisini hesaplar.",
+              "keywords": ["kaldıraç", "kuvvet kolu", "moment"]
+            },
+            {
+              "code": "LGS.FEN.05.01.02",
+              "description": "Sabit ve hareketli makara sistemlerinde kuvvet kazancını yorumlar.",
+              "keywords": ["makara", "kuvvet kazancı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eğik Düzlem ve Dişli",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.05.02.01",
+              "description": "Eğik düzlem, vida ve dişli sistemlerinde basit makine prensiplerini uygular.",
+              "keywords": ["eğik düzlem", "vida", "dişli"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.06",
+      "unit_name": "Enerji Dönüşümleri",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Enerji Türleri",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.06.01.01",
+              "description": "Kinetik, potansiyel, ısı, kimyasal ve elektrik enerjisi türlerini ayırt eder.",
+              "keywords": ["kinetik", "potansiyel", "enerji türü"]
+            },
+            {
+              "code": "LGS.FEN.06.01.02",
+              "description": "Enerjinin korunumu ilkesini dönüşüm örnekleriyle açıklar.",
+              "keywords": ["enerji korunumu", "dönüşüm"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Enerji Dönüşümü",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.06.02.01",
+              "description": "Fotosentez, solunum ve yanma gibi süreçlerde enerji dönüşümlerini yorumlar.",
+              "keywords": ["fotosentez", "solunum", "yanma"]
+            },
+            {
+              "code": "LGS.FEN.06.02.02",
+              "description": "Verim kavramını enerji dönüşüm sistemlerinde hesaplar.",
+              "keywords": ["verim", "enerji kaybı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.07",
+      "unit_name": "Elektrik Yükleri ve Elektrik Enerjisi",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Elektrik Yükleri",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.07.01.01",
+              "description": "Pozitif-negatif yük, çekme-itme kuvveti ve yüklenme yöntemlerini açıklar.",
+              "keywords": ["elektrik yükü", "çekme", "itme", "yükleme"]
+            },
+            {
+              "code": "LGS.FEN.07.01.02",
+              "description": "İletken, yalıtkan ve yarı iletken maddeleri örneklerle ayırt eder.",
+              "keywords": ["iletken", "yalıtkan", "yarı iletken"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Elektrik Devreleri",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.07.02.01",
+              "description": "Seri ve paralel bağlı devrelerde akım, gerilim ve direnç ilişkilerini yorumlar.",
+              "keywords": ["seri bağ", "paralel bağ", "akım", "gerilim"]
+            },
+            {
+              "code": "LGS.FEN.07.02.02",
+              "description": "Ohm kanununu basit devre sorularında uygular.",
+              "keywords": ["Ohm kanunu", "direnç", "devre"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Elektrik Enerjisi",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.07.03.01",
+              "description": "Elektrik enerjisi tüketimini güç-zaman ilişkisiyle hesaplar.",
+              "keywords": ["elektrik enerjisi", "güç", "kWh"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.FEN.08",
+      "unit_name": "Ses ve Deprem (Özet)",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Ses",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.08.01.01",
+              "description": "Sesin yayılması, yansıması ve frekans-genlik ilişkisini yorumlar.",
+              "keywords": ["ses", "frekans", "genlik", "yankı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Deprem",
+          "outcomes": [
+            {
+              "code": "LGS.FEN.08.02.01",
+              "description": "Deprem oluşumu, fay hatları ve deprem güvenliği önlemlerini açıklar.",
+              "keywords": ["deprem", "fay", "deprem güvenliği"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

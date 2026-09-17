@@ -1,0 +1,162 @@
+{
+  "grade": 11,
+  "subject": "Fizik",
+  "program_ref": "MEB Fizik Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "FİZ.11.1",
+      "unit_name": "Kuvvet ve Hareket (İleri)",
+      "topics": [
+        {
+          "topic_name": "Vektörler ve Bağıl Hareket",
+          "outcomes": [
+            {
+              "code": "FİZ.11.1.1.1",
+              "description": "Vektörleri bileşenlerine ayırır; vektörel toplama yapar.",
+              "keywords": [
+                "vektör"
+              ]
+            },
+            {
+              "code": "FİZ.11.1.1.2",
+              "description": "Bağıl hız kavramını uygular.",
+              "keywords": [
+                "bağıl hız"
+              ]
+            },
+            {
+              "code": "FİZ.11.1.1.3",
+              "description": "Düzgün çembersel hareketi açıklar; merkezcil kuvvet hesaplar.",
+              "keywords": [
+                "çembersel hareket"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.11.2",
+      "unit_name": "Enerji",
+      "topics": [
+        {
+          "topic_name": "Enerji ve Momentum",
+          "outcomes": [
+            {
+              "code": "FİZ.11.2.1.1",
+              "description": "Mekanik enerji korunumunu problem çözümünde kullanır.",
+              "keywords": [
+                "mekanik enerji"
+              ]
+            },
+            {
+              "code": "FİZ.11.2.1.2",
+              "description": "İtme-momentum teoremini uygular.",
+              "keywords": [
+                "itme",
+                "momentum"
+              ]
+            },
+            {
+              "code": "FİZ.11.2.1.3",
+              "description": "Esnek ve esnek olmayan çarpışmaları analiz eder.",
+              "keywords": [
+                "çarpışma"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.11.3",
+      "unit_name": "Elektrik ve Manyetizma",
+      "topics": [
+        {
+          "topic_name": "Elektrik Alan ve Potansiyel",
+          "outcomes": [
+            {
+              "code": "FİZ.11.3.1.1",
+              "description": "Elektrik alan ve potansiyel kavramlarını hesaplar.",
+              "keywords": [
+                "elektrik alan",
+                "potansiyel"
+              ]
+            },
+            {
+              "code": "FİZ.11.3.1.2",
+              "description": "Kondansatörlerin özelliklerini açıklar.",
+              "keywords": [
+                "kondansatör"
+              ]
+            },
+            {
+              "code": "FİZ.11.3.1.3",
+              "description": "Manyetik indüksiyon ve Faraday yasasını uygular.",
+              "keywords": [
+                "indüksiyon",
+                "Faraday"
+              ]
+            },
+            {
+              "code": "FİZ.11.3.1.4",
+              "description": "Alternatif akım devrelerini yorumlar.",
+              "keywords": [
+                "alternatif akım"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.11.4",
+      "unit_name": "Dalgalar ve Optik",
+      "topics": [
+        {
+          "topic_name": "Dalga Optiği",
+          "outcomes": [
+            {
+              "code": "FİZ.11.4.1.1",
+              "description": "Işığın girişim ve kırınım olaylarını açıklar.",
+              "keywords": [
+                "girişim",
+                "kırınım"
+              ]
+            },
+            {
+              "code": "FİZ.11.4.1.2",
+              "description": "Doppler etkisini yorumlar.",
+              "keywords": [
+                "Doppler"
+              ]
+            },
+            {
+              "code": "FİZ.11.4.1.3",
+              "description": "Dalga hızı, frekans ve dalga boyu ilişkisini uygular.",
+              "keywords": [
+                "dalga hızı"
+              ]
+            },
+            {
+              "code": "FİZ.11.4.1.4",
+              "description": "Ses dalgalarının uygulamalarını (sonar, ultrason) açıklar.",
+              "keywords": [
+                "sonar",
+                "ultrason"
+              ]
+            },
+            {
+              "code": "FİZ.11.4.1.5",
+              "description": "Optik aletlerin (mikroskop, teleskop) çalışma prensiplerini tanır.",
+              "keywords": [
+                "mikroskop",
+                "teleskop"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

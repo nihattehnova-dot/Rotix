@@ -1,0 +1,176 @@
+{
+  "grade": 9,
+  "subject": "Tarih",
+  "program_ref": "MEB Tarih Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TAR.9.1",
+      "unit_name": "Tarih Bilimine Giriş",
+      "topics": [
+        {
+          "topic_name": "Tarih ve Yöntem",
+          "outcomes": [
+            {
+              "code": "TAR.9.1.1.1",
+              "description": "Tarihin tanımını ve diğer bilimlerle ilişkisini açıklar.",
+              "keywords": [
+                "tarih bilimi"
+              ]
+            },
+            {
+              "code": "TAR.9.1.1.2",
+              "description": "Tarih kaynaklarını (yazılı, sözlü, arkeolojik) sınıflandırır.",
+              "keywords": [
+                "tarih kaynağı"
+              ]
+            },
+            {
+              "code": "TAR.9.1.1.3",
+              "description": "Tarihte zaman ve mekân kavramlarını kullanır.",
+              "keywords": [
+                "zaman",
+                "mekân"
+              ]
+            },
+            {
+              "code": "TAR.9.1.1.4",
+              "description": "Tarih yazıcılığı ve yorum farkını ayırt eder.",
+              "keywords": [
+                "tarih yazıcılığı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.9.2",
+      "unit_name": "İlk ve Orta Çağlarda Türk Dünyası",
+      "topics": [
+        {
+          "topic_name": "İlk Türk Devletleri",
+          "outcomes": [
+            {
+              "code": "TAR.9.2.1.1",
+              "description": "Orta Asya'daki ilk Türk topluluklarını ve göçlerini açıklar.",
+              "keywords": [
+                "Orta Asya",
+                "göç"
+              ]
+            },
+            {
+              "code": "TAR.9.2.1.2",
+              "description": "Hun, Göktürk ve Uygur devletlerinin siyasi ve kültürel özelliklerini sıralar.",
+              "keywords": [
+                "Hun",
+                "Göktürk",
+                "Uygur"
+              ]
+            },
+            {
+              "code": "TAR.9.2.1.3",
+              "description": "Orhun Yazıtları'nın önemini değerlendirir.",
+              "keywords": [
+                "Orhun Yazıtları"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.9.3",
+      "unit_name": "İslam Tarihi",
+      "topics": [
+        {
+          "topic_name": "İslamiyet'in Doğuşu",
+          "outcomes": [
+            {
+              "code": "TAR.9.3.1.1",
+              "description": "Hz. Muhammed döneminde İslamiyet'in yayılışını açıklar.",
+              "keywords": [
+                "İslamiyet",
+                "Hz. Muhammed"
+              ]
+            },
+            {
+              "code": "TAR.9.3.1.2",
+              "description": "Dört Halife dönemindeki gelişmeleri sıralar.",
+              "keywords": [
+                "Dört Halife"
+              ]
+            },
+            {
+              "code": "TAR.9.3.1.3",
+              "description": "Emevi ve Abbasi devletlerinin temel özelliklerini karşılaştırır.",
+              "keywords": [
+                "Emevi",
+                "Abbasi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.9.4",
+      "unit_name": "Türk-İslam Devletleri",
+      "topics": [
+        {
+          "topic_name": "Karahanlı, Gazneli, Selçuklu",
+          "outcomes": [
+            {
+              "code": "TAR.9.4.1.1",
+              "description": "Karahanlıların İslamiyet'i kabulünün sonuçlarını açıklar.",
+              "keywords": [
+                "Karahanlı"
+              ]
+            },
+            {
+              "code": "TAR.9.4.1.2",
+              "description": "Büyük Selçuklu Devleti'nin kuruluşu ve Malazgirt Savaşı'nın önemini değerlendirir.",
+              "keywords": [
+                "Selçuklu",
+                "Malazgirt"
+              ]
+            },
+            {
+              "code": "TAR.9.4.1.3",
+              "description": "Anadolu Selçuklu Devleti'nin siyasi ve kültürel mirasını tanır.",
+              "keywords": [
+                "Anadolu Selçuklu"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.9.5",
+      "unit_name": "Türk Kültür Mirası",
+      "topics": [
+        {
+          "topic_name": "Kültür ve Medeniyet",
+          "outcomes": [
+            {
+              "code": "TAR.9.5.1.1",
+              "description": "Türk-İslam devletlerinde bilim, sanat ve mimari alanındaki gelişmeleri açıklar.",
+              "keywords": [
+                "kültür",
+                "mimari"
+              ]
+            },
+            {
+              "code": "TAR.9.5.1.2",
+              "description": "Türk tarihinde yazı ve alfabe gelişimini sıralar.",
+              "keywords": [
+                "alfabe",
+                "Orhun"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

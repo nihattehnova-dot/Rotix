@@ -1,0 +1,10 @@
+# Generated manually — run `flutter create .` later to fill platform folders.
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+*.iml
+.idea/
+.vscode/
+.DS_Store

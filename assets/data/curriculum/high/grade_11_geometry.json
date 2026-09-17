@@ -1,0 +1,171 @@
+{
+  "grade": 11,
+  "subject": "Geometri",
+  "program_ref": "MEB Geometri Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "GEO.11.1",
+      "unit_name": "Analitik Geometri",
+      "topics": [
+        {
+          "topic_name": "Doğru ve Düzlem",
+          "outcomes": [
+            {
+              "code": "GEO.11.1.1.1",
+              "description": "Doğrunun analitik denklemini farklı formlarda yazar.",
+              "keywords": [
+                "doğru denklemi"
+              ]
+            },
+            {
+              "code": "GEO.11.1.1.2",
+              "description": "İki doğrunun birbirine göre durumunu belirler.",
+              "keywords": [
+                "kesişim",
+                "paralel"
+              ]
+            },
+            {
+              "code": "GEO.11.1.1.3",
+              "description": "Noktanın doğruya uzaklığını hesaplar.",
+              "keywords": [
+                "uzaklık"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.11.2",
+      "unit_name": "Dönüşümler",
+      "topics": [
+        {
+          "topic_name": "Geometrik Dönüşümler",
+          "outcomes": [
+            {
+              "code": "GEO.11.2.1.1",
+              "description": "Öteleme, dönme ve yansıma dönüşümlerini uygular.",
+              "keywords": [
+                "dönme",
+                "yansıma"
+              ]
+            },
+            {
+              "code": "GEO.11.2.1.2",
+              "description": "Bileşik dönüşümleri analiz eder.",
+              "keywords": [
+                "bileşik dönüşüm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.11.3",
+      "unit_name": "Çember ve Daire",
+      "topics": [
+        {
+          "topic_name": "Çember Geometrisi",
+          "outcomes": [
+            {
+              "code": "GEO.11.3.1.1",
+              "description": "Çemberde teğet-kiriş açı ilişkilerini uygular.",
+              "keywords": [
+                "teğet",
+                "kiriş"
+              ]
+            },
+            {
+              "code": "GEO.11.3.1.2",
+              "description": "İki çemberin birbirine göre durumunu belirler.",
+              "keywords": [
+                "çember durumu"
+              ]
+            },
+            {
+              "code": "GEO.11.3.1.3",
+              "description": "Çemberin analitik denklemini kullanır.",
+              "keywords": [
+                "çember denklemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.11.4",
+      "unit_name": "Trigonometrik Uygulamalar",
+      "topics": [
+        {
+          "topic_name": "Trigonometri ve Geometri",
+          "outcomes": [
+            {
+              "code": "GEO.11.4.1.1",
+              "description": "Trigonometrik oranları geometrik problemlerde kullanır.",
+              "keywords": [
+                "trigonometri"
+              ]
+            },
+            {
+              "code": "GEO.11.4.1.2",
+              "description": "Üçgende sinüs ve kosinüs teoremlerini uygular.",
+              "keywords": [
+                "sinüs teoremi",
+                "kosinüs teoremi"
+              ]
+            },
+            {
+              "code": "GEO.11.4.1.3",
+              "description": "Trigonometrik alan formüllerini kullanır.",
+              "keywords": [
+                "trigonometrik alan"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.11.5",
+      "unit_name": "Katı Cisimler",
+      "topics": [
+        {
+          "topic_name": "Uzay Geometri",
+          "outcomes": [
+            {
+              "code": "GEO.11.5.1.1",
+              "description": "Prizma ve piramitlerin hacim formüllerini uygular.",
+              "keywords": [
+                "hacim"
+              ]
+            },
+            {
+              "code": "GEO.11.5.1.2",
+              "description": "Kesit alanlarını hesaplar.",
+              "keywords": [
+                "kesit"
+              ]
+            },
+            {
+              "code": "GEO.11.5.1.3",
+              "description": "Uzayda açı ve mesafe problemlerini çözer.",
+              "keywords": [
+                "uzay açısı"
+              ]
+            },
+            {
+              "code": "GEO.11.5.1.4",
+              "description": "Gerçek yaşam problemlerinde geometrik modelleme yapar.",
+              "keywords": [
+                "modelleme"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "grade": 6,
+  "subject": "Fen Bilimleri",
+  "program_ref": "MEB Fen Bilimleri Dersi Öğretim Programı (Ortaokul, 6. Sınıf)",
+  "units": [
+    {
+      "unit_code": "F.6.1",
+      "unit_name": "Güneş Sistemi ve Tutulmalar",
+      "topics": [
+        {
+          "topic_name": "Güneş Sistemi ve Gezegenler",
+          "outcomes": [
+            {"code": "F.6.1.1.1", "description": "Güneş Sistemi'ndeki gezegenleri büyüklük ve Güneş'e uzaklık açısından karşılaştırır.", "keywords": ["Güneş Sistemi", "gezegen", "yörünge"]},
+            {"code": "F.6.1.1.2", "description": "İç gezegenler (Merkür, Venüs, Dünya, Mars) ile dış gezegenlerin (Jüpiter, Satürn, Uranüs, Neptün) özelliklerini ayırt eder.", "keywords": ["iç gezegen", "dış gezegen", "gaz devi"]},
+            {"code": "F.6.1.1.3", "description": "Güneş'in Güneş Sistemi'ndeki merkezi konumunu ve enerji kaynağı rolünü açıklar.", "keywords": ["Güneş", "enerji", "yıldız"]},
+            {"code": "F.6.1.1.4", "description": "Uydu, asteroit ve kuyruklu yıldız kavramlarını tanımlar.", "keywords": ["uydu", "asteroid", "kuyruklu yıldız"]}
+          ]
+        },
+        {
+          "topic_name": "Ay ve Güneş Tutulmaları",
+          "outcomes": [
+            {"code": "F.6.1.2.1", "description": "Ay tutulmasının Dünya'nın gölgesine giren Ay'da gerçekleştiğini açıklar.", "keywords": ["Ay tutulması", "gölge", "Dünya"]},
+            {"code": "F.6.1.2.2", "description": "Güneş tutulmasının Ay'ın Dünya ile Güneş arasına girmesiyle oluştuğunu açıklar.", "keywords": ["Güneş tutulması", "Ay", "hizalanma"]},
+            {"code": "F.6.1.2.3", "description": "Tutulmaları model kullanarak gösterir; tam ve kısmi tutulma ayrımını yapar.", "keywords": ["model", "tam tutulma", "kısmi tutulma"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.2",
+      "unit_name": "Destek ve Hareket Sistemi",
+      "topics": [
+        {
+          "topic_name": "İskelet Sistemi",
+          "outcomes": [
+            {"code": "F.6.2.1.1", "description": "İnsan iskelet sisteminin temel yapılarını (kemik, eklem, kıkırdak) tanır.", "keywords": ["iskelet", "kemik", "eklem"]},
+            {"code": "F.6.2.1.2", "description": "Destek ve hareket sisteminin vücuttaki işlevlerini açıklar.", "keywords": ["destek", "koruma", "hareket"]},
+            {"code": "F.6.2.1.3", "description": "İskelet sisteminin sağlığı için doğru duruş ve beslenmenin önemini değerlendirir.", "keywords": ["duruş", "kalsiyum", "sağlık"]}
+          ]
+        },
+        {
+          "topic_name": "Kas Sistemi",
+          "outcomes": [
+            {"code": "F.6.2.2.1", "description": "İskelet kaslarının kemikler üzerinde kasılıp gevşeyerek hareket oluşturduğunu açıklar.", "keywords": ["kas", "kasılma", "gevşeme"]},
+            {"code": "F.6.2.2.2", "description": "Çekme kası ve itme kası kavramlarını örneklerle açıklar.", "keywords": ["çekme kası", "itme kası", "biceps"]},
+            {"code": "F.6.2.2.3", "description": "Düzenli egzersizin kas ve iskelet sağlığına etkisini yorumlar.", "keywords": ["egzersiz", "spor", "sağlık"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.3",
+      "unit_name": "Kuvvet ve Hareket",
+      "topics": [
+        {
+          "topic_name": "Kuvvet ve Hareket İlişkisi",
+          "outcomes": [
+            {"code": "F.6.3.1.1", "description": "Durgun cisme etki eden net kuvvetin cismi harekete geçirebileceğini açıklar.", "keywords": ["net kuvvet", "durgunluk", "hareket"]},
+            {"code": "F.6.3.1.2", "description": "Hareket hâlindeki cisme etki eden kuvvetlerin hızı artırabileceğini, azaltabileceğini veya yön değiştirebileceğini açıklar.", "keywords": ["hız", "ivme", "yön değişimi"]},
+            {"code": "F.6.3.1.3", "description": "Sürtünme kuvvetinin harekete zıt yönde etki ettiğini deneylerle gösterir.", "keywords": ["sürtünme", "deney", "zıt yön"]}
+          ]
+        },
+        {
+          "topic_name": "Kütle ve Ağırlık",
+          "outcomes": [
+            {"code": "F.6.3.2.1", "description": "Kütle ile ağırlık kavramlarını ayırt eder.", "keywords": ["kütle", "ağırlık", "gram", "newton"]},
+            {"code": "F.6.3.2.2", "description": "Ağırlığın yer çekimi kuvvetine bağlı olduğunu açıklar.", "keywords": ["yer çekimi", "ağırlık", "Dünya"]},
+            {"code": "F.6.3.2.3", "description": "Dengede kuvvetlerin büyüklük ve yön olarak eşit olduğunu örneklerle açıklar.", "keywords": ["denge", "kuvvet eşitliği"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.4",
+      "unit_name": "Madde ve Isı",
+      "topics": [
+        {
+          "topic_name": "Maddenin Hâl Değişimi",
+          "outcomes": [
+            {"code": "F.6.4.1.1", "description": "Isı alışverişi sonucunda maddenin erime, donma, buharlaşma ve yoğuşma ile hâl değiştirdiğini açıklar.", "keywords": ["hâl değişimi", "ısı", "erime"]},
+            {"code": "F.6.4.1.2", "description": "Erime ve donma sıcaklığının saf maddeler için sabit olduğunu deneylerle gösterir.", "keywords": ["erime noktası", "donma noktası", "saf madde"]},
+            {"code": "F.6.4.1.3", "description": "Kaynama ve yoğuşma olaylarını sıvı-gaz hâl geçişleri olarak açıklar.", "keywords": ["kaynama", "yoğuşma", "buhar"]}
+          ]
+        },
+        {
+          "topic_name": "Isı İletimi",
+          "outcomes": [
+            {"code": "F.6.4.2.1", "description": "Isının iletim, taşınım ve ışınım yollarıyla aktarıldığını açıklar.", "keywords": ["iletim", "taşınım", "ışınım"]},
+            {"code": "F.6.4.2.2", "description": "Metallerin ısı iletkeni, plastik ve tahtanın yalıtkan olduğunu deneylerle gösterir.", "keywords": ["ısı iletkeni", "yalıtkan", "metal"]},
+            {"code": "F.6.4.2.3", "description": "Günlük yaşamda ısı yalıtımının kullanım alanlarını örneklerle açıklar.", "keywords": ["yalıtım", "termos", "izolasyon"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.5",
+      "unit_name": "Ses ve Özellikleri",
+      "topics": [
+        {
+          "topic_name": "Sesin Oluşumu ve Yayılması",
+          "outcomes": [
+            {"code": "F.6.5.1.1", "description": "Sesin titreşimlerle oluştuğunu deneylerle gösterir.", "keywords": ["titreşim", "ses kaynağı", "dalga"]},
+            {"code": "F.6.5.1.2", "description": "Sesin maddesel ortamda (katı, sıvı, gaz) yayıldığını açıklar.", "keywords": ["ses yayılımı", "ortam", "boşlukta yayılmaz"]},
+            {"code": "F.6.5.1.3", "description": "Sesin hızının ortamın cinsine bağlı olduğunu karşılaştırır.", "keywords": ["ses hızı", "katı", "gaz"]}
+          ]
+        },
+        {
+          "topic_name": "Sesin Fiziksel Özellikleri",
+          "outcomes": [
+            {"code": "F.6.5.2.1", "description": "Sesin yüksekliğinin (ince-kalın) titreşim frekansına bağlı olduğunu açıklar.", "keywords": ["yükseklik", "frekans", "ince ses", "kalın ses"]},
+            {"code": "F.6.5.2.2", "description": "Sesin şiddetinin (gürültülü-sessiz) genliğe bağlı olduğunu açıklar.", "keywords": ["şiddet", "genlik", "desibel"]},
+            {"code": "F.6.5.2.3", "description": "Yankı olayını ses dalgalarının yansıması olarak açıklar.", "keywords": ["yankı", "yansıma", "ses"]},
+            {"code": "F.6.5.2.4", "description": "Gürültü kirliliğinin insan sağlığına etkilerini değerlendirir.", "keywords": ["gürültü", "işitme", "sağlık"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.6",
+      "unit_name": "Vücudumuzdaki Sistemler",
+      "topics": [
+        {
+          "topic_name": "Sindirim Sistemi",
+          "outcomes": [
+            {"code": "F.6.6.1.1", "description": "Sindirim sisteminin organlarını (ağız, mide, ince bağırsak, kalın bağırsak) tanır.", "keywords": ["sindirim", "mide", "bağırsak"]},
+            {"code": "F.6.6.1.2", "description": "Besinlerin mekanik ve kimyasal sindirim aşamalarını açıklar.", "keywords": ["mekanik sindirim", "kimyasal sindirim", "enzim"]},
+            {"code": "F.6.6.1.3", "description": "Sağlıklı beslenmenin sindirim sistemi üzerindeki etkisini değerlendirir.", "keywords": ["beslenme", "lif", "sağlık"]}
+          ]
+        },
+        {
+          "topic_name": "Dolaşım ve Solunum Sistemleri",
+          "outcomes": [
+            {"code": "F.6.6.2.1", "description": "Kalp, damarlar ve kanın dolaşım sistemindeki rollerini açıklar.", "keywords": ["kalp", "damar", "kan", "dolaşım"]},
+            {"code": "F.6.6.2.2", "description": "Solunum sisteminin organlarını tanır; oksijen-karbondioksit alışverişini açıklar.", "keywords": ["akciğer", "solunum", "oksijen"]},
+            {"code": "F.6.6.2.3", "description": "Sigara ve hava kirliliğinin solunum ve dolaşım sistemlerine zararlarını açıklar.", "keywords": ["sigara", "kirlilik", "sağlık"]}
+          ]
+        },
+        {
+          "topic_name": "Boşaltım ve Sinir-Uyum Sistemleri",
+          "outcomes": [
+            {"code": "F.6.6.3.1", "description": "Boşaltım sisteminin (böbrek, idrar yolu) işlevlerini açıklar.", "keywords": ["böbrek", "boşaltım", "idrar"]},
+            {"code": "F.6.6.3.2", "description": "Sinir sisteminin uyarıları algılama ve iletmedeki rolünü açıklar.", "keywords": ["sinir", "beyin", "uyarı"]},
+            {"code": "F.6.6.3.3", "description": "Endokrin sistemin hormonlarla vücut dengesini düzenlediğini açıklar.", "keywords": ["hormon", "endokrin", "denge"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.7",
+      "unit_name": "Elektrik İletimi",
+      "topics": [
+        {
+          "topic_name": "Elektrik Devresi ve Akım",
+          "outcomes": [
+            {"code": "F.6.7.1.1", "description": "Elektrik akımının iletken maddelerdeki elektron hareketi olduğunu açıklar.", "keywords": ["elektron", "elektrik akımı", "iletken"]},
+            {"code": "F.6.7.1.2", "description": "Seri ve paralel devrelerde ampul parlaklığını karşılaştırır.", "keywords": ["seri", "paralel", "ampul"]},
+            {"code": "F.6.7.1.3", "description": "Devre şemasını standart sembollerle çizer.", "keywords": ["devre şeması", "sembol", "pil"]}
+          ]
+        },
+        {
+          "topic_name": "İletkenlik ve Direnc",
+          "outcomes": [
+            {"code": "F.6.7.2.1", "description": "Farklı maddelerin iletkenlik özelliklerini karşılaştırır.", "keywords": ["iletkenlik", "bakır", "demir"]},
+            {"code": "F.6.7.2.2", "description": "Telin uzunluğu ve kalınlığının dirence etkisini deneylerle inceler.", "keywords": ["direnç", "uzunluk", "kalınlık"]},
+            {"code": "F.6.7.2.3", "description": "Elektrik çarpmasından korunma yöntemlerini açıklar.", "keywords": ["güvenlik", "topraklama", "sigorta"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "F.6.8",
+      "unit_name": "Bitki ve Hayvanlarda Üreme, Büyüme, Gelişme",
+      "topics": [
+        {
+          "topic_name": "Bitkilerde Üreme ve Gelişme",
+          "outcomes": [
+            {"code": "F.6.8.1.1", "description": "Çiçekli bitkilerde tozlaşma ve döllenme olaylarını açıklar.", "keywords": ["tozlaşma", "döllenme", "çiçek"]},
+            {"code": "F.6.8.1.2", "description": "Tohumun çimlenme koşullarını deneylerle inceler.", "keywords": ["tohum", "çimlenme", "su", "ısı"]},
+            {"code": "F.6.8.1.3", "description": "Bitkilerde vejetatif üremeyi örneklerle açıklar.", "keywords": ["vejetatif üreme", "soğan", "patates"]}
+          ]
+        },
+        {
+          "topic_name": "Hayvanlarda Üreme ve Gelişme",
+          "outcomes": [
+            {"code": "F.6.8.2.1", "description": "Omurgalı hayvanlarda yumurtayla ve dişi vücudunda gelişme türlerini karşılaştırır.", "keywords": ["yumurtayla gelişme", "canlı doğum", "embriyo"]},
+            {"code": "F.6.8.2.2", "description": "Böceklerde tam ve eksik metamorfoz türlerini örneklerle açıklar.", "keywords": ["metamorfoz", "tırtıl", "kelebek"]},
+            {"code": "F.6.8.2.3", "description": "Üreme, büyüme ve gelişmenin türün devamı için önemini değerlendirir.", "keywords": ["üreme", "büyüme", "gelişme", "tür"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

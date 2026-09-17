@@ -1,0 +1,78 @@
+{
+  "grade": 2,
+  "subject": "Hayat Bilgisi",
+  "program_ref": "MEB Hayat Bilgisi (İlkokul)",
+  "units": [
+    {
+      "unit_code": "HB.2.1",
+      "unit_name": "Ben ve Çevrem",
+      "topics": [
+        {
+          "topic_name": "Duygularım",
+          "outcomes": [
+            {
+              "code": "HB.2.1.1.1",
+              "description": "Duygularını tanır ve uygun ifade yollarını kullanır.",
+              "keywords": [
+                "duygu"
+              ]
+            },
+            {
+              "code": "HB.2.1.1.2",
+              "description": "Arkadaşlık ilişkilerinde empati gösterir.",
+              "keywords": [
+                "empati",
+                "arkadaşlık"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "HB.2.2",
+      "unit_name": "Sağlıklı Yaşam",
+      "topics": [
+        {
+          "topic_name": "Hareket ve Dinlenme",
+          "outcomes": [
+            {
+              "code": "HB.2.2.1.1",
+              "description": "Günlük hareket ve dinlenme dengesinin önemini açıklar.",
+              "keywords": [
+                "spor",
+                "dinlenme"
+              ]
+            },
+            {
+              "code": "HB.2.2.1.2",
+              "description": "Tehlikeli maddelerden uzak durma kurallarını bilir.",
+              "keywords": [
+                "güvenlik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "HB.2.3",
+      "unit_name": "Toplumda Yaşam",
+      "topics": [
+        {
+          "topic_name": "Kurallar ve Sorumluluk",
+          "outcomes": [
+            {
+              "code": "HB.2.3.1.1",
+              "description": "Toplumda uyulması gereken temel kuralları açıklar.",
+              "keywords": [
+                "kural",
+                "toplum"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

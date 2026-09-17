@@ -1,0 +1,189 @@
+{
+  "grade": 11,
+  "subject": "Türk Dili ve Edebiyatı",
+  "program_ref": "MEB Türk Dili ve Edebiyatı Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TDE.11.1",
+      "unit_name": "Cumhuriyet Dönemi Roman",
+      "topics": [
+        {
+          "topic_name": "Cumhuriyet Romanı",
+          "outcomes": [
+            {
+              "code": "TDE.11.1.1.1",
+              "description": "Cumhuriyet dönemi romanının gelişim evrelerini açıklar.",
+              "keywords": [
+                "Cumhuriyet romanı"
+              ]
+            },
+            {
+              "code": "TDE.11.1.1.2",
+              "description": "Yakup Kadri, Reşat Nuri, Halide Edip eserlerini inceler.",
+              "keywords": [
+                "Yakup Kadri"
+              ]
+            },
+            {
+              "code": "TDE.11.1.1.3",
+              "description": "Toplumcu gerçekçi roman özelliklerini tanır.",
+              "keywords": [
+                "toplumcu gerçekçilik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.11.2",
+      "unit_name": "Cumhuriyet Dönemi Tiyatrosu",
+      "topics": [
+        {
+          "topic_name": "Tiyatro",
+          "outcomes": [
+            {
+              "code": "TDE.11.2.1.1",
+              "description": "Cumhuriyet dönemi tiyatro eserlerinin özelliklerini açıklar.",
+              "keywords": [
+                "tiyatro"
+              ]
+            },
+            {
+              "code": "TDE.11.2.1.2",
+              "description": "Haldun Taner, Muhsin Ertuğrul eserlerinden örnekler inceler.",
+              "keywords": [
+                "Haldun Taner"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.11.3",
+      "unit_name": "Dünya Edebiyatı",
+      "topics": [
+        {
+          "topic_name": "Dünya Edebiyatından Örnekler",
+          "outcomes": [
+            {
+              "code": "TDE.11.3.1.1",
+              "description": "Klasik ve modern dünya edebiyatından eserleri tanır.",
+              "keywords": [
+                "dünya edebiyatı"
+              ]
+            },
+            {
+              "code": "TDE.11.3.1.2",
+              "description": "Türk edebiyatı ile dünya edebiyatı arasındaki etkileşimleri açıklar.",
+              "keywords": [
+                "etkileşim"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.11.4",
+      "unit_name": "Anlatı Türleri",
+      "topics": [
+        {
+          "topic_name": "Roman ve Hikâye",
+          "outcomes": [
+            {
+              "code": "TDE.11.4.1.1",
+              "description": "Roman ve hikâye türlerinin yapı unsurlarını karşılaştırır.",
+              "keywords": [
+                "roman",
+                "hikâye"
+              ]
+            },
+            {
+              "code": "TDE.11.4.1.2",
+              "description": "Anlatıcı türlerini (1. tekil, 3. tekil, tanık) ayırt eder.",
+              "keywords": [
+                "anlatıcı"
+              ]
+            },
+            {
+              "code": "TDE.11.4.1.3",
+              "description": "Zaman ve mekân kullanımını metinlerde analiz eder.",
+              "keywords": [
+                "zaman",
+                "mekân"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.11.5",
+      "unit_name": "Şiir İnceleme",
+      "topics": [
+        {
+          "topic_name": "Şiir Analizi",
+          "outcomes": [
+            {
+              "code": "TDE.11.5.1.1",
+              "description": "Nazım biçimlerini (gazel, koşma, serbest) tanır.",
+              "keywords": [
+                "nazım biçimi"
+              ]
+            },
+            {
+              "code": "TDE.11.5.1.2",
+              "description": "Şiirde tema, duygu ve düşünce ilişkisini analiz eder.",
+              "keywords": [
+                "tema",
+                "duygu"
+              ]
+            },
+            {
+              "code": "TDE.11.5.1.3",
+              "description": "Şiirde ses ve anlam kaynaşmasını yorumlar.",
+              "keywords": [
+                "ses",
+                "anlam"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.11.6",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Cümle Bilgisi",
+          "outcomes": [
+            {
+              "code": "TDE.11.6.1.1",
+              "description": "Cümle türlerini (basit, birleşik, sıralı, bağlı) ayırt eder.",
+              "keywords": [
+                "cümle türü"
+              ]
+            },
+            {
+              "code": "TDE.11.6.1.2",
+              "description": "Anlatım bozukluklarını tespit eder ve düzeltir.",
+              "keywords": [
+                "anlatım bozukluğu"
+              ]
+            },
+            {
+              "code": "TDE.11.6.1.3",
+              "description": "Yazım ve noktalama kurallarını metinlerde uygular.",
+              "keywords": [
+                "yazım"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

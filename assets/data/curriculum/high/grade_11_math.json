@@ -1,0 +1,188 @@
+{
+  "grade": 11,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "M.11.1",
+      "unit_name": "Trigonometri",
+      "topics": [
+        {
+          "topic_name": "Trigonometrik Oranlar",
+          "outcomes": [
+            {
+              "code": "M.11.1.1.1",
+              "description": "Açıların trigonometrik oranlarını (sin, cos, tan) hesaplar.",
+              "keywords": [
+                "trigonometri",
+                "sin",
+                "cos"
+              ]
+            },
+            {
+              "code": "M.11.1.1.2",
+              "description": "Trigonometrik özdeşlikleri uygular.",
+              "keywords": [
+                "özdeşlik"
+              ]
+            },
+            {
+              "code": "M.11.1.1.3",
+              "description": "Toplam-fark ve yarım açı formüllerini kullanır.",
+              "keywords": [
+                "toplam formülü"
+              ]
+            },
+            {
+              "code": "M.11.1.1.4",
+              "description": "Trigonometrik denklemleri çözer.",
+              "keywords": [
+                "trigonometrik denklem"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.11.2",
+      "unit_name": "Analitik Geometri",
+      "topics": [
+        {
+          "topic_name": "Doğru ve Çember",
+          "outcomes": [
+            {
+              "code": "M.11.2.1.1",
+              "description": "İki nokta arasındaki uzaklığı ve orta noktayı hesaplar.",
+              "keywords": [
+                "uzaklık",
+                "orta nokta"
+              ]
+            },
+            {
+              "code": "M.11.2.1.2",
+              "description": "Doğrunun eğimini ve denklemini bulur.",
+              "keywords": [
+                "eğim",
+                "doğru denklemi"
+              ]
+            },
+            {
+              "code": "M.11.2.1.3",
+              "description": "Paralel ve dik doğruların denklemlerini yazar.",
+              "keywords": [
+                "paralel",
+                "dik"
+              ]
+            },
+            {
+              "code": "M.11.2.1.4",
+              "description": "Çemberin standart denklemini kullanır.",
+              "keywords": [
+                "çember denklemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.11.3",
+      "unit_name": "Fonksiyonlarda Uygulamalar",
+      "topics": [
+        {
+          "topic_name": "Fonksiyon Dönüşümleri",
+          "outcomes": [
+            {
+              "code": "M.11.3.1.1",
+              "description": "Fonksiyonlarda öteleme, yansıma ve ölçekleme dönüşümlerini uygular.",
+              "keywords": [
+                "dönüşüm",
+                "öteleme"
+              ]
+            },
+            {
+              "code": "M.11.3.1.2",
+              "description": "Üstel ve logaritmik fonksiyonları inceler.",
+              "keywords": [
+                "üstel",
+                "logaritma"
+              ]
+            },
+            {
+              "code": "M.11.3.1.3",
+              "description": "Fonksiyon grafiklerini dönüşümlerle çizer.",
+              "keywords": [
+                "grafik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.11.4",
+      "unit_name": "Diziler",
+      "topics": [
+        {
+          "topic_name": "Aritmetik ve Geometrik Dizi",
+          "outcomes": [
+            {
+              "code": "M.11.4.1.1",
+              "description": "Aritmetik dizinin genel terimini ve toplamını bulur.",
+              "keywords": [
+                "aritmetik dizi"
+              ]
+            },
+            {
+              "code": "M.11.4.1.2",
+              "description": "Geometrik dizinin genel terimini ve toplamını bulur.",
+              "keywords": [
+                "geometrik dizi"
+              ]
+            },
+            {
+              "code": "M.11.4.1.3",
+              "description": "Dizi problemlerini çözer.",
+              "keywords": [
+                "dizi problemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.11.5",
+      "unit_name": "Limit ve Süreklilik",
+      "topics": [
+        {
+          "topic_name": "Limit Kavramı",
+          "outcomes": [
+            {
+              "code": "M.11.5.1.1",
+              "description": "Fonksiyonlarda limit kavramını tanır; limit hesaplar.",
+              "keywords": [
+                "limit"
+              ]
+            },
+            {
+              "code": "M.11.5.1.2",
+              "description": "Süreklilik kavramını açıklar.",
+              "keywords": [
+                "süreklilik"
+              ]
+            },
+            {
+              "code": "M.11.5.1.3",
+              "description": "Belirsizlik durumlarında limit tekniklerini uygular.",
+              "keywords": [
+                "belirsizlik"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

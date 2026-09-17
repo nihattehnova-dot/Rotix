@@ -1,0 +1,170 @@
+{
+  "grade": 10,
+  "subject": "Tarih",
+  "program_ref": "MEB Tarih Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TAR.10.1",
+      "unit_name": "Osmanlı Devleti Kuruluş Dönemi",
+      "topics": [
+        {
+          "topic_name": "Kuruluş ve Yükseliş",
+          "outcomes": [
+            {
+              "code": "TAR.10.1.1.1",
+              "description": "Osmanlı Beyliği'nin kuruluşunu ve ilk fetihlerini açıklar.",
+              "keywords": [
+                "Osmanlı kuruluş"
+              ]
+            },
+            {
+              "code": "TAR.10.1.1.2",
+              "description": "Rumeli'deki fetihlerin stratejik önemini değerlendirir.",
+              "keywords": [
+                "Rumeli fetihleri"
+              ]
+            },
+            {
+              "code": "TAR.10.1.1.3",
+              "description": "Osmanlı'da devlet teşkilatının temel yapısını tanır.",
+              "keywords": [
+                "devlet teşkilatı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.10.2",
+      "unit_name": "Osmanlı Yükselme Dönemi",
+      "topics": [
+        {
+          "topic_name": "Fatih ve Kanuni Dönemi",
+          "outcomes": [
+            {
+              "code": "TAR.10.2.1.1",
+              "description": "İstanbul'un fethinin dünya tarihindeki yerini açıklar.",
+              "keywords": [
+                "İstanbul'un fethi"
+              ]
+            },
+            {
+              "code": "TAR.10.2.1.2",
+              "description": "Kanuni dönemindeki askerî ve siyasi gelişmeleri sıralar.",
+              "keywords": [
+                "Kanuni"
+              ]
+            },
+            {
+              "code": "TAR.10.2.1.3",
+              "description": "Osmanlı'da klasik dönem kültür ve sanatını tanır.",
+              "keywords": [
+                "klasik dönem"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.10.3",
+      "unit_name": "Osmanlı Duraklama ve Gerileme",
+      "topics": [
+        {
+          "topic_name": "XVII-XVIII. Yüzyıl",
+          "outcomes": [
+            {
+              "code": "TAR.10.3.1.1",
+              "description": "Duraklama ve gerileme döneminin nedenlerini analiz eder.",
+              "keywords": [
+                "duraklama",
+                "gerileme"
+              ]
+            },
+            {
+              "code": "TAR.10.3.1.2",
+              "description": "Islahat hareketlerini (Lale Devri, III. Selim) değerlendirir.",
+              "keywords": [
+                "ıslahat"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.10.4",
+      "unit_name": "Osmanlı Dağılma Dönemi",
+      "topics": [
+        {
+          "topic_name": "XIX. Yüzyıl",
+          "outcomes": [
+            {
+              "code": "TAR.10.4.1.1",
+              "description": "Tanzimat ve Islahat Fermanlarının içeriğini açıklar.",
+              "keywords": [
+                "Tanzimat",
+                "Islahat"
+              ]
+            },
+            {
+              "code": "TAR.10.4.1.2",
+              "description": "93 Harbi ve Berlin Antlaşması'nın sonuçlarını değerlendirir.",
+              "keywords": [
+                "93 Harbi"
+              ]
+            },
+            {
+              "code": "TAR.10.4.1.3",
+              "description": "Osmanlı'da demokratikleşme sürecini yorumlar.",
+              "keywords": [
+                "demokratikleşme"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.10.5",
+      "unit_name": "Osmanlı Kültür ve Medeniyeti",
+      "topics": [
+        {
+          "topic_name": "Kültür ve Sanat",
+          "outcomes": [
+            {
+              "code": "TAR.10.5.1.1",
+              "description": "Osmanlı'da eğitim ve bilim kurumlarını (medrese, Enderun) tanır.",
+              "keywords": [
+                "medrese",
+                "Enderun"
+              ]
+            },
+            {
+              "code": "TAR.10.5.1.2",
+              "description": "Osmanlı mimarisinin özelliklerini örnek eserlerle açıklar.",
+              "keywords": [
+                "Osmanlı mimarisi"
+              ]
+            },
+            {
+              "code": "TAR.10.5.1.3",
+              "description": "Osmanlı'da sanat ve edebiyat alanındaki gelişmeleri sıralar.",
+              "keywords": [
+                "Osmanlı sanatı"
+              ]
+            },
+            {
+              "code": "TAR.10.5.1.4",
+              "description": "Osmanlı toplum yapısını (millet sistemi) açıklar.",
+              "keywords": [
+                "millet sistemi"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

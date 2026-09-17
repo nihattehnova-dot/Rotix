@@ -1,0 +1,381 @@
+{
+  "grade": 9,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "M.9.1",
+      "unit_name": "Mantık",
+      "topics": [
+        {
+          "topic_name": "Önermeler ve Bileşik Önermeler",
+          "outcomes": [
+            {
+              "code": "M.9.1.1.1",
+              "description": "Önerme kavramını tanır; doğruluk değerini belirler.",
+              "keywords": [
+                "önerme",
+                "doğruluk değeri"
+              ]
+            },
+            {
+              "code": "M.9.1.1.2",
+              "description": "Bileşik önermeleri ve bağlaçları (ve, veya, ya da) kullanır.",
+              "keywords": [
+                "bileşik önerme",
+                "bağlaç"
+              ]
+            },
+            {
+              "code": "M.9.1.1.3",
+              "description": "Koşullu önermeleri tanır; koşul ve sonuç ilişkisini açıklar.",
+              "keywords": [
+                "koşullu önerme",
+                "koşul"
+              ]
+            },
+            {
+              "code": "M.9.1.1.4",
+              "description": "Önermelerin tersini, karşıtını ve karşıt tersini bulur.",
+              "keywords": [
+                "ters",
+                "karşıt"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Niceleyiciler ve İspat",
+          "outcomes": [
+            {
+              "code": "M.9.1.2.1",
+              "description": "Evrensel ve varlıksal niceleyicileri tanır; sembollerle ifade eder.",
+              "keywords": [
+                "niceleyici",
+                "∀",
+                "∃"
+              ]
+            },
+            {
+              "code": "M.9.1.2.2",
+              "description": "Niceleyicili önermelerin doğruluk değerini belirler.",
+              "keywords": [
+                "niceleyici",
+                "doğruluk"
+              ]
+            },
+            {
+              "code": "M.9.1.2.3",
+              "description": "Doğrudan ispat, tersini alarak ispat ve tümevarım yöntemlerini açıklar.",
+              "keywords": [
+                "ispat",
+                "tümevarım"
+              ]
+            },
+            {
+              "code": "M.9.1.2.4",
+              "description": "Matematiksel ifadeleri mantık sembolleriyle temsil eder.",
+              "keywords": [
+                "mantık sembolü"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.9.2",
+      "unit_name": "Kümeler",
+      "topics": [
+        {
+          "topic_name": "Küme Kavramı ve Gösterim",
+          "outcomes": [
+            {
+              "code": "M.9.2.1.1",
+              "description": "Küme kavramını tanır; eleman, alt küme ve eşit küme ilişkilerini açıklar.",
+              "keywords": [
+                "küme",
+                "eleman",
+                "alt küme"
+              ]
+            },
+            {
+              "code": "M.9.2.1.2",
+              "description": "Kümeleri liste, ortak özellik ve Venn şeması ile gösterir.",
+              "keywords": [
+                "Venn şeması",
+                "liste yöntemi"
+              ]
+            },
+            {
+              "code": "M.9.2.1.3",
+              "description": "Boş küme, evrensel küme ve sonlu-sonsuz küme kavramlarını ayırt eder.",
+              "keywords": [
+                "boş küme",
+                "evrensel küme"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Küme İşlemleri",
+          "outcomes": [
+            {
+              "code": "M.9.2.2.1",
+              "description": "Birleşim, kesişim, fark ve tümleyen işlemlerini yapar.",
+              "keywords": [
+                "birleşim",
+                "kesişim",
+                "fark"
+              ]
+            },
+            {
+              "code": "M.9.2.2.2",
+              "description": "De Morgan kurallarını uygular.",
+              "keywords": [
+                "De Morgan"
+              ]
+            },
+            {
+              "code": "M.9.2.2.3",
+              "description": "Küme işlemleriyle ilgili problemleri çözer.",
+              "keywords": [
+                "küme problemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.9.3",
+      "unit_name": "Denklem ve Eşitsizlikler",
+      "topics": [
+        {
+          "topic_name": "Sayı Kümeleri",
+          "outcomes": [
+            {
+              "code": "M.9.3.1.1",
+              "description": "Doğal, tam, rasyonel, irrasyonel ve reel sayı kümelerini tanır.",
+              "keywords": [
+                "sayı kümeleri",
+                "reel sayı"
+              ]
+            },
+            {
+              "code": "M.9.3.1.2",
+              "description": "Sayı kümeleri arasındaki ilişkileri Venn şeması ile gösterir.",
+              "keywords": [
+                "Venn",
+                "sayı kümeleri"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üslü ve Köklü İfadeler",
+          "outcomes": [
+            {
+              "code": "M.9.3.2.1",
+              "description": "Üslü ifadelerle işlem yapar; üs kurallarını uygular.",
+              "keywords": [
+                "üslü ifade",
+                "üs kuralı"
+              ]
+            },
+            {
+              "code": "M.9.3.2.2",
+              "description": "Köklü ifadelerle işlem yapar; sadeleştirme ve rasyonelleştirme yapar.",
+              "keywords": [
+                "köklü ifade",
+                "rasyonelleştirme"
+              ]
+            },
+            {
+              "code": "M.9.3.2.3",
+              "description": "Üslü ve köklü ifadeleri birbirine dönüştürür.",
+              "keywords": [
+                "dönüşüm"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Denklem ve Eşitsizlikler",
+          "outcomes": [
+            {
+              "code": "M.9.3.3.1",
+              "description": "Birinci dereceden bir ve iki bilinmeyenli denklem sistemlerini çözer.",
+              "keywords": [
+                "denklem sistemi"
+              ]
+            },
+            {
+              "code": "M.9.3.3.2",
+              "description": "Mutlak değer içeren birinci dereceden denklemleri çözer.",
+              "keywords": [
+                "mutlak değer",
+                "denklem"
+              ]
+            },
+            {
+              "code": "M.9.3.3.3",
+              "description": "Birinci dereceden bir ve iki bilinmeyenli eşitsizlikleri çözer; sayı doğrusunda gösterir.",
+              "keywords": [
+                "eşitsizlik",
+                "sayı doğrusu"
+              ]
+            },
+            {
+              "code": "M.9.3.3.4",
+              "description": "Denklem ve eşitsizliklerle ilgili problemleri çözer.",
+              "keywords": [
+                "problem çözme"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.9.4",
+      "unit_name": "Üçgenler",
+      "topics": [
+        {
+          "topic_name": "Üçgende Temel Kavramlar",
+          "outcomes": [
+            {
+              "code": "M.9.4.1.1",
+              "description": "Üçgenin elemanlarını (kenar, açı, kenarortay, açıortay, yükseklik) tanır.",
+              "keywords": [
+                "üçgen",
+                "kenarortay",
+                "açıortay"
+              ]
+            },
+            {
+              "code": "M.9.4.1.2",
+              "description": "Üçgenin iç ve dış açılarının özelliklerini kullanır.",
+              "keywords": [
+                "iç açı",
+                "dış açı"
+              ]
+            },
+            {
+              "code": "M.9.4.1.3",
+              "description": "Üçgen eşitsizliğini uygular.",
+              "keywords": [
+                "üçgen eşitsizliği"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üçgende Eşlik ve Benzerlik",
+          "outcomes": [
+            {
+              "code": "M.9.4.2.1",
+              "description": "Üçgenlerde eşlik koşullarını (KKK, AKA, KAK) uygular.",
+              "keywords": [
+                "eşlik",
+                "KKK"
+              ]
+            },
+            {
+              "code": "M.9.4.2.2",
+              "description": "Üçgenlerde benzerlik koşullarını (AA, KAK, KKA) uygular.",
+              "keywords": [
+                "benzerlik",
+                "AA"
+              ]
+            },
+            {
+              "code": "M.9.4.2.3",
+              "description": "Benzer üçgenlerde oran-orantı ilişkilerini kullanır.",
+              "keywords": [
+                "oran",
+                "benzerlik oranı"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üçgende Alan",
+          "outcomes": [
+            {
+              "code": "M.9.4.3.1",
+              "description": "Üçgenin alanını farklı formüllerle hesaplar.",
+              "keywords": [
+                "alan",
+                "formül"
+              ]
+            },
+            {
+              "code": "M.9.4.3.2",
+              "description": "Benzer üçgenlerin alan oranını kullanır.",
+              "keywords": [
+                "alan oranı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.9.5",
+      "unit_name": "Veri",
+      "topics": [
+        {
+          "topic_name": "Merkezi Eğilim Ölçüleri",
+          "outcomes": [
+            {
+              "code": "M.9.5.1.1",
+              "description": "Aritmetik ortalama, ortanca ve mod kavramlarını hesaplar.",
+              "keywords": [
+                "ortalama",
+                "ortanca",
+                "mod"
+              ]
+            },
+            {
+              "code": "M.9.5.1.2",
+              "description": "Veri setlerinde merkezi eğilim ölçülerini karşılaştırır.",
+              "keywords": [
+                "merkezi eğilim"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Veri Analizi",
+          "outcomes": [
+            {
+              "code": "M.9.5.2.1",
+              "description": "Verileri sıklık tablosu ve histogram ile gösterir.",
+              "keywords": [
+                "histogram",
+                "sıklık tablosu"
+              ]
+            },
+            {
+              "code": "M.9.5.2.2",
+              "description": "Veri setlerinde açıklık ve standart sapmayı yorumlar.",
+              "keywords": [
+                "açıklık",
+                "standart sapma"
+              ]
+            },
+            {
+              "code": "M.9.5.2.3",
+              "description": "Gerçek yaşam verilerini analiz ederek yorum yapar.",
+              "keywords": [
+                "veri analizi",
+                "yorum"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "grade": "LGS",
+  "subject": "İngilizce",
+  "program_ref": "MEB LGS Sözel Bölüm Yabancı Dil (İngilizce) soru dağılımı (yaklaşık 10 soru)",
+  "exam_meta": {
+    "total_questions": 10,
+    "notes": "Soru sayısı yıllara göre değişebilir; okuma-anlama ve dil bilgisi ağırlıklıdır."
+  },
+  "units": [
+    {
+      "unit_code": "LGS.ING.01",
+      "unit_name": "Okuma ve Anlama",
+      "typical_questions": "4-5",
+      "topics": [
+        {
+          "topic_name": "Metin Anlama",
+          "outcomes": [
+            {
+              "code": "LGS.ING.01.01.01",
+              "description": "Kısa metinlerde ana fikir, detay bilgi ve çıkarım sorularını yanıtlar.",
+              "keywords": ["main idea", "reading comprehension", "inference"]
+            },
+            {
+              "code": "LGS.ING.01.01.02",
+              "description": "Metindeki bağlam ipuçlarından bilinmeyen kelimelerin anlamını tahmin eder.",
+              "keywords": ["context clues", "vocabulary", "guess meaning"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Diyalog ve Görsel Metin",
+          "outcomes": [
+            {
+              "code": "LGS.ING.01.02.01",
+              "description": "Günlük diyalogları okuyarak amaç, kişi ve yer bilgilerini belirler.",
+              "keywords": ["dialogue", "daily conversation", "purpose"]
+            },
+            {
+              "code": "LGS.ING.01.02.02",
+              "description": "İlan, afiş ve kısa duyuru metinlerinden bilgi çıkarır.",
+              "keywords": ["notice", "poster", "advertisement"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.ING.02",
+      "unit_name": "Dil Bilgisi",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Zamanlar (Tenses)",
+          "outcomes": [
+            {
+              "code": "LGS.ING.02.01.01",
+              "description": "Simple Present, Present Continuous, Simple Past ve Future (will/be going to) zamanlarını doğru kullanır.",
+              "keywords": ["simple present", "present continuous", "simple past", "future"]
+            },
+            {
+              "code": "LGS.ING.02.01.02",
+              "description": "Present Perfect yapısını temel kullanım alanlarında ayırt eder.",
+              "keywords": ["present perfect", "have/has", "tense"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Modal Verbs ve Koşul",
+          "outcomes": [
+            {
+              "code": "LGS.ING.02.02.01",
+              "description": "Can, must, should, may gibi modal fiilleri anlam bağlamında kullanır.",
+              "keywords": ["modal verbs", "can", "must", "should"]
+            },
+            {
+              "code": "LGS.ING.02.02.02",
+              "description": "First Conditional (If + Simple Present, will) yapısını cümle tamamlamada uygular.",
+              "keywords": ["first conditional", "if clause"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.ING.03",
+      "unit_name": "Kelime Bilgisi ve İletişim",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Kelime Bilgisi",
+          "outcomes": [
+            {
+              "code": "LGS.ING.03.01.01",
+              "description": "Günlük hayat, okul, sağlık, teknoloji ve çevre konularındaki temel kelimeleri tanır.",
+              "keywords": ["vocabulary", "daily life", "school", "health"]
+            },
+            {
+              "code": "LGS.ING.03.01.02",
+              "description": "Eş anlamlı, zıt anlamlı kelimeleri ve kelime türetme (suffix/prefix) yapılarını ayırt eder.",
+              "keywords": ["synonym", "antonym", "word formation"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İletişim İfadeleri",
+          "outcomes": [
+            {
+              "code": "LGS.ING.03.02.01",
+              "description": "Telefon, davet, öneri, rica ve yön tarifi ifadelerini uygun bağlamda seçer.",
+              "keywords": ["invitation", "suggestion", "request", "directions"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

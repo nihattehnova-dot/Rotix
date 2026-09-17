@@ -1,0 +1,164 @@
+{
+  "grade": 5,
+  "subject": "Sosyal Bilgiler",
+  "program_ref": "MEB Sosyal Bilgiler Dersi Öğretim Programı (Ortaokul, 5. Sınıf)",
+  "units": [
+    {
+      "unit_code": "SB.5.1",
+      "unit_name": "Birey ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Kimlik ve Toplumsal Roller",
+          "outcomes": [
+            {"code": "SB.5.1.1.1", "description": "Bireysel kimliğin oluşumunda aile, okul ve kültürün etkisini açıklar.", "keywords": ["kimlik", "aile", "kültür"]},
+            {"code": "SB.5.1.1.2", "description": "Toplumdaki farklı rolleri (öğrenci, vatandaş, aile bireyi) tanımlar.", "keywords": ["rol", "toplum", "birey"]},
+            {"code": "SB.5.1.1.3", "description": "Toplumsal kuralların bir arada yaşamaya katkısını değerlendirir.", "keywords": ["kural", "düzen", "toplum"]},
+            {"code": "SB.5.1.1.4", "description": "Farklılıklara saygının toplumsal barışa etkisini açıklar.", "keywords": ["farklılık", "saygı", "hoşgörü"]}
+          ]
+        },
+        {
+          "topic_name": "Hak ve Sorumluluklar",
+          "outcomes": [
+            {"code": "SB.5.1.2.1", "description": "Temel insan haklarını (yaşam, eğitim, sağlık) tanır.", "keywords": ["insan hakları", "eğitim hakkı", "yaşam hakkı"]},
+            {"code": "SB.5.1.2.2", "description": "Hakların kullanımında sorumlulukların da bulunduğunu örneklerle açıklar.", "keywords": ["sorumluluk", "hak", "denge"]},
+            {"code": "SB.5.1.2.3", "description": "Çocuk hakları sözleşmesinin temel ilkelerini açıklar.", "keywords": ["çocuk hakları", "sözleşme", "koruma"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.5.2",
+      "unit_name": "Kültür ve Miras",
+      "topics": [
+        {
+          "topic_name": "Türk Tarihinde İlk Türk Devletleri",
+          "outcomes": [
+            {"code": "SB.5.2.1.1", "description": "İlk Türk devletlerinin (Asya Hun, Göktürk, Uygur) kuruluş ve gelişim süreçlerini kronolojik sıralar.", "keywords": ["Hun", "Göktürk", "Uygur", "kronoloji"]},
+            {"code": "SB.5.2.1.2", "description": "Orhun Yazıtları'nın Türk tarih ve dil açısından önemini açıklar.", "keywords": ["Orhun Yazıtları", "Türkçe", "tarih"]},
+            {"code": "SB.5.2.1.3", "description": "İlk Türk devletlerinde göçebe yaşam tarzının etkilerini değerlendirir.", "keywords": ["göçebe", "hayvancılık", "konargöçer"]},
+            {"code": "SB.5.2.1.4", "description": "Türklerin Orta Asya'dan göç etmesinin nedenlerini açıklar.", "keywords": ["göç", "Orta Asya", "iklim"]}
+          ]
+        },
+        {
+          "topic_name": "Kültürel Miras",
+          "outcomes": [
+            {"code": "SB.5.2.2.1", "description": "Somut ve somut olmayan kültürel miras ögelerini örneklerle ayırt eder.", "keywords": ["somut miras", "somut olmayan miras", "UNESCO"]},
+            {"code": "SB.5.2.2.2", "description": "Türk kültüründe sanat, müzik ve el sanatlarının yerini açıklar.", "keywords": ["sanat", "müzik", "el sanatları"]},
+            {"code": "SB.5.2.2.3", "description": "Kültürel mirasın korunmasının önemini savunur.", "keywords": ["koruma", "miras", "restorasyon"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.5.3",
+      "unit_name": "İnsanlar, Yerler ve Çevreler",
+      "topics": [
+        {
+          "topic_name": "Türkiye'nin Coğrafi Konumu",
+          "outcomes": [
+            {"code": "SB.5.3.1.1", "description": "Türkiye'nin mutlak konumunu (enlem, boylam) harita üzerinde gösterir.", "keywords": ["mutlak konum", "enlem", "boylam"]},
+            {"code": "SB.5.3.1.2", "description": "Türkiye'nin göreceli konumunu komşu ülkeler ve denizler açısından açıklar.", "keywords": ["göreceli konum", "komşu", "kıta"]},
+            {"code": "SB.5.3.1.3", "description": "Türkiye'nin stratejik konumunun tarih ve ticaret üzerindeki etkisini değerlendirir.", "keywords": ["stratejik konum", "ticaret", "boğazlar"]}
+          ]
+        },
+        {
+          "topic_name": "Doğal ve Beşerî Çevre",
+          "outcomes": [
+            {"code": "SB.5.3.2.1", "description": "Türkiye'nin fiziki coğrafya özelliklerini (dağ, ova, plato, akarsu) harita üzerinde tanır.", "keywords": ["fiziki coğrafya", "dağ", "ova", "akarsu"]},
+            {"code": "SB.5.3.2.2", "description": "İklim ve bitki örtüsü arasındaki ilişkiyi Türkiye örnekleriyle açıklar.", "keywords": ["iklim", "bitki örtüsü", "orman"]},
+            {"code": "SB.5.3.2.3", "description": "Doğal afetlerin (deprem, sel, kuraklık) insan yaşamına etkilerini değerlendirir.", "keywords": ["deprem", "doğal afet", "hazırlık"]},
+            {"code": "SB.5.3.2.4", "description": "Beşerî çevre unsurlarını (yerleşme, ulaşım, sanayi) tanır.", "keywords": ["beşerî çevre", "yerleşme", "ulaşım"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.5.4",
+      "unit_name": "Bilim, Teknoloji ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Bilim ve Teknolojinin Toplumsal Etkileri",
+          "outcomes": [
+            {"code": "SB.5.4.1.1", "description": "Bilimsel gelişmelerin günlük yaşamı nasıl değiştirdiğini örneklerle açıklar.", "keywords": ["bilim", "teknoloji", "değişim"]},
+            {"code": "SB.5.4.1.2", "description": "Teknolojinin olumlu ve olumsuz etkilerini tartışır.", "keywords": ["olumlu etki", "olumsuz etki", "teknoloji"]},
+            {"code": "SB.5.4.1.3", "description": "Türk bilim insanlarının katkılarını tanır.", "keywords": ["bilim insanı", "Türk bilim", "keşif"]}
+          ]
+        },
+        {
+          "topic_name": "Medya Okuryazarlığı",
+          "outcomes": [
+            {"code": "SB.5.4.2.1", "description": "Medya mesajlarını eleştirel okuma becerisi geliştirir.", "keywords": ["medya", "eleştirel okuma", "mesaj"]},
+            {"code": "SB.5.4.2.2", "description": "Dijital ortamda güvenli ve sorumlu davranış kurallarını uygular.", "keywords": ["dijital güvenlik", "siber zorbalık", "sorumluluk"]},
+            {"code": "SB.5.4.2.3", "description": "Doğru bilgiye ulaşmak için güvenilir kaynakları ayırt eder.", "keywords": ["kaynak", "doğruluk", "araştırma"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.5.5",
+      "unit_name": "Üretim, Dağıtım ve Tüketim",
+      "topics": [
+        {
+          "topic_name": "Ekonomik Faaliyetler",
+          "outcomes": [
+            {"code": "SB.5.5.1.1", "description": "Tarım, sanayi, hizmet ve madencilik sektörlerini tanımlar.", "keywords": ["tarım", "sanayi", "hizmet", "madencilik"]},
+            {"code": "SB.5.5.1.2", "description": "Türkiye'de tarım ürünlerinin bölgelere göre dağılımını harita üzerinde gösterir.", "keywords": ["tarım ürünü", "bölge", "dağılım"]},
+            {"code": "SB.5.5.1.3", "description": "Doğal kaynakların ekonomik faaliyetlerle ilişkisini açıklar.", "keywords": ["doğal kaynak", "ekonomi", "üretim"]}
+          ]
+        },
+        {
+          "topic_name": "Tüketim ve Tasarruf",
+          "outcomes": [
+            {"code": "SB.5.5.2.1", "description": "İhtiyaç ve istek kavramlarını ayırt eder.", "keywords": ["ihtiyaç", "istek", "tüketim"]},
+            {"code": "SB.5.5.2.2", "description": "Bütçe oluşturmanın temel ilkelerini açıklar.", "keywords": ["bütçe", "tasarruf", "planlama"]},
+            {"code": "SB.5.5.2.3", "description": "Bilinçli tüketimin çevre ve ekonomiye katkısını değerlendirir.", "keywords": ["bilinçli tüketim", "israf", "sürdürülebilirlik"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.5.6",
+      "unit_name": "Etkin Vatandaşlık",
+      "topics": [
+        {
+          "topic_name": "Demokrasi ve Yönetim",
+          "outcomes": [
+            {"code": "SB.5.6.1.1", "description": "Demokrasinin temel ilkelerini (halk egemenliği, eşitlik, özgürlük) açıklar.", "keywords": ["demokrasi", "egemenlik", "eşitlik"]},
+            {"code": "SB.5.6.1.2", "description": "Türkiye Cumhuriyeti'nin yönetim biçimini açıklar.", "keywords": ["cumhuriyet", "yönetim", "TBMM"]},
+            {"code": "SB.5.6.1.3", "description": "Yasama, yürütme ve yargı organlarının görevlerini tanır.", "keywords": ["yasama", "yürütme", "yargı", "kuvvetler ayrılığı"]}
+          ]
+        },
+        {
+          "topic_name": "Vatandaşlık Bilinci",
+          "outcomes": [
+            {"code": "SB.5.6.2.1", "description": "Vatandaşlık görevlerini (vergi, seçim, kanunlara uyma) açıklar.", "keywords": ["vatandaşlık", "görev", "vergi"]},
+            {"code": "SB.5.6.2.2", "description": "Seçme ve seçilme hakkının demokrasideki yerini değerlendirir.", "keywords": ["seçim", "oy", "demokrasi"]},
+            {"code": "SB.5.6.2.3", "description": "Toplumsal sorunlara çözüm üretmede aktif vatandaşlık rolünü savunur.", "keywords": ["aktif vatandaşlık", "katılım", "sivil toplum"]}
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "SB.5.7",
+      "unit_name": "Küresel Bağlantılar",
+      "topics": [
+        {
+          "topic_name": "Küreselleşme ve İletişim",
+          "outcomes": [
+            {"code": "SB.5.7.1.1", "description": "Küreselleşmenin kültür, ekonomi ve iletişim alanlarındaki etkilerini açıklar.", "keywords": ["küreselleşme", "kültür", "iletişim"]},
+            {"code": "SB.5.7.1.2", "description": "Uluslararası örgütlerin (BM, UNESCO) temel amaçlarını tanır.", "keywords": ["BM", "UNESCO", "uluslararası örgüt"]},
+            {"code": "SB.5.7.1.3", "description": "Farklı kültürlerle iletişimde empati ve saygının önemini değerlendirir.", "keywords": ["empati", "kültürler arası", "saygı"]}
+          ]
+        },
+        {
+          "topic_name": "Küresel Sorunlar",
+          "outcomes": [
+            {"code": "SB.5.7.2.1", "description": "Göç, yoksulluk ve iklim değişikliği gibi küresel sorunları tanır.", "keywords": ["göç", "yoksulluk", "iklim değişikliği"]},
+            {"code": "SB.5.7.2.2", "description": "Küresel sorunlara karşı uluslararası dayanışmanın önemini açıklar.", "keywords": ["dayanışma", "iş birliği", "çözüm"]},
+            {"code": "SB.5.7.2.3", "description": "Türkiye'nin küresel sorunlara yönelik katkılarını örneklerle açıklar.", "keywords": ["Türkiye", "insani yardım", "diplomasi"]}
+          ]
+        }
+      ]
+    }
+  ]
+}

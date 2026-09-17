@@ -1,0 +1,180 @@
+{
+  "grade": 11,
+  "subject": "Coğrafya",
+  "program_ref": "MEB Coğrafya Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "COĞ.11.1",
+      "unit_name": "Ekonomik Faaliyetler",
+      "topics": [
+        {
+          "topic_name": "Tarım ve Sanayi",
+          "outcomes": [
+            {
+              "code": "COĞ.11.1.1.1",
+              "description": "Türkiye'de tarım ürünlerinin dağılışını harita üzerinde gösterir.",
+              "keywords": [
+                "tarım"
+              ]
+            },
+            {
+              "code": "COĞ.11.1.1.2",
+              "description": "Sanayi bölgelerini ve gelişmişlik farklarını analiz eder.",
+              "keywords": [
+                "sanayi"
+              ]
+            },
+            {
+              "code": "COĞ.11.1.1.3",
+              "description": "Enerji kaynaklarının dağılışını açıklar.",
+              "keywords": [
+                "enerji"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.11.2",
+      "unit_name": "Ulaşım ve Ticaret",
+      "topics": [
+        {
+          "topic_name": "Ulaşım Ağları",
+          "outcomes": [
+            {
+              "code": "COĞ.11.2.1.1",
+              "description": "Türkiye'nin ulaşım sistemini (karayolu, demiryolu, havayolu) değerlendirir.",
+              "keywords": [
+                "ulaşım"
+              ]
+            },
+            {
+              "code": "COĞ.11.2.1.2",
+              "description": "Dış ticaret rotalarını ve limanların önemini açıklar.",
+              "keywords": [
+                "dış ticaret"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.11.3",
+      "unit_name": "Bölgeler Coğrafyası",
+      "topics": [
+        {
+          "topic_name": "Türkiye'nin Bölgeleri",
+          "outcomes": [
+            {
+              "code": "COĞ.11.3.1.1",
+              "description": "Türkiye'nin coğrafi bölgelerinin fiziki ve beşerî özelliklerini karşılaştırır.",
+              "keywords": [
+                "coğrafi bölge"
+              ]
+            },
+            {
+              "code": "COĞ.11.3.1.2",
+              "description": "Bölgesel kalkınma projelerini tanır.",
+              "keywords": [
+                "GAP",
+                "DAP"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.11.4",
+      "unit_name": "Küresel Sorunlar",
+      "topics": [
+        {
+          "topic_name": "Çevre ve Sürdürülebilirlik",
+          "outcomes": [
+            {
+              "code": "COĞ.11.4.1.1",
+              "description": "Küresel ısınma ve iklim değişikliğinin etkilerini açıklar.",
+              "keywords": [
+                "küresel ısınma"
+              ]
+            },
+            {
+              "code": "COĞ.11.4.1.2",
+              "description": "Doğal afetlerin (deprem, sel, kuraklık) coğrafi dağılışını analiz eder.",
+              "keywords": [
+                "doğal afet"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.11.5",
+      "unit_name": "Turizm Coğrafyası",
+      "topics": [
+        {
+          "topic_name": "Turizm Potansiyeli",
+          "outcomes": [
+            {
+              "code": "COĞ.11.5.1.1",
+              "description": "Türkiye'nin turizm türlerini (kültür, deniz, kış, termal) sınıflandırır.",
+              "keywords": [
+                "turizm"
+              ]
+            },
+            {
+              "code": "COĞ.11.5.1.2",
+              "description": "Turizmin ekonomik ve sosyal etkilerini değerlendirir.",
+              "keywords": [
+                "turizm etkisi"
+              ]
+            },
+            {
+              "code": "COĞ.11.5.1.3",
+              "description": "Sürdürülebilir turizm ilkelerini açıklar.",
+              "keywords": [
+                "sürdürülebilir turizm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.11.6",
+      "unit_name": "Harita ve Grafik",
+      "topics": [
+        {
+          "topic_name": "Veri Yorumlama",
+          "outcomes": [
+            {
+              "code": "COĞ.11.6.1.1",
+              "description": "İstatistiksel verileri harita ve grafiklerle yorumlar.",
+              "keywords": [
+                "grafik",
+                "istatistik"
+              ]
+            },
+            {
+              "code": "COĞ.11.6.1.2",
+              "description": "Nüfus ve ekonomi verilerini karşılaştırmalı analiz eder.",
+              "keywords": [
+                "karşılaştırma"
+              ]
+            },
+            {
+              "code": "COĞ.11.6.1.3",
+              "description": "Coğrafi verileri dijital platformlarda kullanır.",
+              "keywords": [
+                "dijital harita"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

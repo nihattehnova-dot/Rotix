@@ -1,0 +1,345 @@
+{
+  "grade": 8,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Ortaokul, 8. Sınıf) — Sayılar ve İşlemler, Cebir, Geometri ve Ölçme",
+  "units": [
+    {
+      "unit_code": "M.8.1",
+      "unit_name": "Sayılar ve İşlemler",
+      "topics": [
+        {
+          "topic_name": "Çarpanlar ve Katlar",
+          "outcomes": [
+            {
+              "code": "M.8.1.1.1",
+              "description": "Bir doğal sayının çarpanlarını bulur; asal sayıları tanır.",
+              "keywords": ["çarpan", "asal sayı"]
+            },
+            {
+              "code": "M.8.1.1.2",
+              "description": "Bir doğal sayıyı asal çarpanlarına ayırır.",
+              "keywords": ["asal çarpanlara ayırma"]
+            },
+            {
+              "code": "M.8.1.1.3",
+              "description": "İki veya daha fazla doğal sayının EBOB ve EKOK değerlerini hesaplar.",
+              "keywords": ["EBOB", "EKOK"]
+            },
+            {
+              "code": "M.8.1.1.4",
+              "description": "EBOB ve EKOK ile ilgili problemleri çözer.",
+              "keywords": ["EBOB problemi", "EKOK problemi"]
+            },
+            {
+              "code": "M.8.1.1.5",
+              "description": "Ardışık doğal sayılar, ardışık çift ve tek sayılar kavramlarını kullanır.",
+              "keywords": ["ardışık sayı", "çift", "tek"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üslü İfadeler",
+          "outcomes": [
+            {
+              "code": "M.8.1.2.1",
+              "description": "Tam sayı kuvvetlerini tanır; üslü ifadeleri açıklar.",
+              "keywords": ["üslü ifade", "kuvvet", "taban"]
+            },
+            {
+              "code": "M.8.1.2.2",
+              "description": "Aynı tabanlı üslü ifadelerle çarpma ve bölme işlemlerini yapar.",
+              "keywords": ["üslü çarpma", "üslü bölme"]
+            },
+            {
+              "code": "M.8.1.2.3",
+              "description": "Üslü ifadelerin kuvvetini alır; negatif ve sıfır kuvvet kurallarını uygular.",
+              "keywords": ["negatif kuvvet", "sıfır kuvvet"]
+            },
+            {
+              "code": "M.8.1.2.4",
+              "description": "Üslü ifadeleri bilimsel gösterimle ifade eder; dönüşüm yapar.",
+              "keywords": ["bilimsel gösterim", "10'un kuvveti"]
+            },
+            {
+              "code": "M.8.1.2.5",
+              "description": "Üslü ifadelerle işlem gerektiren problemleri çözer.",
+              "keywords": ["üslü problem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kareköklü İfadeler",
+          "outcomes": [
+            {
+              "code": "M.8.1.3.1",
+              "description": "Tam kare sayıları tanır; karekök kavramını açıklar.",
+              "keywords": ["karekök", "tam kare"]
+            },
+            {
+              "code": "M.8.1.3.2",
+              "description": "Tam kare olmayan sayıların karekök değerlerini sayı doğrusunda gösterir; yaklaşık değer bulur.",
+              "keywords": ["yaklaşık karekök", "sayı doğrusu"]
+            },
+            {
+              "code": "M.8.1.3.3",
+              "description": "Kareköklü ifadeleri sadeleştirir; kök dışına çıkarma işlemi yapar.",
+              "keywords": ["kök sadeleştirme", "kök dışına çıkarma"]
+            },
+            {
+              "code": "M.8.1.3.4",
+              "description": "Kareköklü ifadelerle toplama, çıkarma, çarpma ve bölme işlemlerini yapar.",
+              "keywords": ["kareköklü işlem"]
+            },
+            {
+              "code": "M.8.1.3.5",
+              "description": "Kareköklü ifadelerle işlem gerektiren problemleri çözer.",
+              "keywords": ["karekök problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Veri Analizi",
+          "outcomes": [
+            {
+              "code": "M.8.1.4.1",
+              "description": "Verileri histogram ve çizgi grafiği ile düzenler ve gösterir.",
+              "keywords": ["histogram", "çizgi grafiği"]
+            },
+            {
+              "code": "M.8.1.4.2",
+              "description": "Veri grubunun aritmetik ortalamasını, ortancasını, modunu ve açıklığını hesaplar.",
+              "keywords": ["ortalama", "ortanca", "mod", "açıklık"]
+            },
+            {
+              "code": "M.8.1.4.3",
+              "description": "İki veri grubunu karşılaştırır; ortalama mutlak sapmayı yorumlar.",
+              "keywords": ["veri karşılaştırma", "ortalama mutlak sapma"]
+            },
+            {
+              "code": "M.8.1.4.4",
+              "description": "Veri analizi sonuçlarını yorumlayarak karar verir.",
+              "keywords": ["veri yorumlama", "karar verme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Olasılık",
+          "outcomes": [
+            {
+              "code": "M.8.1.5.1",
+              "description": "Olasılık kavramını açıklar; kesin, imkânsız ve rastlantısal olayları ayırt eder.",
+              "keywords": ["olasılık", "rastlantısal olay"]
+            },
+            {
+              "code": "M.8.1.5.2",
+              "description": "Basit bir olayın olasılığını hesaplar; olasılık değerini 0 ile 1 arasında ifade eder.",
+              "keywords": ["olasılık hesaplama", "P(A)"]
+            },
+            {
+              "code": "M.8.1.5.3",
+              "description": "Olasılık değerlerini kesir, ondalık ve yüzde biçiminde gösterir.",
+              "keywords": ["olasılık gösterimi"]
+            },
+            {
+              "code": "M.8.1.5.4",
+              "description": "Basit olasılık problemlerini çözer; örnek uzay kavramını kullanır.",
+              "keywords": ["örnek uzay", "olasılık problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.8.2",
+      "unit_name": "Cebir",
+      "topics": [
+        {
+          "topic_name": "Cebirsel İfadeler ve Özdeşlikler",
+          "outcomes": [
+            {
+              "code": "M.8.2.1.1",
+              "description": "Cebirsel ifadelerle toplama, çıkarma ve çarpma işlemlerini yapar.",
+              "keywords": ["cebirsel işlem"]
+            },
+            {
+              "code": "M.8.2.1.2",
+              "description": "Tam kare ve iki kare farkı özdeşliklerini kullanarak cebirsel ifadeleri çarpanlarına ayırır.",
+              "keywords": ["özdeşlik", "tam kare", "iki kare farkı"]
+            },
+            {
+              "code": "M.8.2.1.3",
+              "description": "Ortak çarpan parantezine alma yöntemiyle çarpanlara ayırma yapar.",
+              "keywords": ["ortak çarpan", "parantez"]
+            },
+            {
+              "code": "M.8.2.1.4",
+              "description": "Cebirsel ifadelerin değerini hesaplar; değişken değerlerini kullanır.",
+              "keywords": ["değer bulma"]
+            },
+            {
+              "code": "M.8.2.1.5",
+              "description": "Özdeşlik ve çarpanlara ayırma içeren problemleri çözer.",
+              "keywords": ["özdeşlik problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Doğrusal Denklemler",
+          "outcomes": [
+            {
+              "code": "M.8.2.2.1",
+              "description": "Birinci dereceden bir bilinmeyenli denklemleri çözer.",
+              "keywords": ["doğrusal denklem", "bir bilinmeyen"]
+            },
+            {
+              "code": "M.8.2.2.2",
+              "description": "Birinci dereceden iki bilinmeyenli denklem sistemlerini çözer.",
+              "keywords": ["denklem sistemi", "iki bilinmeyen"]
+            },
+            {
+              "code": "M.8.2.2.3",
+              "description": "Denklem kurarak gerçek yaşam problemlerini çözer.",
+              "keywords": ["denklem kurma", "problem çözme"]
+            },
+            {
+              "code": "M.8.2.2.4",
+              "description": "Doğrusal denklemleri koordinat düzleminde doğru olarak gösterir.",
+              "keywords": ["koordinat düzlemi", "doğrusal grafik"]
+            },
+            {
+              "code": "M.8.2.2.5",
+              "description": "Doğrusal denklem grafiklerini yorumlar; eğim ve kesişim noktalarını belirler.",
+              "keywords": ["eğim", "y-keseni", "grafik yorumlama"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eşitsizlikler",
+          "outcomes": [
+            {
+              "code": "M.8.2.3.1",
+              "description": "Birinci dereceden bir bilinmeyenli eşitsizlikleri çözer.",
+              "keywords": ["eşitsizlik", "bir bilinmeyen"]
+            },
+            {
+              "code": "M.8.2.3.2",
+              "description": "Eşitsizliğin çözüm kümesini sayı doğrusunda gösterir.",
+              "keywords": ["çözüm kümesi", "sayı doğrusu"]
+            },
+            {
+              "code": "M.8.2.3.3",
+              "description": "Eşitsizlik kurarak problemleri çözer.",
+              "keywords": ["eşitsizlik problemi"]
+            },
+            {
+              "code": "M.8.2.3.4",
+              "description": "Eşitsizliklerin gerçek yaşam uygulamalarını yorumlar.",
+              "keywords": ["eşitsizlik uygulaması"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.8.3",
+      "unit_name": "Geometri ve Ölçme",
+      "topics": [
+        {
+          "topic_name": "Üçgenler",
+          "outcomes": [
+            {
+              "code": "M.8.3.1.1",
+              "description": "Üçgenlerin eşlik koşullarını açıklar; eş üçgenleri belirler.",
+              "keywords": ["eşlik", "eş üçgen", "SSS", "SAS", "ASA"]
+            },
+            {
+              "code": "M.8.3.1.2",
+              "description": "Üçgenlerin benzerlik koşullarını açıklar; benzer üçgenleri belirler.",
+              "keywords": ["benzerlik", "benzer üçgen", "oran"]
+            },
+            {
+              "code": "M.8.3.1.3",
+              "description": "Benzer üçgenlerde karşılıklı kenarların oranını ve alanlarının oranını hesaplar.",
+              "keywords": ["benzerlik oranı", "alan oranı"]
+            },
+            {
+              "code": "M.8.3.1.4",
+              "description": "Pisagor teoremini açıklar; dik üçgende kenar uzunluklarını hesaplar.",
+              "keywords": ["Pisagor", "dik üçgen", "hipotenüs"]
+            },
+            {
+              "code": "M.8.3.1.5",
+              "description": "Üçgende açıortay ve kenarortay kavramlarını kullanır.",
+              "keywords": ["açıortay", "kenarortay"]
+            },
+            {
+              "code": "M.8.3.1.6",
+              "description": "Eşlik ve benzerlik ile ilgili problemleri çözer.",
+              "keywords": ["eşlik problemi", "benzerlik problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Dönüşüm Geometrisi",
+          "outcomes": [
+            {
+              "code": "M.8.3.2.1",
+              "description": "Öteleme dönüşümünü tanır; bir şekli koordinat düzleminde öteler.",
+              "keywords": ["öteleme", "dönüşüm"]
+            },
+            {
+              "code": "M.8.3.2.2",
+              "description": "Yansıma dönüşümünü tanır; bir şekli eksene göre yansıtır.",
+              "keywords": ["yansıma", "simetri ekseni"]
+            },
+            {
+              "code": "M.8.3.2.3",
+              "description": "Dönme dönüşümünü tanır; bir şekli belirli bir nokta etrafında döndürür.",
+              "keywords": ["dönme", "dönme merkezi"]
+            },
+            {
+              "code": "M.8.3.2.4",
+              "description": "Dönüşümlerin birleşimini uygular; dönüşüm gerektiren problemleri çözer.",
+              "keywords": ["dönüşüm birleşimi", "dönüşüm problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Geometrik Cisimler",
+          "outcomes": [
+            {
+              "code": "M.8.3.3.1",
+              "description": "Dikdörtgenler prizmasının ve silindirin yüzey alanını hesaplar.",
+              "keywords": ["prizma", "silindir", "yüzey alanı"]
+            },
+            {
+              "code": "M.8.3.3.2",
+              "description": "Dikdörtgenler prizmasının, silindirin, koninin ve kürenin hacmini hesaplar.",
+              "keywords": ["hacim", "koni", "küre"]
+            },
+            {
+              "code": "M.8.3.3.3",
+              "description": "Geometrik cisimlerin yüz açılımlarını çizer.",
+              "keywords": ["yüz açılımı"]
+            },
+            {
+              "code": "M.8.3.3.4",
+              "description": "Geometrik cisimlerin farklı görünümlerini (üst, ön, yan) çizer.",
+              "keywords": ["görünüm", "üç boyutlu"]
+            },
+            {
+              "code": "M.8.3.3.5",
+              "description": "Yüzey alanı ve hacim içeren gerçek yaşam problemlerini çözer.",
+              "keywords": ["hacim problemi", "yüzey alanı problemi"]
+            },
+            {
+              "code": "M.8.3.3.6",
+              "description": "Geometrik cisimler arasındaki ilişkileri karşılaştırır; birim dönüşümlerini uygular.",
+              "keywords": ["birim dönüşümü", "cm³", "m³"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "grade": "AYT",
+  "subject": "Kimya",
+  "program_ref": "ÖSYM AYT Kimya soru dağılımı (yaklaşık 13 soru)",
+  "exam_meta": {
+    "total_questions": 13,
+    "notes": "Soru sayıları yıllara göre değişebilir; organik kimya ve kimyasal denge konuları ağırlıklı olabilir."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.KIM.01",
+      "unit_name": "Kimyasal Denge",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Denge Sabiti ve Le Chatelier",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.01.01.01",
+              "description": "Denge sabiti (Kc, Kp) hesaplar ve denge ifadelerini yazar.",
+              "keywords": ["denge sabiti", "Kc", "Kp"]
+            },
+            {
+              "code": "AYT.KIM.01.01.02",
+              "description": "Le Chatelier ilkesini sıcaklık, basınç ve derişim değişimlerinde uygular.",
+              "keywords": ["Le Chatelier", "denge kayması"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Denge Hesaplamaları",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.01.02.01",
+              "description": "Denge anında derişim, kısmi basınç ve dönüşüm oranı hesaplar.",
+              "keywords": ["derişim", "dönüşüm oranı", "ICE tablosu"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.KIM.02",
+      "unit_name": "Tepkime Hızı",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Hız ve Aktivasyon Enerjisi",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.02.01.01",
+              "description": "Tepkime hızını derişim-zaman grafiğinden ve hız ifadesinden hesaplar.",
+              "keywords": ["tepkime hızı", "hız sabiti"]
+            },
+            {
+              "code": "AYT.KIM.02.01.02",
+              "description": "Aktivasyon enerjisi ve Arrhenius denklemini yorumlar.",
+              "keywords": ["aktivasyon enerjisi", "Arrhenius", "katalizör"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.KIM.03",
+      "unit_name": "Çözeltiler",
+      "typical_questions": "2",
+      "topics": [
+        {
+          "topic_name": "Derişim Birimleri",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.03.01.01",
+              "description": "Molarite, molalite ve ppm gibi derişim birimlerini hesaplar.",
+              "keywords": ["molarite", "molalite", "derişim"]
+            },
+            {
+              "code": "AYT.KIM.03.01.02",
+              "description": "Seyreltme ve karışım çözelti hesaplamalarını yapar.",
+              "keywords": ["seyreltme", "karışım", "M1V1=M2V2"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Koligatif Özellikler",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.03.02.01",
+              "description": "Kaynama noktası yükselmesi ve donma noktası alçalmasını hesaplar.",
+              "keywords": ["koligatif", "donma noktası", "kaynama noktası"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.KIM.04",
+      "unit_name": "Asit-Baz ve Tuzlar",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Asit-Baz Teorileri",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.04.01.01",
+              "description": "Arrhenius, Brønsted-Lowry asit-baz tanımlarını uygular.",
+              "keywords": ["asit", "baz", "Brønsted", "proton"]
+            },
+            {
+              "code": "AYT.KIM.04.01.02",
+              "description": "pH, pOH ve iyon derişimi hesaplamalarını yapar.",
+              "keywords": ["pH", "pOH", "iyon derişimi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Tampon ve Titrasyon",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.04.02.01",
+              "description": "Tampon çözeltilerin pH değişimine direncini yorumlar.",
+              "keywords": ["tampon", "pH değişimi"]
+            },
+            {
+              "code": "AYT.KIM.04.02.02",
+              "description": "Asit-baz titrasyon eğrilerini ve eşdeğerlik noktasını yorumlar.",
+              "keywords": ["titrasyon", "eşdeğerlik", "indikatör"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.KIM.05",
+      "unit_name": "Elektrokimya",
+      "typical_questions": "2",
+      "topics": [
+        {
+          "topic_name": "Piller ve Elektroliz",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.05.01.01",
+              "description": "Galvanik pillerde anot-katot, indirgenme-yükseltgenme ve hücre potansiyelini hesaplar.",
+              "keywords": ["galvanik pil", "anot", "katot", "E°"]
+            },
+            {
+              "code": "AYT.KIM.05.01.02",
+              "description": "Elektroliz olayını ve Faraday yasalarını hesap sorularında uygular.",
+              "keywords": ["elektroliz", "Faraday", "amper"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.KIM.06",
+      "unit_name": "Organik Kimya",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Hidrokarbonlar",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.06.01.01",
+              "description": "Alkan, alken, alkin ve aromatik bileşiklerin yapı ve adlandırmasını yapar.",
+              "keywords": ["alkan", "alken", "alkin", "aromatik"]
+            },
+            {
+              "code": "AYT.KIM.06.01.02",
+              "description": "İzomer türlerini (yapısal, geometrik, optik) ayırt eder.",
+              "keywords": ["izomer", "cis trans", "optik izomer"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Fonksiyonel Gruplar",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.06.02.01",
+              "description": "Alkol, eter, aldehit, keton, karboksilik asit ve ester bileşiklerini tanır.",
+              "keywords": ["alkol", "aldehit", "keton", "ester", "asit"]
+            },
+            {
+              "code": "AYT.KIM.06.02.02",
+              "description": "Fonksiyonel grupların karakteristik tepkimelerini yorumlar.",
+              "keywords": ["fonksiyonel grup", "tepkime", "esterleşme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Polimerler",
+          "outcomes": [
+            {
+              "code": "AYT.KIM.06.03.01",
+              "description": "Polimerleşme türlerini (katılma, yoğunlaşma) ve günlük hayat polimerlerini açıklar.",
+              "keywords": ["polimer", "katılma", "yoğunlaşma"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

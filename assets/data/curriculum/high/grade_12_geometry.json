@@ -1,0 +1,191 @@
+{
+  "grade": 12,
+  "subject": "Geometri",
+  "program_ref": "MEB Geometri Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "GEO.12.1",
+      "unit_name": "Dönel Cisimler",
+      "topics": [
+        {
+          "topic_name": "Dönel Katı Cisimler",
+          "outcomes": [
+            {
+              "code": "GEO.12.1.1.1",
+              "description": "Dönel cisimlerin (silindir, koni, küre) hacim ve alan formüllerini uygular.",
+              "keywords": [
+                "dönel cisim"
+              ]
+            },
+            {
+              "code": "GEO.12.1.1.2",
+              "description": "Dönel cisimler arasındaki benzerlik oranlarını kullanır.",
+              "keywords": [
+                "benzerlik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.12.2",
+      "unit_name": "Vektörler",
+      "topics": [
+        {
+          "topic_name": "Vektör İşlemleri",
+          "outcomes": [
+            {
+              "code": "GEO.12.2.1.1",
+              "description": "Vektörleri bileşenlerine ayırır; toplama ve çıkarma yapar.",
+              "keywords": [
+                "vektör"
+              ]
+            },
+            {
+              "code": "GEO.12.2.1.2",
+              "description": "Skaler çarpım ve vektörel çarpımı uygular.",
+              "keywords": [
+                "skaler çarpım",
+                "vektörel çarpım"
+              ]
+            },
+            {
+              "code": "GEO.12.2.1.3",
+              "description": "Vektörlerle doğru denklemi yazar.",
+              "keywords": [
+                "vektör denklemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.12.3",
+      "unit_name": "Uzayda Doğru ve Düzlem",
+      "topics": [
+        {
+          "topic_name": "Uzay Geometrisi",
+          "outcomes": [
+            {
+              "code": "GEO.12.3.1.1",
+              "description": "Uzayda doğrunun ve düzlemin denklemlerini yazar.",
+              "keywords": [
+                "doğru denklemi",
+                "düzlem"
+              ]
+            },
+            {
+              "code": "GEO.12.3.1.2",
+              "description": "Doğru ile düzlem arasındaki ilişkileri belirler.",
+              "keywords": [
+                "açı",
+                "paralellik"
+              ]
+            },
+            {
+              "code": "GEO.12.3.1.3",
+              "description": "Uzayda noktanın düzleme uzaklığını hesaplar.",
+              "keywords": [
+                "uzaklık"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.12.4",
+      "unit_name": "Trigonometri",
+      "topics": [
+        {
+          "topic_name": "Trigonometrik Uygulamalar",
+          "outcomes": [
+            {
+              "code": "GEO.12.4.1.1",
+              "description": "Trigonometrik fonksiyonları geometrik problemlerde kullanır.",
+              "keywords": [
+                "trigonometri"
+              ]
+            },
+            {
+              "code": "GEO.12.4.1.2",
+              "description": "Üçgende alan ve yükseklik hesaplar.",
+              "keywords": [
+                "yükseklik"
+              ]
+            },
+            {
+              "code": "GEO.12.4.1.3",
+              "description": "Gerçek yaşam problemlerinde trigonometri uygular.",
+              "keywords": [
+                "trigonometri uygulama"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.12.5",
+      "unit_name": "Analitik Geometri",
+      "topics": [
+        {
+          "topic_name": "Konikler",
+          "outcomes": [
+            {
+              "code": "GEO.12.5.1.1",
+              "description": "Elips, hiperbol ve parabol denklemlerini tanır.",
+              "keywords": [
+                "elips",
+                "hiperbol",
+                "parabol"
+              ]
+            },
+            {
+              "code": "GEO.12.5.1.2",
+              "description": "Koniklerin odak ve doğrudanrix özelliklerini kullanır.",
+              "keywords": [
+                "odak",
+                "doğrudanrix"
+              ]
+            },
+            {
+              "code": "GEO.12.5.1.3",
+              "description": "Koniklerin gerçek yaşam uygulamalarını açıklar.",
+              "keywords": [
+                "konik uygulama"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "GEO.12.6",
+      "unit_name": "Ölçme",
+      "topics": [
+        {
+          "topic_name": "Geometrik Ölçme",
+          "outcomes": [
+            {
+              "code": "GEO.12.6.1.1",
+              "description": "Açı, uzunluk ve alan ölçme problemlerini çözer.",
+              "keywords": [
+                "ölçme"
+              ]
+            },
+            {
+              "code": "GEO.12.6.1.2",
+              "description": "Harita ve plan üzerinde ölçek hesaplamaları yapar.",
+              "keywords": [
+                "ölçek"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

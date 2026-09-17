@@ -1,0 +1,201 @@
+{
+  "grade": 12,
+  "subject": "Türk Dili ve Edebiyatı",
+  "program_ref": "MEB Türk Dili ve Edebiyatı Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TDE.12.1",
+      "unit_name": "Tanzimat'tan Günümüze Roman",
+      "topics": [
+        {
+          "topic_name": "Roman Gelişimi",
+          "outcomes": [
+            {
+              "code": "TDE.12.1.1.1",
+              "description": "Türk romanının gelişim evrelerini kronolojik sıralar.",
+              "keywords": [
+                "roman gelişimi"
+              ]
+            },
+            {
+              "code": "TDE.12.1.1.2",
+              "description": "Yaşar Kemal, Orhan Pamuk, Elif Şafak eserlerini inceler.",
+              "keywords": [
+                "Yaşar Kemal",
+                "Orhan Pamuk"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.12.2",
+      "unit_name": "Şiir ve Deneme",
+      "topics": [
+        {
+          "topic_name": "Modern Şiir",
+          "outcomes": [
+            {
+              "code": "TDE.12.2.1.1",
+              "description": "Cumhuriyet sonrası şiir akımlarını (Garip, İkinci Yeni, Yeni Toplumcu) karşılaştırır.",
+              "keywords": [
+                "modern şiir"
+              ]
+            },
+            {
+              "code": "TDE.12.2.1.2",
+              "description": "Deneme türünün özelliklerini açıklar; örnek metinler inceler.",
+              "keywords": [
+                "deneme"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.12.3",
+      "unit_name": "Edebiyat ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Edebiyatın İşlevi",
+          "outcomes": [
+            {
+              "code": "TDE.12.3.1.1",
+              "description": "Edebiyatın toplumsal değişimdeki rolünü değerlendirir.",
+              "keywords": [
+                "edebiyat",
+                "toplum"
+              ]
+            },
+            {
+              "code": "TDE.12.3.1.2",
+              "description": "Çağdaş Türk edebiyatındaki temaları analiz eder.",
+              "keywords": [
+                "çağdaş edebiyat"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.12.4",
+      "unit_name": "Hikâye ve Roman",
+      "topics": [
+        {
+          "topic_name": "Anlatı Türleri",
+          "outcomes": [
+            {
+              "code": "TDE.12.4.1.1",
+              "description": "Türk hikâyesinin gelişim evrelerini açıklar.",
+              "keywords": [
+                "hikâye gelişimi"
+              ]
+            },
+            {
+              "code": "TDE.12.4.1.2",
+              "description": "Roman türlerini (psikolojik, tarihî, toplumsal) ayırt eder.",
+              "keywords": [
+                "roman türü"
+              ]
+            },
+            {
+              "code": "TDE.12.4.1.3",
+              "description": "Anlatı tekniklerini (iç monolog, akış bilinci) metinlerde tespit eder.",
+              "keywords": [
+                "iç monolog"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.12.5",
+      "unit_name": "Şiir",
+      "topics": [
+        {
+          "topic_name": "Şiir Gelişimi",
+          "outcomes": [
+            {
+              "code": "TDE.12.5.1.1",
+              "description": "Türk şiirinde hece ve aruz ölçülerini karşılaştırır.",
+              "keywords": [
+                "hece",
+                "aruz"
+              ]
+            },
+            {
+              "code": "TDE.12.5.1.2",
+              "description": "Serbest şiirin özelliklerini açıklar.",
+              "keywords": [
+                "serbest şiir"
+              ]
+            },
+            {
+              "code": "TDE.12.5.1.3",
+              "description": "Şiirde imgeleri ve sembolleri analiz eder.",
+              "keywords": [
+                "imge",
+                "sembol"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.12.6",
+      "unit_name": "Tiyatro",
+      "topics": [
+        {
+          "topic_name": "Tiyatro Türü",
+          "outcomes": [
+            {
+              "code": "TDE.12.6.1.1",
+              "description": "Tiyatro türlerini (trajedi, komedi, dram) tanır.",
+              "keywords": [
+                "tiyatro türü"
+              ]
+            },
+            {
+              "code": "TDE.12.6.1.2",
+              "description": "Tiyatro metninde diyalog ve sahne yönergesini analiz eder.",
+              "keywords": [
+                "diyalog",
+                "sahne"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.12.7",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Anlatım",
+          "outcomes": [
+            {
+              "code": "TDE.12.7.1.1",
+              "description": "Cümle çeşitlerini ve anlatım biçimlerini metinlerde belirler.",
+              "keywords": [
+                "anlatım biçimi"
+              ]
+            },
+            {
+              "code": "TDE.12.7.1.2",
+              "description": "Yazım ve noktalama kurallarını uygular.",
+              "keywords": [
+                "yazım"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

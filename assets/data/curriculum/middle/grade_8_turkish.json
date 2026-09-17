@@ -1,0 +1,332 @@
+{
+  "grade": 8,
+  "subject": "Türkçe",
+  "program_ref": "MEB Türkçe Dersi Öğretim Programı (Ortaokul, 8. Sınıf) — dinleme/izleme, konuşma, okuma, yazma, dil bilgisi",
+  "units": [
+    {
+      "unit_code": "T.8.1",
+      "unit_name": "Dinleme / İzleme",
+      "topics": [
+        {
+          "topic_name": "Dinlenen / İzlenen Metni Anlama",
+          "outcomes": [
+            {
+              "code": "T.8.1.1.1",
+              "description": "Dinlediği / izlediği metindeki olay örgüsü, kişiler, mekân-zaman ve sebep-sonuç ilişkilerini analiz eder.",
+              "keywords": ["olay örgüsü", "analiz", "dinleme"]
+            },
+            {
+              "code": "T.8.1.1.2",
+              "description": "Dinlediği / izlediği metnin konusunu, ana fikrini, yardımcı fikirlerini ve ana duygusunu belirler.",
+              "keywords": ["ana fikir", "yardımcı fikir", "duygu"]
+            },
+            {
+              "code": "T.8.1.1.3",
+              "description": "Dinlediği / izlediği metne eleştirel sorular sorar; metni değerlendirir, karşılaştırır ve özetler.",
+              "keywords": ["eleştirel dinleme", "karşılaştırma", "özet"]
+            },
+            {
+              "code": "T.8.1.1.4",
+              "description": "Konuşmacının / metnin amacını, tutumunu, bakış açısını ve hedef kitlesini değerlendirir.",
+              "keywords": ["amaç", "tutum", "hedef kitle"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Söz Varlığı ve Medya Okuryazarlığı",
+          "outcomes": [
+            {
+              "code": "T.8.1.2.1",
+              "description": "Dinlediği metindeki bilinmeyen kelimeleri sözlük, bağlam ve anlam ilişkileriyle öğrenir.",
+              "keywords": ["sözlük", "bağlam", "söz varlığı"]
+            },
+            {
+              "code": "T.8.1.2.2",
+              "description": "Görsel-işitsel ögelerle sözlü mesaj arasındaki ilişkiyi yorumlar; medya dilini analiz eder.",
+              "keywords": ["medya", "görsel-işitsel", "medya dili"]
+            },
+            {
+              "code": "T.8.1.2.3",
+              "description": "Dijital ortamdaki metin ve görselleri güvenilirlik, tarafsızlık ve manipülasyon açısından değerlendirir.",
+              "keywords": ["dijital okuryazarlık", "manipülasyon", "güvenilirlik"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.8.2",
+      "unit_name": "Konuşma",
+      "topics": [
+        {
+          "topic_name": "Sözlü Anlatım",
+          "outcomes": [
+            {
+              "code": "T.8.2.1.1",
+              "description": "Hazırlıksız konuşmada konu dışına çıkmadan düşüncelerini açık, tutarlı ve ikna edici biçimde ifade eder.",
+              "keywords": ["hazırlıksız konuşma", "ikna", "tutarlılık"]
+            },
+            {
+              "code": "T.8.2.1.2",
+              "description": "Hazırlıklı konuşma planlar, sunum yapar; görsel destek kullanır ve sorulara gerekçeli cevap verir.",
+              "keywords": ["sunum", "görsel destek", "gerekçe"]
+            },
+            {
+              "code": "T.8.2.1.3",
+              "description": "Tartışma ve münazara ortamlarında görüşünü kanıtlarla destekler; karşı görüşe saygılı yaklaşır.",
+              "keywords": ["münazara", "tartışma", "kanıt"]
+            },
+            {
+              "code": "T.8.2.1.4",
+              "description": "Farklı dinleyici gruplarına uygun dil, üslup ve sunum tekniği seçer.",
+              "keywords": ["üslup", "dinleyici", "sunum tekniği"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.8.3",
+      "unit_name": "Okuma",
+      "topics": [
+        {
+          "topic_name": "Akıcı ve Anlamlı Okuma",
+          "outcomes": [
+            {
+              "code": "T.8.3.1.1",
+              "description": "Farklı türlerdeki metinleri akıcı, anlamlı ve etkili biçimde okur.",
+              "keywords": ["akıcı okuma", "etkili okuma"]
+            },
+            {
+              "code": "T.8.3.1.2",
+              "description": "Okuma amacına göre tarama, ayrıntılı okuma ve eleştirel okuma stratejilerini uygular.",
+              "keywords": ["tarama", "eleştirel okuma", "okuma stratejisi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Okuduğunu Anlama",
+          "outcomes": [
+            {
+              "code": "T.8.3.2.1",
+              "description": "Metnin konusunu, ana fikrini, yardımcı fikirlerini, ana duygusunu ve anlatım biçimini belirler.",
+              "keywords": ["ana fikir", "anlatım biçimi", "duygu"]
+            },
+            {
+              "code": "T.8.3.2.2",
+              "description": "Metindeki sebep-sonuç, amaç-sonuç, karşılaştırma, koşul-sonuç ve örneklendirme ilişkilerini çözümler.",
+              "keywords": ["metin ilişkileri", "örneklendirme"]
+            },
+            {
+              "code": "T.8.3.2.3",
+              "description": "Metindeki açık ve örtük mesajları, çıkarımları ve yazarın bakış açısını belirler.",
+              "keywords": ["örtük mesaj", "çıkarım", "bakış açısı"]
+            },
+            {
+              "code": "T.8.3.2.4",
+              "description": "Bilgilendirici, öyküleyici, şiir, masal, fabl, anı, gezi yazısı, röportaj ve eleştiri türlerini ayırt eder.",
+              "keywords": ["metin türü", "eleştiri", "röportaj"]
+            },
+            {
+              "code": "T.8.3.2.5",
+              "description": "Metni özetler, değerlendirir, karşılaştırır ve kendi yaşamıyla ilişkilendirir.",
+              "keywords": ["özet", "değerlendirme", "karşılaştırma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Dağarcığı",
+          "outcomes": [
+            {
+              "code": "T.8.3.3.1",
+              "description": "Eş, zıt, eş sesli sözcükler ile deyim, atasözü ve kalıplaşmış sözleri metin içinde anlamlandırır.",
+              "keywords": ["deyim", "atasözü", "kalıplaşmış söz"]
+            },
+            {
+              "code": "T.8.3.3.2",
+              "description": "Gerçek, mecaz, terim ve yan anlamları ayırt eder; anlam kaymasını yorumlar.",
+              "keywords": ["mecaz", "terim", "anlam kayması"]
+            },
+            {
+              "code": "T.8.3.3.3",
+              "description": "Sözcüklerin kök, gövde, ek yapılarını ve türetme yollarını ayırt eder.",
+              "keywords": ["kök", "ek", "türetme"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.8.4",
+      "unit_name": "Yazma",
+      "topics": [
+        {
+          "topic_name": "Metin Yazma",
+          "outcomes": [
+            {
+              "code": "T.8.4.1.1",
+              "description": "Olay örgüsü, kişiler, mekân-zaman ve çatışma unsurlarını içeren öyküleyici metin yazar.",
+              "keywords": ["öykü yazma", "çatışma", "olay örgüsü"]
+            },
+            {
+              "code": "T.8.4.1.2",
+              "description": "Betimleyici, bilgilendirici, tartışmacı ve eleştirel metinler yazar.",
+              "keywords": ["betimleme", "tartışmacı", "eleştirel yazı"]
+            },
+            {
+              "code": "T.8.4.1.3",
+              "description": "Mektup, dilekçe, duyuru, haber, broşür, rapor ve makale türlerinde yazar.",
+              "keywords": ["mektup", "rapor", "makale"]
+            },
+            {
+              "code": "T.8.4.1.4",
+              "description": "Yazma sürecinde planlar, taslak oluşturur, düzenler, düzeltir ve farklı ortamlarda paylaşır.",
+              "keywords": ["yazma süreci", "taslak", "düzenleme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım Düzeni",
+          "outcomes": [
+            {
+              "code": "T.8.4.2.1",
+              "description": "Paragraf yapısını, giriş-gelişme-sonuç bölümlerini ve geçiş ifadelerini etkili kullanır.",
+              "keywords": ["paragraf", "giriş-gelişme-sonuç", "geçiş"]
+            },
+            {
+              "code": "T.8.4.2.2",
+              "description": "Kaynak göstererek alıntı yapar; bibliyografya ve dipnot kullanımının temelini uygular.",
+              "keywords": ["kaynak gösterme", "bibliyografya", "intihal"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.8.5",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Fiilimsiler",
+          "outcomes": [
+            {
+              "code": "T.8.5.1.1",
+              "description": "İsim-fiil, sıfat-fiil ve zarf-fiil türlerini tanır; örneklerle gösterir.",
+              "keywords": ["fiilimsi", "isim-fiil", "sıfat-fiil", "zarf-fiil"]
+            },
+            {
+              "code": "T.8.5.1.2",
+              "description": "Fiilimsilerin cümledeki görevlerini belirler.",
+              "keywords": ["fiilimsi görevi", "cümle ögesi"]
+            },
+            {
+              "code": "T.8.5.1.3",
+              "description": "Fiilimsileri cümle içinde doğru ve etkili biçimde kullanır.",
+              "keywords": ["fiilimsi kullanımı"]
+            },
+            {
+              "code": "T.8.5.1.4",
+              "description": "Fiilimsilerle kurulan cümleleri analiz eder.",
+              "keywords": ["cümle analizi", "fiilimsi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Ögeleri",
+          "outcomes": [
+            {
+              "code": "T.8.5.2.1",
+              "description": "Cümlenin temel ögelerini (yüklem, özne, nesne) belirler.",
+              "keywords": ["yüklem", "özne", "nesne", "temel öge"]
+            },
+            {
+              "code": "T.8.5.2.2",
+              "description": "Cümlenin yardımcı ögelerini (dolaylı tümleç, zarf tümleci, edat tümleci, unvan) belirler.",
+              "keywords": ["dolaylı tümleç", "zarf tümleci", "yardımcı öge"]
+            },
+            {
+              "code": "T.8.5.2.3",
+              "description": "Cümle ögeleri arasındaki anlam ilişkilerini çözümler.",
+              "keywords": ["cümle ögesi", "anlam ilişkisi"]
+            },
+            {
+              "code": "T.8.5.2.4",
+              "description": "Ögeleri belirlerken soru yöntemini uygular.",
+              "keywords": ["soru yöntemi", "öge belirleme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Anlam İlişkileri",
+          "outcomes": [
+            {
+              "code": "T.8.5.3.1",
+              "description": "Eş anlamlılık, zıt anlamlılık, yakın anlamlılık ve eş seslilik ilişkilerini ayırt eder.",
+              "keywords": ["eş anlam", "zıt anlam", "eş seslilik"]
+            },
+            {
+              "code": "T.8.5.3.2",
+              "description": "Gerçek, mecaz, terim ve yan anlam ilişkilerini metin içinde yorumlar.",
+              "keywords": ["mecaz", "terim", "yan anlam"]
+            },
+            {
+              "code": "T.8.5.3.3",
+              "description": "Deyim, atasözü ve kalıplaşmış sözlerin anlam ilişkilerini açıklar.",
+              "keywords": ["deyim", "atasözü", "kalıplaşmış söz"]
+            },
+            {
+              "code": "T.8.5.3.4",
+              "description": "Cümleler arası anlam ilişkilerini (neden-sonuç, amaç-sonuç, karşılaştırma) belirler.",
+              "keywords": ["cümleler arası ilişki", "neden-sonuç"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım ve Noktalama",
+          "outcomes": [
+            {
+              "code": "T.8.5.4.1",
+              "description": "Büyük harf, birleşik/ayrı yazım ve kesme işareti kurallarını uygular.",
+              "keywords": ["büyük harf", "birleşik yazım", "kesme işareti"]
+            },
+            {
+              "code": "T.8.5.4.2",
+              "description": "Nokta, virgül, noktalı virgül, iki nokta, üç nokta ve soru/ünlem işaretlerini doğru kullanır.",
+              "keywords": ["noktalama", "virgül", "nokta"]
+            },
+            {
+              "code": "T.8.5.4.3",
+              "description": "Tırnak işareti, parantez, kısa çizgi ve eğik çizgi kullanım kurallarını uygular.",
+              "keywords": ["tırnak işareti", "parantez", "kısa çizgi"]
+            },
+            {
+              "code": "T.8.5.4.4",
+              "description": "Yazım ve noktalama hatalarını belirler; metinlerini düzeltir.",
+              "keywords": ["yazım hatası", "noktalama hatası", "düzeltme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Anlatım Bozuklukları",
+          "outcomes": [
+            {
+              "code": "T.8.5.5.1",
+              "description": "Anlamca çelişen sözcüklerden kaynaklanan anlatım bozukluklarını belirler ve düzeltir.",
+              "keywords": ["anlamca çelişme", "anlatım bozukluğu"]
+            },
+            {
+              "code": "T.8.5.5.2",
+              "description": "Gereksiz sözcük kullanımı ve özne-yüklem uyumsuzluğundan kaynaklanan bozuklukları düzeltir.",
+              "keywords": ["özne-yüklem uyumu", "gereksiz sözcük"]
+            },
+            {
+              "code": "T.8.5.5.3",
+              "description": "Mantık, dil bilgisi ve sözcük tekrarından kaynaklanan anlatım bozukluklarını düzeltir.",
+              "keywords": ["mantık hatası", "sözcük tekrarı", "düzeltme"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

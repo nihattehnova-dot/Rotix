@@ -1,0 +1,124 @@
+{
+  "grade": "LGS",
+  "subject": "Din Kültürü ve Ahlak Bilgisi",
+  "program_ref": "MEB LGS Sözel Bölüm Din Kültürü soru dağılımı (yaklaşık 10 soru)",
+  "exam_meta": {
+    "total_questions": 10,
+    "notes": "Soru sayısı yıllara göre değişebilir; temel kavramlar ve ahlaki değerler ağırlıklıdır."
+  },
+  "units": [
+    {
+      "unit_code": "LGS.DIN.01",
+      "unit_name": "İnanç Esasları",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "İman Esasları",
+          "outcomes": [
+            {
+              "code": "LGS.DIN.01.01.01",
+              "description": "Allah'a, meleklere, kitaplara, peygamberlere, ahirete ve kadere iman esaslarını açıklar.",
+              "keywords": ["iman", "melek", "peygamber", "ahiret", "kader"]
+            },
+            {
+              "code": "LGS.DIN.01.01.02",
+              "description": "İman esaslarının günlük hayattaki yansımalarını örneklerle ilişkilendirir.",
+              "keywords": ["inanç", "günlük hayat", "yansıma"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.DIN.02",
+      "unit_name": "İbadetler",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Namaz ve Oruç",
+          "outcomes": [
+            {
+              "code": "LGS.DIN.02.01.01",
+              "description": "Namazın farzları, şartları ve bireysel-toplumsal faydalarını açıklar.",
+              "keywords": ["namaz", "farz", "ibadet"]
+            },
+            {
+              "code": "LGS.DIN.02.01.02",
+              "description": "Oruç ibadetinin amacı, şartları ve Ramazan ayının önemini yorumlar.",
+              "keywords": ["oruç", "Ramazan", "ibadet"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Zekât ve Hac",
+          "outcomes": [
+            {
+              "code": "LGS.DIN.02.02.01",
+              "description": "Zekât ve sadakanın toplumsal adalet ve dayanışmadaki rolünü açıklar.",
+              "keywords": ["zekât", "sadaka", "dayanışma"]
+            },
+            {
+              "code": "LGS.DIN.02.02.02",
+              "description": "Hac ibadetinin şartlarını ve İslam'daki yerini açıklar.",
+              "keywords": ["hac", "Kabe", "ibadet"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.DIN.03",
+      "unit_name": "Hz. Muhammed ve Örnek Hayat",
+      "typical_questions": "2",
+      "topics": [
+        {
+          "topic_name": "Peygamberlik ve Sünnet",
+          "outcomes": [
+            {
+              "code": "LGS.DIN.03.01.01",
+              "description": "Hz. Muhammed'in peygamberlik görevini ve güvenilir kişiliğini açıklar.",
+              "keywords": ["Hz. Muhammed", "peygamber", "güvenilir"]
+            },
+            {
+              "code": "LGS.DIN.03.01.02",
+              "description": "Sünnet kavramını ve günlük hayattaki uygulama alanlarını örneklerle ilişkilendirir.",
+              "keywords": ["sünnet", "örnek hayat", "uygulama"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.DIN.04",
+      "unit_name": "Ahlaki Değerler",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Temel Ahlaki İlkeler",
+          "outcomes": [
+            {
+              "code": "LGS.DIN.04.01.01",
+              "description": "Doğruluk, adalet, merhamet, sabır ve saygı gibi temel ahlaki değerleri açıklar.",
+              "keywords": ["doğruluk", "adalet", "merhamet", "saygı"]
+            },
+            {
+              "code": "LGS.DIN.04.01.02",
+              "description": "Ahlaki değerlerin bireysel ve toplumsal ilişkilerdeki önemini yorumlar.",
+              "keywords": ["ahlak", "toplum", "değerler"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kötü Alışkanlıklardan Korunma",
+          "outcomes": [
+            {
+              "code": "LGS.DIN.04.02.01",
+              "description": "Yalan, hırsızlık, iftira ve kötü alışkanlıkların birey ve toplum üzerindeki zararlarını açıklar.",
+              "keywords": ["kötü alışkanlık", "yalan", "hırsızlık"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "grade": 11,
+  "subject": "Biyoloji",
+  "program_ref": "MEB Biyoloji Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "BİY.11.1",
+      "unit_name": "İnsan Fizyolojisi",
+      "topics": [
+        {
+          "topic_name": "Sindirim ve Dolaşım",
+          "outcomes": [
+            {
+              "code": "BİY.11.1.1.1",
+              "description": "Sindirim sisteminin yapısını ve enzimlerin rolünü açıklar.",
+              "keywords": [
+                "sindirim",
+                "enzim"
+              ]
+            },
+            {
+              "code": "BİY.11.1.1.2",
+              "description": "Dolaşım sisteminin yapısını (kalp, damar, kan) tanır.",
+              "keywords": [
+                "dolaşım",
+                "kalp"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Solunum ve Boşaltım",
+          "outcomes": [
+            {
+              "code": "BİY.11.1.2.1",
+              "description": "Solunum sisteminin gaz alışverişi mekanizmasını açıklar.",
+              "keywords": [
+                "solunum"
+              ]
+            },
+            {
+              "code": "BİY.11.1.2.2",
+              "description": "Boşaltım sisteminin yapısını ve idrar oluşumunu tanır.",
+              "keywords": [
+                "boşaltım",
+                "böbrek"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sinir ve Endokrin",
+          "outcomes": [
+            {
+              "code": "BİY.11.1.3.1",
+              "description": "Sinir sisteminin yapısını (nöron, refleks) açıklar.",
+              "keywords": [
+                "sinir",
+                "refleks"
+              ]
+            },
+            {
+              "code": "BİY.11.1.3.2",
+              "description": "Endokrin sistemin hormonları ve düzenleme işlevlerini tanır.",
+              "keywords": [
+                "hormon",
+                "endokrin"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Destek-Hareket ve Duyu",
+          "outcomes": [
+            {
+              "code": "BİY.11.1.4.1",
+              "description": "İskelet ve kas sisteminin yapısını açıklar.",
+              "keywords": [
+                "iskelet",
+                "kas"
+              ]
+            },
+            {
+              "code": "BİY.11.1.4.2",
+              "description": "Duyu organlarının yapı ve işlevlerini tanır.",
+              "keywords": [
+                "duyu organı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.11.2",
+      "unit_name": "Komünite ve Popülasyon",
+      "topics": [
+        {
+          "topic_name": "Ekolojik İlişkiler",
+          "outcomes": [
+            {
+              "code": "BİY.11.2.1.1",
+              "description": "Popülasyon büyüklüğünü etkileyen faktörleri analiz eder.",
+              "keywords": [
+                "popülasyon"
+              ]
+            },
+            {
+              "code": "BİY.11.2.1.2",
+              "description": "Komünite yapısını ve tür çeşitliliğini açıklar.",
+              "keywords": [
+                "komünite",
+                "tür çeşitliliği"
+              ]
+            },
+            {
+              "code": "BİY.11.2.1.3",
+              "description": "Ekolojik başarı ve süksesyon süreçlerini yorumlar.",
+              "keywords": [
+                "süksesyon"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.11.3",
+      "unit_name": "Bağışıklık Sistemi",
+      "topics": [
+        {
+          "topic_name": "Savunma Mekanizmaları",
+          "outcomes": [
+            {
+              "code": "BİY.11.3.1.1",
+              "description": "Bağışıklık sisteminin yapısını (doğuştan, kazanılmış) açıklar.",
+              "keywords": [
+                "bağışıklık"
+              ]
+            },
+            {
+              "code": "BİY.11.3.1.2",
+              "description": "Aşı ve antikor kavramlarını ilişkilendirir.",
+              "keywords": [
+                "aşı",
+                "antikor"
+              ]
+            },
+            {
+              "code": "BİY.11.3.1.3",
+              "description": "Bağışıklık sisteminin hastalıklarla mücadelesini yorumlar.",
+              "keywords": [
+                "bağışıklık hastalığı"
+              ]
+            },
+            {
+              "code": "BİY.11.3.1.4",
+              "description": "Bağışıklık sisteminin sağlıklı yaşamla ilişkisini değerlendirir.",
+              "keywords": [
+                "sağlıklı yaşam"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

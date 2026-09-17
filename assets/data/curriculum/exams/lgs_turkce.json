@@ -1,0 +1,313 @@
+{
+  "grade": "LGS",
+  "subject": "Türkçe",
+  "program_ref": "MEB LGS Sözel Bölüm Türkçe soru dağılımı (yaklaşık 20 soru)",
+  "exam_meta": {
+    "total_questions": 20,
+    "notes": "Soru sayıları yıllara göre değişebilir; paragraf ve dil bilgisi ağırlıklı dağılım son yılların MEB kapsamına göredir."
+  },
+  "units": [
+    {
+      "unit_code": "LGS.TR.01",
+      "unit_name": "Sözcükte Anlam",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Gerçek, Mecaz ve Yan Anlam",
+          "outcomes": [
+            {
+              "code": "LGS.TR.01.01.01",
+              "description": "Sözcüklerin cümle içinde gerçek, mecaz ve yan anlamda kullanıldığı durumları ayırt eder.",
+              "keywords": ["gerçek anlam", "mecaz anlam", "yan anlam"]
+            },
+            {
+              "code": "LGS.TR.01.01.02",
+              "description": "Terim, deyim ve atasözlerinin anlam özelliklerini bağlam içinde yorumlar.",
+              "keywords": ["deyim", "atasözü", "terim anlam"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eş Anlam, Zıt Anlam ve Eş Seslilik",
+          "outcomes": [
+            {
+              "code": "LGS.TR.01.02.01",
+              "description": "Sözcükler arasındaki eş anlam, zıt anlam ve eş seslilik ilişkilerini belirler.",
+              "keywords": ["eş anlam", "zıt anlam", "eş seslilik"]
+            },
+            {
+              "code": "LGS.TR.01.02.02",
+              "description": "Anlam ilişkilerini cümle ve paragraf bağlamında kullanarak doğru seçeneği bulur.",
+              "keywords": ["anlam ilişkisi", "bağlam"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Türleri ve Anlam Kayması",
+          "outcomes": [
+            {
+              "code": "LGS.TR.01.03.01",
+              "description": "Somut-soyut, olumlu-olumsuz ve nicel-nitel anlam özelliklerini ayırt eder.",
+              "keywords": ["somut", "soyut", "nicel", "nitel"]
+            },
+            {
+              "code": "LGS.TR.01.03.02",
+              "description": "Sözcüklerin anlam genişlemesi, daralması ve köken değişimini örneklerle açıklar.",
+              "keywords": ["anlam genişlemesi", "anlam daralması", "anlam kayması"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.TR.02",
+      "unit_name": "Cümlede Anlam",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Cümle Türleri ve Yargı",
+          "outcomes": [
+            {
+              "code": "LGS.TR.02.01.01",
+              "description": "Olumlu, olumsuz, soru, ünlem ve emir cümlelerini ayırt eder.",
+              "keywords": ["olumlu cümle", "olumsuz cümle", "soru cümlesi"]
+            },
+            {
+              "code": "LGS.TR.02.01.02",
+              "description": "Basit, birleşik ve sıralı cümle yapılarını cümlede anlam sorularında kullanır.",
+              "keywords": ["basit cümle", "birleşik cümle", "sıralı cümle"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Anlam İlişkileri",
+          "outcomes": [
+            {
+              "code": "LGS.TR.02.02.01",
+              "description": "Neden-sonuç, amaç-sonuç, koşul, karşılaştırma ve karşıtlık ilişkilerini belirler.",
+              "keywords": ["neden sonuç", "amaç sonuç", "koşul", "karşıtlık"]
+            },
+            {
+              "code": "LGS.TR.02.02.02",
+              "description": "Cümleler arası anlam ilişkisine göre boşluk doldurma ve tamamlama sorularını çözer.",
+              "keywords": ["cümle tamamlama", "anlam ilişkisi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Yorumlama",
+          "outcomes": [
+            {
+              "code": "LGS.TR.02.03.01",
+              "description": "Cümlelerin ana düşüncesi, yardımcı düşünce ve vurgu noktasını tespit eder.",
+              "keywords": ["ana düşünce", "vurgu", "yardımcı düşünce"]
+            },
+            {
+              "code": "LGS.TR.02.03.02",
+              "description": "Anlamca birbirine en yakın veya en uzak cümleyi seçer.",
+              "keywords": ["anlamca yakın", "anlamca uzak"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.TR.03",
+      "unit_name": "Paragraf",
+      "typical_questions": "6-8",
+      "topics": [
+        {
+          "topic_name": "Ana Düşünce ve Yardımcı Düşünce",
+          "outcomes": [
+            {
+              "code": "LGS.TR.03.01.01",
+              "description": "Paragrafın ana düşüncesini ve yardımcı düşüncelerini ayırt eder.",
+              "keywords": ["ana düşünce", "yardımcı düşünce", "paragraf"]
+            },
+            {
+              "code": "LGS.TR.03.01.02",
+              "description": "Paragrafın konusu, başlığı ve iletisini doğru şekilde belirler.",
+              "keywords": ["konu", "başlık", "ileti"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Paragraf Yapısı ve Akış",
+          "outcomes": [
+            {
+              "code": "LGS.TR.03.02.01",
+              "description": "Paragrafın giriş, gelişme ve sonuç bölümlerini yapısal olarak yorumlar.",
+              "keywords": ["giriş", "gelişme", "sonuç"]
+            },
+            {
+              "code": "LGS.TR.03.02.02",
+              "description": "Paragrafın anlam bütünlüğünü bozan cümleyi veya eksik cümleyi tespit eder.",
+              "keywords": ["anlam bütünlüğü", "paragraf tamamlama"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Paragraf Yorumlama",
+          "outcomes": [
+            {
+              "code": "LGS.TR.03.03.01",
+              "description": "Paragrafta anlatılanları çıkarım yaparak yorumlar ve sonuç çıkarır.",
+              "keywords": ["çıkarım", "yorum", "sonuç"]
+            },
+            {
+              "code": "LGS.TR.03.03.02",
+              "description": "Paragrafta geçen düşünceyi destekleyen, örnekleyen veya karşıt görüşleri ayırt eder.",
+              "keywords": ["destekleyici", "örnekleme", "karşıt görüş"]
+            },
+            {
+              "code": "LGS.TR.03.03.03",
+              "description": "Paragrafın anlatım biçimi ve düşünceyi geliştirme yollarını belirler.",
+              "keywords": ["anlatım biçimi", "düşünceyi geliştirme"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.TR.04",
+      "unit_name": "Anlatım Biçimleri",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Anlatım Türleri",
+          "outcomes": [
+            {
+              "code": "LGS.TR.04.01.01",
+              "description": "Öyküleyici, betimleyici, açıklayıcı ve tartışmacı anlatım türlerini ayırt eder.",
+              "keywords": ["öyküleyici", "betimleyici", "açıklayıcı", "tartışmacı"]
+            },
+            {
+              "code": "LGS.TR.04.01.02",
+              "description": "Metinde kullanılan anlatım türünün özelliklerini örneklerle ilişkilendirir.",
+              "keywords": ["anlatım türü", "metin türü"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Düşünceyi Geliştirme Yolları",
+          "outcomes": [
+            {
+              "code": "LGS.TR.04.02.01",
+              "description": "Tanımlama, örneklendirme, karşılaştırma, tanık gösterme ve sayısal veri kullanımını belirler.",
+              "keywords": ["tanımlama", "örneklendirme", "karşılaştırma", "tanık gösterme"]
+            },
+            {
+              "code": "LGS.TR.04.02.02",
+              "description": "Metinde düşünceyi geliştirme yollarının hangi amaçla kullanıldığını yorumlar.",
+              "keywords": ["düşünceyi geliştirme", "anlatım tekniği"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.TR.05",
+      "unit_name": "Dil Bilgisi",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Fiilimsiler",
+          "outcomes": [
+            {
+              "code": "LGS.TR.05.01.01",
+              "description": "İsim-fiil, sıfat-fiil ve zarf-fiil türlerini cümle içinde ayırt eder.",
+              "keywords": ["isim-fiil", "sıfat-fiil", "zarf-fiil", "fiilimsi"]
+            },
+            {
+              "code": "LGS.TR.05.01.02",
+              "description": "Fiilimsilerin cümledeki görevlerini ve anlam özelliklerini belirler.",
+              "keywords": ["fiilimsi görevi", "fiilimsi anlamı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Ögeleri",
+          "outcomes": [
+            {
+              "code": "LGS.TR.05.02.01",
+              "description": "Özne, yüklem, nesne, dolaylı tümleç ve zarf tümleci ögelerini ayırt eder.",
+              "keywords": ["özne", "yüklem", "nesne", "tümleç"]
+            },
+            {
+              "code": "LGS.TR.05.02.02",
+              "description": "Cümle ögeleri arasındaki anlam ve yapı ilişkilerini sorularda kullanır.",
+              "keywords": ["cümle ögesi", "ögeler arası ilişki"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım Kuralları",
+          "outcomes": [
+            {
+              "code": "LGS.TR.05.03.01",
+              "description": "Büyük harf, birleşik kelime, pekiştirme ve kısaltma yazım kurallarını uygular.",
+              "keywords": ["büyük harf", "birleşik kelime", "kısaltma"]
+            },
+            {
+              "code": "LGS.TR.05.03.02",
+              "description": "Eklerin ayrı ve bitişik yazımı ile yabancı kelimelerin yazımını doğru kullanır.",
+              "keywords": ["bitişik yazım", "ayrı yazım", "yabancı kelime"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Noktalama İşaretleri",
+          "outcomes": [
+            {
+              "code": "LGS.TR.05.04.01",
+              "description": "Nokta, virgül, noktalı virgül, iki nokta ve üç noktanın kullanım yerlerini belirler.",
+              "keywords": ["virgül", "nokta", "noktalı virgül", "üç nokta"]
+            },
+            {
+              "code": "LGS.TR.05.04.02",
+              "description": "Tırnak, parantez, kısa çizgi ve soru-ünlem işaretlerinin kullanımını uygular.",
+              "keywords": ["tırnak işareti", "parantez", "soru işareti"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.TR.06",
+      "unit_name": "Görsel Okuma",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Grafik, Tablo ve Şema",
+          "outcomes": [
+            {
+              "code": "LGS.TR.06.01.01",
+              "description": "Grafik, tablo ve şemalardan veri okur, karşılaştırır ve yorumlar.",
+              "keywords": ["grafik okuma", "tablo", "şema"]
+            },
+            {
+              "code": "LGS.TR.06.01.02",
+              "description": "Görsel materyallerdeki ana mesajı ve destekleyici bilgileri ayırt eder.",
+              "keywords": ["görsel yorum", "veri analizi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Karikatür ve İlan",
+          "outcomes": [
+            {
+              "code": "LGS.TR.06.02.01",
+              "description": "Karikatür, afiş ve ilan gibi görsel metinlerin iletisini yorumlar.",
+              "keywords": ["karikatür", "afiş", "ilan"]
+            },
+            {
+              "code": "LGS.TR.06.02.02",
+              "description": "Görsel ve yazılı metin arasındaki ilişkiyi birlikte değerlendirir.",
+              "keywords": ["görsel metin", "ileti", "yorumlama"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

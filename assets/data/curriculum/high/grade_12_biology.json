@@ -1,0 +1,161 @@
+{
+  "grade": 12,
+  "subject": "Biyoloji",
+  "program_ref": "MEB Biyoloji Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "BİY.12.1",
+      "unit_name": "Canlılarda Enerji Dönüşümleri",
+      "topics": [
+        {
+          "topic_name": "Fotosentez ve Solunum",
+          "outcomes": [
+            {
+              "code": "BİY.12.1.1.1",
+              "description": "Fotosentezin aşamalarını (ışık ve karanlık reaksiyon) açıklar.",
+              "keywords": [
+                "fotosentez"
+              ]
+            },
+            {
+              "code": "BİY.12.1.1.2",
+              "description": "Hücresel solunumun (glikoliz, Krebs, ETS) aşamalarını tanır.",
+              "keywords": [
+                "hücresel solunum"
+              ]
+            },
+            {
+              "code": "BİY.12.1.1.3",
+              "description": "Fotosentez ve solunum arasındaki ilişkiyi yorumlar.",
+              "keywords": [
+                "enerji dönüşümü"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.12.2",
+      "unit_name": "Bitki Biyolojisi",
+      "topics": [
+        {
+          "topic_name": "Bitki Yapısı ve İşlevleri",
+          "outcomes": [
+            {
+              "code": "BİY.12.2.1.1",
+              "description": "Bitki dokularını (meristem, iletim, örtü) tanır.",
+              "keywords": [
+                "bitki dokusu"
+              ]
+            },
+            {
+              "code": "BİY.12.2.1.2",
+              "description": "Kök, gövde ve yaprağın yapısını açıklar.",
+              "keywords": [
+                "kök",
+                "gövde",
+                "yaprak"
+              ]
+            },
+            {
+              "code": "BİY.12.2.1.3",
+              "description": "Bitkilerde su ve mineral taşınmasını yorumlar.",
+              "keywords": [
+                "ksilem",
+                "floem"
+              ]
+            },
+            {
+              "code": "BİY.12.2.1.4",
+              "description": "Bitki hormonlarının (oksin, gibberellin) işlevlerini tanır.",
+              "keywords": [
+                "bitki hormonu"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.12.3",
+      "unit_name": "Canlılar ve Çevre",
+      "topics": [
+        {
+          "topic_name": "Ekoloji ve Koruma",
+          "outcomes": [
+            {
+              "code": "BİY.12.3.1.1",
+              "description": "Biyomları ve ekolojik nişleri tanır.",
+              "keywords": [
+                "biyom",
+                "niş"
+              ]
+            },
+            {
+              "code": "BİY.12.3.1.2",
+              "description": "İnsan faaliyetlerinin ekosistemlere etkisini değerlendirir.",
+              "keywords": [
+                "insan etkisi"
+              ]
+            },
+            {
+              "code": "BİY.12.3.1.3",
+              "description": "Koruma alanları ve sürdürülebilir kaynak kullanımını açıklar.",
+              "keywords": [
+                "koruma",
+                "sürdürülebilirlik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "BİY.12.4",
+      "unit_name": "Üreme Sistemi",
+      "topics": [
+        {
+          "topic_name": "Üreme ve Gelişim",
+          "outcomes": [
+            {
+              "code": "BİY.12.4.1.1",
+              "description": "İnsan üreme sisteminin yapısını açıklar.",
+              "keywords": [
+                "üreme sistemi"
+              ]
+            },
+            {
+              "code": "BİY.12.4.1.2",
+              "description": "Embriyonik gelişim aşamalarını tanır.",
+              "keywords": [
+                "embriyo"
+              ]
+            },
+            {
+              "code": "BİY.12.4.1.3",
+              "description": "Üreme sağlığı ve planlamasının önemini değerlendirir.",
+              "keywords": [
+                "üreme sağlığı"
+              ]
+            },
+            {
+              "code": "BİY.12.4.1.4",
+              "description": "Bitkilerde üreme organlarını ve tozlaşmayı açıklar.",
+              "keywords": [
+                "tozlaşma"
+              ]
+            },
+            {
+              "code": "BİY.12.4.1.5",
+              "description": "Bitki ve hayvanlarda vejetatif üremeyi karşılaştırır.",
+              "keywords": [
+                "vejetatif üreme"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

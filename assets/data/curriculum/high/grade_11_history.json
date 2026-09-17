@@ -1,0 +1,169 @@
+{
+  "grade": 11,
+  "subject": "Tarih",
+  "program_ref": "MEB Tarih Dersi Öğretim Programı (Lise, 11. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TAR.11.1",
+      "unit_name": "20. Yüzyıl Başlarında Dünya",
+      "topics": [
+        {
+          "topic_name": "I. Dünya Savaşı",
+          "outcomes": [
+            {
+              "code": "TAR.11.1.1.1",
+              "description": "I. Dünya Savaşı'nın nedenlerini ve sonuçlarını açıklar.",
+              "keywords": [
+                "I. Dünya Savaşı"
+              ]
+            },
+            {
+              "code": "TAR.11.1.1.2",
+              "description": "Osmanlı Devleti'nin savaştaki durumunu değerlendirir.",
+              "keywords": [
+                "Osmanlı savaş"
+              ]
+            },
+            {
+              "code": "TAR.11.1.1.3",
+              "description": "Mondros ve Sevr antlaşmalarının etkilerini analiz eder.",
+              "keywords": [
+                "Mondros",
+                "Sevr"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.11.2",
+      "unit_name": "Milli Mücadele",
+      "topics": [
+        {
+          "topic_name": "Kurtuluş Savaşı",
+          "outcomes": [
+            {
+              "code": "TAR.11.2.1.1",
+              "description": "Kuvâ-yi Milliye hareketini ve kongrelerin önemini açıklar.",
+              "keywords": [
+                "Kuvâ-yi Milliye"
+              ]
+            },
+            {
+              "code": "TAR.11.2.1.2",
+              "description": "TBMM'nin açılışını ve Misak-ı Millî'yi değerlendirir.",
+              "keywords": [
+                "TBMM",
+                "Misak-ı Millî"
+              ]
+            },
+            {
+              "code": "TAR.11.2.1.3",
+              "description": "Cephelerdeki (Doğu, Batı, Güney) mücadeleleri sıralar.",
+              "keywords": [
+                "cephe"
+              ]
+            },
+            {
+              "code": "TAR.11.2.1.4",
+              "description": "Lozan Barış Antlaşması'nın önemini açıklar.",
+              "keywords": [
+                "Lozan"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.11.3",
+      "unit_name": "Atatürk İlkeleri ve İnkılap Tarihi",
+      "topics": [
+        {
+          "topic_name": "İnkılaplar",
+          "outcomes": [
+            {
+              "code": "TAR.11.3.1.1",
+              "description": "Siyasi, hukuk, eğitim ve sosyal inkılapları sıralar.",
+              "keywords": [
+                "inkılap"
+              ]
+            },
+            {
+              "code": "TAR.11.3.1.2",
+              "description": "Atatürk ilkelerini (Cumhuriyetçilik, Halkçılık, Laiklik vb.) açıklar.",
+              "keywords": [
+                "Atatürk ilkeleri"
+              ]
+            },
+            {
+              "code": "TAR.11.3.1.3",
+              "description": "Çok partili hayata geçiş sürecini değerlendirir.",
+              "keywords": [
+                "çok partili hayat"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.11.4",
+      "unit_name": "II. Dünya Savaşı ve Sonrası",
+      "topics": [
+        {
+          "topic_name": "II. Dünya Savaşı",
+          "outcomes": [
+            {
+              "code": "TAR.11.4.1.1",
+              "description": "II. Dünya Savaşı'nın nedenlerini ve Türkiye'nin tutumunu açıklar.",
+              "keywords": [
+                "II. Dünya Savaşı"
+              ]
+            },
+            {
+              "code": "TAR.11.4.1.2",
+              "description": "Savaş sonrası dünya düzenindeki değişimleri yorumlar.",
+              "keywords": [
+                "Soğuk Savaş"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TAR.11.5",
+      "unit_name": "Çok Partili Hayat",
+      "topics": [
+        {
+          "topic_name": "Demokratikleşme Süreci",
+          "outcomes": [
+            {
+              "code": "TAR.11.5.1.1",
+              "description": "1950 seçimlerinin demokratikleşmedeki yerini açıklar.",
+              "keywords": [
+                "1950 seçimleri"
+              ]
+            },
+            {
+              "code": "TAR.11.5.1.2",
+              "description": "Çok partili dönemdeki siyasi gelişmeleri kronolojik sıralar.",
+              "keywords": [
+                "çok partili"
+              ]
+            },
+            {
+              "code": "TAR.11.5.1.3",
+              "description": "Türkiye'nin uluslararası örgütlere katılımını değerlendirir.",
+              "keywords": [
+                "uluslararası örgüt"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

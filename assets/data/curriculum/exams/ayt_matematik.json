@@ -1,0 +1,356 @@
+{
+  "grade": "AYT",
+  "subject": "Matematik",
+  "program_ref": "ÖSYM AYT Matematik soru dağılımı (geometri karışık, yaklaşık 40 soru)",
+  "exam_meta": {
+    "total_questions": 40,
+    "notes": "Soru sayıları yıllara göre değişebilir; analiz, geometri ve olasılık konuları birlikte değerlendirilir."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.MAT.01",
+      "unit_name": "Trigonometri",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Trigonometrik Oranlar",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.01.01.01",
+              "description": "Dar açılarda sin, cos, tan değerlerini birim çember ve dik üçgende hesaplar.",
+              "keywords": ["sin", "cos", "tan", "birim çember"]
+            },
+            {
+              "code": "AYT.MAT.01.01.02",
+              "description": "Trigonometrik özdeşlikleri sadeleştirme ve ispat sorularında kullanır.",
+              "keywords": ["özdeşlik", "sadeleştirme", "ispat"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Trigonometrik Denklemler",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.01.02.01",
+              "description": "Temel trigonometrik denklemleri [0, 2π) aralığında çözer.",
+              "keywords": ["trigonometrik denklem", "çözüm kümesi"]
+            },
+            {
+              "code": "AYT.MAT.01.02.02",
+              "description": "Toplam-fark, yarım açı ve dönüşüm formüllerini uygular.",
+              "keywords": ["toplam fark", "yarım açı", "dönüşüm"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Trigonometrik Fonksiyon Grafikleri",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.01.03.01",
+              "description": "Sinüs ve kosinüs fonksiyonlarının periyot, genlik ve faz kaymasını yorumlar.",
+              "keywords": ["grafik", "periyot", "genlik", "faz"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.02",
+      "unit_name": "Limit ve Süreklilik",
+      "typical_questions": "3-5",
+      "topics": [
+        {
+          "topic_name": "Limit Kavramı",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.02.01.01",
+              "description": "Polinom, rasyonel ve köklü ifadelerde limit hesaplar.",
+              "keywords": ["limit", "rasyonel", "polinom"]
+            },
+            {
+              "code": "AYT.MAT.02.01.02",
+              "description": "Belirsizlik (0/0, ∞/∞) durumlarında limit tekniklerini uygular.",
+              "keywords": ["belirsizlik", "0/0", "limit tekniği"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Süreklilik",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.02.02.01",
+              "description": "Fonksiyonun bir noktada sürekliliğini ve süreksizlik türlerini belirler.",
+              "keywords": ["süreklilik", "süreksizlik", "nokta"]
+            },
+            {
+              "code": "AYT.MAT.02.02.02",
+              "description": "Ara değer teoremini ve süreklilik uygulamalarını yorumlar.",
+              "keywords": ["ara değer", "sürekli fonksiyon"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.03",
+      "unit_name": "Türev ve Uygulamaları",
+      "typical_questions": "6-8",
+      "topics": [
+        {
+          "topic_name": "Türev Alma",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.03.01.01",
+              "description": "Temel türev kurallarını (kuvvet, çarpım, bölüm, zincir) uygular.",
+              "keywords": ["türev", "zincir kuralı", "çarpım kuralı"]
+            },
+            {
+              "code": "AYT.MAT.03.01.02",
+              "description": "Trigonometrik, logaritmik ve üslü fonksiyonların türevini hesaplar.",
+              "keywords": ["trigonometrik türev", "logaritma türevi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Türev Uygulamaları",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.03.02.01",
+              "description": "Fonksiyonun artan-azalan, ekstremum ve büküm noktalarını türevle belirler.",
+              "keywords": ["artan azalan", "maksimum", "minimum"]
+            },
+            {
+              "code": "AYT.MAT.03.02.02",
+              "description": "Teğet ve normal doğru denklemlerini türev kullanarak yazar.",
+              "keywords": ["teğet", "normal", "eğim"]
+            },
+            {
+              "code": "AYT.MAT.03.02.03",
+              "description": "Optimizasyon ve hız-ivme tipi türev uygulama sorularını çözer.",
+              "keywords": ["optimizasyon", "hız", "ivme"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.04",
+      "unit_name": "İntegral ve Uygulamaları",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Belirsiz İntegral",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.04.01.01",
+              "description": "Temel integrasyon kurallarını ve değişken değiştirme yöntemini uygular.",
+              "keywords": ["integral", "antitürev", "değişken değiştirme"]
+            },
+            {
+              "code": "AYT.MAT.04.01.02",
+              "description": "Polinom, rasyonel ve trigonometrik fonksiyonların integrallerini hesaplar.",
+              "keywords": ["polinom integral", "trigonometrik integral"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Belirli İntegral",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.04.02.01",
+              "description": "Belirli integral ile alan ve hacim hesaplarını yapar.",
+              "keywords": ["belirli integral", "alan", "hacim"]
+            },
+            {
+              "code": "AYT.MAT.04.02.02",
+              "description": "İki eğri arasındaki alanı integral kullanarak hesaplar.",
+              "keywords": ["iki eğri", "alan hesabı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.05",
+      "unit_name": "Diziler ve Seriler",
+      "typical_questions": "2-4",
+      "topics": [
+        {
+          "topic_name": "Aritmetik ve Geometrik Dizi",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.05.01.01",
+              "description": "Aritmetik ve geometrik dizilerin genel terim ve toplam formüllerini uygular.",
+              "keywords": ["aritmetik dizi", "geometrik dizi", "genel terim"]
+            },
+            {
+              "code": "AYT.MAT.05.01.02",
+              "description": "Dizi problemlerinde oran ve fark ilişkilerini çözer.",
+              "keywords": ["dizi problemi", "toplam"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Limit ve Toplam",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.05.02.01",
+              "description": "Sonsuz geometrik dizilerin toplamını ve yakınsaklık koşullarını yorumlar.",
+              "keywords": ["sonsuz dizi", "yakınsaklık", "|r|<1"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.06",
+      "unit_name": "Logaritma",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Logaritma Kuralları",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.06.01.01",
+              "description": "Logaritma tanımı ve temel kuralları (çarpma, bölme, kuvvet) uygular.",
+              "keywords": ["logaritma", "taban", "log kuralları"]
+            },
+            {
+              "code": "AYT.MAT.06.01.02",
+              "description": "Logaritmik denklemleri ve eşitsizlikleri çözer.",
+              "keywords": ["logaritmik denklem", "logaritmik eşitsizlik"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.07",
+      "unit_name": "Karmaşık Sayılar",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Karmaşık Sayı İşlemleri",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.07.01.01",
+              "description": "Karmaşık sayılarda toplama, çıkarma, çarpma ve eşlenik işlemlerini yapar.",
+              "keywords": ["karmaşık sayı", "eşlenik", "i"]
+            },
+            {
+              "code": "AYT.MAT.07.01.02",
+              "description": "Karmaşık sayıların modül ve argümanını hesaplar.",
+              "keywords": ["modül", "argüman", "kutupsal"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.MAT.08",
+      "unit_name": "Olasılık ve Kombinatorik",
+      "typical_questions": "3-5",
+      "topics": [
+        {
+          "topic_name": "Permütasyon – Kombinasyon",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.08.01.01",
+              "description": "Permütasyon, kombinasyon ve tekrarlı permütasyon hesaplarını yapar.",
+              "keywords": ["permütasyon", "kombinasyon", "P", "C"]
+            },
+            {
+              "code": "AYT.MAT.08.01.02",
+              "description": "Binom açılımını ve Pascal üçgenini olasılık sorularında kullanır.",
+              "keywords": ["binom", "Pascal", "açılım"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Olasılık",
+          "outcomes": [
+            {
+              "code": "AYT.MAT.08.02.01",
+              "description": "Klasik olasılık, birleşik olay ve koşullu olasılık sorularını çözer.",
+              "keywords": ["olasılık", "koşullu olasılık", "birleşik olay"]
+            },
+            {
+              "code": "AYT.MAT.08.02.02",
+              "description": "Bağımsız olaylar ve Bayes tipi yorum sorularını çözer.",
+              "keywords": ["bağımsız olay", "Bayes"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.GEO.01",
+      "unit_name": "Analitik Geometri",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Doğru ve Çember",
+          "outcomes": [
+            {
+              "code": "AYT.GEO.01.01.01",
+              "description": "Doğrunun eğim, denklem ve iki nokta arası uzaklık formüllerini uygular.",
+              "keywords": ["doğru denklemi", "eğim", "uzaklık"]
+            },
+            {
+              "code": "AYT.GEO.01.01.02",
+              "description": "Çember denklemini merkez-yarıçap ve genel formda yazar, yorumlar.",
+              "keywords": ["çember denklemi", "merkez", "yarıçap"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Konikler",
+          "outcomes": [
+            {
+              "code": "AYT.GEO.01.02.01",
+              "description": "Elips, hiperbol ve parabol denklemlerini temel özellikleriyle yorumlar.",
+              "keywords": ["elips", "hiperbol", "parabol", "konik"]
+            },
+            {
+              "code": "AYT.GEO.01.02.02",
+              "description": "Koniklerin odak, doğrultman ve eksen özelliklerini sorularda kullanır.",
+              "keywords": ["odak", "doğrultman", "eksen"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.GEO.02",
+      "unit_name": "Katı Cisimler ve Uzay Geometrisi",
+      "typical_questions": "2-4",
+      "topics": [
+        {
+          "topic_name": "Katı Cisimler",
+          "outcomes": [
+            {
+              "code": "AYT.GEO.02.01.01",
+              "description": "Prizma, piramit, silindir, koni ve kürede hacim ve yüzey alanı hesaplar.",
+              "keywords": ["hacim", "yüzey alanı", "katı cisim"]
+            },
+            {
+              "code": "AYT.GEO.02.01.02",
+              "description": "Katı cisimlerin kesit, açınım ve birleştirme sorularını çözer.",
+              "keywords": ["kesit", "açınım", "birleştirme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Uzayda Doğru ve Düzlem",
+          "outcomes": [
+            {
+              "code": "AYT.GEO.02.02.01",
+              "description": "Uzayda doğru-düzlem ilişkilerini ve mesafe hesaplarını yorumlar.",
+              "keywords": ["uzay geometrisi", "doğru düzlem", "mesafe"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

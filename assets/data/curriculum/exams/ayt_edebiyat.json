@@ -1,0 +1,184 @@
+{
+  "grade": "AYT",
+  "subject": "Türk Dili ve Edebiyatı",
+  "program_ref": "ÖSYM AYT Türk Dili ve Edebiyatı-Sosyal Bilimler-1 soru dağılımı (yaklaşık 24 soru)",
+  "exam_meta": {
+    "total_questions": 24,
+    "notes": "Soru sayıları yıllara göre değişebilir; metin analizi ve dönem-eser eşleştirmesi ağırlıklıdır."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.EDB.01",
+      "unit_name": "Dil Bilgisi ve Anlatım",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Ses Bilgisi ve Kelime Yapısı",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.01.01.01",
+              "description": "Ses olaylarını (ünsüz yumuşaması, türemesi, düşmesi) örneklerle ayırt eder.",
+              "keywords": ["ses bilgisi", "ünsüz yumuşaması", "türeme"]
+            },
+            {
+              "code": "AYT.EDB.01.01.02",
+              "description": "Kök, gövde, ek ve yapım-çekim eklerini kelime yapısında belirler.",
+              "keywords": ["kök", "ek", "yapım eki", "çekim eki"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Bilgisi",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.01.02.01",
+              "description": "Cümle ögeleri, cümle türleri ve anlatım bozukluklarını analiz eder.",
+              "keywords": ["cümle ögesi", "anlatım bozukluğu", "cümle türü"]
+            },
+            {
+              "code": "AYT.EDB.01.02.02",
+              "description": "Yazım ve noktalama kurallarını metin düzeltme sorularında uygular.",
+              "keywords": ["yazım", "noktalama", "düzeltme"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.EDB.02",
+      "unit_name": "Metin İnceleme",
+      "typical_questions": "6-8",
+      "topics": [
+        {
+          "topic_name": "Paragraf ve Metin Analizi",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.02.01.01",
+              "description": "Metnin ana düşüncesi, yardımcı düşünceleri ve anlatım özelliklerini belirler.",
+              "keywords": ["metin analizi", "ana düşünce", "anlatım"]
+            },
+            {
+              "code": "AYT.EDB.02.01.02",
+              "description": "Metinde kullanılan sanat ve düşünceyi geliştirme yollarını ayırt eder.",
+              "keywords": ["sanat", "düşünceyi geliştirme", "anlatım tekniği"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Şiir Bilgisi",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.02.02.01",
+              "description": "Şiir türleri, nazım biçimleri, ölçü ve kafiye özelliklerini belirler.",
+              "keywords": ["şiir türü", "nazım biçimi", "kafiye", "ölçü"]
+            },
+            {
+              "code": "AYT.EDB.02.02.02",
+              "description": "Şiirde söyleyiş, imgeler ve ahenk unsurlarını yorumlar.",
+              "keywords": ["imge", "söyleyiş", "ahenk"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.EDB.03",
+      "unit_name": "Türk Edebiyatı Dönemleri",
+      "typical_questions": "8-10",
+      "topics": [
+        {
+          "topic_name": "İslamiyet Öncesi ve Geçiş Dönemi",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.03.01.01",
+              "description": "Destan, sagu ve Koşuk geleneğini dönem özellikleriyle ilişkilendirir.",
+              "keywords": ["destan", "sagu", "Koşuk", "İslamiyet öncesi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Halk Edebiyatı",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.03.02.01",
+              "description": "Anonim halk edebiyatı türlerini (masal, hikâye, destan) ayırt eder.",
+              "keywords": ["halk edebiyatı", "masal", "anonim"]
+            },
+            {
+              "code": "AYT.EDB.03.02.02",
+              "description": "Aşık ve ozan geleneğini, Karacaoğlan ve Köroğlu gibi temsilcileriyle tanır.",
+              "keywords": ["aşık", "ozan", "Karacaoğlan", "Köroğlu"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Divan Edebiyatı",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.03.03.01",
+              "description": "Divan edebiyatı nazım ve nesir türlerini (gazel, kaside, mesnevi) ayırt eder.",
+              "keywords": ["divan", "gazel", "kaside", "mesnevi"]
+            },
+            {
+              "code": "AYT.EDB.03.03.02",
+              "description": "Fuzuli, Baki, Nedim ve Şeyh Galip gibi temsilcileri eserleriyle eşleştirir.",
+              "keywords": ["Fuzuli", "Baki", "Nedim", "Şeyh Galip"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Tanzimat – Servet-i Fünun – Fecr-i Ati",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.03.04.01",
+              "description": "Tanzimat dönemi yazarlarını (Şinasi, Namık Kemal, Ziya Paşa) eserleriyle tanır.",
+              "keywords": ["Tanzimat", "Şinasi", "Namık Kemal"]
+            },
+            {
+              "code": "AYT.EDB.03.04.02",
+              "description": "Servet-i Fünun ve Fecr-i Ati dönemlerinin sanat anlayışını karşılaştırır.",
+              "keywords": ["Servet-i Fünun", "Fecr-i Ati", "Tevfik Fikret"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Milli Edebiyat – Cumhuriyet",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.03.05.01",
+              "description": "Milli Edebiyat ve Cumhuriyet dönemi yazar-eser eşleştirmelerini yapar.",
+              "keywords": ["Milli Edebiyat", "Cumhuriyet", "Ömer Seyfettin", "Yahya Kemal"]
+            },
+            {
+              "code": "AYT.EDB.03.05.02",
+              "description": "Modern Türk edebiyatında roman, hikâye, tiyatro ve şiir akımlarını yorumlar.",
+              "keywords": ["roman", "hikâye", "tiyatro", "modern edebiyat"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.EDB.04",
+      "unit_name": "Dünya Edebiyatı",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Dünya Edebiyatından Örnekler",
+          "outcomes": [
+            {
+              "code": "AYT.EDB.04.01.01",
+              "description": "Klasik ve modern dünya edebiyatından temel yazar-eser eşleştirmelerini yapar.",
+              "keywords": ["dünya edebiyatı", "klasik", "modern"]
+            },
+            {
+              "code": "AYT.EDB.04.01.02",
+              "description": "Evrensel temaları Türk ve dünya edebiyatı eserleri arasında karşılaştırır.",
+              "keywords": ["evrensel tema", "karşılaştırma"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

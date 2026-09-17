@@ -1,0 +1,174 @@
+{
+  "grade": 10,
+  "subject": "Fizik",
+  "program_ref": "MEB Fizik Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "FİZ.10.1",
+      "unit_name": "Elektrik ve Manyetizma",
+      "topics": [
+        {
+          "topic_name": "Elektrik Akımı",
+          "outcomes": [
+            {
+              "code": "FİZ.10.1.1.1",
+              "description": "Elektrik akımı, direnç ve gerilim kavramlarını tanır.",
+              "keywords": [
+                "akım",
+                "direnç",
+                "gerilim"
+              ]
+            },
+            {
+              "code": "FİZ.10.1.1.2",
+              "description": "Ohm yasasını uygular; seri ve paralel bağlantıları analiz eder.",
+              "keywords": [
+                "Ohm",
+                "seri",
+                "paralel"
+              ]
+            },
+            {
+              "code": "FİZ.10.1.1.3",
+              "description": "Elektrik gücü ve enerjiyi hesaplar.",
+              "keywords": [
+                "elektrik gücü"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Manyetizma",
+          "outcomes": [
+            {
+              "code": "FİZ.10.1.2.1",
+              "description": "Mıknatıs ve manyetik alan kavramlarını açıklar.",
+              "keywords": [
+                "mıknatıs",
+                "manyetik alan"
+              ]
+            },
+            {
+              "code": "FİZ.10.1.2.2",
+              "description": "Akımın manyetik etkisini yorumlar.",
+              "keywords": [
+                "elektromanyetizma"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.10.2",
+      "unit_name": "Basınç ve Kaldırma Kuvveti",
+      "topics": [
+        {
+          "topic_name": "Basınç",
+          "outcomes": [
+            {
+              "code": "FİZ.10.2.1.1",
+              "description": "Katı, sıvı ve gaz basıncını hesaplar.",
+              "keywords": [
+                "basınç"
+              ]
+            },
+            {
+              "code": "FİZ.10.2.1.2",
+              "description": "Arşimed prensibini uygular.",
+              "keywords": [
+                "Arşimed",
+                "kaldırma kuvveti"
+              ]
+            },
+            {
+              "code": "FİZ.10.2.1.3",
+              "description": "Basınçla ilgili günlük yaşam problemlerini çözer.",
+              "keywords": [
+                "basınç problemi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.10.3",
+      "unit_name": "Dalgalar",
+      "topics": [
+        {
+          "topic_name": "Dalga Hareketi",
+          "outcomes": [
+            {
+              "code": "FİZ.10.3.1.1",
+              "description": "Mekanik dalgaların özelliklerini (genlik, frekans, periyot, dalga boyu) tanır.",
+              "keywords": [
+                "dalga",
+                "frekans"
+              ]
+            },
+            {
+              "code": "FİZ.10.3.1.2",
+              "description": "Yansıma, kırılma ve girişim olaylarını açıklar.",
+              "keywords": [
+                "yansıma",
+                "kırılma",
+                "girişim"
+              ]
+            },
+            {
+              "code": "FİZ.10.3.1.3",
+              "description": "Ses dalgalarının özelliklerini yorumlar.",
+              "keywords": [
+                "ses"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.10.4",
+      "unit_name": "Optik",
+      "topics": [
+        {
+          "topic_name": "Işık ve Görüntü",
+          "outcomes": [
+            {
+              "code": "FİZ.10.4.1.1",
+              "description": "Işığın yansıma ve kırılma yasalarını uygular.",
+              "keywords": [
+                "Snell",
+                "yansıma"
+              ]
+            },
+            {
+              "code": "FİZ.10.4.1.2",
+              "description": "Düzlem ve küresel aynalarda görüntü oluşumunu açıklar.",
+              "keywords": [
+                "ayna",
+                "görüntü"
+              ]
+            },
+            {
+              "code": "FİZ.10.4.1.3",
+              "description": "Merceklerde odak ve görüntü özelliklerini belirler.",
+              "keywords": [
+                "mercek",
+                "odak"
+              ]
+            },
+            {
+              "code": "FİZ.10.4.1.4",
+              "description": "Prizma ve renk ayrımını yorumlar.",
+              "keywords": [
+                "prizma",
+                "renk"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

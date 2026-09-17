@@ -1,0 +1,284 @@
+{
+  "grade": 9,
+  "subject": "Fizik",
+  "program_ref": "MEB Fizik Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "FİZ.9.1",
+      "unit_name": "Fizik Bilimine Giriş",
+      "topics": [
+        {
+          "topic_name": "Fizik ve Bilimsel Yöntem",
+          "outcomes": [
+            {
+              "code": "FİZ.9.1.1.1",
+              "description": "Fiziğin tanımını, alt dallarını ve diğer bilimlerle ilişkisini açıklar.",
+              "keywords": [
+                "fizik",
+                "alt dal"
+              ]
+            },
+            {
+              "code": "FİZ.9.1.1.2",
+              "description": "Bilimsel yöntemin aşamalarını sıralar; gözlem, hipotez ve deney kavramlarını kullanır.",
+              "keywords": [
+                "bilimsel yöntem",
+                "hipotez"
+              ]
+            },
+            {
+              "code": "FİZ.9.1.1.3",
+              "description": "Fizikte kullanılan temel büyüklükleri, birimleri ve SI sistemini tanır.",
+              "keywords": [
+                "SI birim",
+                "büyüklük"
+              ]
+            },
+            {
+              "code": "FİZ.9.1.1.4",
+              "description": "Ölçme belirsizliği ve anlamlı rakam kavramlarını uygular.",
+              "keywords": [
+                "ölçme",
+                "anlamlı rakam"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.9.2",
+      "unit_name": "Madde ve Özellikleri",
+      "topics": [
+        {
+          "topic_name": "Maddenin Yapısı",
+          "outcomes": [
+            {
+              "code": "FİZ.9.2.1.1",
+              "description": "Maddenin tanecikli yapısını açıklar; atom, molekül kavramlarını kullanır.",
+              "keywords": [
+                "tanecik",
+                "atom",
+                "molekül"
+              ]
+            },
+            {
+              "code": "FİZ.9.2.1.2",
+              "description": "Saf madde ve karışım ayrımını yapar; homojen-heterojen karışımları ayırt eder.",
+              "keywords": [
+                "saf madde",
+                "karışım"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yoğunluk ve Basınç",
+          "outcomes": [
+            {
+              "code": "FİZ.9.2.2.1",
+              "description": "Kütle, hacim ve yoğunluk kavramlarını tanır; ρ=m/V formülünü uygular.",
+              "keywords": [
+                "yoğunluk",
+                "kütle",
+                "hacim"
+              ]
+            },
+            {
+              "code": "FİZ.9.2.2.2",
+              "description": "Katı, sıvı ve gazlarda basınç kavramını açıklar.",
+              "keywords": [
+                "basınç"
+              ]
+            },
+            {
+              "code": "FİZ.9.2.2.3",
+              "description": "Açık hava basıncını ve Pascal prensibini yorumlar.",
+              "keywords": [
+                "açık hava basıncı",
+                "Pascal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.9.3",
+      "unit_name": "Hareket ve Kuvvet",
+      "topics": [
+        {
+          "topic_name": "Hareket",
+          "outcomes": [
+            {
+              "code": "FİZ.9.3.1.1",
+              "description": "Konum, yer değiştirme, hız ve ivme kavramlarını ayırt eder.",
+              "keywords": [
+                "konum",
+                "hız",
+                "ivme"
+              ]
+            },
+            {
+              "code": "FİZ.9.3.1.2",
+              "description": "Düzgün doğrusal hareket grafiklerini yorumlar.",
+              "keywords": [
+                "hız-zaman grafiği"
+              ]
+            },
+            {
+              "code": "FİZ.9.3.1.3",
+              "description": "Serbest düşme hareketini açıklar.",
+              "keywords": [
+                "serbest düşme"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kuvvet ve Newton Yasaları",
+          "outcomes": [
+            {
+              "code": "FİZ.9.3.2.1",
+              "description": "Kuvvet kavramını tanır; vektörel toplamayı uygular.",
+              "keywords": [
+                "kuvvet",
+                "vektör"
+              ]
+            },
+            {
+              "code": "FİZ.9.3.2.2",
+              "description": "Newton'un hareket yasalarını açıklar ve problemlerde uygular.",
+              "keywords": [
+                "Newton yasaları"
+              ]
+            },
+            {
+              "code": "FİZ.9.3.2.3",
+              "description": "Sürtünme kuvvetini ve etkilerini yorumlar.",
+              "keywords": [
+                "sürtünme"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.9.4",
+      "unit_name": "Enerji",
+      "topics": [
+        {
+          "topic_name": "İş ve Enerji",
+          "outcomes": [
+            {
+              "code": "FİZ.9.4.1.1",
+              "description": "İş kavramını tanır; W=F·s formülünü uygular.",
+              "keywords": [
+                "iş",
+                "kuvvet"
+              ]
+            },
+            {
+              "code": "FİZ.9.4.1.2",
+              "description": "Kinetik ve potansiyel enerji kavramlarını açıklar.",
+              "keywords": [
+                "kinetik enerji",
+                "potansiyel enerji"
+              ]
+            },
+            {
+              "code": "FİZ.9.4.1.3",
+              "description": "Enerjinin korunumu ilkesini kullanır.",
+              "keywords": [
+                "enerji korunumu"
+              ]
+            },
+            {
+              "code": "FİZ.9.4.1.4",
+              "description": "Güç kavramını tanır; P=W/t ilişkisini uygular.",
+              "keywords": [
+                "güç"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.9.5",
+      "unit_name": "Isı ve Sıcaklık",
+      "topics": [
+        {
+          "topic_name": "Isı ve Sıcaklık",
+          "outcomes": [
+            {
+              "code": "FİZ.9.5.1.1",
+              "description": "Isı ve sıcaklık kavramlarını ayırt eder.",
+              "keywords": [
+                "ısı",
+                "sıcaklık"
+              ]
+            },
+            {
+              "code": "FİZ.9.5.1.2",
+              "description": "Hal değişimlerinde ısı alışverişini Q=m·L ve Q=m·c·ΔT formülleriyle hesaplar.",
+              "keywords": [
+                "hal değişimi",
+                "ısı"
+              ]
+            },
+            {
+              "code": "FİZ.9.5.1.3",
+              "description": "Isı iletim yollarını (iletim, taşınım, ışınım) açıklar.",
+              "keywords": [
+                "ısı iletimi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "FİZ.9.6",
+      "unit_name": "Elektrostatik",
+      "topics": [
+        {
+          "topic_name": "Elektrik Yükü",
+          "outcomes": [
+            {
+              "code": "FİZ.9.6.1.1",
+              "description": "Elektrik yükü ve yük çeşitlerini tanır; Coulomb yasasını uygular.",
+              "keywords": [
+                "elektrik yükü",
+                "Coulomb"
+              ]
+            },
+            {
+              "code": "FİZ.9.6.1.2",
+              "description": "İletken ve yalıtkan maddeleri ayırt eder.",
+              "keywords": [
+                "iletken",
+                "yalıtkan"
+              ]
+            },
+            {
+              "code": "FİZ.9.6.1.3",
+              "description": "Elektrik alan kavramını açıklar.",
+              "keywords": [
+                "elektrik alan"
+              ]
+            },
+            {
+              "code": "FİZ.9.6.1.4",
+              "description": "Elektroskop çalışma prensibini yorumlar.",
+              "keywords": [
+                "elektroskop"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

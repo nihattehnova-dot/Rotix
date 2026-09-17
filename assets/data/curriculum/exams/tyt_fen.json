@@ -1,0 +1,350 @@
+{
+  "grade": "TYT",
+  "subject": "Fen Bilimleri",
+  "program_ref": "ÖSYM TYT Temel Yeterlilik Fen Bilimleri soru dağılımı (Fizik + Kimya + Biyoloji, yaklaşık 20 soru)",
+  "exam_meta": {
+    "total_questions": 20,
+    "physics_questions": "6-8",
+    "chemistry_questions": "6-7",
+    "biology_questions": "5-7",
+    "notes": "Soru sayıları yıllara göre değişebilir; fizik, kimya ve biyoloji konuları birlikte değerlendirilir."
+  },
+  "units": [
+    {
+      "unit_code": "TYT.FIZ.01",
+      "unit_name": "Fizik",
+      "typical_questions": "6-8",
+      "topics": [
+        {
+          "topic_name": "Hareket",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.01.01",
+              "description": "Konum, yer değiştirme, hız ve ivme kavramlarını hareket problemlerinde kullanır.",
+              "keywords": ["hız", "ivme", "yer değiştirme", "konum"]
+            },
+            {
+              "code": "TYT.FIZ.01.01.02",
+              "description": "Düzgün doğrusal hareket ve grafik yorumlama sorularını çözer.",
+              "keywords": ["düzgün hareket", "hız-zaman grafiği", "konum-zaman"]
+            },
+            {
+              "code": "TYT.FIZ.01.01.03",
+              "description": "Serbest düşme ve düşey atış hareketlerini temel düzeyde yorumlar.",
+              "keywords": ["serbest düşme", "düşey atış", "yerçekimi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kuvvet ve Hareket",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.02.01",
+              "description": "Newton'un hareket yasalarını günlük hayat ve problem durumlarında uygular.",
+              "keywords": ["Newton yasaları", "kuvvet", "sürtünme"]
+            },
+            {
+              "code": "TYT.FIZ.01.02.02",
+              "description": "Kuvvet, kütle ve ivme arasındaki ilişkiyi ve vektörel toplamayı yorumlar.",
+              "keywords": ["F=ma", "vektör", "net kuvvet"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Enerji",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.03.01",
+              "description": "İş, güç, kinetik ve potansiyel enerji kavramlarını hesaplar ve yorumlar.",
+              "keywords": ["iş", "güç", "kinetik enerji", "potansiyel enerji"]
+            },
+            {
+              "code": "TYT.FIZ.01.03.02",
+              "description": "Enerjinin korunumu ve enerji dönüşümlerini problem bağlamında kullanır.",
+              "keywords": ["enerji korunumu", "enerji dönüşümü"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Elektrik",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.04.01",
+              "description": "Elektrik yükü, akım, gerilim ve direnç kavramlarını Ohm yasası ile ilişkilendirir.",
+              "keywords": ["akım", "gerilim", "direnç", "Ohm yasası"]
+            },
+            {
+              "code": "TYT.FIZ.01.04.02",
+              "description": "Seri ve paralel devrelerde akım, gerilim ve direnç hesaplarını yapar.",
+              "keywords": ["seri devre", "paralel devre", "elektrik devresi"]
+            },
+            {
+              "code": "TYT.FIZ.01.04.03",
+              "description": "Elektrik enerjisi, güç ve güvenlik uygulamalarını yorumlar.",
+              "keywords": ["elektrik gücü", "elektrik enerjisi", "sigorta"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Optik",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.05.01",
+              "description": "Işığın yansıma ve kırılma olaylarını ayna ve mercek sorularında uygular.",
+              "keywords": ["yansıma", "kırılma", "ayna", "mercek"]
+            },
+            {
+              "code": "TYT.FIZ.01.05.02",
+              "description": "Görüntü oluşumu, odak noktası ve optik araçları temel düzeyde yorumlar.",
+              "keywords": ["görüntü", "odak", "optik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Dalgalar",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.06.01",
+              "description": "Dalga türlerini, dalga boyu, frekans ve hız ilişkisini yorumlar.",
+              "keywords": ["dalga boyu", "frekans", "hız", "periyot"]
+            },
+            {
+              "code": "TYT.FIZ.01.06.02",
+              "description": "Ses dalgalarının özelliklerini ve yankı olayını günlük hayatla ilişkilendirir.",
+              "keywords": ["ses", "yankı", "ses hızı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Modern Fizik (Giriş)",
+          "outcomes": [
+            {
+              "code": "TYT.FIZ.01.07.01",
+              "description": "Atom modellerinin gelişimini ve temel parçacık kavramlarını tanır.",
+              "keywords": ["atom modeli", "elektron", "proton", "nötron"]
+            },
+            {
+              "code": "TYT.FIZ.01.07.02",
+              "description": "Radyoaktivite, yarı ömür ve nükleer enerji kavramlarını temel düzeyde yorumlar.",
+              "keywords": ["radyoaktivite", "yarı ömür", "nükleer enerji"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.KIM.01",
+      "unit_name": "Kimya",
+      "typical_questions": "6-7",
+      "topics": [
+        {
+          "topic_name": "Atom ve Periyodik Sistem",
+          "outcomes": [
+            {
+              "code": "TYT.KIM.01.01.01",
+              "description": "Atomun yapısını, izotop kavramını ve periyodik tablo düzenini yorumlar.",
+              "keywords": ["atom", "izotop", "periyodik tablo"]
+            },
+            {
+              "code": "TYT.KIM.01.01.02",
+              "description": "Periyodik özelliklerdeki (metalik karakter, elektronegatiflik, atom yarıçapı) eğilimleri açıklar.",
+              "keywords": ["metalik karakter", "elektronegatiflik", "periyodik özellik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kimyasal Bağlar",
+          "outcomes": [
+            {
+              "code": "TYT.KIM.01.02.01",
+              "description": "İyonik, kovalent ve metalik bağ türlerini örneklerle ayırt eder.",
+              "keywords": ["iyonik bağ", "kovalent bağ", "metalik bağ"]
+            },
+            {
+              "code": "TYT.KIM.01.02.02",
+              "description": "Bağ türü ile maddenin fiziksel özellikleri arasındaki ilişkiyi yorumlar.",
+              "keywords": ["erime noktası", "iletkenlik", "bağ türü"]
+            },
+            {
+              "code": "TYT.KIM.01.02.03",
+              "description": "Lewis nokta yapılarını ve molekül geometrisini temel düzeyde yorumlar.",
+              "keywords": ["Lewis", "molekül geometrisi", "elektron çifti"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kimyasal Tepkimeler",
+          "outcomes": [
+            {
+              "code": "TYT.KIM.01.03.01",
+              "description": "Kimyasal tepkime denklemlerini denkleştirir ve kütle korunumunu uygular.",
+              "keywords": ["denkleştirme", "kütle korunumu", "tepkime"]
+            },
+            {
+              "code": "TYT.KIM.01.03.02",
+              "description": "Yanma, sentez, ayrışma ve yer değiştirme tepkimelerini sınıflandırır.",
+              "keywords": ["yanma", "sentez", "ayrışma", "yer değiştirme"]
+            },
+            {
+              "code": "TYT.KIM.01.03.03",
+              "description": "Mol kavramını ve basit stokiyometri hesaplarını problem durumlarında kullanır.",
+              "keywords": ["mol", "stokiyometri", "Avogadro"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Asitler, Bazlar ve Tuzlar",
+          "outcomes": [
+            {
+              "code": "TYT.KIM.01.04.01",
+              "description": "Asit ve baz tanımlarını, pH kavramını ve indikatörleri yorumlar.",
+              "keywords": ["asit", "baz", "pH", "indikatör"]
+            },
+            {
+              "code": "TYT.KIM.01.04.02",
+              "description": "Nötrleşme tepkimelerini ve tuz oluşumunu açıklar.",
+              "keywords": ["nötrleşme", "tuz", "asit-baz tepkimesi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Karışımlar ve Çözeltiler",
+          "outcomes": [
+            {
+              "code": "TYT.KIM.01.05.01",
+              "description": "Homojen-heterojen karışım, çözelti ve süspansiyon ayrımını yapar.",
+              "keywords": ["homojen", "heterojen", "çözelti", "süspansiyon"]
+            },
+            {
+              "code": "TYT.KIM.01.05.02",
+              "description": "Derişim birimlerini (molarite, yüzde derişim) hesaplar ve yorumlar.",
+              "keywords": ["molarite", "derişim", "yüzde derişim"]
+            },
+            {
+              "code": "TYT.KIM.01.05.03",
+              "description": "Ayırma ve saflaştırma yöntemlerini (filtreleme, damıtma, kristallendirme) uygular.",
+              "keywords": ["filtreleme", "damıtma", "kristallendirme", "ayırma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Organik Kimya (Giriş)",
+          "outcomes": [
+            {
+              "code": "TYT.KIM.01.06.01",
+              "description": "Organik bileşiklerin genel özelliklerini ve karbon bağını tanır.",
+              "keywords": ["organik bileşik", "karbon", "hidrokarbon"]
+            },
+            {
+              "code": "TYT.KIM.01.06.02",
+              "description": "Alkan, alken ve alkin gibi temel hidrokarbon gruplarını ayırt eder.",
+              "keywords": ["alkan", "alken", "alkin", "hidrokarbon"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.BIY.01",
+      "unit_name": "Biyoloji",
+      "typical_questions": "5-7",
+      "topics": [
+        {
+          "topic_name": "Hücre",
+          "outcomes": [
+            {
+              "code": "TYT.BIY.01.01.01",
+              "description": "Prokaryot ve ökaryot hücre yapılarını organellerle birlikte karşılaştırır.",
+              "keywords": ["prokaryot", "ökaryot", "organel", "hücre"]
+            },
+            {
+              "code": "TYT.BIY.01.01.02",
+              "description": "Hücre zarı, sitoplazma ve çekirdek işlevlerini yorumlar.",
+              "keywords": ["hücre zarı", "sitoplazma", "çekirdek"]
+            },
+            {
+              "code": "TYT.BIY.01.01.03",
+              "description": "Hücre solunumu ve fotosentez süreçlerini temel düzeyde açıklar.",
+              "keywords": ["solunum", "fotosentez", "ATP"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Canlılarda Sistemler",
+          "outcomes": [
+            {
+              "code": "TYT.BIY.01.02.01",
+              "description": "Sindirim, dolaşım, solunum ve boşaltım sistemlerinin yapı ve işlevlerini açıklar.",
+              "keywords": ["sindirim", "dolaşım", "solunum", "boşaltım"]
+            },
+            {
+              "code": "TYT.BIY.01.02.02",
+              "description": "Sinir ve endokrin sistemlerinin koordinasyon işlevlerini yorumlar.",
+              "keywords": ["sinir sistemi", "endokrin", "hormon"]
+            },
+            {
+              "code": "TYT.BIY.01.02.03",
+              "description": "Destek-hareket ve duyu organlarının görevlerini günlük hayatla ilişkilendirir.",
+              "keywords": ["destek hareket", "duyu organı", "iskelet"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kalıtım",
+          "outcomes": [
+            {
+              "code": "TYT.BIY.01.03.01",
+              "description": "DNA, gen, kromozom ve alel kavramlarını kalıtım bağlamında ilişkilendirir.",
+              "keywords": ["DNA", "gen", "kromozom", "alel"]
+            },
+            {
+              "code": "TYT.BIY.01.03.02",
+              "description": "Mendel kalıtım kurallarını ve basit çaprazlama sorularını çözer.",
+              "keywords": ["Mendel", "baskın", "çekinik", "çaprazlama"]
+            },
+            {
+              "code": "TYT.BIY.01.03.03",
+              "description": "Mutasyon, modifikasyon ve genetik mühendisliği kavramlarını ayırt eder.",
+              "keywords": ["mutasyon", "modifikasyon", "genetik mühendisliği"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ekosistem ve Ekoloji",
+          "outcomes": [
+            {
+              "code": "TYT.BIY.01.04.01",
+              "description": "Ekosistem bileşenlerini, besin zinciri ve enerji akışını yorumlar.",
+              "keywords": ["ekosistem", "besin zinciri", "enerji akışı"]
+            },
+            {
+              "code": "TYT.BIY.01.04.02",
+              "description": "Madde döngüleri (karbon, azot, su) ve biyomları açıklar.",
+              "keywords": ["madde döngüsü", "biyom", "karbon döngüsü"]
+            },
+            {
+              "code": "TYT.BIY.01.04.03",
+              "description": "Çevre kirliliği, biyolojik çeşitlilik ve sürdürülebilirlik konularını değerlendirir.",
+              "keywords": ["kirlilik", "biyolojik çeşitlilik", "sürdürülebilirlik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Üreme ve Gelişme",
+          "outcomes": [
+            {
+              "code": "TYT.BIY.01.05.01",
+              "description": "Eşeyli ve eşeysiz üreme türlerini örneklerle karşılaştırır.",
+              "keywords": ["eşeyli üreme", "eşeysiz üreme", "mayoz", "mitoz"]
+            },
+            {
+              "code": "TYT.BIY.01.05.02",
+              "description": "İnsanda üreme sistemlerini ve embriyonik gelişme aşamalarını temel düzeyde açıklar.",
+              "keywords": ["üreme sistemi", "embriyo", "gelişme"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

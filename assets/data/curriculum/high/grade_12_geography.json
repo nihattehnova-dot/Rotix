@@ -1,0 +1,180 @@
+{
+  "grade": 12,
+  "subject": "Coğrafya",
+  "program_ref": "MEB Coğrafya Dersi Öğretim Programı (Lise, 12. Sınıf)",
+  "units": [
+    {
+      "unit_code": "COĞ.12.1",
+      "unit_name": "Türkiye'nin Jeopolitiği",
+      "topics": [
+        {
+          "topic_name": "Stratejik Konum",
+          "outcomes": [
+            {
+              "code": "COĞ.12.1.1.1",
+              "description": "Türkiye'nin jeopolitik önemini açıklar.",
+              "keywords": [
+                "jeopolitik"
+              ]
+            },
+            {
+              "code": "COĞ.12.1.1.2",
+              "description": "Bölgesel güç dengelerini harita üzerinde analiz eder.",
+              "keywords": [
+                "güç dengesi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.12.2",
+      "unit_name": "Küresel ve Bölgesel Örgütler",
+      "topics": [
+        {
+          "topic_name": "Uluslararası Örgütler",
+          "outcomes": [
+            {
+              "code": "COĞ.12.2.1.1",
+              "description": "BM, NATO, AB, İslam İşbirliği Teşkilatı'nın işlevlerini tanır.",
+              "keywords": [
+                "BM",
+                "NATO",
+                "AB"
+              ]
+            },
+            {
+              "code": "COĞ.12.2.1.2",
+              "description": "Türkiye'nin uluslararası örgütlere üyeliğini değerlendirir.",
+              "keywords": [
+                "üyelik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.12.3",
+      "unit_name": "Sürdürülebilir Kalkınma",
+      "topics": [
+        {
+          "topic_name": "Kalkınma ve Çevre",
+          "outcomes": [
+            {
+              "code": "COĞ.12.3.1.1",
+              "description": "Sürdürülebilir kalkınma hedeflerini açıklar.",
+              "keywords": [
+                "sürdürülebilir kalkınma"
+              ]
+            },
+            {
+              "code": "COĞ.12.3.1.2",
+              "description": "Doğal kaynakların sürdürülebilir kullanımını değerlendirir.",
+              "keywords": [
+                "doğal kaynak"
+              ]
+            },
+            {
+              "code": "COĞ.12.3.1.3",
+              "description": "Türkiye'nin kalkınma planlarını tanır.",
+              "keywords": [
+                "kalkınma planı"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.12.4",
+      "unit_name": "Küresel Ticaret",
+      "topics": [
+        {
+          "topic_name": "Ticaret Ağları",
+          "outcomes": [
+            {
+              "code": "COĞ.12.4.1.1",
+              "description": "Küresel ticaret rotalarını harita üzerinde gösterir.",
+              "keywords": [
+                "ticaret rotası"
+              ]
+            },
+            {
+              "code": "COĞ.12.4.1.2",
+              "description": "Türkiye'nin dış ticaret partnerlerini analiz eder.",
+              "keywords": [
+                "dış ticaret"
+              ]
+            },
+            {
+              "code": "COĞ.12.4.1.3",
+              "description": "Lojistik ve ulaşım koridorlarının önemini açıklar.",
+              "keywords": [
+                "lojistik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.12.5",
+      "unit_name": "Afet Yönetimi",
+      "topics": [
+        {
+          "topic_name": "Doğal Afetler",
+          "outcomes": [
+            {
+              "code": "COĞ.12.5.1.1",
+              "description": "Deprem, sel ve yangın risk haritalarını yorumlar.",
+              "keywords": [
+                "risk haritası"
+              ]
+            },
+            {
+              "code": "COĞ.12.5.1.2",
+              "description": "Afet öncesi hazırlık ve sonrası müdahale planlarını açıklar.",
+              "keywords": [
+                "afet yönetimi"
+              ]
+            },
+            {
+              "code": "COĞ.12.5.1.3",
+              "description": "Türkiye'nin afet risk bölgelerini harita üzerinde gösterir.",
+              "keywords": [
+                "afet riski"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "COĞ.12.6",
+      "unit_name": "Beşerî Coğrafya",
+      "topics": [
+        {
+          "topic_name": "Kentsel Coğrafya",
+          "outcomes": [
+            {
+              "code": "COĞ.12.6.1.1",
+              "description": "Türkiye'nin büyük şehirlerinin gelişim süreçlerini analiz eder.",
+              "keywords": [
+                "kentleşme"
+              ]
+            },
+            {
+              "code": "COĞ.12.6.1.2",
+              "description": "Kırsal-kentsel göç dinamiklerini açıklar.",
+              "keywords": [
+                "göç"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

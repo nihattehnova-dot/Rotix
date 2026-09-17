@@ -1,0 +1,203 @@
+{
+  "grade": "LGS",
+  "subject": "T.C. İnkılap Tarihi ve Atatürkçülük",
+  "program_ref": "MEB LGS Sözel Bölüm İnkılap Tarihi soru dağılımı (yaklaşık 10–20 soru)",
+  "exam_meta": {
+    "total_questions": 10,
+    "notes": "Bazı yıllarda 10 soru uygulanır; soru sayısı ve konu ağırlıkları yıllara göre değişebilir."
+  },
+  "units": [
+    {
+      "unit_code": "LGS.INK.01",
+      "unit_name": "Milli Mücadele Hazırlık Dönemi",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "I. Dünya Savaşı ve Mondros",
+          "outcomes": [
+            {
+              "code": "LGS.INK.01.01.01",
+              "description": "I. Dünya Savaşı'nın Osmanlı Devleti üzerindeki etkilerini ve Mondros Ateşkes Antlaşması'nı yorumlar.",
+              "keywords": ["I. Dünya Savaşı", "Mondros", "işgal"]
+            },
+            {
+              "code": "LGS.INK.01.01.02",
+              "description": "İşgaller karşısında oluşan tepkileri ve direniş hareketlerini örneklerle açıklar.",
+              "keywords": ["işgal", "direniş", "Kuvâ-yi Milliye"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kongreler ve Hazırlık",
+          "outcomes": [
+            {
+              "code": "LGS.INK.01.02.01",
+              "description": "Erzurum ve Sivas kongrelerinin kararlarını ve önemini açıklar.",
+              "keywords": ["Erzurum Kongresi", "Sivas Kongresi", "milli sınırlar"]
+            },
+            {
+              "code": "LGS.INK.01.02.02",
+              "description": "Amasya Genelgesi ve TBMM'nin açılışını milli mücadele süreci içinde değerlendirir.",
+              "keywords": ["Amasya Genelgesi", "TBMM", "milli egemenlik"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.INK.02",
+      "unit_name": "Kurtuluş Savaşı Cepheleri",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Cepheler ve Antlaşmalar",
+          "outcomes": [
+            {
+              "code": "LGS.INK.02.01.01",
+              "description": "Doğu, Güney ve Batı cephelerindeki mücadeleleri ve sonuçlarını karşılaştırır.",
+              "keywords": ["Doğu Cephesi", "Güney Cephesi", "Batı Cephesi"]
+            },
+            {
+              "code": "LGS.INK.02.01.02",
+              "description": "Ankara Antlaşması, Mudanya ve Lozan Barış Antlaşması'nın önemini açıklar.",
+              "keywords": ["Ankara Antlaşması", "Mudanya", "Lozan"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sakarya ve Büyük Taarruz",
+          "outcomes": [
+            {
+              "code": "LGS.INK.02.02.01",
+              "description": "Sakarya Meydan Muharebesi ve Büyük Taarruz'un kurtuluş sürecindeki rolünü yorumlar.",
+              "keywords": ["Sakarya", "Büyük Taarruz", "Başkomutanlık"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.INK.03",
+      "unit_name": "Atatürk İlkeleri",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Altı Ok",
+          "outcomes": [
+            {
+              "code": "LGS.INK.03.01.01",
+              "description": "Cumhuriyetçilik, milliyetçilik, halkçılık, devletçilik, laiklik ve inkılapçılık ilkelerini açıklar.",
+              "keywords": ["Altı Ok", "cumhuriyetçilik", "laiklik", "milliyetçilik"]
+            },
+            {
+              "code": "LGS.INK.03.01.02",
+              "description": "Atatürk ilkelerinin günlük hayat ve devlet yönetimindeki yansımalarını örneklerle ilişkilendirir.",
+              "keywords": ["Atatürk ilkeleri", "uygulama", "yansıma"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.INK.04",
+      "unit_name": "Atatürk Dönemi İnkılapları",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Siyasi ve Hukuk İnkılapları",
+          "outcomes": [
+            {
+              "code": "LGS.INK.04.01.01",
+              "description": "Saltanatın kaldırılması, Cumhuriyet'in ilanı ve halifeliğin kaldırılmasını kronolojik olarak değerlendirir.",
+              "keywords": ["saltanat", "Cumhuriyet", "halifelik"]
+            },
+            {
+              "code": "LGS.INK.04.01.02",
+              "description": "1924 Anayasası ve hukuk alanındaki inkılapları (Medeni Kanun vb.) açıklar.",
+              "keywords": ["1924 Anayasası", "Medeni Kanun", "hukuk"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eğitim, Kültür ve Toplumsal İnkılaplar",
+          "outcomes": [
+            {
+              "code": "LGS.INK.04.02.01",
+              "description": "Tevhid-i Tedrisat, Harf İnkılabı ve kıyafet inkılaplarının amaçlarını açıklar.",
+              "keywords": ["Tevhid-i Tedrisat", "Harf İnkılabı", "kıyafet"]
+            },
+            {
+              "code": "LGS.INK.04.02.02",
+              "description": "Kadın hakları, takvim-saat ve ölçü birimlerindeki değişiklikleri toplumsal modernleşme bağlamında yorumlar.",
+              "keywords": ["kadın hakları", "takvim", "ölçü birimleri"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ekonomik İnkılaplar",
+          "outcomes": [
+            {
+              "code": "LGS.INK.04.03.01",
+              "description": "İzmir İktisat Kongresi, kabotaj ve sanayi planlarını ekonomik kalkınma bağlamında değerlendirir.",
+              "keywords": ["İzmir İktisat Kongresi", "kabotaj", "devletçilik"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.INK.05",
+      "unit_name": "Atatürk Dönemi Dış Politika",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Barışçı Dış Politika",
+          "outcomes": [
+            {
+              "code": "LGS.INK.05.01.01",
+              "description": "Yurtta sulh, cihanda sulh ilkesini dış politika örnekleriyle açıklar.",
+              "keywords": ["yurtta sulh", "cihanda sulh", "barış"]
+            },
+            {
+              "code": "LGS.INK.05.01.02",
+              "description": "Musul, Hatay ve Milletler Cemiyeti konularındaki Türkiye tutumunu yorumlar.",
+              "keywords": ["Musul", "Hatay", "Milletler Cemiyeti"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Antlaşmalar",
+          "outcomes": [
+            {
+              "code": "LGS.INK.05.02.01",
+              "description": "Balkan Antantı, Sadabat Paktı ve Montrö Boğazlar Sözleşmesi'nin önemini açıklar.",
+              "keywords": ["Balkan Antantı", "Sadabat", "Montrö"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "LGS.INK.06",
+      "unit_name": "Demokratikleşme Çabaları",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Çok Partili Hayata Geçiş",
+          "outcomes": [
+            {
+              "code": "LGS.INK.06.01.01",
+              "description": "Çok partili hayata geçiş sürecindeki girişimleri ve engelleri kronolojik olarak açıklar.",
+              "keywords": ["çok partili", "Terakkiperver", "Serbest Fırka"]
+            },
+            {
+              "code": "LGS.INK.06.01.02",
+              "description": "Demokrat Parti'nin kuruluşu ve 1950 seçimlerinin demokratikleşmedeki yerini değerlendirir.",
+              "keywords": ["Demokrat Parti", "1950 seçimleri"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

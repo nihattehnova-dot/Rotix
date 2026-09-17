@@ -1,0 +1,181 @@
+{
+  "grade": "AYT",
+  "subject": "Biyoloji",
+  "program_ref": "ÖSYM AYT Biyoloji soru dağılımı (yaklaşık 13 soru)",
+  "exam_meta": {
+    "total_questions": 13,
+    "notes": "Soru sayıları yıllara göre değişebilir; insan fizyolojisi ve genetik konuları ağırlıklı olabilir."
+  },
+  "units": [
+    {
+      "unit_code": "AYT.BIY.01",
+      "unit_name": "Hücre ve Metabolizma",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Hücre Yapısı",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.01.01.01",
+              "description": "Prokaryot ve ökaryot hücre yapılarını organellerin işlevleriyle ilişkilendirir.",
+              "keywords": ["hücre", "organel", "prokaryot", "ökaryot"]
+            },
+            {
+              "code": "AYT.BIY.01.01.02",
+              "description": "Hücre zarı madde geçiş mekanizmalarını (difüzyon, osmoz, aktif taşıma) ayırt eder.",
+              "keywords": ["difüzyon", "osmoz", "aktif taşıma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Enerji Metabolizması",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.01.02.01",
+              "description": "Fotosentez ve hücresel solunum süreçlerini ATP üretimi bağlamında açıklar.",
+              "keywords": ["fotosentez", "solunum", "ATP"]
+            },
+            {
+              "code": "AYT.BIY.01.02.02",
+              "description": "Fermentasyon türlerini ve oksijensiz solunum süreçlerini karşılaştırır.",
+              "keywords": ["fermentasyon", "oksijensiz solunum", "laktik", "etil alkol"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.BIY.02",
+      "unit_name": "Kalıtım",
+      "typical_questions": "2-3",
+      "topics": [
+        {
+          "topic_name": "Mendel Genetiği",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.02.01.01",
+              "description": "Monohibrit ve dihibrit çaprazlamalarda genotip-fenotip oranlarını hesaplar.",
+              "keywords": ["Mendel", "çaprazlama", "genotip", "fenotip"]
+            },
+            {
+              "code": "AYT.BIY.02.01.02",
+              "description": "Bağlı genler, crossing-over ve kan grubu kalıtımını yorumlar.",
+              "keywords": ["bağlı gen", "crossing-over", "kan grubu"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Moleküler Genetik",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.02.02.01",
+              "description": "DNA replikasyonu, transkripsiyon ve translasyon süreçlerini açıklar.",
+              "keywords": ["replikasyon", "transkripsiyon", "translasyon"]
+            },
+            {
+              "code": "AYT.BIY.02.02.02",
+              "description": "Gen mutasyonu, kromozom mutasyonları ve genetik mühendisliği uygulamalarını yorumlar.",
+              "keywords": ["mutasyon", "genetik mühendisliği", "rekombinant DNA"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.BIY.03",
+      "unit_name": "İnsan Fizyolojisi",
+      "typical_questions": "3-4",
+      "topics": [
+        {
+          "topic_name": "Sindirim ve Dolaşım",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.03.01.01",
+              "description": "Sindirim sistemi organlarının yapı ve işlevlerini açıklar.",
+              "keywords": ["sindirim", "enzim", "emilim"]
+            },
+            {
+              "code": "AYT.BIY.03.01.02",
+              "description": "Kalp-damar sistemi, kan basıncı ve kan gruplarını yorumlar.",
+              "keywords": ["dolaşım", "kalp", "kan basıncı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Solunum, Boşaltım ve Sinir",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.03.02.01",
+              "description": "Solunum sisteminde gaz değişimi ve oksijen taşınmasını açıklar.",
+              "keywords": ["solunum", "gaz değişimi", "hemoglobin"]
+            },
+            {
+              "code": "AYT.BIY.03.02.02",
+              "description": "Boşaltım sistemi ve homeostaz mekanizmalarını yorumlar.",
+              "keywords": ["boşaltım", "böbrek", "homeostaz"]
+            },
+            {
+              "code": "AYT.BIY.03.02.03",
+              "description": "Sinir sistemi, refleks yayı ve endokrin bezlerin hormon düzenlemesini açıklar.",
+              "keywords": ["sinir", "refleks", "hormon", "endokrin"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Destek-Hareket ve Duyu",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.03.03.01",
+              "description": "İskelet-kas sistemi ve eklem hareketlerini açıklar.",
+              "keywords": ["iskelet", "kas", "eklem"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.BIY.04",
+      "unit_name": "Bitki Biyolojisi",
+      "typical_questions": "1-2",
+      "topics": [
+        {
+          "topic_name": "Bitki Yapısı ve Fizyolojisi",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.04.01.01",
+              "description": "Bitki dokularını (meristem, iletim, örtü) yapı ve işlevleriyle ilişkilendirir.",
+              "keywords": ["bitki doku", "ksilem", "floem", "meristem"]
+            },
+            {
+              "code": "AYT.BIY.04.01.02",
+              "description": "Bitkilerde su ve mineral taşınması ile fotosentez-terleme ilişkisini yorumlar.",
+              "keywords": ["su taşınması", "terleme", "fotosentez"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "AYT.BIY.05",
+      "unit_name": "Ekoloji",
+      "typical_questions": "2",
+      "topics": [
+        {
+          "topic_name": "Ekosistem ve Popülasyon",
+          "outcomes": [
+            {
+              "code": "AYT.BIY.05.01.01",
+              "description": "Ekosistem bileşenlerini, enerji piramidi ve madde döngülerini açıklar.",
+              "keywords": ["ekosistem", "enerji piramidi", "madde döngüsü"]
+            },
+            {
+              "code": "AYT.BIY.05.01.02",
+              "description": "Popülasyon dinamiği, biyolojik çeşitlilik ve çevre sorunlarını yorumlar.",
+              "keywords": ["popülasyon", "biyolojik çeşitlilik", "çevre"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "grade": 9,
+  "subject": "Kimya",
+  "program_ref": "MEB Kimya Dersi Öğretim Programı (Lise, 9. Sınıf)",
+  "units": [
+    {
+      "unit_code": "KİM.9.1",
+      "unit_name": "Kimya Bilimi",
+      "topics": [
+        {
+          "topic_name": "Kimyanın Temelleri",
+          "outcomes": [
+            {
+              "code": "KİM.9.1.1.1",
+              "description": "Kimyanın tanımını, alt dallarını ve günlük yaşamdaki önemini açıklar.",
+              "keywords": [
+                "kimya",
+                "alt dal"
+              ]
+            },
+            {
+              "code": "KİM.9.1.1.2",
+              "description": "Laboratuvar güvenlik kurallarını uygular.",
+              "keywords": [
+                "laboratuvar güvenliği"
+              ]
+            },
+            {
+              "code": "KİM.9.1.1.3",
+              "description": "Kimyasal madde ve karışım ayrımını yapar.",
+              "keywords": [
+                "kimyasal madde"
+              ]
+            },
+            {
+              "code": "KİM.9.1.1.4",
+              "description": "Simge, formül ve denklem kavramlarını kullanır.",
+              "keywords": [
+                "formül",
+                "denklem"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.9.2",
+      "unit_name": "Atom ve Periyodik Sistem",
+      "topics": [
+        {
+          "topic_name": "Atom Modelleri",
+          "outcomes": [
+            {
+              "code": "KİM.9.2.1.1",
+              "description": "Atom teorilerinin tarihsel gelişimini sıralar (Dalton, Thomson, Rutherford, Bohr).",
+              "keywords": [
+                "atom modeli",
+                "Bohr"
+              ]
+            },
+            {
+              "code": "KİM.9.2.1.2",
+              "description": "Atom altı parçacıkları (proton, nötron, elektron) tanır.",
+              "keywords": [
+                "proton",
+                "nötron",
+                "elektron"
+              ]
+            },
+            {
+              "code": "KİM.9.2.1.3",
+              "description": "İzotop kavramını açıklar.",
+              "keywords": [
+                "izotop"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Periyodik Sistem",
+          "outcomes": [
+            {
+              "code": "KİM.9.2.2.1",
+              "description": "Periyodik tablonun düzenini (grup, periyot) açıklar.",
+              "keywords": [
+                "periyodik tablo",
+                "grup"
+              ]
+            },
+            {
+              "code": "KİM.9.2.2.2",
+              "description": "Periyodik özelliklerdeki (atom yarıçapı, iyonlaşma enerjisi) eğilimleri yorumlar.",
+              "keywords": [
+                "periyodik özellik"
+              ]
+            },
+            {
+              "code": "KİM.9.2.2.3",
+              "description": "Element sembollerini ve isimlerini kullanır.",
+              "keywords": [
+                "element sembolü"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.9.3",
+      "unit_name": "Kimyasal Türler Arası Etkileşimler",
+      "topics": [
+        {
+          "topic_name": "Kimyasal Bağlar",
+          "outcomes": [
+            {
+              "code": "KİM.9.3.1.1",
+              "description": "İyonik, kovalent ve metalik bağları tanır; oluşum mekanizmalarını açıklar.",
+              "keywords": [
+                "iyonik bağ",
+                "kovalent bağ"
+              ]
+            },
+            {
+              "code": "KİM.9.3.1.2",
+              "description": "Lewis nokta yapılarını çizer.",
+              "keywords": [
+                "Lewis yapısı"
+              ]
+            },
+            {
+              "code": "KİM.9.3.1.3",
+              "description": "Molekül polaritesini yorumlar.",
+              "keywords": [
+                "polarite"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Etkileşim Türleri",
+          "outcomes": [
+            {
+              "code": "KİM.9.3.2.1",
+              "description": "Van der Waals, hidrojen bağı ve dipol-dipol etkileşimlerini ayırt eder.",
+              "keywords": [
+                "hidrojen bağı",
+                "Van der Waals"
+              ]
+            },
+            {
+              "code": "KİM.9.3.2.2",
+              "description": "Etkileşim türlerinin maddelerin fiziksel özelliklerine etkisini açıklar.",
+              "keywords": [
+                "fiziksel özellik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.9.4",
+      "unit_name": "Maddenin Halleri",
+      "topics": [
+        {
+          "topic_name": "Gaz, Sıvı ve Katı",
+          "outcomes": [
+            {
+              "code": "KİM.9.4.1.1",
+              "description": "Gazların özelliklerini tanır; ideal gaz yasasını uygular.",
+              "keywords": [
+                "ideal gaz",
+                "basınç"
+              ]
+            },
+            {
+              "code": "KİM.9.4.1.2",
+              "description": "Sıvılarda yüzey gerilimi ve viskoziteyi açıklar.",
+              "keywords": [
+                "viskozite",
+                "yüzey gerilimi"
+              ]
+            },
+            {
+              "code": "KİM.9.4.1.3",
+              "description": "Katılarda kristal yapıları tanır.",
+              "keywords": [
+                "kristal yapı"
+              ]
+            },
+            {
+              "code": "KİM.9.4.1.4",
+              "description": "Hal değişimlerini grafiklerle yorumlar.",
+              "keywords": [
+                "hal değişimi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "KİM.9.5",
+      "unit_name": "Doğa ve Kimya",
+      "topics": [
+        {
+          "topic_name": "Çevre Kimyası",
+          "outcomes": [
+            {
+              "code": "KİM.9.5.1.1",
+              "description": "Su kaynaklarının kirlenmesi ve arıtma yöntemlerini açıklar.",
+              "keywords": [
+                "su kirliliği",
+                "arıtma"
+              ]
+            },
+            {
+              "code": "KİM.9.5.1.2",
+              "description": "Hava kirliliği kaynaklarını ve etkilerini yorumlar.",
+              "keywords": [
+                "hava kirliliği"
+              ]
+            },
+            {
+              "code": "KİM.9.5.1.3",
+              "description": "Geri dönüşüm ve sürdürülebilir kimya uygulamalarını değerlendirir.",
+              "keywords": [
+                "geri dönüşüm",
+                "sürdürülebilirlik"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

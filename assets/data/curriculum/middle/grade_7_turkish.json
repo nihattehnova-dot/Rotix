@@ -1,0 +1,317 @@
+{
+  "grade": 7,
+  "subject": "Türkçe",
+  "program_ref": "MEB Türkçe Dersi Öğretim Programı (Ortaokul, 7. Sınıf) — dinleme/izleme, konuşma, okuma, yazma, dil bilgisi",
+  "units": [
+    {
+      "unit_code": "T.7.1",
+      "unit_name": "Dinleme / İzleme",
+      "topics": [
+        {
+          "topic_name": "Dinlenen / İzlenen Metni Anlama",
+          "outcomes": [
+            {
+              "code": "T.7.1.1.1",
+              "description": "Dinlediği / izlediği metindeki olay örgüsü, kişiler, mekân-zaman ve sebep-sonuç ilişkilerini belirler.",
+              "keywords": ["olay örgüsü", "sebep-sonuç", "dinleme"]
+            },
+            {
+              "code": "T.7.1.1.2",
+              "description": "Dinlediği / izlediği metnin konusunu, ana fikrini ve yardımcı fikirlerini belirler.",
+              "keywords": ["ana fikir", "yardımcı fikir", "konu"]
+            },
+            {
+              "code": "T.7.1.1.3",
+              "description": "Dinlediği / izlediği metne eleştirel sorular sorar; metni değerlendirir ve özetler.",
+              "keywords": ["eleştirel dinleme", "özet", "değerlendirme"]
+            },
+            {
+              "code": "T.7.1.1.4",
+              "description": "Konuşmacının / metnin amacını, tutumunu, bakış açısını ve hedef kitlesini fark eder.",
+              "keywords": ["amaç", "tutum", "bakış açısı", "hedef kitle"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Söz Varlığı ve Medya Okuryazarlığı",
+          "outcomes": [
+            {
+              "code": "T.7.1.2.1",
+              "description": "Dinlediği metindeki bilinmeyen kelimeleri sözlük, bağlam ve eş/zıt anlamlı sözcüklerle öğrenir.",
+              "keywords": ["sözlük", "bağlam", "söz varlığı"]
+            },
+            {
+              "code": "T.7.1.2.2",
+              "description": "Görsel-işitsel ögelerle sözlü mesaj arasındaki ilişkiyi yorumlar.",
+              "keywords": ["görsel-işitsel", "medya", "yorumlama"]
+            },
+            {
+              "code": "T.7.1.2.3",
+              "description": "Dijital ortamdaki metin ve görselleri güvenilirlik, tarafsızlık ve amaç açısından değerlendirir.",
+              "keywords": ["dijital okuryazarlık", "güvenilirlik", "tarafsızlık"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.7.2",
+      "unit_name": "Konuşma",
+      "topics": [
+        {
+          "topic_name": "Sözlü Anlatım",
+          "outcomes": [
+            {
+              "code": "T.7.2.1.1",
+              "description": "Hazırlıksız konuşmada konu dışına çıkmadan düşüncelerini açık ve tutarlı biçimde ifade eder.",
+              "keywords": ["hazırlıksız konuşma", "tutarlılık"]
+            },
+            {
+              "code": "T.7.2.1.2",
+              "description": "Hazırlıklı konuşma planlar, sunum yapar ve dinleyici sorularına gerekçeli cevap verir.",
+              "keywords": ["sunum", "hazırlıklı konuşma", "soru-cevap"]
+            },
+            {
+              "code": "T.7.2.1.3",
+              "description": "Tartışma ve grup konuşmalarında sıraya girer, görüşünü kanıtlarla destekler.",
+              "keywords": ["tartışma", "gerekçe", "kanıt"]
+            },
+            {
+              "code": "T.7.2.1.4",
+              "description": "Konuşmalarında etkili beden dili, vurgu, duraklama ve ses tonu kullanır.",
+              "keywords": ["beden dili", "vurgu", "etkili konuşma"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.7.3",
+      "unit_name": "Okuma",
+      "topics": [
+        {
+          "topic_name": "Akıcı ve Anlamlı Okuma",
+          "outcomes": [
+            {
+              "code": "T.7.3.1.1",
+              "description": "Farklı türlerdeki metinleri akıcı, anlamlı ve vurgulu okur.",
+              "keywords": ["akıcı okuma", "vurgu", "metin türü"]
+            },
+            {
+              "code": "T.7.3.1.2",
+              "description": "Okuma amacına göre okuma hızını, stratejisini ve not alma yöntemini ayarlar.",
+              "keywords": ["okuma stratejisi", "not alma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Okuduğunu Anlama",
+          "outcomes": [
+            {
+              "code": "T.7.3.2.1",
+              "description": "Metnin konusunu, ana fikrini, yardımcı fikirlerini ve ana duygusunu belirler.",
+              "keywords": ["ana fikir", "yardımcı fikir", "duygu"]
+            },
+            {
+              "code": "T.7.3.2.2",
+              "description": "Metindeki sebep-sonuç, amaç-sonuç, karşılaştırma ve koşul-sonuç ilişkilerini çözümler.",
+              "keywords": ["metin ilişkileri", "sebep-sonuç", "koşul-sonuç"]
+            },
+            {
+              "code": "T.7.3.2.3",
+              "description": "Metindeki açık ve örtük mesajları, çıkarımları ayırt eder.",
+              "keywords": ["örtük mesaj", "çıkarım"]
+            },
+            {
+              "code": "T.7.3.2.4",
+              "description": "Bilgilendirici, öyküleyici, şiir, masal, fabl, anı, gezi yazısı ve röportaj türlerini ayırt eder.",
+              "keywords": ["metin türü", "anı", "röportaj", "gezi yazısı"]
+            },
+            {
+              "code": "T.7.3.2.5",
+              "description": "Metni özetler, değerlendirir ve kendi yaşamıyla ilişkilendirir.",
+              "keywords": ["özet", "değerlendirme", "ilişkilendirme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sözcük Dağarcığı",
+          "outcomes": [
+            {
+              "code": "T.7.3.3.1",
+              "description": "Eş, zıt, eş sesli sözcükler ile deyim ve atasözlerini metin içinde anlamlandırır.",
+              "keywords": ["deyim", "atasözü", "eş sesli", "zıt anlam"]
+            },
+            {
+              "code": "T.7.3.3.2",
+              "description": "Gerçek, mecaz, terim ve yan anlamları ayırt eder.",
+              "keywords": ["mecaz", "terim", "yan anlam"]
+            },
+            {
+              "code": "T.7.3.3.3",
+              "description": "Sözcüklerin kök, gövde ve ek yapılarını ayırt eder.",
+              "keywords": ["kök", "ek", "morfoloji"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.7.4",
+      "unit_name": "Yazma",
+      "topics": [
+        {
+          "topic_name": "Metin Yazma",
+          "outcomes": [
+            {
+              "code": "T.7.4.1.1",
+              "description": "Olay örgüsü, kişiler, mekân-zaman unsurlarını içeren öyküleyici metin yazar.",
+              "keywords": ["öykü yazma", "olay örgüsü"]
+            },
+            {
+              "code": "T.7.4.1.2",
+              "description": "Betimleyici, bilgilendirici ve tartışmacı metinler yazar.",
+              "keywords": ["betimleme", "bilgilendirme", "tartışmacı"]
+            },
+            {
+              "code": "T.7.4.1.3",
+              "description": "Mektup, dilekçe, duyuru, haber, broşür ve rapor türlerinde yazar.",
+              "keywords": ["mektup", "dilekçe", "rapor", "haber"]
+            },
+            {
+              "code": "T.7.4.1.4",
+              "description": "Yazma sürecinde planlar, taslak oluşturur, düzenler, düzeltir ve paylaşır.",
+              "keywords": ["yazma süreci", "taslak", "düzenleme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yazım Düzeni",
+          "outcomes": [
+            {
+              "code": "T.7.4.2.1",
+              "description": "Paragraf yapısını, giriş-gelişme-sonuç bölümlerini ve geçiş ifadelerini kullanır.",
+              "keywords": ["paragraf", "giriş-gelişme-sonuç", "geçiş"]
+            },
+            {
+              "code": "T.7.4.2.2",
+              "description": "Kaynak göstererek alıntı yapar; intihalden kaçınır.",
+              "keywords": ["kaynak gösterme", "alıntı", "intihal"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "T.7.5",
+      "unit_name": "Dil Bilgisi",
+      "topics": [
+        {
+          "topic_name": "Fiiller",
+          "outcomes": [
+            {
+              "code": "T.7.5.1.1",
+              "description": "Fiillerin kip, kişi, zaman, şahıs ve yapı özelliklerini belirler.",
+              "keywords": ["fiil", "kip", "zaman", "kişi"]
+            },
+            {
+              "code": "T.7.5.1.2",
+              "description": "Basit, birleşik, türemiş ve yardımcı fiilleri ayırt eder.",
+              "keywords": ["basit fiil", "birleşik fiil", "yardımcı fiil"]
+            },
+            {
+              "code": "T.7.5.1.3",
+              "description": "Fiillerin olumlu, olumsuz ve soru biçimlerini oluşturur.",
+              "keywords": ["olumlu", "olumsuz", "soru"]
+            },
+            {
+              "code": "T.7.5.1.4",
+              "description": "Fiil çekimlerini cümle içinde doğru kullanır.",
+              "keywords": ["fiil çekimi", "cümle"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Zarflar",
+          "outcomes": [
+            {
+              "code": "T.7.5.2.1",
+              "description": "Zarf türlerini (durum, zaman, miktar, soru) tanır ve örneklerle gösterir.",
+              "keywords": ["zarf", "durum zarfı", "zaman zarfı"]
+            },
+            {
+              "code": "T.7.5.2.2",
+              "description": "Zarfların cümlede hangi sözcükleri nitelendirdiğini belirler.",
+              "keywords": ["zarf görevi", "nitelendirme"]
+            },
+            {
+              "code": "T.7.5.2.3",
+              "description": "Zarfları cümle içinde doğru ve etkili biçimde kullanır.",
+              "keywords": ["zarf kullanımı"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bağlaçlar",
+          "outcomes": [
+            {
+              "code": "T.7.5.3.1",
+              "description": "Bağlaç türlerini (sözcük, sözcük grubu, cümle) tanır; örneklerle gösterir.",
+              "keywords": ["bağlaç", "bağlaç türü"]
+            },
+            {
+              "code": "T.7.5.3.2",
+              "description": "Bağlaçları cümle içinde doğru kullanır; anlam ilişkisini korur.",
+              "keywords": ["bağlaç kullanımı", "anlam ilişkisi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cümle Türleri",
+          "outcomes": [
+            {
+              "code": "T.7.5.4.1",
+              "description": "Yüklemin türüne göre cümleleri (isim, fiil) ayırt eder.",
+              "keywords": ["isim cümlesi", "fiil cümlesi"]
+            },
+            {
+              "code": "T.7.5.4.2",
+              "description": "Yüklemin yerine göre cümleleri (kurallı, devrik) ayırt eder.",
+              "keywords": ["kurallı cümle", "devrik cümle"]
+            },
+            {
+              "code": "T.7.5.4.3",
+              "description": "Anlamına göre cümleleri (olumlu, olumsuz, soru, ünlem, emir) ayırt eder.",
+              "keywords": ["olumlu cümle", "soru cümlesi", "ünlem"]
+            },
+            {
+              "code": "T.7.5.4.4",
+              "description": "Yapısına göre cümleleri (basit, birleşik, sıralı, bağlı) ayırt eder.",
+              "keywords": ["basit cümle", "birleşik cümle", "sıralı cümle"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Anlatım Bozuklukları",
+          "outcomes": [
+            {
+              "code": "T.7.5.5.1",
+              "description": "Anlamca çelişen sözcüklerden kaynaklanan anlatım bozukluklarını belirler.",
+              "keywords": ["anlamca çelişme", "anlatım bozukluğu"]
+            },
+            {
+              "code": "T.7.5.5.2",
+              "description": "Gereksiz sözcük kullanımından kaynaklanan anlatım bozukluklarını düzeltir.",
+              "keywords": ["gereksiz sözcük", "sadeleştirme"]
+            },
+            {
+              "code": "T.7.5.5.3",
+              "description": "Mantık ve dil bilgisi hatalarından kaynaklanan anlatım bozukluklarını düzeltir.",
+              "keywords": ["mantık hatası", "düzeltme"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

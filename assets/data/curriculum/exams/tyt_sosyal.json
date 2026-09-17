@@ -1,0 +1,363 @@
+{
+  "grade": "TYT",
+  "subject": "Sosyal Bilimler",
+  "program_ref": "ÖSYM TYT Temel Yeterlilik Sosyal Bilimler soru dağılımı (Tarih + Coğrafya + Felsefe + Din Kültürü, yaklaşık 20 soru)",
+  "exam_meta": {
+    "total_questions": 20,
+    "history_questions": "4-6",
+    "geography_questions": "4-6",
+    "philosophy_questions": "4-5",
+    "religion_questions": "4-5",
+    "notes": "Soru sayıları yıllara göre değişebilir; tarih bölümünde İnkılap Tarihi ağırlıklı dağılım son yılların ÖSYM kapsamına göredir."
+  },
+  "units": [
+    {
+      "unit_code": "TYT.SOS.01",
+      "unit_name": "Tarih",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "İlk Çağ ve Orta Çağ Medeniyetleri",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.01.01.01",
+              "description": "Mezopotamya, Mısır, Anadolu ve Ege medeniyetlerinin temel özelliklerini karşılaştırır.",
+              "keywords": ["Mezopotamya", "Mısır", "Anadolu medeniyetleri"]
+            },
+            {
+              "code": "TYT.SOS.01.01.02",
+              "description": "İlk Türk devletlerinin siyasi, sosyal ve kültürel yapısını yorumlar.",
+              "keywords": ["İlk Türk devletleri", "Göktürk", "Uygur"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Osmanlı Devleti (Kuruluş – Yükselme – Duraklama)",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.01.02.01",
+              "description": "Osmanlı Devleti'nin kuruluş, yükselme ve duraklama dönemlerindeki temel gelişmeleri sıralar.",
+              "keywords": ["Osmanlı", "kuruluş", "yükselme", "duraklama"]
+            },
+            {
+              "code": "TYT.SOS.01.02.02",
+              "description": "Osmanlı'da askeri, siyasi ve ekonomik yapıyı dönemsel gelişmelerle ilişkilendirir.",
+              "keywords": ["timar", "devşirme", "Osmanlı ekonomisi"]
+            },
+            {
+              "code": "TYT.SOS.01.02.03",
+              "description": "Islahat hareketleri ve modernleşme çabalarını tarihsel bağlamda değerlendirir.",
+              "keywords": ["Tanzimat", "Islahat", "modernleşme"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Milli Mücadele Hazırlık Dönemi",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.01.03.01",
+              "description": "I. Dünya Savaşı'nın Osmanlı Devleti üzerindeki etkilerini ve Mondros Ateşkes Antlaşması'nı yorumlar.",
+              "keywords": ["I. Dünya Savaşı", "Mondros", "işgal"]
+            },
+            {
+              "code": "TYT.SOS.01.03.02",
+              "description": "Erzurum ve Sivas kongrelerinin kararlarını ve Amasya Genelgesi'nin önemini açıklar.",
+              "keywords": ["Erzurum Kongresi", "Sivas Kongresi", "Amasya Genelgesi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Kurtuluş Savaşı ve Cumhuriyet",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.01.04.01",
+              "description": "Doğu, Güney ve Batı cephelerindeki mücadeleleri ve antlaşmaları karşılaştırır.",
+              "keywords": ["Doğu Cephesi", "Güney Cephesi", "Lozan", "Sevr"]
+            },
+            {
+              "code": "TYT.SOS.01.04.02",
+              "description": "TBMM'nin açılışı, Misak-ı Milli ve Saltanatın kaldırılmasını milli mücadele süreci içinde değerlendirir.",
+              "keywords": ["TBMM", "Misak-ı Milli", "Saltanatın kaldırılması"]
+            },
+            {
+              "code": "TYT.SOS.01.04.03",
+              "description": "Cumhuriyet'in ilanı ve Atatürk ilkelerini (Cumhuriyetçilik, Milliyetçilik, Halkçılık, Laiklik, Devletçilik, İnkılapçılık) açıklar.",
+              "keywords": ["Cumhuriyet", "Atatürk ilkeleri", "inkılap"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Atatürk Dönemi İnkılapları",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.01.05.01",
+              "description": "Siyasi, hukuk, eğitim-kültür, ekonomi ve toplumsal alandaki inkılapları amaç ve sonuçlarıyla değerlendirir.",
+              "keywords": ["inkılap", "Medeni Kanun", "harf devrimi", "kılık kıyafet"]
+            },
+            {
+              "code": "TYT.SOS.01.05.02",
+              "description": "Atatürk dönemi dış politika gelişmelerini (Lozan, Montrö, Balkan Antantı) yorumlar.",
+              "keywords": ["Lozan", "Montrö", "dış politika"]
+            }
+          ]
+        },
+        {
+          "topic_name": "II. Dünya Savaşı ve Soğuk Savaş Dönemi",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.01.06.01",
+              "description": "II. Dünya Savaşı'nın nedenleri, seyri ve sonuçlarını Türkiye'nin durumuyla birlikte değerlendirir.",
+              "keywords": ["II. Dünya Savaşı", "tarafsızlık", "çok partili hayat"]
+            },
+            {
+              "code": "TYT.SOS.01.06.02",
+              "description": "Soğuk Savaş döneminde Türkiye'nin konumunu ve NATO'ya girişini tarihsel bağlamda yorumlar.",
+              "keywords": ["Soğuk Savaş", "NATO", "Kore Savaşı"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.SOS.02",
+      "unit_name": "Coğrafya",
+      "typical_questions": "4-6",
+      "topics": [
+        {
+          "topic_name": "Doğal Sistemler",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.02.01.01",
+              "description": "İklim elemanlarını, iklim tiplerini ve Türkiye'nin iklim özelliklerini yorumlar.",
+              "keywords": ["iklim", "sıcaklık", "yağış", "Türkiye iklimi"]
+            },
+            {
+              "code": "TYT.SOS.02.01.02",
+              "description": "Yer şekilleri, iç ve dış kuvvetleri ve Türkiye'nin yer şekilleri özelliklerini açıklar.",
+              "keywords": ["yer şekilleri", "iç kuvvet", "dış kuvvet", "dağ"]
+            },
+            {
+              "code": "TYT.SOS.02.01.03",
+              "description": "Su, toprak ve bitki örtüsü dağılışını iklim ve yer şekilleriyle ilişkilendirir.",
+              "keywords": ["su kaynakları", "toprak", "bitki örtüsü"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Beşeri ve Ekonomik Coğrafya",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.02.02.01",
+              "description": "Nüfus artışı, göç ve yerleşme özelliklerini sosyal ve ekonomik sonuçlarıyla değerlendirir.",
+              "keywords": ["nüfus", "göç", "yerleşme", "kentleşme"]
+            },
+            {
+              "code": "TYT.SOS.02.02.02",
+              "description": "Türkiye'de tarım, hayvancılık, madencilik ve sanayi faaliyetlerinin dağılışını yorumlar.",
+              "keywords": ["tarım", "sanayi", "madencilik", "ekonomik faaliyet"]
+            },
+            {
+              "code": "TYT.SOS.02.02.03",
+              "description": "Ulaşım, ticaret ve turizm faaliyetlerinin coğrafi dağılışını harita üzerinde değerlendirir.",
+              "keywords": ["ulaşım", "ticaret", "turizm", "harita"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bölgeler ve Çevre",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.02.03.01",
+              "description": "Türkiye'nin coğrafi bölgelerinin fiziki ve beşeri özelliklerini karşılaştırır.",
+              "keywords": ["coğrafi bölge", "Marmara", "Ege", "Karadeniz"]
+            },
+            {
+              "code": "TYT.SOS.02.03.02",
+              "description": "Doğal afetler, çevre sorunları ve sürdürülebilir kalkınma kavramlarını değerlendirir.",
+              "keywords": ["doğal afet", "çevre sorunu", "sürdürülebilirlik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Harita Bilgisi",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.02.04.01",
+              "description": "Harita projeksiyonları, ölçek ve yön kavramlarını harita okuma sorularında kullanır.",
+              "keywords": ["harita", "ölçek", "projeksiyon", "yön"]
+            },
+            {
+              "code": "TYT.SOS.02.04.02",
+              "description": "İzohips, iklim ve nüfus haritalarından veri okur ve yorumlar.",
+              "keywords": ["izohips", "iklim haritası", "nüfus haritası"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.SOS.03",
+      "unit_name": "Felsefe",
+      "typical_questions": "4-5",
+      "topics": [
+        {
+          "topic_name": "Felsefenin Alanı",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.03.01.01",
+              "description": "Felsefenin konusunu, bilimden ve dinden farkını temel kavramlarla açıklar.",
+              "keywords": ["felsefe", "bilim", "din", "sorgulama"]
+            },
+            {
+              "code": "TYT.SOS.03.01.02",
+              "description": "Felsefe disiplinlerini (metafizik, epistemoloji, etik, estetik, mantık) tanır.",
+              "keywords": ["metafizik", "epistemoloji", "etik", "estetik", "mantık"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Bilgi Felsefesi",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.03.02.01",
+              "description": "Bilgi kaynaklarını (akıl, deney, sezgi, vahiy) felsefi açıdan karşılaştırır.",
+              "keywords": ["bilgi kaynağı", "akıl", "deney", "sezgi"]
+            },
+            {
+              "code": "TYT.SOS.03.02.02",
+              "description": "Rasyonalizm, empirizm ve eleştirel felsefe akımlarının bilgi anlayışlarını yorumlar.",
+              "keywords": ["rasyonalizm", "empirizm", "eleştirelcilik"]
+            },
+            {
+              "code": "TYT.SOS.03.02.03",
+              "description": "Doğruluk, kesinlik ve şüphecilik kavramlarını bilgi felsefesi bağlamında değerlendirir.",
+              "keywords": ["doğruluk", "kesinlik", "şüphecilik"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Varlık Felsefesi",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.03.03.01",
+              "description": "Varlık, madde, ruh ve evren sorunlarını temel felsefi yaklaşımlarla ilişkilendirir.",
+              "keywords": ["varlık", "madde", "ruh", "evren"]
+            },
+            {
+              "code": "TYT.SOS.03.03.02",
+              "description": "Determinizm, özgür irade ve tesadüf kavramlarını felsefi açıdan yorumlar.",
+              "keywords": ["determinizm", "özgür irade", "tesadüf"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ahlak Felsefesi",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.03.04.01",
+              "description": "Ahlaki değer, erdem ve sorumluluk kavramlarını felsefi açıdan değerlendirir.",
+              "keywords": ["ahlak", "erdem", "sorumluluk", "değer"]
+            },
+            {
+              "code": "TYT.SOS.03.04.02",
+              "description": "Evrensel ahlak, görecelilik ve faydacılık yaklaşımlarını karşılaştırır.",
+              "keywords": ["evrensel ahlak", "görecelilik", "faydacılık"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Sanat Felsefesi ve Mantık",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.03.05.01",
+              "description": "Güzellik, sanat ve estetik yargı kavramlarını felsefi açıdan yorumlar.",
+              "keywords": ["güzellik", "sanat", "estetik"]
+            },
+            {
+              "code": "TYT.SOS.03.05.02",
+              "description": "Önerme, çıkarım ve mantıksal akıl yürütme türlerini temel düzeyde uygular.",
+              "keywords": ["önerme", "çıkarım", "mantık", "akıl yürütme"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TYT.SOS.04",
+      "unit_name": "Din Kültürü ve Ahlak Bilgisi",
+      "typical_questions": "4-5",
+      "topics": [
+        {
+          "topic_name": "İslam'ın Temel İlkeleri",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.04.01.01",
+              "description": "İslam'ın inanç esaslarını (iman) ve temel ibadetleri açıklar.",
+              "keywords": ["iman", "ibadet", "İslam", "inanç esasları"]
+            },
+            {
+              "code": "TYT.SOS.04.01.02",
+              "description": "Kur'an-ı Kerim'in özelliklerini ve temel kavramlarını yorumlar.",
+              "keywords": ["Kur'an", "ayet", "sure", "tefsir"]
+            },
+            {
+              "code": "TYT.SOS.04.01.03",
+              "description": "Hz. Muhammed'in hayatını, peygamberlik görevini ve örnekliğini değerlendirir.",
+              "keywords": ["Hz. Muhammed", "peygamberlik", "sünnet"]
+            }
+          ]
+        },
+        {
+          "topic_name": "İslam Düşüncesinde Yorumlar",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.04.02.01",
+              "description": "İslam düşüncesinde farklı yorum ve mezhep anlayışlarını temel düzeyde tanır.",
+              "keywords": ["mezhep", "yorum", "İslam düşüncesi"]
+            },
+            {
+              "code": "TYT.SOS.04.02.02",
+              "description": "Kelam, tasavvuf ve fıkıh alanlarının konusunu ve birbirinden farkını açıklar.",
+              "keywords": ["kelam", "tasavvuf", "fıkıh"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Ahlak ve Değerler",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.04.03.01",
+              "description": "İslam ahlak anlayışındaki temel değerleri (adalet, dürüstlük, merhamet) günlük hayatla ilişkilendirir.",
+              "keywords": ["adalet", "dürüstlük", "merhamet", "ahlak"]
+            },
+            {
+              "code": "TYT.SOS.04.03.02",
+              "description": "Evrensel ahlaki değerler ile dinî ahlak arasındaki ilişkiyi yorumlar.",
+              "keywords": ["evrensel değer", "dinî ahlak", "etik"]
+            },
+            {
+              "code": "TYT.SOS.04.03.03",
+              "description": "Toplumsal sorumluluk, yardımlaşma ve dayanışma kavramlarını değerlendirir.",
+              "keywords": ["sorumluluk", "yardımlaşma", "dayanışma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Din ve Kültür",
+          "outcomes": [
+            {
+              "code": "TYT.SOS.04.04.01",
+              "description": "Dinin kültür, sanat ve medeniyet üzerindeki etkilerini örneklerle açıklar.",
+              "keywords": ["din", "kültür", "medeniyet", "sanat"]
+            },
+            {
+              "code": "TYT.SOS.04.04.02",
+              "description": "Dinler arası diyalog, hoşgörü ve ortak değerleri toplumsal bağlamda değerlendirir.",
+              "keywords": ["diyalog", "hoşgörü", "ortak değerler"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

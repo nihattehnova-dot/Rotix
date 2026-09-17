@@ -1,0 +1,170 @@
+{
+  "grade": 10,
+  "subject": "Türk Dili ve Edebiyatı",
+  "program_ref": "MEB Türk Dili ve Edebiyatı Dersi Öğretim Programı (Lise, 10. Sınıf)",
+  "units": [
+    {
+      "unit_code": "TDE.10.1",
+      "unit_name": "Tanzimat Edebiyatı",
+      "topics": [
+        {
+          "topic_name": "Tanzimat Dönemi",
+          "outcomes": [
+            {
+              "code": "TDE.10.1.1.1",
+              "description": "Tanzimat döneminin tarihî ve sosyal arka planını açıklar.",
+              "keywords": [
+                "Tanzimat"
+              ]
+            },
+            {
+              "code": "TDE.10.1.1.2",
+              "description": "Tanzimat dönemi roman, hikâye ve şiir özelliklerini tanır.",
+              "keywords": [
+                "Tanzimat romanı"
+              ]
+            },
+            {
+              "code": "TDE.10.1.1.3",
+              "description": "Şinasi, Namık Kemal, Ziya Paşa eserlerinden örnekler inceler.",
+              "keywords": [
+                "Şinasi",
+                "Namık Kemal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.10.2",
+      "unit_name": "Servet-i Fünun ve Fecr-i Ati",
+      "topics": [
+        {
+          "topic_name": "II. Dönem Tanzimat ve Sonrası",
+          "outcomes": [
+            {
+              "code": "TDE.10.2.1.1",
+              "description": "Servet-i Fünun edebiyatının özelliklerini açıklar.",
+              "keywords": [
+                "Servet-i Fünun"
+              ]
+            },
+            {
+              "code": "TDE.10.2.1.2",
+              "description": "Tevfik Fikret, Cenap Şahabettin ve Halit Ziya eserlerini tanır.",
+              "keywords": [
+                "Tevfik Fikret"
+              ]
+            },
+            {
+              "code": "TDE.10.2.1.3",
+              "description": "Fecr-i Ati topluluğunun sanat anlayışını değerlendirir.",
+              "keywords": [
+                "Fecr-i Ati"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.10.3",
+      "unit_name": "Milli Edebiyat",
+      "topics": [
+        {
+          "topic_name": "Milli Edebiyat Dönemi",
+          "outcomes": [
+            {
+              "code": "TDE.10.3.1.1",
+              "description": "Milli Edebiyat akımının amaç ve ilkelerini açıklar.",
+              "keywords": [
+                "Milli Edebiyat"
+              ]
+            },
+            {
+              "code": "TDE.10.3.1.2",
+              "description": "Ömer Seyfettin, Ziya Gökalp ve Mehmet Emin Yurdakul eserlerini inceler.",
+              "keywords": [
+                "Ömer Seyfettin"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.10.4",
+      "unit_name": "Cumhuriyet Dönemi Şiiri",
+      "topics": [
+        {
+          "topic_name": "Cumhuriyet Şiiri",
+          "outcomes": [
+            {
+              "code": "TDE.10.4.1.1",
+              "description": "Cumhuriyet dönemi şiir akımlarını (Garip, İkinci Yeni) tanır.",
+              "keywords": [
+                "Garip",
+                "İkinci Yeni"
+              ]
+            },
+            {
+              "code": "TDE.10.4.1.2",
+              "description": "Nazım Hikmet, Orhan Veli ve Fazıl Hüsnü eserlerinden örnekler analiz eder.",
+              "keywords": [
+                "Nazım Hikmet"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "TDE.10.5",
+      "unit_name": "Dil Bilgisi ve Anlatım",
+      "topics": [
+        {
+          "topic_name": "Anlatım Teknikleri",
+          "outcomes": [
+            {
+              "code": "TDE.10.5.1.1",
+              "description": "Betimleme, öyküleme, açıklama ve tartışma tekniklerini metinlerde ayırt eder.",
+              "keywords": [
+                "anlatım tekniği"
+              ]
+            },
+            {
+              "code": "TDE.10.5.1.2",
+              "description": "Paragraf yapısını (giriş, gelişme, sonuç) analiz eder.",
+              "keywords": [
+                "paragraf"
+              ]
+            },
+            {
+              "code": "TDE.10.5.1.3",
+              "description": "Yazım ve noktalama kurallarını uygular.",
+              "keywords": [
+                "yazım",
+                "noktalama"
+              ]
+            },
+            {
+              "code": "TDE.10.5.1.4",
+              "description": "Kaynak gösterme ve alıntı yapma kurallarını uygular.",
+              "keywords": [
+                "kaynak gösterme"
+              ]
+            },
+            {
+              "code": "TDE.10.5.1.5",
+              "description": "Sözlü anlatım ve sunum becerilerini geliştirir.",
+              "keywords": [
+                "sözlü anlatım"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

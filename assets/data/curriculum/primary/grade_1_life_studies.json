@@ -1,0 +1,98 @@
+{
+  "grade": 1,
+  "subject": "Hayat Bilgisi",
+  "program_ref": "MEB Hayat Bilgisi (İlkokul)",
+  "units": [
+    {
+      "unit_code": "HB.1.1",
+      "unit_name": "Ben ve Okulum",
+      "topics": [
+        {
+          "topic_name": "Okula Uyum",
+          "outcomes": [
+            {
+              "code": "HB.1.1.1.1",
+              "description": "Okul kurallarını ve sınıf içi sorumluluklarını açıklar.",
+              "keywords": [
+                "okul",
+                "sorumluluk"
+              ]
+            },
+            {
+              "code": "HB.1.1.1.2",
+              "description": "Kendini tanıtır; duygu ve ihtiyaçlarını ifade eder.",
+              "keywords": [
+                "duygu",
+                "iletişim"
+              ]
+            }
+          ]
+        },
+        {
+          "topic_name": "Güvenli Okul",
+          "outcomes": [
+            {
+              "code": "HB.1.1.2.1",
+              "description": "Okulda güvenli ve tehlikeli davranışları ayırt eder.",
+              "keywords": [
+                "güvenlik"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "HB.1.2",
+      "unit_name": "Sağlıklı Yaşam",
+      "topics": [
+        {
+          "topic_name": "Temizlik ve Beslenme",
+          "outcomes": [
+            {
+              "code": "HB.1.2.1.1",
+              "description": "Kişisel temizlik alışkanlıklarını uygular.",
+              "keywords": [
+                "temizlik",
+                "sağlık"
+              ]
+            },
+            {
+              "code": "HB.1.2.1.2",
+              "description": "Sağlıklı beslenme ile ilgili basit seçimler yapar.",
+              "keywords": [
+                "beslenme"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "HB.1.3",
+      "unit_name": "Ailem ve Toplum",
+      "topics": [
+        {
+          "topic_name": "Aile İçi İlişkiler",
+          "outcomes": [
+            {
+              "code": "HB.1.3.1.1",
+              "description": "Aile bireylerinin rollerini tanır.",
+              "keywords": [
+                "aile"
+              ]
+            },
+            {
+              "code": "HB.1.3.1.2",
+              "description": "Yardımlaşma ve saygı davranışlarını örnekler.",
+              "keywords": [
+                "saygı",
+                "yardımlaşma"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

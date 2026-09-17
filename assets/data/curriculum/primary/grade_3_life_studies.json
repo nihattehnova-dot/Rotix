@@ -1,0 +1,84 @@
+{
+  "grade": 3,
+  "subject": "Hayat Bilgisi",
+  "program_ref": "MEB Hayat Bilgisi (İlkokul)",
+  "units": [
+    {
+      "unit_code": "HB.3.1",
+      "unit_name": "Kişisel Gelişim",
+      "topics": [
+        {
+          "topic_name": "Hedef ve Plan",
+          "outcomes": [
+            {
+              "code": "HB.3.1.1.1",
+              "description": "Kısa vadeli hedef belirler ve plan yapar.",
+              "keywords": [
+                "hedef",
+                "plan"
+              ]
+            },
+            {
+              "code": "HB.3.1.1.2",
+              "description": "Zamanını etkin kullanmaya yönelik basit stratejiler uygular.",
+              "keywords": [
+                "zaman yönetimi"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "HB.3.2",
+      "unit_name": "Sağlıklı Yaşam",
+      "topics": [
+        {
+          "topic_name": "Sağlık ve Çevre",
+          "outcomes": [
+            {
+              "code": "HB.3.2.1.1",
+              "description": "Sağlıklı yaşam bileşenlerini (beslenme, uyku, hareket) ilişkilendirir.",
+              "keywords": [
+                "sağlık"
+              ]
+            },
+            {
+              "code": "HB.3.2.1.2",
+              "description": "Çevreyi koruma konusunda sorumluluk alır.",
+              "keywords": [
+                "çevre"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "HB.3.3",
+      "unit_name": "Vatandaşlık",
+      "topics": [
+        {
+          "topic_name": "Hak ve Sorumluluk",
+          "outcomes": [
+            {
+              "code": "HB.3.3.1.1",
+              "description": "Temel hak ve sorumlulukları örneklerle açıklar.",
+              "keywords": [
+                "hak",
+                "sorumluluk"
+              ]
+            },
+            {
+              "code": "HB.3.3.1.2",
+              "description": "Atatürk ve Millî Mücadele ile ilgili temel bilgileri ifade eder.",
+              "keywords": [
+                "Atatürk"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

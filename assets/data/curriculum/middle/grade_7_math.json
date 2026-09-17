@@ -1,0 +1,371 @@
+{
+  "grade": 7,
+  "subject": "Matematik",
+  "program_ref": "MEB Matematik Dersi Öğretim Programı (Ortaokul, 7. Sınıf) — Sayılar ve İşlemler, Cebir, Geometri ve Ölçme, Veri Analizi",
+  "units": [
+    {
+      "unit_code": "M.7.1",
+      "unit_name": "Sayılar ve İşlemler",
+      "topics": [
+        {
+          "topic_name": "Tam Sayılar",
+          "outcomes": [
+            {
+              "code": "M.7.1.1.1",
+              "description": "Tam sayıları sayı doğrusunda gösterir; tam sayıların sıralamasını yapar.",
+              "keywords": ["tam sayı", "sayı doğrusu", "sıralama"]
+            },
+            {
+              "code": "M.7.1.1.2",
+              "description": "Tam sayıların mutlak değerini hesaplar; mutlak değerin anlamını açıklar.",
+              "keywords": ["mutlak değer", "|x|"]
+            },
+            {
+              "code": "M.7.1.1.3",
+              "description": "Tam sayılarla toplama ve çıkarma işlemlerini yapar.",
+              "keywords": ["tam sayı toplama", "tam sayı çıkarma"]
+            },
+            {
+              "code": "M.7.1.1.4",
+              "description": "Tam sayılarla çarpma ve bölme işlemlerini yapar; işlem önceliğini uygular.",
+              "keywords": ["tam sayı çarpma", "tam sayı bölme", "işlem önceliği"]
+            },
+            {
+              "code": "M.7.1.1.5",
+              "description": "Tam sayılarla dört işlem gerektiren problemleri çözer.",
+              "keywords": ["tam sayı problemi", "dört işlem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Rasyonel Sayılar",
+          "outcomes": [
+            {
+              "code": "M.7.1.2.1",
+              "description": "Rasyonel sayıları tanır; kesir, ondalık ve tam sayılı kesir biçimlerinde gösterir.",
+              "keywords": ["rasyonel sayı", "kesir", "ondalık gösterim"]
+            },
+            {
+              "code": "M.7.1.2.2",
+              "description": "Rasyonel sayıları sayı doğrusunda gösterir; karşılaştırır ve sıralar.",
+              "keywords": ["sayı doğrusu", "rasyonel sıralama"]
+            },
+            {
+              "code": "M.7.1.2.3",
+              "description": "Rasyonel sayılarla toplama ve çıkarma işlemlerini yapar.",
+              "keywords": ["rasyonel toplama", "rasyonel çıkarma"]
+            },
+            {
+              "code": "M.7.1.2.4",
+              "description": "Rasyonel sayılarla çarpma ve bölme işlemlerini yapar.",
+              "keywords": ["rasyonel çarpma", "rasyonel bölme"]
+            },
+            {
+              "code": "M.7.1.2.5",
+              "description": "Rasyonel sayılarla dört işlem gerektiren problemleri çözer.",
+              "keywords": ["rasyonel problem", "dört işlem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Oran ve Orantı",
+          "outcomes": [
+            {
+              "code": "M.7.1.3.1",
+              "description": "İki niceliğin birbirine oranını farklı biçimlerde ifade eder; oranı sadeleştirir.",
+              "keywords": ["oran", "sadeleştirme"]
+            },
+            {
+              "code": "M.7.1.3.2",
+              "description": "Orantı kavramını açıklar; doğru orantı ilişkisini belirler.",
+              "keywords": ["orantı", "doğru orantı"]
+            },
+            {
+              "code": "M.7.1.3.3",
+              "description": "Orantı kurarak bilinmeyen niceliği bulur.",
+              "keywords": ["orantı kurma", "bilinmeyen"]
+            },
+            {
+              "code": "M.7.1.3.4",
+              "description": "Oran ve orantı içeren gerçek yaşam problemlerini çözer.",
+              "keywords": ["oran problemi", "orantı problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Yüzde",
+          "outcomes": [
+            {
+              "code": "M.7.1.4.1",
+              "description": "Yüzde kavramını açıklar; kesir, ondalık ve yüzde gösterimleri arasında dönüşüm yapar.",
+              "keywords": ["yüzde", "dönüşüm"]
+            },
+            {
+              "code": "M.7.1.4.2",
+              "description": "Bir niceliğin belirli bir yüzdesini hesaplar.",
+              "keywords": ["yüzde hesaplama"]
+            },
+            {
+              "code": "M.7.1.4.3",
+              "description": "Yüzde artış ve azalış durumlarını hesaplar.",
+              "keywords": ["yüzde artış", "yüzde azalış"]
+            },
+            {
+              "code": "M.7.1.4.4",
+              "description": "Yüzde içeren alışveriş, indirim, kar-zarar ve faiz problemlerini çözer.",
+              "keywords": ["indirim", "faiz", "yüzde problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.7.2",
+      "unit_name": "Cebir",
+      "topics": [
+        {
+          "topic_name": "Cebirsel İfadeler",
+          "outcomes": [
+            {
+              "code": "M.7.2.1.1",
+              "description": "Cebirsel ifadeleri tanır; terim, katsayı ve değişken kavramlarını kullanır.",
+              "keywords": ["cebirsel ifade", "terim", "katsayı", "değişken"]
+            },
+            {
+              "code": "M.7.2.1.2",
+              "description": "Cebirsel ifadeleri toplar ve çıkarır; benzer terimleri birleştirir.",
+              "keywords": ["benzer terim", "toplama", "çıkarma"]
+            },
+            {
+              "code": "M.7.2.1.3",
+              "description": "Bir cebirsel ifadeyi bir sayı ile çarpar.",
+              "keywords": ["cebirsel çarpma"]
+            },
+            {
+              "code": "M.7.2.1.4",
+              "description": "Cebirsel ifadelerin değerini verilen değişken değerleriyle hesaplar.",
+              "keywords": ["değer bulma", "yerine koyma"]
+            },
+            {
+              "code": "M.7.2.1.5",
+              "description": "Cebirsel ifadelerle işlem gerektiren problemleri çözer.",
+              "keywords": ["cebirsel problem"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Eşitlik ve Denklem",
+          "outcomes": [
+            {
+              "code": "M.7.2.2.1",
+              "description": "Eşitliğin korunma özelliğini açıklar; eşitliğin her iki tarafına aynı işlemi uygular.",
+              "keywords": ["eşitlik", "korunma özelliği"]
+            },
+            {
+              "code": "M.7.2.2.2",
+              "description": "Birinci dereceden bir bilinmeyenli denklemleri çözer.",
+              "keywords": ["birinci derece denklem", "bilinmeyen"]
+            },
+            {
+              "code": "M.7.2.2.3",
+              "description": "Denklem kurarak problemleri çözer; çözümü kontrol eder.",
+              "keywords": ["denklem kurma", "kontrol"]
+            },
+            {
+              "code": "M.7.2.2.4",
+              "description": "Birinci dereceden bir bilinmeyenli denklemleri içeren gerçek yaşam problemlerini çözer.",
+              "keywords": ["denklem problemi"]
+            },
+            {
+              "code": "M.7.2.2.5",
+              "description": "Denklem çözümünde işlem önceliğini ve ters işlemleri kullanır.",
+              "keywords": ["ters işlem", "işlem önceliği"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.7.3",
+      "unit_name": "Geometri ve Ölçme",
+      "topics": [
+        {
+          "topic_name": "Doğrular ve Açılar",
+          "outcomes": [
+            {
+              "code": "M.7.3.1.1",
+              "description": "Paralel doğrular ve bir kesenle oluşan iç ters, dış ters, yöndeş ve ters açıları belirler.",
+              "keywords": ["paralel doğru", "kesen", "iç ters", "yöndeş"]
+            },
+            {
+              "code": "M.7.3.1.2",
+              "description": "Paralel doğrular ve kesenle oluşan açıların ölçülerini hesaplar.",
+              "keywords": ["açı hesaplama", "paralel"]
+            },
+            {
+              "code": "M.7.3.1.3",
+              "description": "Üçgende bir dış açının ölçüsünün, kendisine komşu olmayan iki iç açının toplamına eşit olduğunu gösterir.",
+              "keywords": ["dış açı", "üçgen"]
+            },
+            {
+              "code": "M.7.3.1.4",
+              "description": "Doğrular ve açılarla ilgili problemleri çözer.",
+              "keywords": ["açı problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çokgenler",
+          "outcomes": [
+            {
+              "code": "M.7.3.2.1",
+              "description": "Çokgenlerin iç açılarının toplamını hesaplar.",
+              "keywords": ["iç açı toplamı", "çokgen"]
+            },
+            {
+              "code": "M.7.3.2.2",
+              "description": "Düzgün çokgenlerin bir iç açı ve bir dış açı ölçüsünü hesaplar.",
+              "keywords": ["düzgün çokgen", "iç açı", "dış açı"]
+            },
+            {
+              "code": "M.7.3.2.3",
+              "description": "Yamuk ve eşkenar dörtgenin özelliklerini belirler; alanını hesaplar.",
+              "keywords": ["yamuk", "eşkenar dörtgen", "alan"]
+            },
+            {
+              "code": "M.7.3.2.4",
+              "description": "Çokgenlerle ilgili alan ve açı problemlerini çözer.",
+              "keywords": ["çokgen problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Çember ve Daire",
+          "outcomes": [
+            {
+              "code": "M.7.3.3.1",
+              "description": "Çemberin merkez, yarıçap, çap, kiriş ve teğet kavramlarını kullanır.",
+              "keywords": ["çember", "yarıçap", "çap", "kiriş", "teğet"]
+            },
+            {
+              "code": "M.7.3.3.2",
+              "description": "Merkez açı ve çevre açı kavramlarını açıklar; aralarındaki ilişkiyi kullanır.",
+              "keywords": ["merkez açı", "çevre açı"]
+            },
+            {
+              "code": "M.7.3.3.3",
+              "description": "Çemberin uzunluğunu hesaplar.",
+              "keywords": ["çevre", "2πr"]
+            },
+            {
+              "code": "M.7.3.3.4",
+              "description": "Dairenin alanını hesaplar.",
+              "keywords": ["daire alanı", "πr²"]
+            },
+            {
+              "code": "M.7.3.3.5",
+              "description": "Çember ve daire ile ilgili gerçek yaşam problemlerini çözer.",
+              "keywords": ["çember problemi", "daire problemi"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Görüntüler",
+          "outcomes": [
+            {
+              "code": "M.7.3.4.1",
+              "description": "İzometrik görüntüleri tanır; üç boyutlu cisimlerin izometrik çizimini yapar.",
+              "keywords": ["izometrik", "üç boyutlu çizim"]
+            },
+            {
+              "code": "M.7.3.4.2",
+              "description": "Perspektif görüntüleri tanır; basit perspektif çizimler yapar.",
+              "keywords": ["perspektif", "derinlik"]
+            },
+            {
+              "code": "M.7.3.4.3",
+              "description": "Görüntüler arasındaki farkları açıklar; uygun görüntü türünü seçer.",
+              "keywords": ["görüntü türü", "karşılaştırma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Cisimlerin Yüzleri",
+          "outcomes": [
+            {
+              "code": "M.7.3.5.1",
+              "description": "Prizma, piramit, silindir ve koninin yüz açılımlarını çizer.",
+              "keywords": ["yüz açılımı", "prizma", "piramit"]
+            },
+            {
+              "code": "M.7.3.5.2",
+              "description": "Yüz açılımından cisimlerin yüzey alanını hesaplar.",
+              "keywords": ["yüzey alanı"]
+            },
+            {
+              "code": "M.7.3.5.3",
+              "description": "Dikdörtgenler prizmasının hacmini hesaplar.",
+              "keywords": ["hacim", "dikdörtgenler prizması"]
+            },
+            {
+              "code": "M.7.3.5.4",
+              "description": "Yüzey alanı ve hacim içeren problemleri çözer.",
+              "keywords": ["hacim problemi", "yüzey alanı problemi"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unit_code": "M.7.4",
+      "unit_name": "Veri Analizi",
+      "topics": [
+        {
+          "topic_name": "Veri Analizi",
+          "outcomes": [
+            {
+              "code": "M.7.4.1.1",
+              "description": "Veri toplama yöntemlerini açıklar; anket, gözlem ve kayıt yöntemlerini kullanır.",
+              "keywords": ["veri toplama", "anket", "gözlem"]
+            },
+            {
+              "code": "M.7.4.1.2",
+              "description": "Verileri sıklık tablosu ve çizgi grafiği ile düzenler ve gösterir.",
+              "keywords": ["sıklık tablosu", "çizgi grafiği"]
+            },
+            {
+              "code": "M.7.4.1.3",
+              "description": "Veri grubunun aritmetik ortalamasını, ortancasını, modunu, açıklığını ve ortalama mutlak sapmasını hesaplar.",
+              "keywords": ["ortalama", "ortanca", "mod", "açıklık", "ortalama mutlak sapma"]
+            },
+            {
+              "code": "M.7.4.1.4",
+              "description": "Veri analizi sonuçlarını yorumlar; karşılaştırma yapar.",
+              "keywords": ["veri yorumlama", "karşılaştırma"]
+            }
+          ]
+        },
+        {
+          "topic_name": "Daire Grafiği",
+          "outcomes": [
+            {
+              "code": "M.7.4.2.1",
+              "description": "Daire grafiğini tanır; verileri daire grafiği ile gösterir.",
+              "keywords": ["daire grafiği", "veri gösterimi"]
+            },
+            {
+              "code": "M.7.4.2.2",
+              "description": "Daire grafiğindeki merkez açıları hesaplar; yüzdeleri belirler.",
+              "keywords": ["merkez açı", "yüzde"]
+            },
+            {
+              "code": "M.7.4.2.3",
+              "description": "Daire grafiği verilerini okur, yorumlar ve problemleri çözer.",
+              "keywords": ["daire grafiği okuma", "yorumlama"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
