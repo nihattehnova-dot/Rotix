@@ -104,8 +104,17 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
     };
     _ws ??= client;
 
-    await _ws!.connect(sessionId: session.id, userId: userId);
-    _wsSessionId = session.id;
+    try {
+      final ok = await _ws!.connect(sessionId: session.id, userId: userId);
+      if (ok) {
+        _wsSessionId = session.id;
+      } else {
+        // WS yoksa da tahta + Sokratik HTTP ile devam eder
+        _wsSessionId = session.id;
+      }
+    } catch (_) {
+      _wsSessionId = session.id;
+    }
   }
 
   void _onStrokeComplete(EveningReviewNotifier notifier) {

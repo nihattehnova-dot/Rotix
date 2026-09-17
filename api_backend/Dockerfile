@@ -1,5 +1,5 @@
 # Repo kökünden: docker build -f api_backend/Dockerfile .
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 WORKDIR /app
 COPY api_backend/package.json api_backend/package-lock.json* ./
 RUN npm ci
@@ -7,7 +7,7 @@ COPY api_backend/tsconfig.json ./
 COPY api_backend/src ./src
 RUN npm run build
 
-FROM node:20-alpine
+FROM node:22-alpine
 WORKDIR /app
 ENV NODE_ENV=production
 ENV CURRICULUM_ROOT=/app/assets/data/curriculum

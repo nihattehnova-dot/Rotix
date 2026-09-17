@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 typedef RemoteStrokeHandler = void Function(Map<String, dynamic> stroke);
@@ -14,6 +15,7 @@ class WhiteboardWsClient {
   final String wsBaseUrl;
   WebSocketChannel? _channel;
   StreamSubscription? _sub;
+  String? lastError;
 
   RemoteStrokeHandler? onRemoteStroke;
   RemoteClearHandler? onRemoteClear;
@@ -22,36 +24,79 @@ class WhiteboardWsClient {
 
   bool get isConnected => _channel != null;
 
-  Future<void> connect({
+  Uri get _wsUri {
+    final base = Uri.parse(wsBaseUrl);
+    final scheme = switch (base.scheme) {
+      'https' || 'wss' => 'wss',
+      'http' || 'ws' => 'ws',
+      _ => base.scheme,
+    };
+    return base.replace(scheme: scheme, path: '/ws', query: '');
+  }
+
+  /// Tek kullanıcı için WS şart değil — hata yutulur, HTTP Sokratik çalışır.
+  Future<bool> connect({
     required String sessionId,
     required String userId,
   }) async {
-    await disconnect();
-    final uri = Uri.parse('$wsBaseUrl/ws');
-    _channel = WebSocketChannel.connect(uri);
-    send({'type': 'join', 'sessionId': sessionId, 'userId': userId});
+    lastError = null;
+    try {
+      await disconnect();
+      final uri = _wsUri;
+      _channel = WebSocketChannel.connect(uri);
+      await _channel!.ready.timeout(const Duration(seconds: 8));
+      send({'type': 'join', 'sessionId': sessionId, 'userId': userId});
 
-    _sub = _channel!.stream.listen((event) {
-      final data = jsonDecode(event as String) as Map<String, dynamic>;
-      switch (data['type']) {
-        case 'stroke':
-          onRemoteStroke?.call(data['stroke'] as Map<String, dynamic>);
-          break;
-        case 'clear':
-          onRemoteClear?.call();
-          break;
-        case 'phase':
-          onRemotePhase?.call(data['phase'] as String? ?? '');
-          break;
-        case 'canvas_commands':
-          final cmds = (data['commands'] as List<dynamic>? ?? const [])
-              .whereType<Map>()
-              .map((e) => Map<String, dynamic>.from(e))
-              .toList();
-          onRemoteCanvas?.call(cmds);
-          break;
+      _sub = _channel!.stream.listen(
+        (event) {
+          try {
+            final data = jsonDecode(event as String) as Map<String, dynamic>;
+            switch (data['type']) {
+              case 'stroke':
+                onRemoteStroke?.call(data['stroke'] as Map<String, dynamic>);
+                break;
+              case 'clear':
+                onRemoteClear?.call();
+                break;
+              case 'phase':
+                onRemotePhase?.call(data['phase'] as String? ?? '');
+                break;
+              case 'canvas_commands':
+                final cmds = (data['commands'] as List<dynamic>? ?? const [])
+                    .whereType<Map>()
+                    .map((e) => Map<String, dynamic>.from(e))
+                    .toList();
+                onRemoteCanvas?.call(cmds);
+                break;
+            }
+          } catch (e) {
+            if (kDebugMode) {
+              // ignore: avoid_print
+              print('[ws] message parse: $e');
+            }
+          }
+        },
+        onError: (Object e) {
+          lastError = e.toString();
+          if (kDebugMode) {
+            // ignore: avoid_print
+            print('[ws] stream error: $e');
+          }
+        },
+        onDone: () {
+          _channel = null;
+        },
+      );
+      return true;
+    } catch (e) {
+      lastError = e.toString();
+      _channel = null;
+      if (kDebugMode) {
+        // ignore: avoid_print
+        print('[ws] connect failed (non-fatal): $e');
       }
-    });
+      return false;
+    }
   }
 
   void sendStroke({
@@ -76,12 +121,16 @@ class WhiteboardWsClient {
   }
 
   void send(Map<String, dynamic> payload) {
-    _channel?.sink.add(jsonEncode(payload));
+    try {
+      _channel?.sink.add(jsonEncode(payload));
+    } catch (_) {}
   }
 
   Future<void> disconnect() async {
     await _sub?.cancel();
-    await _channel?.sink.close();
+    try {
+      await _channel?.sink.close();
+    } catch (_) {}
     _sub = null;
     _channel = null;
   }
