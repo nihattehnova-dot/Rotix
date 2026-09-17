@@ -7,7 +7,7 @@ const envSchema = z.object({
   SUPABASE_ANON_KEY: z.string().optional(),
   SUPABASE_SERVICE_ROLE_KEY: z.string().optional(),
   GEMINI_API_KEY: z.string().optional(),
-  GEMINI_MODEL: z.string().default('gemini-3.6-flash'),
+  GEMINI_MODEL: z.string().default('gemini-flash-latest'),
   GEMINI_TTS_MODEL: z.string().default('gemini-2.5-flash-preview-tts'),
   TIER_BASIC_MINUTES: z.coerce.number().default(30),
   TIER_BASIC_QUESTIONS: z.coerce.number().default(100),

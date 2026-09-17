@@ -1,5 +1,6 @@
 import { env } from '../config/env.js';
 import { AppError } from '../middleware/errorHandler.js';
+import { generateGeminiVision } from './ai/geminiClient.js';
 import { runSocraticTurn } from './ai/socraticPipeline.js';
 import { getSupabaseAdmin } from './supabase.js';
 import { resolveQuestionTopic } from './topicMatcher.js';
@@ -23,65 +24,21 @@ async function analyzeHomeworkImage(input: {
   imageBase64: string;
   mimeType: string;
 }): Promise<VisionAnalyze> {
-  const model = env.geminiModel;
-  const url =
-    `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent` +
-    `?key=${encodeURIComponent(env.geminiApiKey!)}`;
-
-  const visionRes = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [
-        {
-          role: 'user',
-          parts: [
-            {
-              text: [
-                'Bu bir öğrenci ödev fotoğrafı.',
-                'Görseldeki SORULARI say. Bir sayfada birden fazla soru (1), 2), a), b) vb.) varsa her birini ayrı maddede yaz.',
-                'Çözüm veya cevap YAZMA.',
-                'SADECE JSON döndür:',
-                '{"questionCount": number, "questions": string[], "combinedText": string}',
-                'questionCount: kaç ayrı soru var.',
-                'questions: her sorunun kısa metni (LaTeX olabilir).',
-                'combinedText: tüm metin birleşik.',
-              ].join('\n'),
-            },
-            {
-              inlineData: {
-                mimeType: input.mimeType,
-                data: input.imageBase64.replace(/^data:[^;]+;base64,/, ''),
-              },
-            },
-          ],
-        },
-      ],
-      generationConfig: {
-        temperature: 0.1,
-        responseMimeType: 'application/json',
-      },
-    }),
+  const { text: raw } = await generateGeminiVision({
+    prompt: [
+      'Bu bir öğrenci ödev fotoğrafı.',
+      'Görseldeki SORULARI say. Bir sayfada birden fazla soru (1), 2), a), b) vb.) varsa her birini ayrı maddede yaz.',
+      'Çözüm veya cevap YAZMA.',
+      'SADECE JSON döndür:',
+      '{"questionCount": number, "questions": string[], "combinedText": string}',
+      'questionCount: kaç ayrı soru var.',
+      'questions: her sorunun kısa metni (LaTeX olabilir).',
+      'combinedText: tüm metin birleşik.',
+    ].join('\n'),
+    imageBase64: input.imageBase64,
+    mimeType: input.mimeType,
+    temperature: 0.1,
   });
-
-  const visionBody = (await visionRes.json()) as {
-    candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }>;
-    error?: { message?: string };
-  };
-
-  if (!visionRes.ok) {
-    throw new AppError(
-      502,
-      visionBody.error?.message ?? 'Vision failed',
-      'GEMINI_VISION_ERROR',
-    );
-  }
-
-  const raw =
-    visionBody.candidates?.[0]?.content?.parts
-      ?.map((p) => p.text ?? '')
-      .join('')
-      .trim() ?? '';
 
   if (!raw) {
     throw new AppError(422, 'Görselden soru okunamadı', 'OCR_EMPTY');
