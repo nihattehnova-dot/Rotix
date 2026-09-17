@@ -21,16 +21,26 @@ export type GeminiGenerateResult = {
   modelUsed: string;
 };
 
-/** Yoğunluk / 404 durumunda sırayla dene. */
+/** Yoğunluk / 404 durumunda sırayla dene (yalnızca bu anahtarla çalışanlar). */
 function modelCandidates(preferred?: string): string[] {
   const list = [
     preferred?.trim(),
     env.geminiModel,
-    'gemini-flash-latest',
+    'gemini-3.5-flash',
+    'gemini-flash-lite-latest',
     'gemini-3.6-flash',
-    'gemini-2.5-flash',
+    'gemini-flash-latest',
   ].filter((m): m is string => !!m && m.length > 0);
-  return [...new Set(list)];
+  // Eski / new-user’a kapalı modelleri ele
+  const blocked = new Set([
+    'gemini-2.5-flash',
+    'gemini-2.5-pro',
+    'gemini-2.0-flash',
+    'gemini-1.5-flash',
+    'gemini-1.5-flash-latest',
+    'gemini-pro',
+  ]);
+  return [...new Set(list)].filter((m) => !blocked.has(m));
 }
 
 function isRetryableGeminiError(status: number, message: string): boolean {
