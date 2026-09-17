@@ -82,13 +82,13 @@ class LandingScreen extends StatelessWidget {
                                 _HeroButton(
                                   label: '1 hafta ücretsiz başla',
                                   filled: true,
-                                  onTap: () => context.go('/onboarding'),
+                                  onTap: () => context.go('/login'),
                                 ),
                                 const SizedBox(height: 12),
                                 _HeroButton(
                                   label: 'Uygulamaya gir',
                                   filled: false,
-                                  onTap: () => context.go('/app'),
+                                  onTap: () => context.go('/login'),
                                 ),
                               ],
                             ),

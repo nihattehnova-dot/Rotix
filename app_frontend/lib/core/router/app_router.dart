@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sanal_ogretmen/core/auth/auth_service.dart';
 import 'package:sanal_ogretmen/features/auth/presentation/screens/login_screen.dart';
 import 'package:sanal_ogretmen/features/billing/presentation/screens/plans_screen.dart';
 import 'package:sanal_ogretmen/features/evening_review/presentation/screens/evening_review_screen.dart';
@@ -14,6 +15,25 @@ import 'package:sanal_ogretmen/features/onboarding/presentation/screens/onboardi
 
 final appRouter = GoRouter(
   initialLocation: '/',
+  refreshListenable: _AuthRefresh(),
+  redirect: (context, state) {
+    final auth = AuthService.instance;
+    if (!auth.isConfigured || !auth.isReady) return null;
+
+    final loggedIn = auth.session != null;
+    final loc = state.matchedLocation;
+    final onAuthGate = loc == '/login' ||
+        loc == '/' ||
+        loc == '/onboarding';
+
+    if (!loggedIn && !onAuthGate) {
+      return '/login';
+    }
+    if (loggedIn && loc == '/login') {
+      return '/app';
+    }
+    return null;
+  },
   routes: [
     GoRoute(
       path: '/',
@@ -73,3 +93,24 @@ final appRouter = GoRouter(
     ),
   ],
 );
+
+/// GoRouter’ın oturum değişimini görmesi için.
+class _AuthRefresh extends ChangeNotifier {
+  _AuthRefresh() {
+    Future<void>.microtask(_attach);
+  }
+
+  bool _attached = false;
+
+  void _attach() {
+    if (_attached) return;
+    final auth = AuthService.instance;
+    if (!auth.isReady) {
+      Future<void>.delayed(const Duration(milliseconds: 50), _attach);
+      return;
+    }
+    _attached = true;
+    auth.authChanges.listen((_) => notifyListeners());
+    notifyListeners();
+  }
+}

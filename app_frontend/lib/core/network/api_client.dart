@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:sanal_ogretmen/core/auth/auth_service.dart';
 import 'package:sanal_ogretmen/core/network/api_config.dart';
 import 'package:sanal_ogretmen/core/network/api_exception.dart';
 
@@ -27,8 +28,13 @@ class ApiClient {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     };
-    if (config.accessToken != null && config.accessToken!.isNotEmpty) {
-      h['Authorization'] = 'Bearer ${config.accessToken}';
+    // Her istekte güncel token (stale Provider config’e güvenme)
+    final live = AuthService.instance.accessToken;
+    final token = (live != null && live.isNotEmpty)
+        ? live
+        : config.accessToken;
+    if (token != null && token.isNotEmpty) {
+      h['Authorization'] = 'Bearer $token';
     } else if (config.userId.isNotEmpty) {
       h['X-User-Id'] = config.userId;
     }
