@@ -52,6 +52,8 @@ export type QuestionData = {
   variants?: string[];
   merge_count?: number;
   last_prompt?: string;
+  wrong_answer_count?: number;
+  force_reveal?: boolean;
 };
 
 export type DbMistake = {
@@ -83,12 +85,55 @@ export type DbUsageQuota = {
 };
 
 export type CanvasCommand =
-  | { type: 'clear' }
-  | { type: 'text'; x: number; y: number; content: string; latex?: boolean }
-  | { type: 'line'; x1: number; y1: number; x2: number; y2: number }
-  | { type: 'rect'; x: number; y: number; w: number; h: number }
-  | { type: 'highlight'; x: number; y: number; w: number; h: number }
-  | { type: 'formula'; x: number; y: number; latex: string };
+  | { type: 'clear'; delayMs?: number }
+  | {
+      type: 'text';
+      x: number;
+      y: number;
+      content: string;
+      latex?: boolean;
+      delayMs?: number;
+    }
+  | {
+      type: 'line';
+      x1: number;
+      y1: number;
+      x2: number;
+      y2: number;
+      delayMs?: number;
+    }
+  | {
+      type: 'rect';
+      x: number;
+      y: number;
+      w: number;
+      h: number;
+      delayMs?: number;
+    }
+  | {
+      type: 'highlight';
+      x: number;
+      y: number;
+      w: number;
+      h: number;
+      delayMs?: number;
+    }
+  | {
+      type: 'formula';
+      x: number;
+      y: number;
+      latex: string;
+      delayMs?: number;
+    }
+  | {
+      type: 'image';
+      x: number;
+      y: number;
+      w: number;
+      h: number;
+      dataUrl: string;
+      delayMs?: number;
+    };
 
 export type SocraticAiResult = {
   guidingQuestion: string;
@@ -96,5 +141,5 @@ export type SocraticAiResult = {
   canvasCommands: CanvasCommand[];
   pedagogicalBand: PedagogicalBand;
   tokensUsed: number;
-  neverRevealAnswer: true;
+  neverRevealAnswer: boolean;
 };

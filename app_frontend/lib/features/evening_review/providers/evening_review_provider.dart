@@ -364,11 +364,14 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
   }
 
   Future<void> askSocratic({
-    required String subject,
+    String subject = 'Genel',
     required String questionText,
     String? studentAnswer,
     String? topic,
     bool logAsMistake = true,
+    bool? answerWrong,
+    String? imageBase64,
+    String? imageMimeType,
   }) async {
     if (state.isOnlineAction) return;
 
@@ -397,6 +400,12 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
         sessionId: state.activeSession?.id,
         logAsMistake: logAsMistake,
         struggleScore: logAsMistake ? 3 : null,
+        answerWrong: answerWrong ??
+            (studentAnswer != null && studentAnswer.trim().isNotEmpty
+                ? true
+                : null),
+        imageBase64: imageBase64,
+        imageMimeType: imageMimeType,
       );
 
       final cmds = response.socratic.canvasCommands
@@ -412,6 +421,8 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
                 if (c.h != null) 'h': c.h,
                 if (c.content != null) 'content': c.content,
                 if (c.latex != null) 'latex': c.latex,
+                if (c.delayMs != null) 'delayMs': c.delayMs,
+                if (c.dataUrl != null) 'dataUrl': c.dataUrl,
               })
           .toList();
 

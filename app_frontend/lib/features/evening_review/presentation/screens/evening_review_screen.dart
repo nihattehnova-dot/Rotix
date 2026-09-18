@@ -277,6 +277,10 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       _pendingPhotoBase64 = base64Encode(bytes);
       _pendingPhotoMime = 'image/jpeg';
       _photoClarifications = const [];
+      // Tahtaya hemen yerleştir
+      _boardController.setStudentPhoto(
+        'data:image/jpeg;base64,${_pendingPhotoBase64!}',
+      );
       await _submitPhotoQuestion(notifier);
       return;
     }
@@ -293,6 +297,9 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
     _pendingPhotoBase64 = base64Encode(bytes);
     _pendingPhotoMime = file.mimeType ?? 'image/jpeg';
     _photoClarifications = const [];
+    _boardController.setStudentPhoto(
+      'data:${_pendingPhotoMime};base64,${_pendingPhotoBase64!}',
+    );
     await _submitPhotoQuestion(notifier);
   }
 
@@ -311,7 +318,7 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       final raw = await ref.read(learningApiProvider).photoQuestion(
             imageBase64: b64,
             mimeType: _pendingPhotoMime,
-            subject: 'Genel',
+            subject: null,
             sessionId: notifier.state.activeSession?.id,
             selectedQuestionIndex: selectedIndex,
           );
@@ -339,7 +346,7 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       }
 
       final cmds = <Map<String, dynamic>>[
-        {'type': 'clear'},
+        {'type': 'clear', 'delayMs': 0},
         ...socratic.canvasCommands.map(
           (c) => {
             'type': c.type,
@@ -353,13 +360,14 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
             if (c.h != null) 'h': c.h,
             if (c.content != null) 'content': c.content,
             if (c.latex != null) 'latex': c.latex,
+            if (c.delayMs != null) 'delayMs': c.delayMs,
           },
         ),
       ];
 
+      // Fotoğrafı state’te tut (Vision + tahta); yalnızca clarifications temizle
       setState(() {
         _photoClarifications = const [];
-        _pendingPhotoBase64 = null;
       });
 
       notifier.selectCurriculum({
@@ -368,13 +376,18 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
         'topic': topic,
         'confidence': match?['confidence'],
       });
-      // Apply via askSocratic path fields
       await notifier.applyExternalSocratic(
         socratic: socratic,
         subject: subject,
         topic: topic,
         canvasCommands: cmds,
       );
+      // Multimodal takip: aynı görseli socratic’a da bağla (görsün)
+      if (_pendingPhotoBase64 != null) {
+        _boardController.setStudentPhoto(
+          'data:${_pendingPhotoMime ?? 'image/jpeg'};base64,${_pendingPhotoBase64!}',
+        );
+      }
       await notifier.refreshDueMistakes();
       await _speakGuidingQuestion(notifier);
     } catch (e) {
@@ -406,9 +419,11 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
 
     if (isQuestion || trimmed.length > 6) {
       await notifier.askSocratic(
-        subject: 'Genel',
         questionText: trimmed,
         logAsMistake: true,
+        imageBase64: _pendingPhotoBase64,
+        imageMimeType: _pendingPhotoMime,
+        answerWrong: true,
       );
       await _speakGuidingQuestion(notifier);
       return;
@@ -431,7 +446,12 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       if (!mounted) return;
       notifier.setSpeakingLevel(0);
     };
-    await tts.speakText(guide, config: config);
+    await tts.speakText(
+      guide,
+      config: config,
+      ws: _ws,
+      sessionId: notifier.state.activeSession?.id,
+    );
   }
 
   Future<void> _openSocraticDialog(EveningReviewNotifier notifier) async {
@@ -491,12 +511,14 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
     if (confirmed != true || !mounted) return;
 
     await notifier.askSocratic(
-      subject: 'Genel',
       questionText: questionCtrl.text.trim(),
       studentAnswer: answerCtrl.text.trim().isEmpty
           ? null
           : answerCtrl.text.trim(),
       logAsMistake: true,
+      answerWrong: answerCtrl.text.trim().isNotEmpty,
+      imageBase64: _pendingPhotoBase64,
+      imageMimeType: _pendingPhotoMime,
     );
     await _speakGuidingQuestion(notifier);
   }

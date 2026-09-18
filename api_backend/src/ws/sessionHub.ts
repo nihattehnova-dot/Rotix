@@ -1,5 +1,6 @@
 import type { WebSocket } from 'ws';
 import { getSession } from '../services/sessionService.js';
+import { streamTutorSpeech } from '../services/ai/geminiLiveSpeech.js';
 
 export type WsClientMessage =
   | { type: 'join'; sessionId: string; userId: string }
@@ -14,7 +15,13 @@ export type WsClientMessage =
     }
   | { type: 'clear'; sessionId: string }
   | { type: 'canvas_commands'; sessionId: string; commands: unknown[] }
-  | { type: 'phase'; sessionId: string; phase: string };
+  | { type: 'phase'; sessionId: string; phase: string }
+  | {
+      type: 'speak_stream';
+      sessionId: string;
+      text: string;
+      voice?: string;
+    };
 
 type ClientMeta = {
   userId: string;
@@ -36,6 +43,12 @@ function broadcast(sessionId: string, payload: unknown, except?: WebSocket) {
     if (client !== except && client.readyState === 1) {
       client.send(text);
     }
+  }
+}
+
+function send(ws: WebSocket, payload: unknown) {
+  if (ws.readyState === 1) {
+    ws.send(JSON.stringify(payload));
   }
 }
 
@@ -88,6 +101,41 @@ export async function handleWsMessage(ws: WebSocket, raw: string) {
     case 'phase':
       broadcast(msg.sessionId, { type: 'phase', phase: msg.phase }, ws);
       break;
+    case 'speak_stream': {
+      const text = typeof msg.text === 'string' ? msg.text.trim() : '';
+      if (!text) {
+        send(ws, { type: 'error', message: 'Empty speak text' });
+        break;
+      }
+      send(ws, { type: 'speak_started', sessionId: msg.sessionId });
+      try {
+        const { engine } = await streamTutorSpeech(
+          text,
+          (ev) => {
+            send(ws, {
+              type: 'audio_chunk',
+              sessionId: msg.sessionId,
+              mimeType: ev.mimeType,
+              audioBase64: ev.audioBase64,
+              index: ev.index,
+              done: ev.done,
+            });
+          },
+          { voice: msg.voice },
+        );
+        send(ws, {
+          type: 'speak_done',
+          sessionId: msg.sessionId,
+          engine,
+        });
+      } catch (err) {
+        send(ws, {
+          type: 'speak_error',
+          message: err instanceof Error ? err.message : 'Speech failed',
+        });
+      }
+      break;
+    }
     default:
       ws.send(JSON.stringify({ type: 'error', message: 'Unknown type' }));
   }

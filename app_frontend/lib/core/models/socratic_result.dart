@@ -12,6 +12,8 @@ class CanvasCommand {
     this.content,
     this.latex,
     this.isLatexText,
+    this.delayMs,
+    this.dataUrl,
   });
 
   final String type;
@@ -26,6 +28,8 @@ class CanvasCommand {
   final String? content;
   final String? latex;
   final bool? isLatexText;
+  final int? delayMs;
+  final String? dataUrl;
 
   factory CanvasCommand.fromJson(Map<String, dynamic> json) {
     return CanvasCommand(
@@ -41,6 +45,8 @@ class CanvasCommand {
       content: json['content'] as String?,
       latex: json['latex'] as String?,
       isLatexText: json['latex'] is bool ? json['latex'] as bool : null,
+      delayMs: (json['delayMs'] as num?)?.toInt(),
+      dataUrl: json['dataUrl'] as String?,
     );
   }
 }

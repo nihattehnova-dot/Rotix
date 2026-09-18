@@ -9,6 +9,9 @@ const envSchema = z.object({
   GEMINI_API_KEY: z.string().optional(),
   GEMINI_MODEL: z.string().default('gemini-3.5-flash'),
   GEMINI_TTS_MODEL: z.string().default('gemini-2.5-flash-preview-tts'),
+  GEMINI_LIVE_MODEL: z
+    .string()
+    .default('gemini-2.5-flash-native-audio-preview-12-2025'),
   TIER_BASIC_MINUTES: z.coerce.number().default(30),
   TIER_BASIC_QUESTIONS: z.coerce.number().default(100),
   TIER_PRO_MINUTES: z.coerce.number().default(50),
@@ -83,6 +86,7 @@ export const env = {
   geminiApiKey: data.GEMINI_API_KEY,
   geminiModel: data.GEMINI_MODEL,
   geminiTtsModel: data.GEMINI_TTS_MODEL,
+  geminiLiveModel: data.GEMINI_LIVE_MODEL,
   tierLimits: {
     basic: {
       dailyMinutes: data.TIER_BASIC_MINUTES,

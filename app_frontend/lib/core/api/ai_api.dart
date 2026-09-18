@@ -7,22 +7,28 @@ class AiApi {
   final ApiClient _client;
 
   Future<SocraticResponse> socratic({
-    required String subject,
+    String? subject,
     required String questionText,
     String? studentAnswer,
     String? topic,
     String? sessionId,
     bool logAsMistake = true,
     int? struggleScore,
+    bool? answerWrong,
+    String? imageBase64,
+    String? imageMimeType,
   }) async {
     final json = await _client.post('/api/ai/socratic', body: {
-      'subject': subject,
+      if (subject != null) 'subject': subject,
       'questionText': questionText,
       if (studentAnswer != null) 'studentAnswer': studentAnswer,
       if (topic != null) 'topic': topic,
       if (sessionId != null) 'sessionId': sessionId,
       'logAsMistake': logAsMistake,
       if (struggleScore != null) 'struggleScore': struggleScore,
+      if (answerWrong != null) 'answerWrong': answerWrong,
+      if (imageBase64 != null) 'imageBase64': imageBase64,
+      if (imageMimeType != null) 'imageMimeType': imageMimeType,
     });
     return SocraticResponse.fromJson(json);
   }

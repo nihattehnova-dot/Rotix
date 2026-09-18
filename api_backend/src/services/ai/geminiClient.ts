@@ -1,7 +1,11 @@
 import { env } from '../../config/env.js';
 import { AppError } from '../../middleware/errorHandler.js';
 
-type GeminiPart = { text?: string; inlineData?: { mimeType: string; data: string } };
+type GeminiPart = {
+  text?: string;
+  inlineData?: { mimeType: string; data: string };
+  functionCall?: { name?: string; args?: Record<string, unknown> };
+};
 
 type GeminiResponse = {
   candidates?: Array<{
@@ -19,6 +23,21 @@ export type GeminiGenerateResult = {
   text: string;
   tokensUsed: number;
   modelUsed: string;
+};
+
+export type GeminiToolDef = {
+  name: string;
+  description: string;
+  parameters: Record<string, unknown>;
+};
+
+export type GeminiToolCall = {
+  name: string;
+  args: Record<string, unknown>;
+};
+
+export type GeminiToolsResult = GeminiGenerateResult & {
+  functionCalls: GeminiToolCall[];
 };
 
 /** Yoğunluk / 404 durumunda sırayla dene (yalnızca bu anahtarla çalışanlar). */
@@ -221,6 +240,110 @@ export async function generateGeminiVision(input: {
         (result.body.usageMetadata?.candidatesTokenCount ?? 0);
 
     return { text, tokensUsed, modelUsed: model };
+  }
+
+  throw new AppError(
+    503,
+    lastMessage.includes('high demand')
+      ? 'Yapay zeka şu an yoğun. 30 sn sonra tekrar dene.'
+      : lastMessage,
+    'GEMINI_UNAVAILABLE',
+  );
+}
+
+/** Function calling (draw_on_board / tutor_reply) + optional image. */
+export async function generateGeminiWithTools(input: {
+  systemInstruction: string;
+  userMessage: string;
+  tools: GeminiToolDef[];
+  imageBase64?: string;
+  imageMimeType?: string;
+  temperature?: number;
+}): Promise<GeminiToolsResult> {
+  if (!env.geminiApiKey) {
+    throw new AppError(
+      503,
+      'Gemini is not configured (GEMINI_API_KEY)',
+      'GEMINI_NOT_CONFIGURED',
+    );
+  }
+
+  const userParts: Array<Record<string, unknown>> = [
+    { text: input.userMessage },
+  ];
+  if (input.imageBase64) {
+    const raw = input.imageBase64.includes(',')
+      ? input.imageBase64.split(',').pop()!
+      : input.imageBase64;
+    userParts.push({
+      inlineData: {
+        mimeType: input.imageMimeType || 'image/jpeg',
+        data: raw,
+      },
+    });
+  }
+
+  const payload = {
+    systemInstruction: {
+      parts: [{ text: input.systemInstruction }],
+    },
+    contents: [{ role: 'user', parts: userParts }],
+    tools: [
+      {
+        functionDeclarations: input.tools.map((t) => ({
+          name: t.name,
+          description: t.description,
+          parameters: t.parameters,
+        })),
+      },
+    ],
+    toolConfig: {
+      functionCallingConfig: { mode: 'AUTO' },
+    },
+    generationConfig: {
+      temperature: input.temperature ?? 0.4,
+    },
+  };
+
+  let lastMessage = 'Gemini tools failed';
+  for (const model of modelCandidates()) {
+    const result = await postGenerateContent({ model, body: payload });
+    if (!result.ok) {
+      lastMessage = result.message;
+      if (isRetryableGeminiError(result.status, result.message)) {
+        console.warn(`[gemini-tools] ${model} failed: ${result.message}`);
+        await new Promise((r) => setTimeout(r, 400));
+        continue;
+      }
+      throw new AppError(502, result.message, 'GEMINI_HTTP_ERROR');
+    }
+
+    const parts = result.body.candidates?.[0]?.content?.parts ?? [];
+    const text = parts
+      .map((p) => p.text ?? '')
+      .join('')
+      .trim();
+    const functionCalls: GeminiToolCall[] = [];
+    for (const p of parts) {
+      if (p.functionCall?.name) {
+        functionCalls.push({
+          name: p.functionCall.name,
+          args: (p.functionCall.args ?? {}) as Record<string, unknown>,
+        });
+      }
+    }
+
+    if (!text && functionCalls.length === 0) {
+      lastMessage = 'Empty tools response';
+      continue;
+    }
+
+    const tokensUsed =
+      result.body.usageMetadata?.totalTokenCount ??
+      (result.body.usageMetadata?.promptTokenCount ?? 0) +
+        (result.body.usageMetadata?.candidatesTokenCount ?? 0);
+
+    return { text, tokensUsed, modelUsed: model, functionCalls };
   }
 
   throw new AppError(

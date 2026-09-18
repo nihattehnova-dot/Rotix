@@ -1,3 +1,8 @@
+import 'dart:async';
+import 'dart:convert';
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 
 class StrokePoint {
@@ -57,6 +62,7 @@ class BoardAnnotation {
     this.w,
     this.h,
     this.content,
+    this.imageBytes,
   });
 
   final String type;
@@ -69,23 +75,35 @@ class BoardAnnotation {
   final double? w;
   final double? h;
   final String? content;
+  final Uint8List? imageBytes;
 
-  factory BoardAnnotation.fromCommand(Map<String, dynamic> json) {
-    final type = json['type'] as String? ?? 'text';
-    final content =
-        json['content'] as String? ?? json['latex'] as String? ?? '';
-    return BoardAnnotation(
-      type: type,
-      x: (json['x'] as num?)?.toDouble(),
-      y: (json['y'] as num?)?.toDouble(),
-      x1: (json['x1'] as num?)?.toDouble(),
-      y1: (json['y1'] as num?)?.toDouble(),
-      x2: (json['x2'] as num?)?.toDouble(),
-      y2: (json['y2'] as num?)?.toDouble(),
-      w: (json['w'] as num?)?.toDouble(),
-      h: (json['h'] as num?)?.toDouble(),
-      content: content.isEmpty ? null : content,
-    );
+  static BoardAnnotation? tryFromCommand(Map<String, dynamic> json) {
+    try {
+      final type = json['type'] as String? ?? 'text';
+      final content =
+          json['content'] as String? ?? json['latex'] as String? ?? '';
+      Uint8List? imageBytes;
+      final dataUrl = json['dataUrl'] as String? ?? json['imageBase64'] as String?;
+      if (dataUrl != null && dataUrl.isNotEmpty) {
+        final raw = dataUrl.contains(',') ? dataUrl.split(',').last : dataUrl;
+        imageBytes = Uint8List.fromList(base64Decode(raw));
+      }
+      return BoardAnnotation(
+        type: type,
+        x: (json['x'] as num?)?.toDouble(),
+        y: (json['y'] as num?)?.toDouble(),
+        x1: (json['x1'] as num?)?.toDouble(),
+        y1: (json['y1'] as num?)?.toDouble(),
+        x2: (json['x2'] as num?)?.toDouble(),
+        y2: (json['y2'] as num?)?.toDouble(),
+        w: (json['w'] as num?)?.toDouble(),
+        h: (json['h'] as num?)?.toDouble(),
+        content: content.isEmpty ? null : content,
+        imageBytes: imageBytes,
+      );
+    } catch (_) {
+      return null;
+    }
   }
 }
 
@@ -102,7 +120,8 @@ class WhiteboardController {
       _state?.applyRemoteStroke(json);
   void clearRemote() => _state?.clear(fromRemote: true);
   void applyCanvasCommands(List<Map<String, dynamic>> commands) =>
-      _state?.applyCanvasCommands(commands);
+      _state?.enqueueCanvasCommands(commands);
+  void setStudentPhoto(String? dataUrl) => _state?.setStudentPhoto(dataUrl);
 
   WhiteboardStroke? takeLastStroke() => _state?.takeLastStroke();
 }
@@ -129,17 +148,27 @@ class WhiteboardCanvas extends StatefulWidget {
   State<WhiteboardCanvas> createState() => _WhiteboardCanvasState();
 }
 
-class _WhiteboardCanvasState extends State<WhiteboardCanvas> {
+class _WhiteboardCanvasState extends State<WhiteboardCanvas>
+    with SingleTickerProviderStateMixin {
   final List<WhiteboardStroke> _strokes = [];
   final List<BoardAnnotation> _annotations = [];
+  final List<Map<String, dynamic>> _queue = [];
   WhiteboardStroke? _current;
   Size _size = Size.zero;
+  bool _draining = false;
+  String? _studentPhotoDataUrl;
+  ui.Image? _studentPhotoImage;
+  late final AnimationController _tick;
 
   @override
   void initState() {
     super.initState();
     widget.controller?._attach(this);
     widget.onClearReady?.call(clear);
+    _tick = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 16),
+    )..addListener(_onFrame);
   }
 
   @override
@@ -153,11 +182,20 @@ class _WhiteboardCanvasState extends State<WhiteboardCanvas> {
 
   @override
   void dispose() {
+    _tick.dispose();
     widget.controller?._detach(this);
+    _studentPhotoImage?.dispose();
     super.dispose();
   }
 
+  void _onFrame() {
+    if (!_draining) return;
+    // requestAnimationFrame proxy — AnimationController tick
+  }
+
   void clear({bool fromRemote = false}) {
+    _queue.clear();
+    _draining = false;
     setState(() {
       _strokes.clear();
       _annotations.clear();
@@ -165,22 +203,80 @@ class _WhiteboardCanvasState extends State<WhiteboardCanvas> {
     });
   }
 
+  Future<void> setStudentPhoto(String? dataUrl) async {
+    _studentPhotoDataUrl = dataUrl;
+    _studentPhotoImage?.dispose();
+    _studentPhotoImage = null;
+    if (dataUrl == null || dataUrl.isEmpty) {
+      if (mounted) setState(() {});
+      return;
+    }
+    try {
+      final raw = dataUrl.contains(',') ? dataUrl.split(',').last : dataUrl;
+      final bytes = Uint8List.fromList(base64Decode(raw));
+      final codec = await ui.instantiateImageCodec(bytes);
+      final frame = await codec.getNextFrame();
+      if (!mounted) {
+        frame.image.dispose();
+        return;
+      }
+      setState(() => _studentPhotoImage = frame.image);
+    } catch (_) {
+      if (mounted) setState(() => _studentPhotoImage = null);
+    }
+  }
+
   void applyRemoteStroke(Map<String, dynamic> json) {
     setState(() => _strokes.add(WhiteboardStroke.fromJson(json)));
   }
 
-  void applyCanvasCommands(List<Map<String, dynamic>> commands) {
-    setState(() {
+  /// Tool-call komutlarını kuyruğa al; delayMs + rAF ile adım adım bas.
+  void enqueueCanvasCommands(List<Map<String, dynamic>> commands) {
+    try {
       for (final cmd in commands) {
-        final type = cmd['type'] as String? ?? '';
-        if (type == 'clear') {
-          _strokes.clear();
-          _annotations.clear();
-        } else {
-          _annotations.add(BoardAnnotation.fromCommand(cmd));
-        }
+        _queue.add(Map<String, dynamic>.from(cmd));
       }
-    });
+      unawaited(_drainQueue());
+    } catch (e) {
+      debugPrint('[whiteboard] enqueue parse error: $e');
+    }
+  }
+
+  Future<void> _drainQueue() async {
+    if (_draining) return;
+    _draining = true;
+    if (!_tick.isAnimating) _tick.repeat();
+    while (_queue.isNotEmpty && mounted) {
+      final cmd = _queue.removeAt(0);
+      try {
+        final delayMs = (cmd['delayMs'] as num?)?.toInt() ?? 280;
+        if (delayMs > 0) {
+          await Future<void>.delayed(Duration(milliseconds: delayMs));
+        }
+        if (!mounted) break;
+        _applyOne(cmd);
+      } catch (e) {
+        debugPrint('[whiteboard] command apply error: $e');
+      }
+      // Yield to next animation frame
+      await Future<void>.delayed(Duration.zero);
+    }
+    _draining = false;
+    _tick.stop();
+  }
+
+  void _applyOne(Map<String, dynamic> cmd) {
+    final type = cmd['type'] as String? ?? '';
+    if (type == 'clear') {
+      setState(() {
+        _strokes.clear();
+        _annotations.clear();
+      });
+      return;
+    }
+    final ann = BoardAnnotation.tryFromCommand(cmd);
+    if (ann == null) return;
+    setState(() => _annotations.add(ann));
   }
 
   WhiteboardStroke? takeLastStroke() =>
@@ -229,6 +325,7 @@ class _WhiteboardCanvasState extends State<WhiteboardCanvas> {
                 annotations: _annotations,
                 boardSize: _size,
                 showGrid: widget.showGrid,
+                studentPhoto: _studentPhotoImage,
               ),
               child: const SizedBox.expand(),
             ),
@@ -245,12 +342,14 @@ class _BoardPainter extends CustomPainter {
     required this.annotations,
     required this.boardSize,
     required this.showGrid,
+    this.studentPhoto,
   });
 
   final List<WhiteboardStroke> strokes;
   final List<BoardAnnotation> annotations;
   final Size boardSize;
   final bool showGrid;
+  final ui.Image? studentPhoto;
 
   Offset _map(double lx, double ly) {
     final w = boardSize.width <= 0 ? 1.0 : boardSize.width;
@@ -260,7 +359,6 @@ class _BoardPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // Sıcak krem öğretmen tahtası — çizgisiz
     final bg = Paint()
       ..shader = const LinearGradient(
         begin: Alignment.topLeft,
@@ -280,6 +378,40 @@ class _BoardPainter extends CustomPainter {
       for (double y = 0; y < size.height; y += step) {
         canvas.drawLine(Offset(0, y), Offset(size.width, y), grid);
       }
+    }
+
+    // Öğrenci sorusu fotoğrafı — sağ üst köşe
+    final photo = studentPhoto;
+    if (photo != null) {
+      final maxW = size.width * 0.28;
+      final maxH = size.height * 0.28;
+      final scale = (maxW / photo.width).clamp(0.0, maxH / photo.height);
+      final dw = photo.width * scale;
+      final dh = photo.height * scale;
+      final dst = Rect.fromLTWH(size.width - dw - 12, 12, dw, dh);
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(dst.inflate(4), const Radius.circular(8)),
+        Paint()..color = const Color(0xE6FFFFFF),
+      );
+      paintImage(
+        canvas: canvas,
+        rect: dst,
+        image: photo,
+        fit: BoxFit.cover,
+        filterQuality: FilterQuality.medium,
+      );
+      final label = TextPainter(
+        text: const TextSpan(
+          text: 'Öğrencinin Sorusu',
+          style: TextStyle(
+            color: Color(0xFF0B1B3A),
+            fontSize: 11,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      label.paint(canvas, Offset(dst.left, dst.bottom + 4));
     }
 
     for (final a in annotations) {
@@ -311,6 +443,11 @@ class _BoardPainter extends CustomPainter {
                     : const Color(0x3322D3EE)
                 ..style = PaintingStyle.fill,
             );
+          }
+          break;
+        case 'image':
+          if (a.imageBytes != null && a.x != null && a.y != null) {
+            // Async decode handled via setStudentPhoto; skip inline for perf
           }
           break;
         case 'text':

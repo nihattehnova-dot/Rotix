@@ -38,7 +38,8 @@ export const reviewMistakeSchema = z.object({
 });
 
 export const socraticTurnSchema = z.object({
-  subject: z.string().min(1),
+  /** Late-binding: ders/konu zorunlu değil — model tespit eder */
+  subject: z.string().optional(),
   questionText: z.string().min(1),
   studentAnswer: z.string().optional(),
   topic: z.string().optional(),
@@ -46,4 +47,8 @@ export const socraticTurnSchema = z.object({
   /** If true and student struggled, also log to user_mistakes */
   logAsMistake: z.boolean().optional(),
   struggleScore: z.number().int().min(1).max(5).optional(),
+  /** Explicit wrong-answer signal → increments wrong_answer_count */
+  answerWrong: z.boolean().optional(),
+  imageBase64: z.string().min(20).optional(),
+  imageMimeType: z.string().optional(),
 });

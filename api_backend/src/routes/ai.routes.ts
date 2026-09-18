@@ -9,6 +9,12 @@ import { logMistake } from '../services/mistakeService.js';
 import { resolveQuestionTopic } from '../services/topicMatcher.js';
 import { consumeMinutes, consumeQuestion } from '../services/quotaService.js';
 import { addSessionTokens } from '../services/sessionService.js';
+import {
+  getTutorSession,
+  lockDetectedTopic,
+  recordCorrectOrReset,
+  recordWrongAnswer,
+} from '../services/tutorSessionState.js';
 import { socraticTurnSchema } from '../validators/schemas.js';
 
 function examFromTrack(track?: string | null): string | undefined {
@@ -88,7 +94,7 @@ aiRouter.get(
 
 /**
  * Dynamic Gemini path — Socratic Q&A only.
- * Standard lectures must use curriculum cache (not this endpoint).
+ * Late binding: konu/ders oturum başında zorunlu değil.
  */
 aiRouter.post(
   '/socratic',
@@ -104,36 +110,85 @@ aiRouter.post(
       throw new AppError(400, 'Student grade_level is required', 'GRADE_REQUIRED');
     }
 
-    const match = await resolveQuestionTopic({
-      questionText: parsed.data.questionText,
-      gradeLevel: user.grade_level,
-      subjectHint: parsed.data.subject,
-      topicHint: parsed.data.topic,
-      exam: examFromTrack(user.exam_track),
-    });
+    const sessionKey = parsed.data.sessionId ?? `anon-${user.id}`;
+    let tutorState = getTutorSession(sessionKey, user.id);
 
-    const subject = match?.subject ?? parsed.data.subject;
-    const topic =
+    const looksWrong =
+      parsed.data.answerWrong === true ||
+      (Boolean(parsed.data.studentAnswer?.trim()) &&
+        parsed.data.logAsMistake !== false);
+
+    if (looksWrong && parsed.data.studentAnswer?.trim()) {
+      tutorState = recordWrongAnswer(sessionKey, user.id);
+    } else if (parsed.data.answerWrong === false) {
+      tutorState = recordCorrectOrReset(sessionKey, user.id);
+    }
+
+    // Soft topic match — asla erken çapa; sadece ipucu
+    let match = null as Awaited<ReturnType<typeof resolveQuestionTopic>>;
+    try {
+      match = await resolveQuestionTopic({
+        questionText: parsed.data.questionText,
+        gradeLevel: user.grade_level,
+        subjectHint: parsed.data.subject ?? tutorState.detectedSubject ?? undefined,
+        topicHint: parsed.data.topic ?? tutorState.detectedTopic ?? undefined,
+        exam: examFromTrack(user.exam_track),
+      });
+    } catch {
+      match = null;
+    }
+
+    const subjectHint =
+      tutorState.detectedSubject ??
+      match?.subject ??
+      parsed.data.subject ??
+      undefined;
+    const topicHint =
+      tutorState.detectedTopic ??
       match?.topic ??
       (parsed.data.topic?.trim() || undefined);
 
-    if (!topic?.trim() && !subject?.trim()) {
-      throw new AppError(
-        400,
-        'Konu veya ders gerekli — konu dışı sohbet kapalı',
-        'TOPIC_REQUIRED',
+    const result = await runSocraticTurn({
+      gradeLevel: user.grade_level,
+      subject: subjectHint,
+      questionText: parsed.data.questionText,
+      studentAnswer: parsed.data.studentAnswer,
+      topic: topicHint,
+      outcomeCodes: match?.outcomeCodes,
+      unitName: match?.unitName ?? undefined,
+      wrongAnswerCount: tutorState.wrongAnswerCount,
+      forceReveal: tutorState.forceReveal,
+      imageBase64: parsed.data.imageBase64,
+      imageMimeType: parsed.data.imageMimeType,
+    });
+
+    if (result.offTopic) {
+      // Kota düşürme — alakasız
+      res.json({
+        socratic: result,
+        topicMatch: null,
+        subject: null,
+        topic: null,
+        mistake: null,
+        costPath: 'guardrail_off_topic',
+        wrongAnswerCount: tutorState.wrongAnswerCount,
+        forceRevealApplied: false,
+      });
+      return;
+    }
+
+    if (result.detectedSubject || result.detectedTopic) {
+      tutorState = lockDetectedTopic(
+        sessionKey,
+        user.id,
+        result.detectedSubject,
+        result.detectedTopic,
       );
     }
 
-    const result = await runSocraticTurn({
-      gradeLevel: user.grade_level,
-      subject,
-      questionText: parsed.data.questionText,
-      studentAnswer: parsed.data.studentAnswer,
-      topic,
-      outcomeCodes: match?.outcomeCodes,
-      unitName: match?.unitName ?? undefined,
-    });
+    if (result.sessionComplete || result.forceRevealApplied) {
+      recordCorrectOrReset(sessionKey, user.id);
+    }
 
     await consumeQuestion(user.id, 1);
 
@@ -141,12 +196,16 @@ aiRouter.post(
       await addSessionTokens(parsed.data.sessionId, user.id, result.tokensUsed);
     }
 
+    const subject =
+      result.detectedSubject ?? subjectHint ?? parsed.data.subject ?? 'Genel';
+    const topic =
+      result.detectedTopic ?? topicHint ?? 'Öğrenci sorusu';
+
     let mistake = null;
-    if (parsed.data.logAsMistake) {
+    if (parsed.data.logAsMistake && !result.offTopic) {
       mistake = await logMistake({
         userId: user.id,
         sessionId: parsed.data.sessionId,
-        // catalog ids may not exist in Supabase FK yet — keep in question_data
         curriculumId: null,
         subject,
         topic,
@@ -158,6 +217,8 @@ aiRouter.post(
           matched_curriculum_id: match?.curriculumId,
           matched_confidence: match?.confidence,
           outcome_codes: match?.outcomeCodes,
+          wrong_answer_count: tutorState.wrongAnswerCount,
+          force_reveal: result.forceRevealApplied,
         },
       });
     }
@@ -169,6 +230,9 @@ aiRouter.post(
       topic,
       mistake,
       costPath: 'dynamic_gemini',
+      wrongAnswerCount: tutorState.wrongAnswerCount,
+      forceRevealApplied: result.forceRevealApplied,
+      sessionComplete: result.sessionComplete,
     });
   }),
 );

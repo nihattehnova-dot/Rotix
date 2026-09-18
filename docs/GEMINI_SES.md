@@ -10,7 +10,7 @@ Sistem o zaman tarayıcının ucuz TTS’ine düşüyor.
 
 ```
 GEMINI_API_KEY=buraya_yeni_anahtar
-GEMINI_MODEL=gemini-2.0-flash
+GEMINI_MODEL=gemini-3.6-flash
 GEMINI_TTS_MODEL=gemini-2.5-flash-preview-tts
 ```
 

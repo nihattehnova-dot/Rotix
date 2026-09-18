@@ -120,24 +120,44 @@ export async function processPhotoQuestion(input: {
     questionText = analyzed.questions[0]!;
   }
 
-  const subjectHint = input.subject ?? 'Genel';
+  const subjectHint = input.subject;
   const match = await resolveQuestionTopic({
     questionText,
     gradeLevel: input.gradeLevel,
     subjectHint: input.subject,
-  });
+  }).catch(() => null);
 
-  const subject = match?.subject ?? subjectHint;
-  const topic = match?.topic ?? 'Ödev sorusu';
-
+  // Late binding: konu varsayımı yok — model tespit eder; match yalnızca ipucu
   const socratic = await runSocraticTurn({
     gradeLevel: input.gradeLevel,
-    subject,
-    topic,
+    subject: match?.subject ?? subjectHint,
+    topic: match?.topic,
     questionText,
     outcomeCodes: match?.outcomeCodes,
     unitName: match?.unitName ?? undefined,
+    imageBase64: input.imageBase64,
+    imageMimeType: mime,
   });
+
+  const subject =
+    socratic.detectedSubject ?? match?.subject ?? subjectHint ?? 'Genel';
+  const topic = socratic.detectedTopic ?? match?.topic ?? 'Ödev sorusu';
+
+  if (socratic.offTopic) {
+    return {
+      needsClarification: false,
+      questionCount: 1,
+      questions: [questionText],
+      message: socratic.guidingQuestion,
+      photoQuestion: null,
+      extractedText: questionText,
+      socratic,
+      topicMatch: match,
+      subject,
+      topic,
+      offTopic: true,
+    };
+  }
 
   await consumeQuestion(input.userId, 1);
 

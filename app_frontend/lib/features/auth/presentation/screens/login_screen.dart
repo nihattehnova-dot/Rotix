@@ -6,6 +6,7 @@ import 'package:sanal_ogretmen/core/api/auth_api.dart';
 import 'package:sanal_ogretmen/core/network/api_client.dart';
 import 'package:sanal_ogretmen/core/network/api_config.dart';
 import 'package:sanal_ogretmen/core/providers/api_providers.dart';
+import 'package:sanal_ogretmen/core/theme/app_theme.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -17,9 +18,10 @@ class LoginScreen extends ConsumerStatefulWidget {
 class _LoginScreenState extends ConsumerState<LoginScreen> {
   final emailCtrl = TextEditingController();
   final passCtrl = TextEditingController();
-  bool signUp = false;
+  bool signUp = true;
   bool busy = false;
   int grade = 5;
+  String? hint;
 
   @override
   void dispose() {
@@ -29,7 +31,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
   }
 
   Future<void> _submit() async {
-    setState(() => busy = true);
+    setState(() {
+      busy = true;
+      hint = null;
+    });
     try {
       final auth = ref.read(authServiceProvider);
       if (!auth.isConfigured) {
@@ -37,14 +42,36 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         return;
       }
 
-      if (signUp) {
-        await auth.signUp(email: emailCtrl.text.trim(), password: passCtrl.text);
-      } else {
-        await auth.signIn(email: emailCtrl.text.trim(), password: passCtrl.text);
+      final email = emailCtrl.text.trim();
+      final password = passCtrl.text;
+      if (email.isEmpty || password.length < 6) {
+        throw Exception('E-posta gir ve şifre en az 6 karakter olsun.');
       }
 
-      final token = auth.accessToken;
-      if (token == null) throw Exception('Oturum token alınamadı');
+      if (signUp) {
+        await auth.signUp(email: email, password: password);
+      } else {
+        await auth.signIn(email: email, password: password);
+      }
+
+      var token = auth.accessToken;
+      // E-posta onayı açıksa kayıtta session gelmez — bir kez giriş dene
+      if (token == null && signUp) {
+        try {
+          await auth.signIn(email: email, password: password);
+          token = auth.accessToken;
+        } catch (_) {}
+      }
+
+      if (token == null) {
+        setState(() {
+          signUp = false;
+          hint =
+              'Kayıt alındı. E-postandaki onay linkine tıkla, sonra burada Giriş yap. '
+              '(Onay maili yoksa 1 dk bekle; çok denediysen biraz bekle — rate limit.)';
+        });
+        return;
+      }
 
       final bootstrapClient = ApiClient(
         config: ApiConfig.fromEnvironment(accessToken: token),
@@ -52,7 +79,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       try {
         await AuthApi(bootstrapClient).bootstrap(
           gradeLevel: grade,
-          fullName: emailCtrl.text.split('@').first,
+          fullName: email.split('@').first,
         );
       } finally {
         bootstrapClient.close();
@@ -60,9 +87,21 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
       if (mounted) context.go('/app');
     } catch (e) {
+      final raw = e.toString();
+      String msg = raw;
+      if (raw.contains('over_email_send_rate_limit') || raw.contains('48')) {
+        msg =
+            'Çok hızlı denendi. 1 dakika bekle, sonra tekrar Kayıt ol / Giriş yap.';
+      } else if (raw.contains('Invalid login')) {
+        msg = 'E-posta veya şifre hatalı. Kayıt olmadıysan «Hesap oluştur».';
+      } else if (raw.contains('already registered') ||
+          raw.contains('User already')) {
+        msg = 'Bu e-posta kayıtlı. «Zaten hesabım var» ile giriş yap.';
+        signUp = false;
+      }
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('$e')),
+          SnackBar(content: Text(msg)),
         );
       }
     } finally {
@@ -75,35 +114,51 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
     final authConfigured = ref.watch(authServiceProvider).isConfigured;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Giriş')),
+      appBar: AppBar(title: Text(signUp ? 'Hesap oluştur' : 'Giriş yap')),
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: [
           Text(
-            authConfigured ? 'Supabase hesabın' : 'Supabase yapılandırılmadı',
-            style: GoogleFonts.ibmPlexSans(
+            'Rotix hesabı',
+            style: GoogleFonts.nunito(
               fontSize: 22,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w800,
+              color: RotixColors.textPrimary,
             ),
           ),
-          if (!authConfigured)
-            Padding(
-              padding: const EdgeInsets.only(top: 8, bottom: 16),
-              child: Text(
-                'SUPABASE_URL ve SUPABASE_ANON_KEY olmadan demo moda geçilir.',
-                style: GoogleFonts.sourceSans3(color: const Color(0xFF64748B)),
+          const SizedBox(height: 8),
+          Text(
+            authConfigured
+                ? 'Sadece bu uygulama için e-posta ve şifre. Ayrı bir “Supabase üyeliği” gerekmez.'
+                : 'Auth yapılandırılmamış — demo moda geçilir.',
+            style: GoogleFonts.nunito(
+              color: RotixColors.textMuted,
+              fontSize: 14,
+            ),
+          ),
+          if (hint != null) ...[
+            const SizedBox(height: 12),
+            Text(
+              hint!,
+              style: GoogleFonts.nunito(
+                color: RotixColors.neon,
+                fontWeight: FontWeight.w700,
               ),
             ),
+          ],
+          const SizedBox(height: 16),
           TextField(
             controller: emailCtrl,
+            keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(labelText: 'E-posta'),
           ),
           TextField(
             controller: passCtrl,
-            decoration: const InputDecoration(labelText: 'Şifre'),
+            decoration: const InputDecoration(labelText: 'Şifre (en az 6 karakter)'),
             obscureText: true,
           ),
           if (signUp) ...[
+            const SizedBox(height: 8),
             Text('Sınıf: $grade'),
             Slider(
               value: grade.toDouble(),
@@ -120,12 +175,13 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
             child: Text(signUp ? 'Kayıt ol' : 'Giriş yap'),
           ),
           TextButton(
-            onPressed: () => setState(() => signUp = !signUp),
-            child: Text(signUp ? 'Zaten hesabım var' : 'Hesap oluştur'),
-          ),
-          TextButton(
-            onPressed: () => context.go('/app'),
-            child: const Text('Demo mod (auth yok)'),
+            onPressed: busy
+                ? null
+                : () => setState(() {
+                      signUp = !signUp;
+                      hint = null;
+                    }),
+            child: Text(signUp ? 'Zaten hesabım var — giriş yap' : 'Hesap oluştur'),
           ),
         ],
       ),

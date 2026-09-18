@@ -8,6 +8,7 @@ typedef RemoteStrokeHandler = void Function(Map<String, dynamic> stroke);
 typedef RemoteClearHandler = void Function();
 typedef RemotePhaseHandler = void Function(String phase);
 typedef RemoteCanvasHandler = void Function(List<Map<String, dynamic>> commands);
+typedef AudioEventHandler = void Function(Map<String, dynamic> data);
 
 class WhiteboardWsClient {
   WhiteboardWsClient({required this.wsBaseUrl});
@@ -21,6 +22,7 @@ class WhiteboardWsClient {
   RemoteClearHandler? onRemoteClear;
   RemotePhaseHandler? onRemotePhase;
   RemoteCanvasHandler? onRemoteCanvas;
+  AudioEventHandler? onAudioEvent;
 
   bool get isConnected => _channel != null;
 
@@ -67,6 +69,12 @@ class WhiteboardWsClient {
                     .map((e) => Map<String, dynamic>.from(e))
                     .toList();
                 onRemoteCanvas?.call(cmds);
+                break;
+              case 'audio_chunk':
+              case 'speak_started':
+              case 'speak_done':
+              case 'speak_error':
+                onAudioEvent?.call(data);
                 break;
             }
           } catch (e) {
