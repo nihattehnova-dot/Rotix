@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:sanal_ogretmen/core/curriculum/curriculum_catalog.dart';
 import 'package:sanal_ogretmen/core/api/ai_api.dart';
@@ -44,6 +46,7 @@ class EveningReviewState {
     this.canvasCommandSeq = 0,
     this.videoSuggestion,
     this.boardExpanded = false,
+    this.activeQuestionText,
   });
 
   final int gradeLevel;
@@ -66,6 +69,8 @@ class EveningReviewState {
   final int canvasCommandSeq;
   final Map<String, dynamic>? videoSuggestion;
   final bool boardExpanded;
+  /** Aktif problem metni — kısa cevaplar buna studentAnswer olarak gider */
+  final String? activeQuestionText;
 
   EveningReviewState copyWith({
     int? gradeLevel,
@@ -94,6 +99,8 @@ class EveningReviewState {
     Map<String, dynamic>? videoSuggestion,
     bool clearVideo = false,
     bool? boardExpanded,
+    String? activeQuestionText,
+    bool clearActiveQuestion = false,
   }) {
     return EveningReviewState(
       gradeLevel: gradeLevel ?? this.gradeLevel,
@@ -123,6 +130,9 @@ class EveningReviewState {
       videoSuggestion:
           clearVideo ? null : (videoSuggestion ?? this.videoSuggestion),
       boardExpanded: boardExpanded ?? this.boardExpanded,
+      activeQuestionText: clearActiveQuestion
+          ? null
+          : (activeQuestionText ?? this.activeQuestionText),
     );
   }
 }
@@ -253,6 +263,8 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
     required String subject,
     required String topic,
     required List<Map<String, dynamic>> canvasCommands,
+    String? questionText,
+    Map<String, dynamic>? video,
   }) async {
     state = state.copyWith(
       phase: SessionPhase.socratic,
@@ -260,6 +272,9 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
       guidingQuestion: socratic.guidingQuestion,
       pendingCanvasCommands: canvasCommands,
       canvasCommandSeq: state.canvasCommandSeq + 1,
+      activeQuestionText: questionText ?? topic,
+      videoSuggestion: video,
+      clearVideo: video == null,
       activeCurriculum: {
         ...?state.activeCurriculum,
         'subject': subject,
@@ -413,21 +428,31 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
         state = state.copyWith(activeSession: session);
       }
 
-      final response = await _aiApi.socratic(
-        subject: subject,
-        questionText: questionText,
-        studentAnswer: studentAnswer,
-        topic: topic,
-        sessionId: state.activeSession?.id,
-        logAsMistake: logAsMistake,
-        struggleScore: logAsMistake ? 3 : null,
-        answerWrong: answerWrong ??
-            (studentAnswer != null && studentAnswer.trim().isNotEmpty
-                ? true
-                : null),
-        imageBase64: imageBase64,
-        imageMimeType: imageMimeType,
-      );
+      // Takip: kısa cevap → studentAnswer; görseli tekrar yollama
+      final isFollowUp = studentAnswer != null &&
+          studentAnswer.trim().isNotEmpty &&
+          state.activeQuestionText != null;
+      final qText = isFollowUp ? state.activeQuestionText! : questionText;
+      final img = isFollowUp ? null : imageBase64;
+      final mime = isFollowUp ? null : imageMimeType;
+
+      final response = await _aiApi
+          .socratic(
+            subject: subject,
+            questionText: qText,
+            studentAnswer: studentAnswer,
+            topic: topic,
+            sessionId: state.activeSession?.id,
+            logAsMistake: logAsMistake,
+            struggleScore: logAsMistake ? 3 : null,
+            answerWrong: answerWrong ??
+                (studentAnswer != null && studentAnswer.trim().isNotEmpty
+                    ? true
+                    : null),
+            imageBase64: img,
+            imageMimeType: mime,
+          )
+          .timeout(const Duration(seconds: 45));
 
       final cmds = response.socratic.canvasCommands
           .map((c) => {
@@ -442,7 +467,8 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
                 if (c.h != null) 'h': c.h,
                 if (c.content != null) 'content': c.content,
                 if (c.latex != null) 'latex': c.latex,
-                if (c.delayMs != null) 'delayMs': c.delayMs,
+                // Hız: varsayılan gecikmeyi kısalt
+                'delayMs': c.delayMs ?? 120,
                 if (c.dataUrl != null) 'dataUrl': c.dataUrl,
               })
           .toList();
@@ -461,6 +487,7 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
         canvasCommandSeq: state.canvasCommandSeq + 1,
         videoSuggestion: response.video,
         clearVideo: response.video == null,
+        activeQuestionText: isFollowUp ? state.activeQuestionText : qText,
         activeCurriculum: {
           'id': match?['curriculumId'] ?? state.activeCurriculum?['id'],
           'subject': matchedSubject,
@@ -469,12 +496,13 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
           'unit_name': match?['unitName'],
           'outcome_codes': match?['outcomeCodes'],
         },
-        statusMessage: response.mistakeId != null
-            ? 'Konu: $matchedTopic · hata defterine eklendi'
-            : 'Konu: $matchedTopic · yönlendirme hazır',
+        statusMessage: response.costPath == 'semantic_cache'
+            ? 'Konu: $matchedTopic · önbellek'
+            : 'Konu: $matchedTopic · hazır',
       );
-      await refreshQuota();
-      if (logAsMistake) await refreshDueMistakes();
+      // Kota yenilemeyi arka planda — UI kilitleme
+      unawaited(refreshQuota());
+      if (logAsMistake) unawaited(refreshDueMistakes());
     } on ApiException catch (e) {
       state = state.copyWith(
         isOnlineAction: false,

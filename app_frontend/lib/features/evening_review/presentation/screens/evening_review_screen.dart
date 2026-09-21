@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
@@ -381,20 +382,23 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
         'topic': topic,
         'confidence': match?['confidence'],
       });
+      final extracted = raw['extractedText'] as String? ?? topic;
+      final video = raw['video'] as Map<String, dynamic>?;
       await notifier.applyExternalSocratic(
         socratic: socratic,
         subject: subject,
         topic: topic,
         canvasCommands: cmds,
+        questionText: extracted,
+        video: video,
       );
-      // Multimodal takip: aynı görseli socratic’a da bağla (görsün)
       if (_pendingPhotoBase64 != null) {
         _boardController.setStudentPhoto(
           'data:${_pendingPhotoMime ?? 'image/jpeg'};base64,${_pendingPhotoBase64!}',
         );
       }
-      await notifier.refreshDueMistakes();
-      await _speakGuidingQuestion(notifier);
+      unawaited(notifier.refreshDueMistakes());
+      unawaited(_speakGuidingQuestion(notifier));
     } catch (e) {
       notifier.setStatus('Fotoğraf gönderilemedi: $e');
     }
@@ -409,33 +413,58 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
     if (trimmed.isEmpty) return;
     _voiceFinalHandled = true;
 
-    await VoiceListener.instance.stop();
-    notifier.setMicActive(false);
+    try {
+      await VoiceListener.instance.stop();
+      notifier.setMicActive(false);
 
-    final lower = trimmed.toLowerCase();
-    final isQuestion = lower.contains('?') ||
-        lower.contains('nasıl') ||
-        lower.contains('nedir') ||
-        lower.contains('anlamad') ||
-        lower.contains('çöz') ||
-        lower.contains('yardım') ||
-        lower.contains('kaç') ||
-        lower.contains('ne ');
+      final lower = trimmed.toLowerCase();
+      final looksLikeAnswer = RegExp(r'^[\d\s.,+\-*/=xXyYa-zA-ZçğıöşüÇĞİÖŞÜ]+$')
+              .hasMatch(trimmed) &&
+          trimmed.length <= 40;
+      final isQuestion = lower.contains('?') ||
+          lower.contains('nasıl') ||
+          lower.contains('nedir') ||
+          lower.contains('anlamad') ||
+          lower.contains('çöz') ||
+          lower.contains('yardım') ||
+          lower.contains('kaç') ||
+          lower.contains('ne ');
 
-    if (isQuestion || trimmed.length > 6) {
-      await notifier.askSocratic(
-        questionText: trimmed,
-        logAsMistake: true,
-        imageBase64: _pendingPhotoBase64,
-        imageMimeType: _pendingPhotoMime,
-        answerWrong: true,
-      );
-      await _speakGuidingQuestion(notifier);
-      return;
+      final hasActive = notifier.state.activeQuestionText != null ||
+          notifier.state.guidingQuestion != null ||
+          _pendingPhotoBase64 != null;
+
+      // Kısa cevap / sayı → aktif soruya studentAnswer
+      if (hasActive && (looksLikeAnswer || trimmed.length <= 24) && !isQuestion) {
+        await notifier.askSocratic(
+          questionText: notifier.state.activeQuestionText ??
+              notifier.state.guidingQuestion ??
+              'Ödev sorusu',
+          studentAnswer: trimmed,
+          logAsMistake: true,
+          answerWrong: true,
+          // görsel takipte gitmez
+        );
+        // Ses UI'yi kilitlemesin
+        unawaited(_speakGuidingQuestion(notifier));
+        return;
+      }
+
+      if (isQuestion || trimmed.length > 2) {
+        await notifier.askSocratic(
+          questionText: trimmed,
+          logAsMistake: true,
+          imageBase64: _pendingPhotoBase64,
+          imageMimeType: _pendingPhotoMime,
+        );
+        unawaited(_speakGuidingQuestion(notifier));
+        return;
+      }
+
+      notifier.setStatus('Sorunu daha net söyle veya İpucu ile yaz.');
+    } finally {
+      _voiceFinalHandled = false;
     }
-
-    _voiceFinalHandled = false;
-    notifier.setStatus('Sorunu daha net söyle veya İpucu ile yaz.');
   }
 
   Future<void> _speakGuidingQuestion(EveningReviewNotifier notifier) async {

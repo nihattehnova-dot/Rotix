@@ -41,16 +41,24 @@ export type GeminiToolsResult = GeminiGenerateResult & {
 };
 
 /** Yoğunluk / 404 durumunda sırayla dene (yalnızca bu anahtarla çalışanlar). */
-function modelCandidates(preferred?: string): string[] {
-  const list = [
-    preferred?.trim(),
-    env.geminiModel,
-    'gemini-3.5-flash',
-    'gemini-flash-lite-latest',
-    'gemini-3.6-flash',
-    'gemini-flash-latest',
-  ].filter((m): m is string => !!m && m.length > 0);
-  // Eski / new-user’a kapalı modelleri ele
+function modelCandidates(preferred?: string, preferLite = false): string[] {
+  const list = preferLite
+    ? [
+        preferred?.trim(),
+        'gemini-flash-lite-latest',
+        env.geminiModel,
+        'gemini-3.5-flash',
+        'gemini-flash-latest',
+      ]
+    : [
+        preferred?.trim(),
+        env.geminiModel,
+        'gemini-3.5-flash',
+        'gemini-flash-lite-latest',
+        'gemini-3.6-flash',
+        'gemini-flash-latest',
+      ];
+  const filtered = list.filter((m): m is string => !!m && m.length > 0);
   const blocked = new Set([
     'gemini-2.5-flash',
     'gemini-2.5-pro',
@@ -59,7 +67,7 @@ function modelCandidates(preferred?: string): string[] {
     'gemini-1.5-flash-latest',
     'gemini-pro',
   ]);
-  return [...new Set(list)].filter((m) => !blocked.has(m));
+  return [...new Set(filtered)].filter((m) => !blocked.has(m));
 }
 
 function isRetryableGeminiError(status: number, message: string): boolean {
@@ -162,6 +170,88 @@ export async function generateGeminiContent(input: {
       (result.body.usageMetadata?.promptTokenCount ?? 0) +
         (result.body.usageMetadata?.candidatesTokenCount ?? 0);
 
+    return { text, tokensUsed, modelUsed: model };
+  }
+
+  throw new AppError(
+    503,
+    lastMessage.includes('high demand')
+      ? 'Yapay zeka şu an yoğun. 30 sn sonra tekrar dene.'
+      : lastMessage,
+    'GEMINI_UNAVAILABLE',
+  );
+}
+
+/**
+ * Hızlı Sokratik tur: tek JSON yanıt (+ opsiyonel görsel).
+ * Tools yok → daha düşük latency.
+ */
+export async function generateGeminiJsonTurn(input: {
+  systemInstruction: string;
+  userMessage: string;
+  imageBase64?: string;
+  imageMimeType?: string;
+  temperature?: number;
+  maxOutputTokens?: number;
+  preferLite?: boolean;
+}): Promise<GeminiGenerateResult> {
+  if (!env.geminiApiKey) {
+    throw new AppError(
+      503,
+      'Gemini is not configured (GEMINI_API_KEY)',
+      'GEMINI_NOT_CONFIGURED',
+    );
+  }
+
+  const parts: Array<Record<string, unknown>> = [{ text: input.userMessage }];
+  if (input.imageBase64) {
+    const raw = input.imageBase64.includes(',')
+      ? input.imageBase64.split(',').pop()!
+      : input.imageBase64;
+    parts.push({
+      inlineData: {
+        mimeType: input.imageMimeType || 'image/jpeg',
+        data: raw,
+      },
+    });
+  }
+
+  const payload = {
+    systemInstruction: {
+      parts: [{ text: input.systemInstruction }],
+    },
+    contents: [{ role: 'user', parts }],
+    generationConfig: {
+      temperature: input.temperature ?? 0.35,
+      responseMimeType: 'application/json',
+      maxOutputTokens: input.maxOutputTokens ?? 400,
+    },
+  };
+
+  let lastMessage = 'Gemini JSON turn failed';
+  for (const model of modelCandidates(undefined, input.preferLite === true)) {
+    const result = await postGenerateContent({ model, body: payload });
+    if (!result.ok) {
+      lastMessage = result.message;
+      if (isRetryableGeminiError(result.status, result.message)) {
+        console.warn(`[gemini-json] ${model} failed: ${result.message}`);
+        await new Promise((r) => setTimeout(r, 250));
+        continue;
+      }
+      throw new AppError(502, result.message, 'GEMINI_HTTP_ERROR');
+    }
+    const text = result.body.candidates?.[0]?.content?.parts
+      ?.map((p) => p.text ?? '')
+      .join('')
+      .trim();
+    if (!text) {
+      lastMessage = 'Empty JSON turn';
+      continue;
+    }
+    const tokensUsed =
+      result.body.usageMetadata?.totalTokenCount ??
+      (result.body.usageMetadata?.promptTokenCount ?? 0) +
+        (result.body.usageMetadata?.candidatesTokenCount ?? 0);
     return { text, tokensUsed, modelUsed: model };
   }
 

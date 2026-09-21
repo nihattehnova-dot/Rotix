@@ -140,28 +140,20 @@ async function executeSocraticTurn(input: {
     }
   }
 
-  let imageBase64 = body.imageBase64;
-  let imageMimeType = body.imageMimeType;
-  if (imageBase64) {
-    const opt = await optimizeQuestionImage({
-      imageBase64,
-      mimeType: imageMimeType,
-    });
-    imageBase64 = opt.base64;
-    imageMimeType = opt.mimeType;
-  }
-
+  // Topic match — konu zaten kilitliyse ATLA (büyük latency kazanımı)
   let match = null as Awaited<ReturnType<typeof resolveQuestionTopic>>;
-  try {
-    match = await resolveQuestionTopic({
-      questionText: body.questionText,
-      gradeLevel,
-      subjectHint: body.subject ?? tutorState.detectedSubject ?? undefined,
-      topicHint: body.topic ?? tutorState.detectedTopic ?? undefined,
-      exam: examFromTrack(input.examTrack),
-    });
-  } catch {
-    match = null;
+  if (!tutorState.detectedTopic) {
+    try {
+      match = await resolveQuestionTopic({
+        questionText: body.questionText,
+        gradeLevel,
+        subjectHint: body.subject ?? tutorState.detectedSubject ?? undefined,
+        topicHint: body.topic ?? undefined,
+        exam: examFromTrack(input.examTrack),
+      });
+    } catch {
+      match = null;
+    }
   }
 
   const subjectHint =
@@ -173,6 +165,23 @@ async function executeSocraticTurn(input: {
     tutorState.detectedTopic ??
     match?.topic ??
     (body.topic?.trim() || undefined);
+
+  // Takip turunda görseli tekrar gönderme — yalnızca ilk görsel tur
+  const sendImage =
+    Boolean(body.imageBase64) &&
+    tutorState.interactionTurnCount <= 1 &&
+    !body.studentAnswer;
+
+  let imageBase64 = sendImage ? body.imageBase64 : undefined;
+  let imageMimeType = sendImage ? body.imageMimeType : undefined;
+  if (imageBase64) {
+    const opt = await optimizeQuestionImage({
+      imageBase64,
+      mimeType: imageMimeType,
+    });
+    imageBase64 = opt.base64;
+    imageMimeType = opt.mimeType;
+  }
 
   pushTurnHistory(
     sessionKey,

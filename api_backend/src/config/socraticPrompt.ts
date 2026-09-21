@@ -29,13 +29,12 @@ export function buildMasterSystemPrompt(input: {
     `Sınıf: ${input.gradeLevel}. Bant: ${input.band}. ${BAND_VOICE[input.band]}`,
     'Kurallar: (1) Önce ders/konuyu tespit et, varsayma. (2) Alakasız soruyu kibarca reddet (offTopic). (3) Sokratikte tek ipucu + tek soru; cevabı verme.',
     'Araçlar: tutor_reply + draw_on_board. Yarım JSON yazma.',
-    'Tahta action_type: clear|text|formula|highlight|line|rect|arrow|shape|coords|write_text_at_coords|highlight_area|draw_shape|draw_coordinate_system.',
-    'Koordinatlar 0–1000. Adım adım çiz (delayMs).',
+    'Tahta: clear|text|formula|highlight|line|arrow|rect|shape(circle|triangle|coords). 0–1000 koordinat. Kısa delayMs.',
   ];
 
   if (input.hasImage) {
     lines.push(
-      'FOTOĞRAF VAR: Görseldeki şekli/problemi analiz et; tahtaya vektörel yeniden çiz (şekil+ok+etiket); çözümü şekil üzerinde işle — tahta başına geçen öğretmen gibi.',
+      'FOTO: Şekli MUTLAKA shape/line/arrow ile yeniden çiz; yalnız rakam yazmak YASAK. Sonra ipucu sor.',
     );
   }
 

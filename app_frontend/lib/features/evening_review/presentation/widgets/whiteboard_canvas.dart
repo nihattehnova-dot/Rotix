@@ -253,9 +253,9 @@ class _WhiteboardCanvasState extends State<WhiteboardCanvas>
     while (_queue.isNotEmpty && mounted) {
       final cmd = _queue.removeAt(0);
       try {
-        final delayMs = (cmd['delayMs'] as num?)?.toInt() ?? 280;
+        final delayMs = (cmd['delayMs'] as num?)?.toInt() ?? 100;
         if (delayMs > 0) {
-          await Future<void>.delayed(Duration(milliseconds: delayMs));
+          await Future<void>.delayed(Duration(milliseconds: delayMs.clamp(0, 400)));
         }
         if (!mounted) break;
         _applyOne(cmd);
