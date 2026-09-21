@@ -88,9 +88,15 @@ export async function processPhotoQuestion(input: {
   }
 
   const mime = input.mimeType ?? 'image/jpeg';
-  const analyzed = await analyzeHomeworkImage({
+  const { optimizeQuestionImage } = await import('./imageOptimize.js');
+  const optimized = await optimizeQuestionImage({
     imageBase64: input.imageBase64,
     mimeType: mime,
+  });
+
+  const analyzed = await analyzeHomeworkImage({
+    imageBase64: optimized.base64,
+    mimeType: optimized.mimeType,
   });
 
   const multi =
@@ -135,8 +141,8 @@ export async function processPhotoQuestion(input: {
     questionText,
     outcomeCodes: match?.outcomeCodes,
     unitName: match?.unitName ?? undefined,
-    imageBase64: input.imageBase64,
-    imageMimeType: mime,
+    imageBase64: optimized.base64,
+    imageMimeType: optimized.mimeType,
   });
 
   const subject =
@@ -177,6 +183,15 @@ export async function processPhotoQuestion(input: {
   if (error) throw error;
 
   // Konuyu AI eşler → unutma defterine otomatik arşiv (konuya göre birleşir)
+  const { suggestVideoCard } = await import('./videoCatalog.js');
+  const video = suggestVideoCard({
+    outcomeCodes: match?.outcomeCodes,
+    topic,
+    subject,
+    struggleCount: 1,
+    wantsSummary: socratic.forceRevealApplied || socratic.sessionComplete,
+  });
+
   await logMistake({
     userId: input.userId,
     sessionId: input.sessionId,
@@ -204,5 +219,6 @@ export async function processPhotoQuestion(input: {
     topicMatch: match,
     subject,
     topic,
+    video,
   };
 }

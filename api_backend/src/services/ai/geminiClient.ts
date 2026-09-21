@@ -107,6 +107,7 @@ export async function generateGeminiContent(input: {
   systemInstruction: string;
   userMessage: string;
   temperature?: number;
+  maxOutputTokens?: number;
 }): Promise<GeminiGenerateResult> {
   if (!env.geminiApiKey) {
     throw new AppError(
@@ -129,6 +130,7 @@ export async function generateGeminiContent(input: {
     generationConfig: {
       temperature: input.temperature ?? 0.4,
       responseMimeType: 'application/json',
+      maxOutputTokens: input.maxOutputTokens ?? 512,
     },
   };
 
@@ -178,6 +180,7 @@ export async function generateGeminiVision(input: {
   imageBase64: string;
   mimeType: string;
   temperature?: number;
+  maxOutputTokens?: number;
 }): Promise<GeminiGenerateResult> {
   if (!env.geminiApiKey) {
     throw new AppError(
@@ -209,6 +212,7 @@ export async function generateGeminiVision(input: {
     generationConfig: {
       temperature: input.temperature ?? 0.2,
       responseMimeType: 'application/json',
+      maxOutputTokens: input.maxOutputTokens ?? 400,
     },
   };
 
@@ -259,6 +263,7 @@ export async function generateGeminiWithTools(input: {
   imageBase64?: string;
   imageMimeType?: string;
   temperature?: number;
+  maxOutputTokens?: number;
 }): Promise<GeminiToolsResult> {
   if (!env.geminiApiKey) {
     throw new AppError(
@@ -302,6 +307,7 @@ export async function generateGeminiWithTools(input: {
     },
     generationConfig: {
       temperature: input.temperature ?? 0.4,
+      maxOutputTokens: input.maxOutputTokens ?? 512,
     },
   };
 

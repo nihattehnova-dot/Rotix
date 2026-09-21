@@ -9,10 +9,20 @@ import { logMistake } from '../services/mistakeService.js';
 import { resolveQuestionTopic } from '../services/topicMatcher.js';
 import { consumeMinutes, consumeQuestion } from '../services/quotaService.js';
 import { addSessionTokens } from '../services/sessionService.js';
+import { runInBackground } from '../services/backgroundTasks.js';
 import {
+  lookupSemanticCache,
+  storeSemanticCache,
+} from '../services/semanticCache.js';
+import { optimizeQuestionImage } from '../services/imageOptimize.js';
+import { suggestVideoCard } from '../services/videoCatalog.js';
+import {
+  getRecentHistory,
   getTutorSession,
   lockDetectedTopic,
+  pushTurnHistory,
   recordCorrectOrReset,
+  recordInteractionTurn,
   recordWrongAnswer,
 } from '../services/tutorSessionState.js';
 import { socraticTurnSchema } from '../validators/schemas.js';
@@ -29,14 +39,10 @@ export const aiRouter = Router();
 const speakSchema = z.object({
   text: z.string().min(1).max(4000),
   voice: z.string().optional(),
-  /** evening_interrupt → dakika kotası; homework → soru kotası (ayrı endpoint) */
   billAs: z.enum(['none', 'minute']).default('none'),
   minutes: z.number().positive().max(10).optional(),
 });
 
-/**
- * Sevecen Gemini TTS. Standart konu metinleri mümkünse DB'den gelir.
- */
 aiRouter.post(
   '/speak',
   asyncHandler(async (req, res) => {
@@ -60,7 +66,6 @@ aiRouter.post(
   }),
 );
 
-/** Açılış: bugün hangi konuları işlediniz? */
 aiRouter.get(
   '/greeting',
   asyncHandler(async (req, res) => {
@@ -80,7 +85,6 @@ aiRouter.get(
     } catch (err) {
       const message =
         err instanceof Error ? err.message : 'Gemini TTS unavailable';
-      // Key yok/geçersizse metin dön — istemci uyarı göstersin
       res.json({
         text,
         mimeType: null,
@@ -92,127 +96,182 @@ aiRouter.get(
   }),
 );
 
-/**
- * Dynamic Gemini path — Socratic Q&A only.
- * Late binding: konu/ders oturum başında zorunlu değil.
- */
-aiRouter.post(
-  '/socratic',
-  enforceQuota('question'),
-  asyncHandler(async (req, res) => {
-    const parsed = socraticTurnSchema.safeParse(req.body);
-    if (!parsed.success) {
-      throw new AppError(400, parsed.error.message, 'VALIDATION_ERROR');
-    }
+type SocraticBody = z.infer<typeof socraticTurnSchema>;
 
-    const user = req.user!;
-    if (!user.grade_level) {
-      throw new AppError(400, 'Student grade_level is required', 'GRADE_REQUIRED');
-    }
+async function executeSocraticTurn(input: {
+  userId: string;
+  gradeLevel: number;
+  examTrack?: string | null;
+  body: SocraticBody;
+}) {
+  const { body, userId, gradeLevel } = input;
+  const sessionKey = body.sessionId ?? `anon-${userId}`;
+  let tutorState = getTutorSession(sessionKey, userId);
 
-    const sessionKey = parsed.data.sessionId ?? `anon-${user.id}`;
-    let tutorState = getTutorSession(sessionKey, user.id);
+  const looksWrong =
+    body.answerWrong === true ||
+    (Boolean(body.studentAnswer?.trim()) && body.logAsMistake !== false);
 
-    const looksWrong =
-      parsed.data.answerWrong === true ||
-      (Boolean(parsed.data.studentAnswer?.trim()) &&
-        parsed.data.logAsMistake !== false);
+  if (looksWrong && body.studentAnswer?.trim()) {
+    tutorState = recordWrongAnswer(sessionKey, userId);
+  } else if (body.answerWrong === false) {
+    tutorState = recordCorrectOrReset(sessionKey, userId);
+  }
 
-    if (looksWrong && parsed.data.studentAnswer?.trim()) {
-      tutorState = recordWrongAnswer(sessionKey, user.id);
-    } else if (parsed.data.answerWrong === false) {
-      tutorState = recordCorrectOrReset(sessionKey, user.id);
-    }
+  tutorState = recordInteractionTurn(sessionKey, userId);
 
-    // Soft topic match — asla erken çapa; sadece ipucu
-    let match = null as Awaited<ReturnType<typeof resolveQuestionTopic>>;
-    try {
-      match = await resolveQuestionTopic({
-        questionText: parsed.data.questionText,
-        gradeLevel: user.grade_level,
-        subjectHint: parsed.data.subject ?? tutorState.detectedSubject ?? undefined,
-        topicHint: parsed.data.topic ?? tutorState.detectedTopic ?? undefined,
-        exam: examFromTrack(user.exam_track),
-      });
-    } catch {
-      match = null;
-    }
-
-    const subjectHint =
-      tutorState.detectedSubject ??
-      match?.subject ??
-      parsed.data.subject ??
-      undefined;
-    const topicHint =
-      tutorState.detectedTopic ??
-      match?.topic ??
-      (parsed.data.topic?.trim() || undefined);
-
-    const result = await runSocraticTurn({
-      gradeLevel: user.grade_level,
-      subject: subjectHint,
-      questionText: parsed.data.questionText,
-      studentAnswer: parsed.data.studentAnswer,
-      topic: topicHint,
-      outcomeCodes: match?.outcomeCodes,
-      unitName: match?.unitName ?? undefined,
-      wrongAnswerCount: tutorState.wrongAnswerCount,
-      forceReveal: tutorState.forceReveal,
-      imageBase64: parsed.data.imageBase64,
-      imageMimeType: parsed.data.imageMimeType,
+  // Semantic cache — görsel yoksa ve Exit değilse
+  const canCache = !body.imageBase64 && !tutorState.forceReveal;
+  if (canCache) {
+    const cached = lookupSemanticCache({
+      questionText: body.questionText + (body.studentAnswer ?? ''),
+      gradeLevel,
     });
+    if (cached.hit) {
+      return {
+        payload: {
+          ...(cached.entry.response as Record<string, unknown>),
+          costPath: 'semantic_cache',
+          cacheHit: true,
+          cacheSimilarity: cached.similarity,
+        },
+        fromCache: true as const,
+      };
+    }
+  }
 
-    if (result.offTopic) {
-      // Kota düşürme — alakasız
-      res.json({
+  let imageBase64 = body.imageBase64;
+  let imageMimeType = body.imageMimeType;
+  if (imageBase64) {
+    const opt = await optimizeQuestionImage({
+      imageBase64,
+      mimeType: imageMimeType,
+    });
+    imageBase64 = opt.base64;
+    imageMimeType = opt.mimeType;
+  }
+
+  let match = null as Awaited<ReturnType<typeof resolveQuestionTopic>>;
+  try {
+    match = await resolveQuestionTopic({
+      questionText: body.questionText,
+      gradeLevel,
+      subjectHint: body.subject ?? tutorState.detectedSubject ?? undefined,
+      topicHint: body.topic ?? tutorState.detectedTopic ?? undefined,
+      exam: examFromTrack(input.examTrack),
+    });
+  } catch {
+    match = null;
+  }
+
+  const subjectHint =
+    tutorState.detectedSubject ??
+    match?.subject ??
+    body.subject ??
+    undefined;
+  const topicHint =
+    tutorState.detectedTopic ??
+    match?.topic ??
+    (body.topic?.trim() || undefined);
+
+  pushTurnHistory(
+    sessionKey,
+    userId,
+    'user',
+    `${body.questionText}${body.studentAnswer ? ` → ${body.studentAnswer}` : ''}`,
+  );
+
+  const result = await runSocraticTurn({
+    gradeLevel,
+    subject: subjectHint,
+    questionText: body.questionText,
+    studentAnswer: body.studentAnswer,
+    topic: topicHint,
+    outcomeCodes: match?.outcomeCodes,
+    unitName: match?.unitName ?? undefined,
+    wrongAnswerCount: tutorState.wrongAnswerCount,
+    interactionTurnCount: tutorState.interactionTurnCount,
+    forceReveal: tutorState.forceReveal,
+    imageBase64,
+    imageMimeType,
+    recentHistory: getRecentHistory(sessionKey, userId, 3),
+  });
+
+  pushTurnHistory(sessionKey, userId, 'assistant', result.guidingQuestion);
+
+  if (result.offTopic) {
+    return {
+      payload: {
         socratic: result,
         topicMatch: null,
         subject: null,
         topic: null,
         mistake: null,
+        video: null,
         costPath: 'guardrail_off_topic',
         wrongAnswerCount: tutorState.wrongAnswerCount,
+        interactionTurnCount: tutorState.interactionTurnCount,
         forceRevealApplied: false,
-      });
-      return;
+      },
+      fromCache: false as const,
+    };
+  }
+
+  if (result.detectedSubject || result.detectedTopic) {
+    tutorState = lockDetectedTopic(
+      sessionKey,
+      userId,
+      result.detectedSubject,
+      result.detectedTopic,
+    );
+  }
+
+  const subject =
+    result.detectedSubject ?? subjectHint ?? body.subject ?? 'Genel';
+  const topic = result.detectedTopic ?? topicHint ?? 'Öğrenci sorusu';
+
+  const video = suggestVideoCard({
+    outcomeCodes: match?.outcomeCodes,
+    topic,
+    subject,
+    struggleCount: Math.max(
+      tutorState.wrongAnswerCount,
+      tutorState.interactionTurnCount >= 2 ? 2 : 0,
+    ),
+    wantsSummary: result.forceRevealApplied || result.sessionComplete,
+  });
+
+  const responsePayload = {
+    socratic: result,
+    topicMatch: match,
+    subject,
+    topic,
+    mistake: null as unknown,
+    video,
+    costPath: 'dynamic_gemini',
+    wrongAnswerCount: tutorState.wrongAnswerCount,
+    interactionTurnCount: tutorState.interactionTurnCount,
+    forceRevealApplied: result.forceRevealApplied,
+    sessionComplete: result.sessionComplete,
+  };
+
+  // Kota + log arka planda — yanıt hızı öncelikli
+  runInBackground(async () => {
+    await consumeQuestion(userId, 1);
+    if (body.sessionId) {
+      await addSessionTokens(body.sessionId, userId, result.tokensUsed);
     }
-
-    if (result.detectedSubject || result.detectedTopic) {
-      tutorState = lockDetectedTopic(
-        sessionKey,
-        user.id,
-        result.detectedSubject,
-        result.detectedTopic,
-      );
-    }
-
-    if (result.sessionComplete || result.forceRevealApplied) {
-      recordCorrectOrReset(sessionKey, user.id);
-    }
-
-    await consumeQuestion(user.id, 1);
-
-    if (parsed.data.sessionId) {
-      await addSessionTokens(parsed.data.sessionId, user.id, result.tokensUsed);
-    }
-
-    const subject =
-      result.detectedSubject ?? subjectHint ?? parsed.data.subject ?? 'Genel';
-    const topic =
-      result.detectedTopic ?? topicHint ?? 'Öğrenci sorusu';
-
-    let mistake = null;
-    if (parsed.data.logAsMistake && !result.offTopic) {
-      mistake = await logMistake({
-        userId: user.id,
-        sessionId: parsed.data.sessionId,
+    if (body.logAsMistake && !result.offTopic) {
+      responsePayload.mistake = await logMistake({
+        userId,
+        sessionId: body.sessionId,
         curriculumId: null,
         subject,
         topic,
-        struggleScore: parsed.data.struggleScore ?? 3,
+        struggleScore: body.struggleScore ?? 3,
         questionData: {
-          prompt: parsed.data.questionText,
-          student_answer: parsed.data.studentAnswer,
+          prompt: body.questionText,
+          student_answer: body.studentAnswer,
           source: 'socratic',
           matched_curriculum_id: match?.curriculumId,
           matched_confidence: match?.confidence,
@@ -222,17 +281,109 @@ aiRouter.post(
         },
       });
     }
+    if (result.sessionComplete || result.forceRevealApplied) {
+      recordCorrectOrReset(sessionKey, userId);
+    }
+  }, 'socratic-post');
 
-    res.json({
-      socratic: result,
-      topicMatch: match,
-      subject,
-      topic,
-      mistake,
-      costPath: 'dynamic_gemini',
-      wrongAnswerCount: tutorState.wrongAnswerCount,
-      forceRevealApplied: result.forceRevealApplied,
-      sessionComplete: result.sessionComplete,
+  if (canCache && !result.offTopic) {
+    storeSemanticCache({
+      questionText: body.questionText + (body.studentAnswer ?? ''),
+      gradeLevel,
+      response: responsePayload,
+      tokensSavedEstimate: result.tokensUsed,
     });
+  }
+
+  return { payload: responsePayload, fromCache: false as const };
+}
+aiRouter.post(
+  '/socratic',
+  enforceQuota('question'),
+  asyncHandler(async (req, res) => {
+    const parsed = socraticTurnSchema.safeParse(req.body);
+    if (!parsed.success) {
+      throw new AppError(400, parsed.error.message, 'VALIDATION_ERROR');
+    }
+    const user = req.user!;
+    if (!user.grade_level) {
+      throw new AppError(400, 'Student grade_level is required', 'GRADE_REQUIRED');
+    }
+
+    const { payload } = await executeSocraticTurn({
+      userId: user.id,
+      gradeLevel: user.grade_level,
+      examTrack: user.exam_track,
+      body: parsed.data,
+    });
+    res.json(payload);
+  }),
+);
+
+/**
+ * SSE — ilk kelimeden itibaren progressive UX (guidingQuestion chunk’ları + canvas).
+ */
+aiRouter.post(
+  '/socratic/stream',
+  enforceQuota('question'),
+  asyncHandler(async (req, res) => {
+    const parsed = socraticTurnSchema.safeParse(req.body);
+    if (!parsed.success) {
+      throw new AppError(400, parsed.error.message, 'VALIDATION_ERROR');
+    }
+    const user = req.user!;
+    if (!user.grade_level) {
+      throw new AppError(400, 'Student grade_level is required', 'GRADE_REQUIRED');
+    }
+
+    res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
+    res.setHeader('Cache-Control', 'no-cache, no-transform');
+    res.setHeader('Connection', 'keep-alive');
+    res.flushHeaders?.();
+
+    const send = (event: string, data: unknown) => {
+      res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
+    };
+
+    send('status', { phase: 'thinking' });
+
+    try {
+      const { payload, fromCache } = await executeSocraticTurn({
+        userId: user.id,
+        gradeLevel: user.grade_level,
+        examTrack: user.exam_track,
+        body: parsed.data,
+      });
+
+      const socratic = (payload as { socratic?: { guidingQuestion?: string; canvasCommands?: unknown[] } })
+        .socratic;
+      const guide = socratic?.guidingQuestion ?? '';
+      // Token-benzeri progressive stream (kelime kelime)
+      const words = guide.split(/(\s+)/).filter(Boolean);
+      let acc = '';
+      for (const w of words) {
+        acc += w;
+        send('token', { text: w, accumulated: acc });
+        await new Promise((r) => setTimeout(r, 12));
+      }
+
+      const cmds = socratic?.canvasCommands ?? [];
+      for (const cmd of cmds) {
+        send('canvas', { command: cmd });
+        await new Promise((r) => setTimeout(r, 40));
+      }
+
+      if ((payload as { video?: unknown }).video) {
+        send('video', { video: (payload as { video: unknown }).video });
+      }
+
+      send('done', { ...payload, stream: true, fromCache });
+    } catch (err) {
+      send('error', {
+        message: err instanceof Error ? err.message : 'stream failed',
+      });
+    } finally {
+      res.end();
+    }
   }),
 );

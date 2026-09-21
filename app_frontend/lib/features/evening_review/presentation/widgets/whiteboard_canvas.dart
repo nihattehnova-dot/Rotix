@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math' as math;
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 
@@ -63,6 +64,7 @@ class BoardAnnotation {
     this.h,
     this.content,
     this.imageBytes,
+    this.shape,
   });
 
   final String type;
@@ -76,6 +78,7 @@ class BoardAnnotation {
   final double? h;
   final String? content;
   final Uint8List? imageBytes;
+  final String? shape;
 
   static BoardAnnotation? tryFromCommand(Map<String, dynamic> json) {
     try {
@@ -100,6 +103,7 @@ class BoardAnnotation {
         h: (json['h'] as num?)?.toDouble(),
         content: content.isEmpty ? null : content,
         imageBytes: imageBytes,
+        shape: json['shape'] as String?,
       );
     } catch (_) {
       return null;
@@ -357,6 +361,41 @@ class _BoardPainter extends CustomPainter {
     return Offset(lx / 1000 * w, ly / 1000 * h);
   }
 
+  void _paintShape(Canvas canvas, BoardAnnotation a) {
+    if (a.x == null || a.y == null) return;
+    final origin = _map(a.x!, a.y!);
+    final ww = ((a.w ?? 180) / 1000) * boardSize.width;
+    final hh = ((a.h ?? 180) / 1000) * boardSize.height;
+    final paint = Paint()
+      ..color = const Color(0xFF0B1B3A)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.5;
+    final kind = a.shape ?? 'circle';
+    if (kind == 'coords') {
+      canvas.drawLine(
+        Offset(origin.dx, origin.dy + hh),
+        Offset(origin.dx + ww, origin.dy + hh),
+        paint,
+      );
+      canvas.drawLine(
+        Offset(origin.dx, origin.dy + hh),
+        Offset(origin.dx, origin.dy),
+        paint,
+      );
+      return;
+    }
+    if (kind == 'triangle') {
+      final path = Path()
+        ..moveTo(origin.dx + ww / 2, origin.dy)
+        ..lineTo(origin.dx + ww, origin.dy + hh)
+        ..lineTo(origin.dx, origin.dy + hh)
+        ..close();
+      canvas.drawPath(path, paint);
+      return;
+    }
+    canvas.drawOval(Rect.fromLTWH(origin.dx, origin.dy, ww, hh), paint);
+  }
+
   @override
   void paint(Canvas canvas, Size size) {
     final bg = Paint()
@@ -417,15 +456,40 @@ class _BoardPainter extends CustomPainter {
     for (final a in annotations) {
       switch (a.type) {
         case 'line':
+        case 'arrow':
           if (a.x1 != null && a.y1 != null && a.x2 != null && a.y2 != null) {
+            final p1 = _map(a.x1!, a.y1!);
+            final p2 = _map(a.x2!, a.y2!);
             canvas.drawLine(
-              _map(a.x1!, a.y1!),
-              _map(a.x2!, a.y2!),
+              p1,
+              p2,
               Paint()
                 ..color = const Color(0xFF0B1B3A)
-                ..strokeWidth = 3,
+                ..strokeWidth = a.type == 'arrow' ? 3.5 : 3
+                ..strokeCap = StrokeCap.round,
             );
+            if (a.type == 'arrow') {
+              final angle = (p2 - p1).direction;
+              const head = 14.0;
+              final a1 = Offset(
+                p2.dx - head * math.cos(angle - 0.4),
+                p2.dy - head * math.sin(angle - 0.4),
+              );
+              final a2 = Offset(
+                p2.dx - head * math.cos(angle + 0.4),
+                p2.dy - head * math.sin(angle + 0.4),
+              );
+              canvas.drawLine(p2, a1, Paint()
+                ..color = const Color(0xFF0B1B3A)
+                ..strokeWidth = 3);
+              canvas.drawLine(p2, a2, Paint()
+                ..color = const Color(0xFF0B1B3A)
+                ..strokeWidth = 3);
+            }
           }
+          break;
+        case 'shape':
+          _paintShape(canvas, a);
           break;
         case 'rect':
         case 'highlight':

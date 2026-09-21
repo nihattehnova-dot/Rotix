@@ -42,6 +42,8 @@ class EveningReviewState {
     this.activeCurriculum,
     this.pendingCanvasCommands = const [],
     this.canvasCommandSeq = 0,
+    this.videoSuggestion,
+    this.boardExpanded = false,
   });
 
   final int gradeLevel;
@@ -62,6 +64,8 @@ class EveningReviewState {
   final Map<String, dynamic>? activeCurriculum;
   final List<Map<String, dynamic>> pendingCanvasCommands;
   final int canvasCommandSeq;
+  final Map<String, dynamic>? videoSuggestion;
+  final bool boardExpanded;
 
   EveningReviewState copyWith({
     int? gradeLevel,
@@ -87,6 +91,9 @@ class EveningReviewState {
     bool clearCurriculum = false,
     List<Map<String, dynamic>>? pendingCanvasCommands,
     int? canvasCommandSeq,
+    Map<String, dynamic>? videoSuggestion,
+    bool clearVideo = false,
+    bool? boardExpanded,
   }) {
     return EveningReviewState(
       gradeLevel: gradeLevel ?? this.gradeLevel,
@@ -113,6 +120,9 @@ class EveningReviewState {
       pendingCanvasCommands:
           pendingCanvasCommands ?? this.pendingCanvasCommands,
       canvasCommandSeq: canvasCommandSeq ?? this.canvasCommandSeq,
+      videoSuggestion:
+          clearVideo ? null : (videoSuggestion ?? this.videoSuggestion),
+      boardExpanded: boardExpanded ?? this.boardExpanded,
     );
   }
 }
@@ -281,6 +291,17 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
     state = state.copyWith(pendingCanvasCommands: const []);
   }
 
+  void toggleBoardExpanded() {
+    state = state.copyWith(boardExpanded: !state.boardExpanded);
+  }
+
+  void setVideoSuggestion(Map<String, dynamic>? video) {
+    state = state.copyWith(
+      videoSuggestion: video,
+      clearVideo: video == null,
+    );
+  }
+
   Future<void> startSession({bool forceGapFill = false}) async {
     if (state.activeSession != null || state.isOnlineAction) return;
 
@@ -438,6 +459,8 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
         audioLevel: 0.45,
         pendingCanvasCommands: cmds,
         canvasCommandSeq: state.canvasCommandSeq + 1,
+        videoSuggestion: response.video,
+        clearVideo: response.video == null,
         activeCurriculum: {
           'id': match?['curriculumId'] ?? state.activeCurriculum?['id'],
           'subject': matchedSubject,

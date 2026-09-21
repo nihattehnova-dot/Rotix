@@ -3,34 +3,55 @@ import { buildMasterSystemPrompt } from '../../config/socraticPrompt.js';
 import { AppError } from '../../middleware/errorHandler.js';
 import type { CanvasCommand, SocraticAiResult } from '../../types/domain.js';
 import { generateGeminiWithTools } from './geminiClient.js';
+import { MAX_SOCRATIC_TURNS } from '../tutorSessionState.js';
 
 export type SocraticTurnInput = {
   gradeLevel: number;
   subject?: string;
   questionText: string;
   studentAnswer?: string;
-  /** Late-bound — only after prior turn detected; never invent at session start */
   topic?: string;
   outcomeCodes?: string[];
   unitName?: string;
   wrongAnswerCount?: number;
+  interactionTurnCount?: number;
   forceReveal?: boolean;
   imageBase64?: string;
   imageMimeType?: string;
+  /** Son 3 etkileşim */
+  recentHistory?: Array<{ role: 'user' | 'assistant'; text: string }>;
 };
 
 const DRAW_TOOL = {
   name: 'draw_on_board',
   description:
-    'Canlı tahtaya çizim ekler. Ses ile senkron için adım adım çağır.',
+    'Canlı tahtaya yapısal çizim. Fotoğrafta şekli yeniden çiz; metinde formülleri adım adım yaz.',
   parameters: {
     type: 'object',
     properties: {
       action_type: {
         type: 'string',
-        enum: ['clear', 'text', 'highlight', 'formula', 'line', 'rect'],
+        enum: [
+          'clear',
+          'text',
+          'write_text_at_coords',
+          'formula',
+          'highlight',
+          'highlight_area',
+          'line',
+          'arrow',
+          'rect',
+          'draw_shape',
+          'shape',
+          'draw_coordinate_system',
+          'coords',
+        ],
       },
-      content: { type: 'string', description: 'text içeriği veya LaTeX' },
+      content: { type: 'string' },
+      shape: {
+        type: 'string',
+        enum: ['circle', 'triangle', 'coords', 'rectangle'],
+      },
       x: { type: 'number' },
       y: { type: 'number' },
       x1: { type: 'number' },
@@ -39,10 +60,7 @@ const DRAW_TOOL = {
       y2: { type: 'number' },
       w: { type: 'number' },
       h: { type: 'number' },
-      delayMs: {
-        type: 'number',
-        description: 'Tahtada belirme gecikmesi (ms), ses senkronu için',
-      },
+      delayMs: { type: 'number' },
     },
     required: ['action_type'],
   },
@@ -50,7 +68,7 @@ const DRAW_TOOL = {
 
 const REPLY_TOOL = {
   name: 'tutor_reply',
-  description: 'Öğrenciye sözlü/yazılı yanıt ve oturum bayrakları.',
+  description: 'Öğrenciye yanıt bayrakları (kısa guidingQuestion).',
   parameters: {
     type: 'object',
     properties: {
@@ -67,7 +85,13 @@ const REPLY_TOOL = {
 };
 
 function toolCallToCanvas(args: Record<string, unknown>): CanvasCommand | null {
-  const action = String(args.action_type ?? '');
+  let action = String(args.action_type ?? '');
+  // Alias map → domain types
+  if (action === 'write_text_at_coords') action = 'text';
+  if (action === 'highlight_area') action = 'highlight';
+  if (action === 'draw_shape') action = 'shape';
+  if (action === 'draw_coordinate_system') action = 'coords';
+
   const delayMs =
     typeof args.delayMs === 'number' ? args.delayMs : undefined;
   const withDelay = <T extends CanvasCommand>(cmd: T): T =>
@@ -106,6 +130,14 @@ function toolCallToCanvas(args: Record<string, unknown>): CanvasCommand | null {
         x2: Number(args.x2 ?? 100),
         y2: Number(args.y2 ?? 100),
       });
+    case 'arrow':
+      return withDelay({
+        type: 'arrow',
+        x1: Number(args.x1 ?? 0),
+        y1: Number(args.y1 ?? 0),
+        x2: Number(args.x2 ?? 100),
+        y2: Number(args.y2 ?? 100),
+      });
     case 'rect':
       return withDelay({
         type: 'rect',
@@ -114,6 +146,24 @@ function toolCallToCanvas(args: Record<string, unknown>): CanvasCommand | null {
         w: Number(args.w ?? 100),
         h: Number(args.h ?? 100),
       });
+    case 'shape':
+    case 'coords': {
+      const shapeRaw = String(args.shape ?? (action === 'coords' ? 'coords' : 'circle'));
+      const shape =
+        shapeRaw === 'triangle'
+          ? 'triangle'
+          : shapeRaw === 'coords'
+            ? 'coords'
+            : 'circle';
+      return withDelay({
+        type: 'shape',
+        shape,
+        x: Number(args.x ?? 200),
+        y: Number(args.y ?? 200),
+        w: Number(args.w ?? 200),
+        h: Number(args.h ?? 200),
+      });
+    }
     default:
       return null;
   }
@@ -126,40 +176,57 @@ export type SocraticTurnResult = SocraticAiResult & {
   sessionComplete: boolean;
   encouragement: string;
   forceRevealApplied: boolean;
+  interactionTurnCount: number;
+  fromCache?: boolean;
 };
 
-/**
- * Costly dynamic path — Socratic / Q&A only.
- * Topic is late-bound (model detects); not injected as default.
- */
 export async function runSocraticTurn(
   input: SocraticTurnInput,
 ): Promise<SocraticTurnResult> {
   const band = pedagogicalBandForGrade(input.gradeLevel);
+  const turn = input.interactionTurnCount ?? 0;
   const forceReveal =
-    input.forceReveal === true || (input.wrongAnswerCount ?? 0) >= 2;
+    input.forceReveal === true || turn >= MAX_SOCRATIC_TURNS;
 
   const systemInstruction = buildMasterSystemPrompt({
     gradeLevel: input.gradeLevel,
     band,
     wrongAnswerCount: input.wrongAnswerCount,
+    interactionTurnCount: turn,
     forceReveal,
+    hasImage: Boolean(input.imageBase64),
   });
 
+  const historyBlock =
+    input.recentHistory && input.recentHistory.length > 0
+      ? [
+          'Son etkileşimler (en fazla 3 tur):',
+          ...input.recentHistory.map(
+            (h) => `${h.role === 'user' ? 'Öğrenci' : 'Roti'}: ${h.text}`,
+          ),
+        ].join('\n')
+      : null;
+
   const userParts: string[] = [
-    `Öğrenci sorusu / problem: ${input.questionText}`,
+    `Soru: ${input.questionText}`,
     input.studentAnswer
-      ? `Öğrencinin denemesi (muhtemelen yanlış veya eksik): ${input.studentAnswer}`
-      : 'Öğrenci henüz cevap vermedi — ilk yönlendirmeyi yap.',
-    input.wrongAnswerCount != null
-      ? `Bu soruda biriken yanlış deneme sayısı: ${input.wrongAnswerCount}`
+      ? `Öğrenci denemesi: ${input.studentAnswer}`
+      : 'Henüz cevap yok — ilk ipucu.',
+    `Tur: ${turn}/${MAX_SOCRATIC_TURNS}; yanlış: ${input.wrongAnswerCount ?? 0}`,
+    input.outcomeCodes?.length
+      ? `MEB kodları: ${input.outcomeCodes.join(', ')}`
       : null,
-    // Late binding hint only if already locked from prior turn
     input.topic
-      ? `(Önceki turda tespit edilen konu ipucu — doğrula, körü körüne saplanma: ${input.subject ?? ''} / ${input.topic})`
-      : 'Henüz kilitlenmiş konu yok — önce anla, detectedSubject/Topic doldur.',
-    'Önce tutor_reply, sonra gerekiyorsa draw_on_board çağrılarını yap.',
+      ? `Konu ipucu (doğrula): ${input.subject ?? ''} / ${input.topic}`
+      : 'Konu kilidi yok — tespit et.',
+    historyBlock,
+    forceReveal
+      ? 'EXIT&EXPLAIN: çözümü tahtaya adım adım çiz.'
+      : 'tutor_reply + draw_on_board (kısa).',
   ].filter(Boolean) as string[];
+
+  // Sokratik ipucu kısa; Exit & Explain biraz daha uzun
+  const maxOutputTokens = forceReveal ? 900 : 420;
 
   const { text, tokensUsed, functionCalls } = await generateGeminiWithTools({
     systemInstruction,
@@ -167,6 +234,7 @@ export async function runSocraticTurn(
     tools: [REPLY_TOOL, DRAW_TOOL],
     imageBase64: input.imageBase64,
     imageMimeType: input.imageMimeType,
+    maxOutputTokens,
   });
 
   const canvasCommands: CanvasCommand[] = [];
@@ -181,7 +249,6 @@ export async function runSocraticTurn(
     }
   }
 
-  // Fallback: model text JSON if tools skipped
   if (!reply && text) {
     try {
       const raw = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
@@ -216,5 +283,6 @@ export async function runSocraticTurn(
     encouragement:
       typeof reply?.encouragement === 'string' ? reply.encouragement : '',
     forceRevealApplied: forceReveal,
+    interactionTurnCount: turn,
   };
 }

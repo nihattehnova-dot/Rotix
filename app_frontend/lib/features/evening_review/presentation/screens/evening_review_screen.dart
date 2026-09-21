@@ -9,9 +9,11 @@ import 'package:image_picker/image_picker.dart';
 import 'package:sanal_ogretmen/core/audio/voice_listener.dart';
 import 'package:sanal_ogretmen/core/audio/warm_narration.dart';
 import 'package:sanal_ogretmen/core/media/webcam_capture.dart';
+import 'package:sanal_ogretmen/core/media/image_compress.dart';
 import 'package:sanal_ogretmen/core/theme/app_theme.dart';
 import 'package:sanal_ogretmen/core/theme/grade_adaptive_theme.dart';
 import 'package:sanal_ogretmen/core/theme/rotix_surfaces.dart';
+import 'package:sanal_ogretmen/features/evening_review/presentation/widgets/curated_video_card.dart';
 import 'package:sanal_ogretmen/features/evening_review/presentation/widgets/session_controls.dart';
 import 'package:sanal_ogretmen/features/evening_review/presentation/widgets/whiteboard_canvas.dart';
 import 'package:sanal_ogretmen/core/api/auth_api.dart';
@@ -274,12 +276,13 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
     if (choice == 'camera' && kIsWeb) {
       final bytes = await captureWebcamPhoto(context);
       if (bytes == null || !mounted) return;
-      _pendingPhotoBase64 = base64Encode(bytes);
-      _pendingPhotoMime = 'image/jpeg';
+      final compressed = await compressQuestionImage(bytes);
+      _pendingPhotoBase64 = base64Encode(compressed);
+      _pendingPhotoMime = 'image/png';
       _photoClarifications = const [];
       // Tahtaya hemen yerleştir
       _boardController.setStudentPhoto(
-        'data:image/jpeg;base64,${_pendingPhotoBase64!}',
+        'data:image/png;base64,${_pendingPhotoBase64!}',
       );
       await _submitPhotoQuestion(notifier);
       return;
@@ -288,17 +291,19 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
     final file = await _picker.pickImage(
       source:
           choice == 'camera' ? ImageSource.camera : ImageSource.gallery,
-      maxWidth: 1600,
-      imageQuality: 85,
+      maxWidth: 1024,
+      maxHeight: 1024,
+      imageQuality: 78,
     );
     if (file == null || !mounted) return;
 
     final bytes = await file.readAsBytes();
-    _pendingPhotoBase64 = base64Encode(bytes);
-    _pendingPhotoMime = file.mimeType ?? 'image/jpeg';
+    final compressed = await compressQuestionImage(bytes);
+    _pendingPhotoBase64 = base64Encode(compressed);
+    _pendingPhotoMime = 'image/png';
     _photoClarifications = const [];
     _boardController.setStudentPhoto(
-      'data:${_pendingPhotoMime};base64,${_pendingPhotoBase64!}',
+      'data:image/png;base64,${_pendingPhotoBase64!}',
     );
     await _submitPhotoQuestion(notifier);
   }
@@ -612,6 +617,11 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
                         ),
                       ),
                     ],
+                    if (state.videoSuggestion != null) ...[
+                      CuratedVideoCard(
+                        video: VideoSuggestion.fromJson(state.videoSuggestion!),
+                      ),
+                    ],
                     if (_clarifications.isNotEmpty) ...[
                       const SizedBox(height: 8),
                       SizedBox(
@@ -654,13 +664,38 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
                     ],
                     const SizedBox(height: 10),
                     Expanded(
-                      child: _WhiteboardPanel(
-                        accent: RotixColors.neon,
-                        controller: _boardController,
-                        onStrokeComplete: () => _onStrokeComplete(notifier),
-                        onClearReady: (clear) => _clearBoardFn = clear,
-                        latexHints:
-                            state.lastSocratic?.latexHints ?? const [],
+                      flex: state.boardExpanded ? 8 : 5,
+                      child: Stack(
+                        children: [
+                          _WhiteboardPanel(
+                            accent: RotixColors.neon,
+                            controller: _boardController,
+                            onStrokeComplete: () =>
+                                _onStrokeComplete(notifier),
+                            onClearReady: (clear) => _clearBoardFn = clear,
+                            latexHints:
+                                state.lastSocratic?.latexHints ?? const [],
+                          ),
+                          Positioned(
+                            top: 8,
+                            right: 8,
+                            child: IconButton.filled(
+                              style: IconButton.styleFrom(
+                                backgroundColor: Colors.black54,
+                              ),
+                              tooltip: state.boardExpanded
+                                  ? 'Tahtayı küçült'
+                                  : 'Tahtayı büyüt',
+                              onPressed: notifier.toggleBoardExpanded,
+                              icon: Icon(
+                                state.boardExpanded
+                                    ? Icons.fullscreen_exit_rounded
+                                    : Icons.fullscreen_rounded,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 8),

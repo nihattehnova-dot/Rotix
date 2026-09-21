@@ -58,6 +58,10 @@ class SocraticResult {
     required this.canvasCommands,
     required this.pedagogicalBand,
     required this.tokensUsed,
+    this.neverRevealAnswer = true,
+    this.sessionComplete = false,
+    this.forceRevealApplied = false,
+    this.interactionTurnCount,
   });
 
   final String guidingQuestion;
@@ -65,6 +69,10 @@ class SocraticResult {
   final List<CanvasCommand> canvasCommands;
   final String pedagogicalBand;
   final int tokensUsed;
+  final bool neverRevealAnswer;
+  final bool sessionComplete;
+  final bool forceRevealApplied;
+  final int? interactionTurnCount;
 
   factory SocraticResult.fromJson(Map<String, dynamic> json) {
     return SocraticResult(
@@ -80,6 +88,10 @@ class SocraticResult {
           const [],
       pedagogicalBand: json['pedagogicalBand'] as String? ?? '',
       tokensUsed: (json['tokensUsed'] as num?)?.toInt() ?? 0,
+      neverRevealAnswer: json['neverRevealAnswer'] as bool? ?? true,
+      sessionComplete: json['sessionComplete'] as bool? ?? false,
+      forceRevealApplied: json['forceRevealApplied'] as bool? ?? false,
+      interactionTurnCount: (json['interactionTurnCount'] as num?)?.toInt(),
     );
   }
 }
@@ -92,6 +104,9 @@ class SocraticResponse {
     this.subject,
     this.topic,
     this.topicMatch,
+    this.video,
+    this.interactionTurnCount,
+    this.forceRevealApplied,
   });
 
   final SocraticResult socratic;
@@ -100,18 +115,32 @@ class SocraticResponse {
   final String? subject;
   final String? topic;
   final Map<String, dynamic>? topicMatch;
+  final Map<String, dynamic>? video;
+  final int? interactionTurnCount;
+  final bool? forceRevealApplied;
 
   factory SocraticResponse.fromJson(Map<String, dynamic> json) {
     final mistake = json['mistake'] as Map<String, dynamic>?;
+    final socraticRaw =
+        (json['socratic'] as Map<String, dynamic>?) ?? const {};
     return SocraticResponse(
-      socratic: SocraticResult.fromJson(
-        (json['socratic'] as Map<String, dynamic>?) ?? const {},
-      ),
+      socratic: SocraticResult.fromJson({
+        ...socraticRaw,
+        'sessionComplete':
+            socraticRaw['sessionComplete'] ?? json['sessionComplete'],
+        'forceRevealApplied':
+            socraticRaw['forceRevealApplied'] ?? json['forceRevealApplied'],
+        'interactionTurnCount': socraticRaw['interactionTurnCount'] ??
+            json['interactionTurnCount'],
+      }),
       mistakeId: mistake?['id'] as String?,
       costPath: json['costPath'] as String? ?? 'dynamic_gemini',
       subject: json['subject'] as String?,
       topic: json['topic'] as String?,
       topicMatch: json['topicMatch'] as Map<String, dynamic>?,
+      video: json['video'] as Map<String, dynamic>?,
+      interactionTurnCount: (json['interactionTurnCount'] as num?)?.toInt(),
+      forceRevealApplied: json['forceRevealApplied'] as bool?,
     );
   }
 }

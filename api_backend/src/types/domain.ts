@@ -126,6 +126,23 @@ export type CanvasCommand =
       delayMs?: number;
     }
   | {
+      type: 'arrow';
+      x1: number;
+      y1: number;
+      x2: number;
+      y2: number;
+      delayMs?: number;
+    }
+  | {
+      type: 'shape';
+      shape: 'circle' | 'triangle' | 'coords';
+      x: number;
+      y: number;
+      w?: number;
+      h?: number;
+      delayMs?: number;
+    }
+  | {
       type: 'image';
       x: number;
       y: number;
