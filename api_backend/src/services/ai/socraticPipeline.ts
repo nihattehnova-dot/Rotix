@@ -4,6 +4,7 @@ import { AppError } from '../../middleware/errorHandler.js';
 import type { CanvasCommand, SocraticAiResult } from '../../types/domain.js';
 import { generateGeminiJsonTurn } from './geminiClient.js';
 import { MAX_WRONG_PER_STAGE } from '../tutorSessionState.js';
+import { parseGeminiJsonObject } from './parseGeminiJson.js';
 
 export type SocraticTurnInput = {
   gradeLevel: number;
@@ -197,24 +198,44 @@ export async function runSocraticTurn(
     .filter(Boolean)
     .join('\n');
 
-  const maxOutputTokens = forceReveal ? 650 : hasImage ? 480 : 280;
+  const maxOutputTokens = forceReveal ? 800 : hasImage ? 600 : 360;
 
-  const { text, tokensUsed } = await generateGeminiJsonTurn({
+  let tokensUsed = 0;
+  const first = await generateGeminiJsonTurn({
     systemInstruction,
     userMessage,
     imageBase64: input.imageBase64,
     imageMimeType: input.imageMimeType,
     maxOutputTokens,
-    temperature: hasImage ? 0.25 : 0.3,
+    temperature: hasImage ? 0.2 : 0.3,
     preferLite: !hasImage && !forceReveal,
   });
+  tokensUsed += first.tokensUsed;
 
-  let reply: Record<string, unknown>;
-  try {
-    const raw = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
-    reply = JSON.parse(raw) as Record<string, unknown>;
-  } catch {
-    throw new AppError(502, 'Invalid JSON from Gemini', 'GEMINI_BAD_SCHEMA');
+  let reply = parseGeminiJsonObject(first.text ?? '');
+  if (!reply) {
+    const retry = await generateGeminiJsonTurn({
+      systemInstruction:
+        systemInstruction +
+        '\nÖNEMLİ: Yalnızca tek satır geçerli JSON. canvasCommands en fazla 5 eleman.',
+      userMessage:
+        userMessage +
+        '\nKISA JSON zorunlu. Örnek: {"guidingQuestion":"...","spokenNarration":"...","canvasCommands":[{"type":"clear"}],"offTopic":false,"sessionComplete":false,"stageComplete":false,"neverRevealAnswer":true}',
+      imageBase64: input.imageBase64,
+      imageMimeType: input.imageMimeType,
+      maxOutputTokens: forceReveal ? 700 : 400,
+      temperature: 0.1,
+      preferLite: true,
+    });
+    tokensUsed += retry.tokensUsed;
+    reply = parseGeminiJsonObject(retry.text ?? '');
+    if (!reply) {
+      throw new AppError(
+        502,
+        'Yanıt okunamadı, tekrar dene.',
+        'GEMINI_BAD_SCHEMA',
+      );
+    }
   }
 
   let guidingQuestion =

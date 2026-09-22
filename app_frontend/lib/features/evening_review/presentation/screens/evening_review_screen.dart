@@ -404,16 +404,13 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       unawaited(_speakGuidingQuestion(notifier));
     } catch (e) {
       final msg = e.toString();
-      final isReadFail = msg.contains('OCR') ||
-          msg.contains('okunamad') ||
-          msg.contains('422') ||
-          msg.contains('Fotoğraf');
+      // Tüm fotoğraf hatalarında tahta/foto sıfırla — yeniden sorulabilsin
       _resetPhotoAttempt(
         notifier,
-        isReadFail
-            ? 'Fotoğraf okunamadı — sayfa sıfırlandı. Yeniden sorabilirsin.'
-            : 'Fotoğraf gönderilemedi: $e',
+        'Fotoğraf okunamadı — sayfa sıfırlandı. Yeniden sorabilirsin.',
       );
+      // ignore: avoid_print
+      print('[photo] fail: $msg');
     }
   }
 
@@ -817,7 +814,16 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
   }
 
   String? _userFacingStatus(EveningReviewState state) {
-    if (state.errorMessage != null) return state.errorMessage;
+    if (state.errorMessage != null) {
+      final e = state.errorMessage!.toLowerCase();
+      if (e.contains('json') ||
+          e.contains('gemini') ||
+          e.contains('schema') ||
+          e.contains('invalid')) {
+        return 'Yanıt okunamadı — tekrar dene.';
+      }
+      return state.errorMessage;
+    }
     final s = state.statusMessage;
     if (s == null) return null;
     // Teknik / geliştirici ifadelerini gizle
@@ -829,10 +835,12 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
         lower.contains('kota alınamadı') ||
         lower.contains('oturum:') ||
         lower.contains('basic') ||
-        lower.contains('mode')) {
-      if (lower.contains('dinliyorum') || lower.contains('duydum')) return s;
-      if (lower.contains('roti')) return s;
-      return null;
+        lower.contains('mode') ||
+        lower.contains('invalid json')) {
+      if (lower.contains('okunamad') || lower.contains('sıfırland')) {
+        return 'Fotoğraf okunamadı — sayfa sıfırlandı. Yeniden sorabilirsin.';
+      }
+      return 'Bir şey ters gitti — tekrar dene.';
     }
     return s;
   }

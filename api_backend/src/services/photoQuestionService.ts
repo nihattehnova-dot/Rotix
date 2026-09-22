@@ -3,6 +3,8 @@ import { buildMasterSystemPrompt } from '../config/socraticPrompt.js';
 import { env } from '../config/env.js';
 import { AppError } from '../middleware/errorHandler.js';
 import { generateGeminiJsonTurn } from './ai/geminiClient.js';
+import { parseGeminiJsonObject } from './ai/parseGeminiJson.js';
+import { runSocraticTurn } from './ai/socraticPipeline.js';
 import { runInBackground } from './backgroundTasks.js';
 import { getSupabaseAdmin } from './supabase.js';
 import { consumeQuestion } from './quotaService.js';
@@ -26,13 +28,6 @@ type PhotoSinglePass = {
   tokensUsed: number;
 };
 
-function stripCodeFences(raw: string): string {
-  return raw
-    .replace(/^```(?:json)?\s*/i, '')
-    .replace(/\s*```$/i, '')
-    .trim();
-}
-
 function parseCanvasCommands(raw: unknown): CanvasCommand[] {
   if (!Array.isArray(raw)) return [];
   const out: CanvasCommand[] = [];
@@ -53,7 +48,7 @@ function parseCanvasCommands(raw: unknown): CanvasCommand[] {
             type: 'text',
             x: Number(c.x ?? 80),
             y: Number(c.y ?? 120),
-            content: String(c.content ?? ''),
+            content: String(c.content ?? '').slice(0, 200),
             delayMs,
           });
           break;
@@ -62,7 +57,7 @@ function parseCanvasCommands(raw: unknown): CanvasCommand[] {
             type: 'formula',
             x: Number(c.x ?? 80),
             y: Number(c.y ?? 120),
-            latex: String(c.latex ?? c.content ?? ''),
+            latex: String(c.latex ?? c.content ?? '').slice(0, 120),
             delayMs,
           });
           break;
@@ -109,99 +104,17 @@ function parseCanvasCommands(raw: unknown): CanvasCommand[] {
           break;
       }
     } catch {
-      /* skip bad cmd */
+      /* skip */
     }
   }
-  return out;
+  return out.slice(0, 8);
 }
 
-/**
- * Tek Gemini Vision çağrısı: OCR + ilk Sokratik tur + tahta.
- * Topic match / DB yazımı arka planda.
- */
-async function analyzeAndTutorPhoto(input: {
-  imageBase64: string;
-  mimeType: string;
-  gradeLevel: number;
-  subjectHint?: string;
-  selectedQuestionIndex?: number;
-}): Promise<PhotoSinglePass> {
-  const band = pedagogicalBandForGrade(input.gradeLevel);
-  const systemInstruction = [
-    buildMasterSystemPrompt({
-      gradeLevel: input.gradeLevel,
-      band,
-      wrongAnswerCount: 0,
-      questionStage: 1,
-      interactionTurnCount: 1,
-      forceReveal: false,
-      hasImage: true,
-    }),
-    'FOTOĞRAF MODU (tek geçiş): Önce soruları say; birden fazlaysa yalnızca listele, çözüm verme.',
-    'Tek soru veya seçilmiş soru: şekli tahtaya çiz + kısa spokenNarration + guidingQuestion.',
-  ].join('\n');
-
-  const selectHint =
-    input.selectedQuestionIndex != null
-      ? `Öğrenci ${input.selectedQuestionIndex + 1}. soruyu seçti — yalnız onu çöz.`
-      : 'Birden fazla soru varsa needsClarification mantığında questionCount>1 ve questions doldur; guidingQuestion kısa seçim mesajı olsun; canvasCommands=[{"type":"clear"}].';
-
-  const userMessage = [
-    selectHint,
-    input.subjectHint ? `Ders ipucu: ${input.subjectHint}` : null,
-    'SADECE JSON:',
-    JSON.stringify({
-      questionCount: 1,
-      questions: ['...'],
-      combinedText: '...',
-      guidingQuestion: '...',
-      spokenNarration: '...',
-      detectedSubject: null,
-      detectedTopic: null,
-      offTopic: false,
-      sessionComplete: false,
-      stageComplete: false,
-      encouragement: '',
-      neverRevealAnswer: true,
-      canvasCommands: [
-        { type: 'clear' },
-        {
-          type: 'shape',
-          shape: 'triangle',
-          x: 220,
-          y: 120,
-          w: 300,
-          h: 260,
-          delayMs: 60,
-        },
-        { type: 'text', x: 80, y: 420, content: '...', delayMs: 120 },
-      ],
-    }),
-  ]
-    .filter(Boolean)
-    .join('\n');
-
-  const { text, tokensUsed } = await generateGeminiJsonTurn({
-    systemInstruction,
-    userMessage,
-    imageBase64: input.imageBase64,
-    imageMimeType: input.mimeType,
-    maxOutputTokens: 700,
-    temperature: 0.2,
-    preferLite: false,
-  });
-
-  if (!text?.trim()) {
-    throw new AppError(422, 'Görselden soru okunamadı', 'OCR_EMPTY');
-  }
-
-  let reply: Record<string, unknown>;
-  try {
-    reply = JSON.parse(stripCodeFences(text)) as Record<string, unknown>;
-  } catch {
-    throw new AppError(422, 'Görselden soru okunamadı', 'OCR_PARSE');
-  }
-
+function mapReplyToPhotoPass(
+  reply: Record<string, unknown>,
+  tokensUsed: number,
+  opts: { selectedQuestionIndex?: number },
+): PhotoSinglePass {
   const questions = Array.isArray(reply.questions)
     ? reply.questions.filter(
         (q): q is string => typeof q === 'string' && q.trim().length > 0,
@@ -223,13 +136,9 @@ async function analyzeAndTutorPhoto(input: {
   if (!spokenNarration) spokenNarration = guidingQuestion;
   if (!guidingQuestion) guidingQuestion = spokenNarration;
 
-  if (!guidingQuestion && questions.length === 0) {
-    throw new AppError(422, 'Görselden soru okunamadı', 'OCR_EMPTY');
-  }
-
   let canvasCommands = parseCanvasCommands(reply.canvasCommands);
   const multi = questionCount > 1 || questions.length > 1;
-  if (!multi && input.selectedQuestionIndex == null) {
+  if (!multi && opts.selectedQuestionIndex == null) {
     const hasGeom = canvasCommands.some((c) =>
       ['shape', 'line', 'arrow', 'rect'].includes(c.type),
     );
@@ -255,11 +164,17 @@ async function analyzeAndTutorPhoto(input: {
       ? reply.combinedText
       : questions.join('\n') || guidingQuestion;
 
+  if (!guidingQuestion && questions.length === 0 && !combinedText.trim()) {
+    throw new AppError(422, 'Görselden soru okunamadı', 'OCR_EMPTY');
+  }
+
   return {
     questionCount,
     questions: questions.length > 0 ? questions : [combinedText],
     combinedText,
-    guidingQuestion: guidingQuestion || 'Bu sayfada birden fazla soru görüyorum. Hangisini çözelim?',
+    guidingQuestion:
+      guidingQuestion ||
+      'Bu sayfada birden fazla soru görüyorum. Hangisini çözelim?',
     spokenNarration: spokenNarration || guidingQuestion,
     detectedSubject:
       typeof reply.detectedSubject === 'string' ? reply.detectedSubject : null,
@@ -276,9 +191,201 @@ async function analyzeAndTutorPhoto(input: {
   };
 }
 
+/** Sadece OCR — hafif, yüksek başarı */
+async function ocrOnlyPhoto(input: {
+  imageBase64: string;
+  mimeType: string;
+}): Promise<{
+  questionCount: number;
+  questions: string[];
+  combinedText: string;
+  tokensUsed: number;
+}> {
+  const { text, tokensUsed } = await generateGeminiJsonTurn({
+    systemInstruction:
+      'Öğrenci ödev fotoğrafı. Soruları oku. Çözüm yazma. SADECE JSON.',
+    userMessage:
+      '{"questionCount":1,"questions":["soru metni"],"combinedText":"birleşik metin"}',
+    imageBase64: input.imageBase64,
+    imageMimeType: input.mimeType,
+    maxOutputTokens: 400,
+    temperature: 0.05,
+    preferLite: true,
+  });
+  const reply = parseGeminiJsonObject(text ?? '');
+  if (!reply) {
+    throw new AppError(422, 'Görselden soru okunamadı', 'OCR_PARSE');
+  }
+  const questions = Array.isArray(reply.questions)
+    ? reply.questions.filter(
+        (q): q is string => typeof q === 'string' && q.trim().length > 0,
+      )
+    : [];
+  const combinedText =
+    typeof reply.combinedText === 'string' && reply.combinedText.trim()
+      ? reply.combinedText
+      : questions.join('\n');
+  if (!combinedText.trim() && questions.length === 0) {
+    throw new AppError(422, 'Görselden soru okunamadı', 'OCR_EMPTY');
+  }
+  const questionCount =
+    typeof reply.questionCount === 'number' && reply.questionCount > 0
+      ? reply.questionCount
+      : Math.max(1, questions.length);
+  return {
+    questionCount,
+    questions: questions.length > 0 ? questions : [combinedText],
+    combinedText,
+    tokensUsed,
+  };
+}
+
 /**
- * Photo → en fazla TEK soru. Çok soru varsa netleştirme ister; kota düşmez.
+ * Tek Gemini Vision: OCR + ipucu. Bozulursa OCR→Sokratik yedek.
  */
+async function analyzeAndTutorPhoto(input: {
+  imageBase64: string;
+  mimeType: string;
+  gradeLevel: number;
+  subjectHint?: string;
+  selectedQuestionIndex?: number;
+}): Promise<PhotoSinglePass> {
+  const band = pedagogicalBandForGrade(input.gradeLevel);
+  const systemInstruction = [
+    buildMasterSystemPrompt({
+      gradeLevel: input.gradeLevel,
+      band,
+      wrongAnswerCount: 0,
+      questionStage: 1,
+      interactionTurnCount: 1,
+      forceReveal: false,
+      hasImage: true,
+    }),
+    'FOTO: Önce soru sayısı. Birden fazlaysa yalnız listele (canvasCommands=[{"type":"clear"}]).',
+    'Tek soru: kısa spokenNarration + guidingQuestion + en fazla 5 canvas komutu (şekil zorunlu).',
+    'JSON kısa tut; uzun paragraf yazma.',
+  ].join('\n');
+
+  const selectHint =
+    input.selectedQuestionIndex != null
+      ? `Öğrenci ${input.selectedQuestionIndex + 1}. soruyu seçti — yalnız onu.`
+      : 'Çok soru → questionCount>1, questions doldur, çözüm yok.';
+
+  const userMessage = [
+    selectHint,
+    input.subjectHint ? `Ders: ${input.subjectHint}` : null,
+    'SADECE kompakt JSON: questionCount,questions,combinedText,guidingQuestion,spokenNarration,detectedSubject,detectedTopic,offTopic,sessionComplete,stageComplete,neverRevealAnswer,canvasCommands(max 5).',
+  ]
+    .filter(Boolean)
+    .join('\n');
+
+  let tokensUsed = 0;
+  try {
+    const first = await generateGeminiJsonTurn({
+      systemInstruction,
+      userMessage,
+      imageBase64: input.imageBase64,
+      imageMimeType: input.mimeType,
+      maxOutputTokens: 900,
+      temperature: 0.15,
+      preferLite: false,
+    });
+    tokensUsed += first.tokensUsed;
+    let reply = parseGeminiJsonObject(first.text ?? '');
+    if (!reply) {
+      const retry = await generateGeminiJsonTurn({
+        systemInstruction:
+          'Fotoğraf oku. SADECE kısa JSON. canvasCommands max 3.',
+        userMessage:
+          '{"questionCount":1,"questions":["..."],"combinedText":"...","guidingQuestion":"...","spokenNarration":"...","offTopic":false,"sessionComplete":false,"stageComplete":false,"neverRevealAnswer":true,"canvasCommands":[{"type":"clear"},{"type":"shape","shape":"triangle","x":220,"y":120,"w":280,"h":240},{"type":"text","x":80,"y":420,"content":"..."}]}',
+        imageBase64: input.imageBase64,
+        imageMimeType: input.mimeType,
+        maxOutputTokens: 500,
+        temperature: 0.05,
+        preferLite: true,
+      });
+      tokensUsed += retry.tokensUsed;
+      reply = parseGeminiJsonObject(retry.text ?? '');
+    }
+    if (reply) {
+      return mapReplyToPhotoPass(reply, tokensUsed, {
+        selectedQuestionIndex: input.selectedQuestionIndex,
+      });
+    }
+  } catch (err) {
+    if (err instanceof AppError && err.code?.startsWith('OCR')) throw err;
+    // fallback below
+  }
+
+  // Yedek: OCR sonra sokratik
+  const ocr = await ocrOnlyPhoto({
+    imageBase64: input.imageBase64,
+    mimeType: input.mimeType,
+  });
+  tokensUsed += ocr.tokensUsed;
+
+  const multi = ocr.questionCount > 1 || ocr.questions.length > 1;
+  if (multi && input.selectedQuestionIndex == null) {
+    return {
+      questionCount: ocr.questionCount,
+      questions: ocr.questions,
+      combinedText: ocr.combinedText,
+      guidingQuestion:
+        'Bu sayfada birden fazla soru görüyorum. Hangisini çözelim?',
+      spokenNarration:
+        'Sayfada birden fazla soru var. Numarasını söyle, birlikte çözelim.',
+      detectedSubject: null,
+      detectedTopic: null,
+      offTopic: false,
+      sessionComplete: false,
+      stageComplete: false,
+      encouragement: '',
+      neverRevealAnswer: true,
+      canvasCommands: [{ type: 'clear', delayMs: 0 }],
+      tokensUsed,
+    };
+  }
+
+  let questionText = ocr.combinedText;
+  if (
+    input.selectedQuestionIndex != null &&
+    ocr.questions[input.selectedQuestionIndex]
+  ) {
+    questionText = ocr.questions[input.selectedQuestionIndex]!;
+  } else if (ocr.questions.length === 1) {
+    questionText = ocr.questions[0]!;
+  }
+
+  const socratic = await runSocraticTurn({
+    gradeLevel: input.gradeLevel,
+    subject: input.subjectHint,
+    questionText,
+    imageBase64: input.imageBase64,
+    imageMimeType: input.mimeType,
+    wrongAnswerCount: 0,
+    questionStage: 1,
+    interactionTurnCount: 1,
+  });
+  tokensUsed += socratic.tokensUsed;
+
+  return {
+    questionCount: 1,
+    questions: [questionText],
+    combinedText: questionText,
+    guidingQuestion: socratic.guidingQuestion,
+    spokenNarration: socratic.spokenNarration,
+    detectedSubject: socratic.detectedSubject,
+    detectedTopic: socratic.detectedTopic,
+    offTopic: socratic.offTopic,
+    sessionComplete: socratic.sessionComplete,
+    stageComplete: socratic.stageComplete,
+    encouragement: socratic.encouragement,
+    neverRevealAnswer: socratic.neverRevealAnswer,
+    canvasCommands: socratic.canvasCommands,
+    tokensUsed,
+  };
+}
+
 export async function processPhotoQuestion(input: {
   userId: string;
   gradeLevel: number;
@@ -354,8 +461,7 @@ export async function processPhotoQuestion(input: {
     questionStage: 1,
   };
 
-  const subject =
-    socratic.detectedSubject ?? input.subject ?? 'Genel';
+  const subject = socratic.detectedSubject ?? input.subject ?? 'Genel';
   const topic = socratic.detectedTopic ?? 'Ödev sorusu';
 
   if (socratic.offTopic) {
@@ -383,7 +489,6 @@ export async function processPhotoQuestion(input: {
     wantsSummary: false,
   });
 
-  // Kota + DB + mistake arka planda — kullanıcı yanıtı beklemesin
   runInBackground(async () => {
     await consumeQuestion(input.userId, 1);
     await getSupabaseAdmin()

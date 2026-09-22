@@ -291,6 +291,27 @@ async function main() {
     assert.equal(locked, false);
   });
 
+  await test('parseGeminiJson repairs truncated object', async () => {
+    const { parseGeminiJsonObject } = await import(
+      '../services/ai/parseGeminiJson.js'
+    );
+    const broken = '{"guidingQuestion":"Merhaba","spokenNarration":"selam","canvasCommands":[{"type":"clear"}';
+    const p = parseGeminiJsonObject(broken);
+    assert.ok(p);
+    assert.equal(p!.guidingQuestion, 'Merhaba');
+  });
+
+  await test('parseGeminiJson strips fences and noise', async () => {
+    const { parseGeminiJsonObject } = await import(
+      '../services/ai/parseGeminiJson.js'
+    );
+    const noisy =
+      'İşte yanıt:\n```json\n{"guidingQuestion":"x?","spokenNarration":"x"}\n```\n';
+    const p = parseGeminiJsonObject(noisy);
+    assert.ok(p);
+    assert.equal(p!.guidingQuestion, 'x?');
+  });
+
   console.log(`\n=== ${passed} passed, ${failed} failed ===\n`);
   if (failed > 0) process.exit(1);
 }

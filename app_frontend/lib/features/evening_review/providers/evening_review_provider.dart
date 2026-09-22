@@ -87,6 +87,7 @@ class EveningReviewState {
     QuotaSnapshot? quota,
     List<UserMistake>? dueMistakes,
     SocraticResult? lastSocratic,
+    bool clearLastSocratic = false,
     String? guidingQuestion,
     bool clearGuiding = false,
     String? spokenNarration,
@@ -118,7 +119,8 @@ class EveningReviewState {
           clearSession ? null : (activeSession ?? this.activeSession),
       quota: quota ?? this.quota,
       dueMistakes: dueMistakes ?? this.dueMistakes,
-      lastSocratic: lastSocratic ?? this.lastSocratic,
+      lastSocratic:
+          clearLastSocratic ? null : (lastSocratic ?? this.lastSocratic),
       guidingQuestion:
           clearGuiding ? null : (guidingQuestion ?? this.guidingQuestion),
       spokenNarration:
@@ -297,6 +299,7 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
   void resetQuestionUi({String? statusMessage}) {
     state = state.copyWith(
       phase: SessionPhase.idle,
+      clearLastSocratic: true,
       clearGuiding: true,
       clearSpoken: true,
       clearActiveQuestion: true,
@@ -446,6 +449,10 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
       clearGuiding: true,
     );
 
+    final willSendImage = imageBase64 != null &&
+        imageBase64.trim().isNotEmpty &&
+        (studentAnswer == null || studentAnswer.trim().isEmpty);
+
     try {
       if (state.activeSession == null) {
         final session = await _sessionsApi.start(
@@ -532,20 +539,51 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
       unawaited(refreshQuota());
       if (logAsMistake) unawaited(refreshDueMistakes());
     } on ApiException catch (e) {
+      final friendly = _friendlyApiError(e);
+      final hadImage = willSendImage;
       state = state.copyWith(
         isOnlineAction: false,
-        phase: SessionPhase.error,
-        errorMessage: e.isQuota ? 'Kota: ${e.message}' : e.message,
-        clearStatus: true,
+        phase: hadImage ? SessionPhase.idle : SessionPhase.error,
+        errorMessage: hadImage ? null : friendly,
+        statusMessage: hadImage
+            ? 'Fotoğraf okunamadı — sayfa sıfırlandı. Yeniden sorabilirsin.'
+            : null,
+        clearError: hadImage,
+        clearStatus: !hadImage,
+        clearGuiding: hadImage,
+        clearSpoken: hadImage,
+        clearActiveQuestion: hadImage,
+        clearLastSocratic: hadImage,
+        pendingCanvasCommands: hadImage
+            ? const [
+                {'type': 'clear', 'delayMs': 0},
+              ]
+            : state.pendingCanvasCommands,
+        canvasCommandSeq:
+            hadImage ? state.canvasCommandSeq + 1 : state.canvasCommandSeq,
       );
     } catch (e) {
       state = state.copyWith(
         isOnlineAction: false,
         phase: SessionPhase.error,
-        errorMessage: 'İstek başarısız: $e',
+        errorMessage: 'İstek başarısız. Biraz sonra tekrar dene.',
         clearStatus: true,
       );
     }
+  }
+
+  static String _friendlyApiError(ApiException e) {
+    final m = e.message.toLowerCase();
+    final c = (e.code ?? '').toUpperCase();
+    if (c.contains('GEMINI') ||
+        c.contains('OCR') ||
+        m.contains('json') ||
+        m.contains('gemini') ||
+        m.contains('okunamad')) {
+      return 'Yanıt okunamadı — tekrar dene.';
+    }
+    if (e.isQuota) return 'Kota: ${e.message}';
+    return e.message;
   }
 
   Future<void> reviewDueMistake(
