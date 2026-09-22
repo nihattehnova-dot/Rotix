@@ -92,6 +92,7 @@ export type CanvasCommand =
       y: number;
       content: string;
       latex?: boolean;
+      spoiler?: boolean;
       delayMs?: number;
     }
   | {
@@ -123,6 +124,7 @@ export type CanvasCommand =
       x: number;
       y: number;
       latex: string;
+      spoiler?: boolean;
       delayMs?: number;
     }
   | {
@@ -140,6 +142,14 @@ export type CanvasCommand =
       y: number;
       w?: number;
       h?: number;
+      delayMs?: number;
+    }
+  | {
+      type: 'draw_geometry';
+      shape: 'triangle' | 'circle' | 'line';
+      labels?: Record<string, [number, number]>;
+      highlightAngle?: string;
+      spoilers?: string[];
       delayMs?: number;
     }
   | {

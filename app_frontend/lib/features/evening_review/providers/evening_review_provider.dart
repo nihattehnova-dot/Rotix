@@ -441,13 +441,13 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
   }) async {
     if (state.isOnlineAction) return;
 
-    state = state.copyWith(
-      isOnlineAction: true,
-      phase: SessionPhase.busy,
-      statusMessage: 'Roti düşünüyor…',
-      clearError: true,
-      clearGuiding: true,
-    );
+      state = state.copyWith(
+        isOnlineAction: true,
+        phase: SessionPhase.busy,
+        statusMessage: 'Roti yanıtlıyor…',
+        clearError: true,
+        clearGuiding: true,
+      );
 
     final willSendImage = imageBase64 != null &&
         imageBase64.trim().isNotEmpty &&
@@ -470,8 +470,10 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
       final img = isFollowUp ? null : imageBase64;
       final mime = isFollowUp ? null : imageMimeType;
 
+      final progressiveCmds = <Map<String, dynamic>>[];
+
       final response = await _aiApi
-          .socratic(
+          .socraticStream(
             subject: subject,
             questionText: qText,
             studentAnswer: studentAnswer,
@@ -485,27 +487,47 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
                     : null),
             imageBase64: img,
             imageMimeType: mime,
+            onNarration: (acc) {
+              if (acc.isEmpty) return;
+              state = state.copyWith(
+                spokenNarration: acc,
+                guidingQuestion: acc,
+                phase: SessionPhase.tutorSpeaking,
+                statusMessage: 'Roti anlatıyor…',
+              );
+            },
+            onCanvas: (cmd) {
+              progressiveCmds.add({
+                ...cmd,
+                'delayMs': cmd['delayMs'] ?? 80,
+              });
+              state = state.copyWith(
+                pendingCanvasCommands: List.from(progressiveCmds),
+                canvasCommandSeq: state.canvasCommandSeq + 1,
+              );
+            },
           )
-          .timeout(const Duration(seconds: 45));
+          .timeout(const Duration(seconds: 90));
 
-      final cmds = response.socratic.canvasCommands
-          .map((c) => {
-                'type': c.type,
-                if (c.x != null) 'x': c.x,
-                if (c.y != null) 'y': c.y,
-                if (c.x1 != null) 'x1': c.x1,
-                if (c.y1 != null) 'y1': c.y1,
-                if (c.x2 != null) 'x2': c.x2,
-                if (c.y2 != null) 'y2': c.y2,
-                if (c.w != null) 'w': c.w,
-                if (c.h != null) 'h': c.h,
-                if (c.content != null) 'content': c.content,
-                if (c.latex != null) 'latex': c.latex,
-                // Hız: varsayılan gecikmeyi kısalt
-                'delayMs': c.delayMs ?? 120,
-                if (c.dataUrl != null) 'dataUrl': c.dataUrl,
-              })
-          .toList();
+      final cmds = progressiveCmds.isNotEmpty
+          ? progressiveCmds
+          : response.socratic.canvasCommands
+              .map((c) => {
+                    'type': c.type,
+                    if (c.x != null) 'x': c.x,
+                    if (c.y != null) 'y': c.y,
+                    if (c.x1 != null) 'x1': c.x1,
+                    if (c.y1 != null) 'y1': c.y1,
+                    if (c.x2 != null) 'x2': c.x2,
+                    if (c.y2 != null) 'y2': c.y2,
+                    if (c.w != null) 'w': c.w,
+                    if (c.h != null) 'h': c.h,
+                    if (c.content != null) 'content': c.content,
+                    if (c.latex != null) 'latex': c.latex,
+                    'delayMs': c.delayMs ?? 80,
+                    if (c.dataUrl != null) 'dataUrl': c.dataUrl,
+                  })
+              .toList();
 
       final matchedSubject = response.subject ?? subject;
       final matchedTopic = response.topic ?? topic;

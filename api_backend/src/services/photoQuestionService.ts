@@ -406,9 +406,42 @@ export async function processPhotoQuestion(input: {
     mimeType: mime,
   });
 
-  const analyzed = await analyzeAndTutorPhoto({
-    imageBase64: optimized.base64,
+  // Bounding-box crop — çok soru + seçim yoksa clarification
+  const { cropSelectedQuestion } = await import('./visionCrop.js');
+  let imageForTutor = {
+    base64: optimized.base64,
     mimeType: optimized.mimeType,
+  };
+  try {
+    const cropped = await cropSelectedQuestion({
+      imageBase64: optimized.base64,
+      mimeType: optimized.mimeType,
+      selectedIndex: input.selectedQuestionIndex,
+    });
+    if (cropped.needsClarification) {
+      return {
+        needsClarification: true,
+        questionCount: Math.max(2, cropped.boxes.length),
+        questions: cropped.boxes.map(
+          (b, i) => `Soru ${i + 1} (bölge ${b.y}–${b.y + b.h})`,
+        ),
+        message:
+          'Bu sayfada birden fazla soru görüyorum. Hangisini çözmemi istiyorsun?',
+        extractedText: null,
+        socratic: null,
+        photoQuestion: null,
+      };
+    }
+    if (cropped.cropped) {
+      imageForTutor = cropped.cropped;
+    }
+  } catch {
+    /* crop opsiyonel — orijinal görsel ile devam */
+  }
+
+  const analyzed = await analyzeAndTutorPhoto({
+    imageBase64: imageForTutor.base64,
+    mimeType: imageForTutor.mimeType,
     gradeLevel: input.gradeLevel,
     subjectHint: input.subject,
     selectedQuestionIndex: input.selectedQuestionIndex,

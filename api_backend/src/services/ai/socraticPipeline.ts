@@ -3,7 +3,7 @@ import { buildMasterSystemPrompt } from '../../config/socraticPrompt.js';
 import { AppError } from '../../middleware/errorHandler.js';
 import type { CanvasCommand, SocraticAiResult } from '../../types/domain.js';
 import { generateGeminiJsonTurn } from './geminiClient.js';
-import { MAX_WRONG_PER_STAGE } from '../tutorSessionState.js';
+import { MAX_WRONG_PER_STAGE, type TutorFsmState } from '../tutorSessionState.js';
 import { parseGeminiJsonObject } from './parseGeminiJson.js';
 
 export type SocraticTurnInput = {
@@ -18,6 +18,8 @@ export type SocraticTurnInput = {
   questionStage?: number;
   interactionTurnCount?: number;
   forceReveal?: boolean;
+  fsmState?: TutorFsmState;
+  avoidRepeatHint?: boolean;
   imageBase64?: string;
   imageMimeType?: string;
   recentHistory?: Array<{ role: 'user' | 'assistant'; text: string }>;
@@ -47,6 +49,7 @@ function parseCanvasCommands(raw: unknown): CanvasCommand[] {
             x: Number(c.x ?? 80),
             y: Number(c.y ?? 120),
             content: String(c.content ?? ''),
+            spoiler: c.spoiler === true,
             delayMs,
           });
           break;
@@ -56,6 +59,7 @@ function parseCanvasCommands(raw: unknown): CanvasCommand[] {
             x: Number(c.x ?? 80),
             y: Number(c.y ?? 200),
             latex: String(c.content ?? c.latex ?? ''),
+            spoiler: c.spoiler === true,
             delayMs,
           });
           break;
@@ -121,6 +125,39 @@ function parseCanvasCommands(raw: unknown): CanvasCommand[] {
           });
           break;
         }
+        case 'draw_geometry': {
+          const shapeRaw = String(c.shape ?? 'triangle');
+          const shape =
+            shapeRaw === 'circle' || shapeRaw === 'line'
+              ? shapeRaw
+              : 'triangle';
+          const labelsRaw = c.labels;
+          const labels: Record<string, [number, number]> = {};
+          if (labelsRaw && typeof labelsRaw === 'object') {
+            for (const [k, v] of Object.entries(
+              labelsRaw as Record<string, unknown>,
+            )) {
+              if (Array.isArray(v) && v.length >= 2) {
+                labels[k] = [Number(v[0]), Number(v[1])];
+              }
+            }
+          }
+          const spoilers = Array.isArray(c.spoilers)
+            ? c.spoilers.filter((x): x is string => typeof x === 'string')
+            : undefined;
+          out.push({
+            type: 'draw_geometry',
+            shape,
+            labels: Object.keys(labels).length ? labels : undefined,
+            highlightAngle:
+              typeof c.highlightAngle === 'string'
+                ? c.highlightAngle
+                : undefined,
+            spoilers,
+            delayMs,
+          });
+          break;
+        }
         default:
           break;
       }
@@ -155,8 +192,11 @@ export async function runSocraticTurn(
   const turn = input.interactionTurnCount ?? 0;
   const wrongs = input.wrongAnswerCount ?? 0;
   const stage = input.questionStage ?? 1;
+  const fsm = input.fsmState ?? 'HINT_1';
   const forceReveal =
-    input.forceReveal === true || wrongs >= MAX_WRONG_PER_STAGE;
+    input.forceReveal === true ||
+    fsm === 'EXPLANATION' ||
+    wrongs >= MAX_WRONG_PER_STAGE;
   const hasImage = Boolean(input.imageBase64);
 
   const systemInstruction = buildMasterSystemPrompt({
@@ -167,6 +207,8 @@ export async function runSocraticTurn(
     interactionTurnCount: turn,
     forceReveal,
     hasImage,
+    fsmState: fsm,
+    avoidRepeatHint: input.avoidRepeatHint === true,
   });
 
   const historyBlock =
@@ -178,22 +220,22 @@ export async function runSocraticTurn(
       : '';
 
   const shapeRule = hasImage
-    ? 'FOTO: canvasCommands içinde shape/line/arrow zorunlu; yalnız rakam yasak.'
-    : 'Formülleri formula/text ile yaz.';
+    ? 'FOTO: draw_geometry veya shape/line/arrow; yalnız rakam yasak.'
+    : 'Formülleri formula/text ile yaz; spoiler:true ipucu turunda.';
 
   const userMessage = [
     `Soru: ${input.questionText}`,
     input.studentAnswer
       ? `Öğrenci denemesi: ${input.studentAnswer}`
       : 'İlk yönlendirme.',
-    `Kademe ${stage}; yanlış ${wrongs}/${MAX_WRONG_PER_STAGE}`,
+    `FSM=${fsm}; kademe ${stage}; yanlış ${wrongs}/${MAX_WRONG_PER_STAGE}`,
     input.topic ? `Konu: ${input.subject ?? ''} / ${input.topic}` : null,
-    historyBlock ? `Geçmiş:\n${historyBlock}` : null,
+    historyBlock ? `Geçmiş (son 2 tur):\n${historyBlock}` : null,
     shapeRule,
     forceReveal
-      ? 'AÇIKLA: spokenNarration 3–6 cümle sesli anlatım; tahtaya çöz; stageComplete=true.'
-      : 'Kısa ipucu; spokenNarration 1–2 cümle; cevabı verme.',
-    'SADECE JSON: {"guidingQuestion":"...","spokenNarration":"...","detectedSubject":null,"detectedTopic":null,"offTopic":false,"sessionComplete":false,"stageComplete":false,"encouragement":"","neverRevealAnswer":true,"canvasCommands":[{"type":"clear"},{"type":"text","x":80,"y":120,"content":"...","delayMs":80}]}',
+      ? 'AÇIKLA: spokenNarration 3–6 cümle; spoiler yok; stageComplete=true.'
+      : 'Kısa ipucu; spokenNarration 1–2 cümle; sonuç spoiler:true.',
+    'SADECE JSON: guidingQuestion,spokenNarration,canvasCommands,offTopic,sessionComplete,stageComplete,neverRevealAnswer',
   ]
     .filter(Boolean)
     .join('\n');
@@ -253,6 +295,17 @@ export async function runSocraticTurn(
   }
 
   let canvasCommands = parseCanvasCommands(reply.canvasCommands);
+  if (forceReveal) {
+    canvasCommands = canvasCommands.map((cmd) => {
+      if (cmd.type === 'text' || cmd.type === 'formula') {
+        return { ...cmd, spoiler: false };
+      }
+      if (cmd.type === 'draw_geometry') {
+        return { ...cmd, spoilers: undefined };
+      }
+      return cmd;
+    });
+  }
   if (hasImage) {
     const hasGeom = canvasCommands.some((c) =>
       ['shape', 'line', 'arrow', 'rect'].includes(c.type),

@@ -50,7 +50,10 @@ final quotasApiProvider = Provider<QuotasApi>((ref) {
 });
 
 final aiApiProvider = Provider<AiApi>((ref) {
-  return AiApi(ref.watch(apiClientProvider));
+  return AiApi(
+    ref.watch(apiClientProvider),
+    config: ref.watch(apiConfigProvider),
+  );
 });
 
 final learningApiProvider = Provider<LearningApi>((ref) {

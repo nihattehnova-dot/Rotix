@@ -1,7 +1,15 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:sanal_ogretmen/core/math/math_normalize.dart';
 import 'package:sanal_ogretmen/core/models/socratic_result.dart';
 
 void main() {
+  group('math normalize', () {
+    test('circ and latex cleanup', () {
+      expect(normalizeMathText(r'90^\circ'), '90°');
+      expect(normalizeMathText(r'$2x$'), '2x');
+    });
+  });
+
   group('short answer routing rules', () {
     bool looksLikeShortAnswer(String trimmed, bool hasActive) {
       final lower = trimmed.toLowerCase();

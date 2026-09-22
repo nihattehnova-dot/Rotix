@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
+import 'package:sanal_ogretmen/core/math/math_normalize.dart';
 
 class StrokePoint {
   const StrokePoint(this.offset, this.pressure);
@@ -65,6 +66,9 @@ class BoardAnnotation {
     this.content,
     this.imageBytes,
     this.shape,
+    this.spoiler = false,
+    this.labels,
+    this.highlightAngle,
   });
 
   final String type;
@@ -79,6 +83,9 @@ class BoardAnnotation {
   final String? content;
   final Uint8List? imageBytes;
   final String? shape;
+  final bool spoiler;
+  final Map<String, List<double>>? labels;
+  final String? highlightAngle;
 
   static BoardAnnotation? tryFromCommand(Map<String, dynamic> json) {
     try {
@@ -90,6 +97,20 @@ class BoardAnnotation {
       if (dataUrl != null && dataUrl.isNotEmpty) {
         final raw = dataUrl.contains(',') ? dataUrl.split(',').last : dataUrl;
         imageBytes = Uint8List.fromList(base64Decode(raw));
+      }
+      Map<String, List<double>>? labels;
+      final labelsRaw = json['labels'];
+      if (labelsRaw is Map) {
+        labels = {};
+        for (final e in labelsRaw.entries) {
+          final v = e.value;
+          if (v is List && v.length >= 2) {
+            labels[e.key.toString()] = [
+              (v[0] as num).toDouble(),
+              (v[1] as num).toDouble(),
+            ];
+          }
+        }
       }
       return BoardAnnotation(
         type: type,
@@ -104,6 +125,9 @@ class BoardAnnotation {
         content: content.isEmpty ? null : content,
         imageBytes: imageBytes,
         shape: json['shape'] as String?,
+        spoiler: json['spoiler'] == true,
+        labels: labels,
+        highlightAngle: json['highlightAngle'] as String?,
       );
     } catch (_) {
       return null;
@@ -397,6 +421,64 @@ class _BoardPainter extends CustomPainter {
     canvas.drawOval(Rect.fromLTWH(origin.dx, origin.dy, ww, hh), paint);
   }
 
+  void _paintDrawGeometry(Canvas canvas, BoardAnnotation a) {
+    final paint = Paint()
+      ..color = const Color(0xFF0B1B3A)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.8
+      ..strokeJoin = StrokeJoin.round;
+    final labels = a.labels;
+    if (labels != null &&
+        labels.length >= 3 &&
+        (a.shape == null || a.shape == 'triangle')) {
+      final pts = labels.values.map((v) => _map(v[0], v[1])).toList();
+      final path = Path()
+        ..moveTo(pts[0].dx, pts[0].dy)
+        ..lineTo(pts[1].dx, pts[1].dy)
+        ..lineTo(pts[2].dx, pts[2].dy)
+        ..close();
+      canvas.drawPath(path, paint);
+      for (final e in labels.entries) {
+        final p = _map(e.value[0], e.value[1]);
+        final tp = TextPainter(
+          text: TextSpan(
+            text: e.key,
+            style: const TextStyle(
+              color: Color(0xFF0B1B3A),
+              fontSize: 16,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          textDirection: TextDirection.ltr,
+        )..layout();
+        tp.paint(canvas, Offset(p.dx - 6, p.dy - 22));
+      }
+      final hi = a.highlightAngle;
+      if (hi != null && labels.containsKey(hi)) {
+        final p = _map(labels[hi]![0], labels[hi]![1]);
+        canvas.drawCircle(
+          p,
+          18,
+          Paint()
+            ..color = const Color(0x66FBBF24)
+            ..style = PaintingStyle.fill,
+        );
+      }
+      return;
+    }
+    _paintShape(
+      canvas,
+      BoardAnnotation(
+        type: 'shape',
+        shape: a.shape ?? 'triangle',
+        x: 250,
+        y: 120,
+        w: 320,
+        h: 280,
+      ),
+    );
+  }
+
   @override
   void paint(Canvas canvas, Size size) {
     final bg = Paint()
@@ -492,6 +574,9 @@ class _BoardPainter extends CustomPainter {
         case 'shape':
           _paintShape(canvas, a);
           break;
+        case 'draw_geometry':
+          _paintDrawGeometry(canvas, a);
+          break;
         case 'rect':
         case 'highlight':
           if (a.x != null && a.y != null && a.w != null && a.h != null) {
@@ -518,14 +603,21 @@ class _BoardPainter extends CustomPainter {
         case 'text':
         case 'formula':
           if (a.x != null && a.y != null && a.content != null) {
+            final display = a.spoiler
+                ? '•••'
+                : normalizeMathText(a.content!);
             final tp = TextPainter(
               text: TextSpan(
-                text: a.content,
+                text: display,
                 style: TextStyle(
-                  color: const Color(0xFF0B1B3A),
+                  color: a.spoiler
+                      ? const Color(0x660B1B3A)
+                      : const Color(0xFF0B1B3A),
                   fontSize: a.type == 'formula' ? 20 : 17,
                   fontWeight: FontWeight.w700,
                   height: 1.25,
+                  backgroundColor:
+                      a.spoiler ? const Color(0x33A78B6B) : null,
                 ),
               ),
               textDirection: TextDirection.ltr,

@@ -11,15 +11,20 @@ import {
 } from '../services/semanticCache.js';
 import {
   advanceQuestionStage,
+  applyLoopGuard,
   getRecentHistory,
   getTutorSession,
+  MAX_SOCRATIC_TURNS,
   MAX_WRONG_PER_STAGE,
   pushTurnHistory,
   recordInteractionTurn,
   recordWrongAnswer,
   recordCorrectOrReset,
   clearTutorSession,
+  tokenJaccard,
 } from '../services/tutorSessionState.js';
+import { splitIntoSentences } from '../services/ai/voiceAnchor.js';
+import { normalizeMathDisplay } from '../services/ai/mathNormalize.js';
 import { suggestVideoCard } from '../services/videoCatalog.js';
 import { optimizeQuestionImage } from '../services/imageOptimize.js';
 
@@ -131,16 +136,27 @@ async function main() {
   });
 
   clearTutorSession('t1');
-  await test('3 wrongs per stage force reveal', () => {
+  await test('3 wrongs per stage force reveal + FSM EXPLANATION', () => {
     let s = getTutorSession('t1', 'u1');
     assert.equal(s.forceReveal, false);
     assert.equal(MAX_WRONG_PER_STAGE, 3);
-    s = recordWrongAnswer('t1', 'u1');
-    s = recordWrongAnswer('t1', 'u1');
+    assert.equal(MAX_SOCRATIC_TURNS, 4);
+    s = recordWrongAnswer('t1', 'u1', '100');
+    s = recordWrongAnswer('t1', 'u1', '120');
     assert.equal(s.wrongAnswerCount, 2);
     assert.equal(s.forceReveal, false);
-    s = recordWrongAnswer('t1', 'u1');
+    s = recordWrongAnswer('t1', 'u1', '90');
     assert.equal(s.wrongAnswerCount, 3);
+    assert.equal(s.forceReveal, true);
+    assert.equal(s.fsmState, 'EXPLANATION');
+  });
+
+  await test('4 interaction turns enter EXPLANATION', () => {
+    clearTutorSession('t1b');
+    let s = getTutorSession('t1b', 'u1');
+    for (let i = 0; i < 4; i++) s = recordInteractionTurn('t1b', 'u1');
+    assert.equal(s.interactionTurnCount, 4);
+    assert.equal(s.fsmState, 'EXPLANATION');
     assert.equal(s.forceReveal, true);
   });
 
@@ -153,15 +169,39 @@ async function main() {
     assert.equal(s.questionStage, 2);
     assert.equal(s.wrongAnswerCount, 0);
     assert.equal(s.forceReveal, false);
+    assert.equal(s.fsmState, 'HINT_1');
   });
 
-  await test('interaction turns alone do NOT force reveal', () => {
+  await test('loop detect forces different hint path', () => {
+    clearTutorSession('t2loop');
+    recordWrongAnswer('t2loop', 'u1', '180 derece');
+    recordWrongAnswer('t2loop', 'u1', '180 derece');
+    let s = applyLoopGuard('t2loop', 'u1');
+    assert.ok(s.fsmState === 'HINT_3' || s.fsmState === 'EXPLANATION');
+  });
+
+  await test('tokenJaccard similar answers high', () => {
+    assert.ok(tokenJaccard('180 derece', '180 derece') >= 0.99);
+  });
+
+  await test('splitIntoSentences groups by punctuation', () => {
+    const parts = splitIntoSentences(
+      'Merhaba dostum. Bugün üçgenlere bakalım. Hazır mısın?',
+    );
+    assert.ok(parts.length >= 2);
+  });
+
+  await test('normalizeMathDisplay circ to degree', () => {
+    assert.equal(normalizeMathDisplay('90^\\circ'), '90°');
+  });
+
+  await test('interaction turns alone under 4 do NOT force reveal', () => {
     clearTutorSession('t2b');
     let s = getTutorSession('t2b', 'u1');
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
       s = recordInteractionTurn('t2b', 'u1');
     }
-    assert.equal(s.interactionTurnCount, 5);
+    assert.equal(s.interactionTurnCount, 3);
     assert.equal(s.forceReveal, false);
   });
 

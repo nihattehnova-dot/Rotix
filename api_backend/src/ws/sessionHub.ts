@@ -119,9 +119,14 @@ export async function handleWsMessage(ws: WebSocket, raw: string) {
               audioBase64: ev.audioBase64,
               index: ev.index,
               done: ev.done,
+              text: ev.text,
             });
           },
-          { voice: msg.voice },
+          {
+            voice: typeof msg.voice === 'string' ? msg.voice : undefined,
+            sessionId:
+              typeof msg.sessionId === 'string' ? msg.sessionId : undefined,
+          },
         );
         send(ws, {
           type: 'speak_done',

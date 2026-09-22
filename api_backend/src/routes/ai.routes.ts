@@ -18,6 +18,7 @@ import { optimizeQuestionImage } from '../services/imageOptimize.js';
 import { suggestVideoCard } from '../services/videoCatalog.js';
 import {
   advanceQuestionStage,
+  applyLoopGuard,
   getRecentHistory,
   getTutorSession,
   lockDetectedTopic,
@@ -25,6 +26,7 @@ import {
   recordCorrectOrReset,
   recordInteractionTurn,
   recordWrongAnswer,
+  setOriginalQuestion,
 } from '../services/tutorSessionState.js';
 import { socraticTurnSchema } from '../validators/schemas.js';
 
@@ -40,6 +42,9 @@ export const aiRouter = Router();
 const speakSchema = z.object({
   text: z.string().min(1).max(4000),
   voice: z.string().optional(),
+  sessionId: z.string().optional(),
+  /** Cümle cümle WAV dizisi (kesilme önleme) */
+  sentenceChunks: z.boolean().optional().default(true),
   billAs: z.enum(['none', 'minute']).default('none'),
   minutes: z.number().positive().max(10).optional(),
 });
@@ -51,17 +56,42 @@ aiRouter.post(
     if (!parsed.success) {
       throw new AppError(400, parsed.error.message, 'VALIDATION_ERROR');
     }
-    const speech = await generateWarmSpeech(
-      parsed.data.text,
-      parsed.data.voice ?? 'Callirrhoe',
-    );
-    if (parsed.data.billAs === 'minute' && req.user) {
-      await consumeMinutes(req.user.id, parsed.data.minutes ?? 0.5);
+    const { text, voice, sessionId, sentenceChunks, billAs, minutes } =
+      parsed.data;
+    if (sentenceChunks) {
+      const { generateWarmSpeechSentences } = await import(
+        '../services/ai/geminiTts.js'
+      );
+      const chunks = await generateWarmSpeechSentences(text, {
+        voice,
+        sessionId,
+      });
+      if (billAs === 'minute' && req.user) {
+        await consumeMinutes(req.user.id, minutes ?? 0.5);
+      }
+      res.json({
+        chunks: chunks.map((c) => ({
+          mimeType: c.mimeType,
+          audioBase64: c.audioBase64,
+          index: c.index,
+          text: c.text,
+          done: c.done,
+        })),
+        voice: chunks[0]?.voiceName ?? 'Callirrhoe',
+        seed: chunks[0]?.seed,
+        engine: 'gemini-tts-sentences',
+      });
+      return;
+    }
+    const speech = await generateWarmSpeech(text, voice, sessionId);
+    if (billAs === 'minute' && req.user) {
+      await consumeMinutes(req.user.id, minutes ?? 0.5);
     }
     res.json({
       mimeType: speech.mimeType,
       audioBase64: speech.audioBase64,
-      voice: parsed.data.voice ?? 'Callirrhoe',
+      voice: speech.voiceName,
+      seed: speech.seed,
       engine: 'gemini-tts',
     });
   }),
@@ -108,13 +138,19 @@ async function executeSocraticTurn(input: {
   const { body, userId, gradeLevel } = input;
   const sessionKey = body.sessionId ?? `anon-${userId}`;
   let tutorState = getTutorSession(sessionKey, userId);
+  tutorState = setOriginalQuestion(sessionKey, userId, body.questionText);
 
   const looksWrong =
     body.answerWrong === true ||
     (Boolean(body.studentAnswer?.trim()) && body.logAsMistake !== false);
 
   if (looksWrong && body.studentAnswer?.trim()) {
-    tutorState = recordWrongAnswer(sessionKey, userId);
+    tutorState = recordWrongAnswer(
+      sessionKey,
+      userId,
+      body.studentAnswer,
+    );
+    tutorState = applyLoopGuard(sessionKey, userId);
   } else if (body.answerWrong === false) {
     tutorState = recordCorrectOrReset(sessionKey, userId);
   }
@@ -198,7 +234,7 @@ async function executeSocraticTurn(input: {
   const result = await runSocraticTurn({
     gradeLevel,
     subject: subjectHint,
-    questionText: body.questionText,
+    questionText: tutorState.originalQuestion ?? body.questionText,
     studentAnswer: body.studentAnswer,
     topic: topicHint,
     outcomeCodes: match?.outcomeCodes,
@@ -207,9 +243,11 @@ async function executeSocraticTurn(input: {
     questionStage: tutorState.questionStage,
     interactionTurnCount: tutorState.interactionTurnCount,
     forceReveal: tutorState.forceReveal,
+    fsmState: tutorState.fsmState,
+    avoidRepeatHint: tutorState.fsmState === 'HINT_3',
     imageBase64,
     imageMimeType,
-    recentHistory: getRecentHistory(sessionKey, userId, 3),
+    recentHistory: getRecentHistory(sessionKey, userId, 2),
   });
 
   pushTurnHistory(
@@ -284,6 +322,7 @@ async function executeSocraticTurn(input: {
     stageComplete: result.stageComplete,
     sessionComplete: result.sessionComplete,
     spokenNarration: result.spokenNarration,
+    fsmState: tutorState.fsmState,
   };
 
   // Kota + log arka planda — yanıt hızı öncelikli
@@ -373,7 +412,7 @@ aiRouter.post(
       res.write(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`);
     };
 
-    send('status', { phase: 'thinking' });
+    send('status', { phase: 'speaking' });
 
     try {
       const { payload, fromCache } = await executeSocraticTurn({
@@ -383,22 +422,37 @@ aiRouter.post(
         body: parsed.data,
       });
 
-      const socratic = (payload as { socratic?: { guidingQuestion?: string; canvasCommands?: unknown[] } })
-        .socratic;
-      const guide = socratic?.guidingQuestion ?? '';
-      // Token-benzeri progressive stream (kelime kelime)
-      const words = guide.split(/(\s+)/).filter(Boolean);
+      const socratic = (
+        payload as {
+          socratic?: {
+            guidingQuestion?: string;
+            spokenNarration?: string;
+            canvasCommands?: unknown[];
+          };
+          spokenNarration?: string;
+        }
+      ).socratic;
+      const narration =
+        socratic?.spokenNarration ||
+        (payload as { spokenNarration?: string }).spokenNarration ||
+        socratic?.guidingQuestion ||
+        '';
+      // Cümle cümle progressive (TTS ile hizalı)
+      const { splitIntoSentences } = await import(
+        '../services/ai/voiceAnchor.js'
+      );
+      const sentences = splitIntoSentences(narration);
       let acc = '';
-      for (const w of words) {
-        acc += w;
-        send('token', { text: w, accumulated: acc });
-        await new Promise((r) => setTimeout(r, 12));
+      for (const sentence of sentences) {
+        acc = acc ? `${acc} ${sentence}` : sentence;
+        send('token', { text: sentence, accumulated: acc, sentence: true });
+        await new Promise((r) => setTimeout(r, 8));
       }
 
       const cmds = socratic?.canvasCommands ?? [];
       for (const cmd of cmds) {
         send('canvas', { command: cmd });
-        await new Promise((r) => setTimeout(r, 40));
+        await new Promise((r) => setTimeout(r, 30));
       }
 
       if ((payload as { video?: unknown }).video) {

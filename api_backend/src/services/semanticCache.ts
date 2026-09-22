@@ -120,3 +120,65 @@ export function storeSemanticCache(input: {
 export function semanticCacheStats() {
   return { size: store.size, max: MAX_ENTRIES, ttlMs: TTL_MS };
 }
+
+/** Temel MEB kalıpları — boot’ta yükle */
+export function seedMebTemplates() {
+  const templates: Array<{
+    q: string;
+    grade: number;
+    guiding: string;
+    narration: string;
+  }> = [
+    {
+      q: 'üçgenin iç açıları toplamı kaç derecedir',
+      grade: 5,
+      guiding: 'Üçgende iç açılar toplamı nedir? Bir kenarı uzatınca ne görürsün?',
+      narration:
+        'İpucu: Bir üçgende üç iç açıyı toplarsan her zaman aynı sonuca ulaşırsın. Önce bunu hatırla.',
+    },
+    {
+      q: '2x + 6 = 14 denkleminde x nedir',
+      grade: 7,
+      guiding: 'Önce her iki taraftan 6 çıkarsak ne kalır?',
+      narration: 'Denklemde x yalnız kalsın diye önce sabit terimi karşıya alalım.',
+    },
+  ];
+  for (const t of templates) {
+    storeSemanticCache({
+      questionText: t.q,
+      gradeLevel: t.grade,
+      tokensSavedEstimate: 200,
+      response: {
+        socratic: {
+          guidingQuestion: t.guiding,
+          spokenNarration: t.narration,
+          latexHints: [],
+          canvasCommands: [
+            { type: 'clear' },
+            {
+              type: 'text',
+              x: 80,
+              y: 120,
+              content: t.guiding,
+              spoiler: false,
+              delayMs: 80,
+            },
+          ],
+          pedagogicalBand: 'middle',
+          tokensUsed: 0,
+          neverRevealAnswer: true,
+          sessionComplete: false,
+          stageComplete: false,
+          forceRevealApplied: false,
+        },
+        subject: 'Matematik',
+        topic: 'Kalıp soru',
+        costPath: 'semantic_template',
+        video: null,
+      },
+    });
+  }
+}
+
+seedMebTemplates();
+

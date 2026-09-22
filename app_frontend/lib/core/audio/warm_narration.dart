@@ -7,9 +7,7 @@ import 'package:just_audio/just_audio.dart';
 import 'package:sanal_ogretmen/core/network/api_config.dart';
 import 'package:sanal_ogretmen/core/realtime/whiteboard_ws_client.dart';
 
-/// Gemini TTS (abla tonu). Tek parça WAV — net anlaşılır ses.
-/// WS streaming küçük PCM parçaları takılma/anlaşılmazlık yaptığından
-/// varsayılan yol HTTP /api/ai/speak.
+/// Gemini TTS (abla tonu) — cümle kuyruğu + sabit ses (Callirrhoe).
 class WarmNarration {
   WarmNarration._();
   static final WarmNarration instance = WarmNarration._();
@@ -18,6 +16,7 @@ class WarmNarration {
   final AudioPlayer _player = AudioPlayer();
   StreamSubscription<PlayerState>? _stateSub;
   bool _ttsReady = false;
+  bool _cancelled = false;
   String? lastError;
   bool usedGemini = false;
   void Function(double level)? onLevel;
@@ -38,6 +37,7 @@ class WarmNarration {
   }
 
   Future<void> stop() async {
+    _cancelled = true;
     await _stateSub?.cancel();
     _stateSub = null;
     await _tts.stop();
@@ -45,7 +45,6 @@ class WarmNarration {
     onLevel?.call(0);
   }
 
-  /// WS üzerinden tek WAV (backend artık dilimlemiyor).
   Future<bool> speakViaWs({
     required WhiteboardWsClient ws,
     required String sessionId,
@@ -54,11 +53,34 @@ class WarmNarration {
     final cleaned = text.trim();
     if (cleaned.isEmpty) return false;
     await stop();
+    _cancelled = false;
     lastError = null;
     usedGemini = false;
 
     final done = Completer<bool>();
-    var gotChunk = false;
+    final queue = <({String b64, String mime})>[];
+    var playing = false;
+    var streamEnded = false;
+
+    Future<void> pump() async {
+      if (playing || _cancelled) return;
+      while (queue.isNotEmpty && !_cancelled) {
+        playing = true;
+        final next = queue.removeAt(0);
+        usedGemini = true;
+        try {
+          await _playBase64(next.b64, next.mime, notifyDone: false);
+        } catch (e) {
+          lastError = e.toString();
+        }
+      }
+      playing = false;
+      if (streamEnded && queue.isEmpty && !done.isCompleted) {
+        onLevel?.call(0);
+        onDone?.call();
+        done.complete(usedGemini);
+      }
+    }
 
     void handler(Map<String, dynamic> data) {
       final type = data['type'] as String?;
@@ -66,27 +88,23 @@ class WarmNarration {
         final b64 = data['audioBase64'] as String? ?? '';
         final mime = data['mimeType'] as String? ?? 'audio/wav';
         final isDone = data['done'] == true;
-        if (b64.isNotEmpty && !gotChunk) {
-          gotChunk = true;
-          usedGemini = true;
-          unawaited(() async {
-            try {
-              await _playBase64(b64, mime);
-              if (!done.isCompleted) done.complete(true);
-            } catch (e) {
-              lastError = e.toString();
-              if (!done.isCompleted) done.complete(false);
-            }
-          }());
+        if (b64.isNotEmpty) {
+          queue.add((b64: b64, mime: mime));
+          unawaited(pump());
         }
-        if (isDone && !gotChunk && !done.isCompleted) {
-          done.complete(false);
+        if (isDone) {
+          streamEnded = true;
+          unawaited(pump());
+          if (queue.isEmpty && !playing && !done.isCompleted) {
+            done.complete(usedGemini);
+          }
         }
       } else if (type == 'speak_error') {
         lastError = data['message'] as String?;
         if (!done.isCompleted) done.complete(false);
-      } else if (type == 'speak_done' && !gotChunk && !done.isCompleted) {
-        done.complete(false);
+      } else if (type == 'speak_done') {
+        streamEnded = true;
+        unawaited(pump());
       }
     }
 
@@ -101,8 +119,8 @@ class WarmNarration {
     });
 
     final ok = await done.future.timeout(
-      const Duration(seconds: 90),
-      onTimeout: () => gotChunk,
+      const Duration(seconds: 120),
+      onTimeout: () => usedGemini,
     );
     ws.onAudioEvent = prev;
     return ok;
@@ -117,10 +135,10 @@ class WarmNarration {
     final cleaned = text.trim();
     if (cleaned.isEmpty) return;
     await stop();
+    _cancelled = false;
     lastError = null;
     usedGemini = false;
 
-    // 1) HTTP tek WAV — en net / en az takılma
     if (config != null) {
       try {
         onStatus?.call('Roti konuşuyor (AI ses)…');
@@ -135,11 +153,29 @@ class WarmNarration {
           body: jsonEncode({
             'text': cleaned,
             'voice': 'Callirrhoe',
+            'sessionId': sessionId,
+            'sentenceChunks': true,
             'billAs': 'none',
           }),
         );
         if (res.statusCode >= 200 && res.statusCode < 300) {
           final body = jsonDecode(res.body) as Map<String, dynamic>;
+          final chunks = body['chunks'] as List<dynamic>?;
+          if (chunks != null && chunks.isNotEmpty) {
+            usedGemini = true;
+            for (final raw in chunks) {
+              if (_cancelled) return;
+              final c = raw as Map<String, dynamic>;
+              final b64 = c['audioBase64'] as String?;
+              final mime = c['mimeType'] as String? ?? 'audio/wav';
+              if (b64 != null && b64.isNotEmpty) {
+                await _playBase64(b64, mime, notifyDone: false);
+              }
+            }
+            onLevel?.call(0);
+            onDone?.call();
+            return;
+          }
           final b64 = body['audioBase64'] as String?;
           final mime = body['mimeType'] as String? ?? 'audio/wav';
           if (b64 != null && b64.isNotEmpty) {
@@ -147,17 +183,15 @@ class WarmNarration {
             await _playBase64(b64, mime);
             return;
           }
-          lastError = body['error'] as String? ??
-              'AI ses üretilemedi — Gemini API key kontrol et';
+          lastError = 'AI ses üretilemedi';
         } else {
-          lastError = 'AI ses hatası (${res.statusCode}): ${res.body}';
+          lastError = 'AI ses hatası (${res.statusCode})';
         }
       } catch (e) {
-        lastError = 'AI ses bağlantı hatası: $e';
+        lastError = 'AI ses bağlantı hatası';
       }
     }
 
-    // 2) WS yedek (tek WAV)
     if (ws != null &&
         sessionId != null &&
         ws.isConnected &&
@@ -165,9 +199,7 @@ class WarmNarration {
       return;
     }
 
-    onStatus?.call(
-      'AI ses çalışmadı (key?). Geçici robot ses kullanılıyor.',
-    );
+    onStatus?.call('Geçici cihaz sesi kullanılıyor.');
     await _ensureTts();
     onLevel?.call(0.55);
     await _tts.speak(cleaned);
@@ -193,31 +225,41 @@ class WarmNarration {
           await _playBase64(b64, mime);
           return;
         }
-        lastError = body['error'] as String?;
         if (text.isNotEmpty) await speakText(text, config: config);
         return;
       }
     } catch (_) {}
     await speakText(
-      'Merhaba $name! Ben Roti, senin ablan gibi bir özel ders arkadaşın. '
-      'Bugün okulda hangi konuları işlediniz? Mikrofonu açıp sesinle söylemen yeterli.',
+      'Merhaba $name! Ben Roti, senin özel ders arkadaşın.',
       config: config,
     );
   }
 
-  Future<void> _playBase64(String b64, String mime) async {
+  Future<void> _playBase64(
+    String b64,
+    String mime, {
+    bool notifyDone = true,
+  }) async {
     final bytes = base64Decode(b64);
     onLevel?.call(0.65);
     await _stateSub?.cancel();
+    final completer = Completer<void>();
     await _player.setAudioSource(
       AudioSource.uri(Uri.dataFromBytes(bytes, mimeType: mime)),
     );
     _stateSub = _player.playerStateStream.listen((s) {
       if (s.processingState == ProcessingState.completed) {
-        onLevel?.call(0);
-        onDone?.call();
+        if (notifyDone) {
+          onLevel?.call(0);
+          onDone?.call();
+        }
+        if (!completer.isCompleted) completer.complete();
       }
     });
     await _player.play();
+    await completer.future.timeout(
+      const Duration(seconds: 60),
+      onTimeout: () {},
+    );
   }
 }

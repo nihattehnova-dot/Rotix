@@ -1,24 +1,26 @@
 import { env } from '../../config/env.js';
 import { AppError } from '../../middleware/errorHandler.js';
-import { generateWarmSpeech } from './geminiTts.js';
+import {
+  generateWarmSpeech,
+  generateWarmSpeechSentences,
+} from './geminiTts.js';
 
 export type AudioChunkEvent = {
   mimeType: string;
   audioBase64: string;
   index: number;
   done: boolean;
+  text?: string;
 };
 
 /**
- * Tutor speech for WS clients.
- * Varsayılan: tek seferlik Gemini TTS (WAV) — net ve anlaşılır.
- * Live native-audio parçalı oynatma tarayıcıda takılma/anlaşılmazlık
- * ürettiği için kapalı tutulur (GEMINI_LIVE_SPEECH=true ile açılır).
+ * Tutor speech for WS — cümle cümle WAV (Voice Anchor).
+ * Live: GEMINI_LIVE_SPEECH=true (Faz 4 stub → TTS fallback).
  */
 export async function streamTutorSpeech(
   text: string,
   onChunk: (ev: AudioChunkEvent) => void,
-  options?: { voice?: string },
+  options?: { voice?: string; sessionId?: string },
 ): Promise<{ engine: 'live' | 'tts' }> {
   const cleaned = text.trim();
   if (!cleaned) {
@@ -28,21 +30,38 @@ export async function streamTutorSpeech(
     throw new AppError(503, 'Gemini not configured', 'GEMINI_NOT_CONFIGURED');
   }
 
-  const voice = options?.voice ?? 'Callirrhoe';
+  if (env.geminiLiveSpeech) {
+    // Faz 4: Live henüz native stream yok — aynı sentence TTS (flag hazır)
+    console.info('[live] GEMINI_LIVE_SPEECH on — using sentence TTS bridge');
+  }
 
-  // Kalite öncelikli: tek WAV
-  const speech = await generateWarmSpeech(cleaned, voice);
-  onChunk({
-    mimeType: speech.mimeType,
-    audioBase64: speech.audioBase64,
-    index: 0,
-    done: false,
+  const chunks = await generateWarmSpeechSentences(cleaned, {
+    voice: options?.voice,
+    sessionId: options?.sessionId,
   });
+  for (const c of chunks) {
+    onChunk({
+      mimeType: c.mimeType,
+      audioBase64: c.audioBase64,
+      index: c.index,
+      done: false,
+      text: c.text,
+    });
+  }
   onChunk({
-    mimeType: speech.mimeType,
+    mimeType: 'audio/wav',
     audioBase64: '',
-    index: 1,
+    index: chunks.length,
     done: true,
   });
   return { engine: 'tts' };
+}
+
+/** @deprecated single-shot helper */
+export async function oneShotTutorSpeech(
+  text: string,
+  voice?: string,
+  sessionId?: string,
+) {
+  return generateWarmSpeech(text, voice, sessionId);
 }
