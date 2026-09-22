@@ -2,10 +2,10 @@
 String normalizeMathText(String raw) {
   var s = raw.trim();
   s = s.replaceAll(RegExp(r'\$\$?'), '');
+  s = s.replaceAll(r'^\circ', '°');
   s = s.replaceAll(r'\circ', '°');
   s = s.replaceAll('(c2circ)', '°');
   s = s.replaceAll(r'\degree', '°');
-  s = s.replaceAll(r'^\circ', '°');
   s = s.replaceAllMapped(RegExp(r'\^\{?2\}?'), (_) => '²');
   s = s.replaceAllMapped(RegExp(r'\^\{?3\}?'), (_) => '³');
   s = s.replaceAll(r'\times', '×');
