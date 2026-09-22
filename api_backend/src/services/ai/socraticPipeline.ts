@@ -3,7 +3,7 @@ import { buildMasterSystemPrompt } from '../../config/socraticPrompt.js';
 import { AppError } from '../../middleware/errorHandler.js';
 import type { CanvasCommand, SocraticAiResult } from '../../types/domain.js';
 import { generateGeminiJsonTurn } from './geminiClient.js';
-import { MAX_SOCRATIC_TURNS } from '../tutorSessionState.js';
+import { MAX_WRONG_PER_STAGE } from '../tutorSessionState.js';
 
 export type SocraticTurnInput = {
   gradeLevel: number;
@@ -14,6 +14,7 @@ export type SocraticTurnInput = {
   outcomeCodes?: string[];
   unitName?: string;
   wrongAnswerCount?: number;
+  questionStage?: number;
   interactionTurnCount?: number;
   forceReveal?: boolean;
   imageBase64?: string;
@@ -134,28 +135,34 @@ export type SocraticTurnResult = SocraticAiResult & {
   detectedTopic: string | null;
   offTopic: boolean;
   sessionComplete: boolean;
+  stageComplete: boolean;
   encouragement: string;
+  spokenNarration: string;
   forceRevealApplied: boolean;
   interactionTurnCount: number;
+  questionStage: number;
   fromCache?: boolean;
 };
 
 /**
- * Fast path: tek JSON generateContent (tools yok → çok daha hızlı).
+ * Fast path: tek JSON generateContent (tools yok → düşük latency).
  */
 export async function runSocraticTurn(
   input: SocraticTurnInput,
 ): Promise<SocraticTurnResult> {
   const band = pedagogicalBandForGrade(input.gradeLevel);
   const turn = input.interactionTurnCount ?? 0;
+  const wrongs = input.wrongAnswerCount ?? 0;
+  const stage = input.questionStage ?? 1;
   const forceReveal =
-    input.forceReveal === true || turn >= MAX_SOCRATIC_TURNS;
+    input.forceReveal === true || wrongs >= MAX_WRONG_PER_STAGE;
   const hasImage = Boolean(input.imageBase64);
 
   const systemInstruction = buildMasterSystemPrompt({
     gradeLevel: input.gradeLevel,
     band,
-    wrongAnswerCount: input.wrongAnswerCount,
+    wrongAnswerCount: wrongs,
+    questionStage: stage,
     interactionTurnCount: turn,
     forceReveal,
     hasImage,
@@ -170,33 +177,27 @@ export async function runSocraticTurn(
       : '';
 
   const shapeRule = hasImage
-    ? [
-        'FOTOĞRAF VAR — ZORUNLU:',
-        '1) Önce canvasCommands içinde şekli yeniden çiz: shape/circle/triangle/rect/line/arrow (sadece rakam/yazı YETERLİ DEĞİL).',
-        '2) Sonra oklar ve kısa etiketlerle ipucu ekle.',
-        '3) En az 1 shape VEYA 2 line/arrow komutu olmalı.',
-      ].join(' ')
-    : 'Metin sorusu: formülleri adım adım formula/text ile tahtaya yaz.';
+    ? 'FOTO: canvasCommands içinde shape/line/arrow zorunlu; yalnız rakam yasak.'
+    : 'Formülleri formula/text ile yaz.';
 
   const userMessage = [
     `Soru: ${input.questionText}`,
     input.studentAnswer
-      ? `Öğrenci cevabı/denemesi: ${input.studentAnswer}`
+      ? `Öğrenci denemesi: ${input.studentAnswer}`
       : 'İlk yönlendirme.',
-    `Tur ${turn}/${MAX_SOCRATIC_TURNS}`,
+    `Kademe ${stage}; yanlış ${wrongs}/${MAX_WRONG_PER_STAGE}`,
     input.topic ? `Konu: ${input.subject ?? ''} / ${input.topic}` : null,
     historyBlock ? `Geçmiş:\n${historyBlock}` : null,
     shapeRule,
     forceReveal
-      ? 'EXIT&EXPLAIN: çözümü açıkla, tahtaya çiz, sessionComplete=true.'
-      : 'Tek kısa guidingQuestion; cevabı verme.',
-    'SADECE JSON:',
-    '{"guidingQuestion":"...","detectedSubject":null,"detectedTopic":null,"offTopic":false,"sessionComplete":false,"encouragement":"","neverRevealAnswer":true,"canvasCommands":[{"type":"clear"},{"type":"shape","shape":"triangle","x":200,"y":150,"w":300,"h":260,"delayMs":200},{"type":"text","x":80,"y":450,"content":"...","delayMs":400}]}',
+      ? 'AÇIKLA: spokenNarration 3–6 cümle sesli anlatım; tahtaya çöz; stageComplete=true.'
+      : 'Kısa ipucu; spokenNarration 1–2 cümle; cevabı verme.',
+    'SADECE JSON: {"guidingQuestion":"...","spokenNarration":"...","detectedSubject":null,"detectedTopic":null,"offTopic":false,"sessionComplete":false,"stageComplete":false,"encouragement":"","neverRevealAnswer":true,"canvasCommands":[{"type":"clear"},{"type":"text","x":80,"y":120,"content":"...","delayMs":80}]}',
   ]
     .filter(Boolean)
     .join('\n');
 
-  const maxOutputTokens = forceReveal ? 700 : hasImage ? 550 : 320;
+  const maxOutputTokens = forceReveal ? 650 : hasImage ? 480 : 280;
 
   const { text, tokensUsed } = await generateGeminiJsonTurn({
     systemInstruction,
@@ -204,9 +205,8 @@ export async function runSocraticTurn(
     imageBase64: input.imageBase64,
     imageMimeType: input.imageMimeType,
     maxOutputTokens,
-    temperature: hasImage ? 0.3 : 0.35,
-    // Takip turlarında flash-lite tercih
-    preferLite: !hasImage && !forceReveal && turn > 1,
+    temperature: hasImage ? 0.25 : 0.3,
+    preferLite: !hasImage && !forceReveal,
   });
 
   let reply: Record<string, unknown>;
@@ -217,16 +217,21 @@ export async function runSocraticTurn(
     throw new AppError(502, 'Invalid JSON from Gemini', 'GEMINI_BAD_SCHEMA');
   }
 
-  const guidingQuestion =
+  let guidingQuestion =
     typeof reply.guidingQuestion === 'string'
       ? reply.guidingQuestion.trim()
       : '';
+  let spokenNarration =
+    typeof reply.spokenNarration === 'string'
+      ? reply.spokenNarration.trim()
+      : '';
+  if (!spokenNarration) spokenNarration = guidingQuestion;
+  if (!guidingQuestion) guidingQuestion = spokenNarration;
   if (!guidingQuestion) {
     throw new AppError(502, 'Missing guidingQuestion', 'GEMINI_BAD_SCHEMA');
   }
 
   let canvasCommands = parseCanvasCommands(reply.canvasCommands);
-  // Fotoğrafta şekil yoksa en azından boş şekil iskeleti ekleme — model başarısızsa uyarı text
   if (hasImage) {
     const hasGeom = canvasCommands.some((c) =>
       ['shape', 'line', 'arrow', 'rect'].includes(c.type),
@@ -241,19 +246,16 @@ export async function runSocraticTurn(
           y: 120,
           w: 320,
           h: 280,
-          delayMs: 150,
+          delayMs: 80,
         },
         ...canvasCommands.filter((c) => c.type !== 'clear'),
-        {
-          type: 'text',
-          x: 80,
-          y: 480,
-          content: 'Şekli tahtaya taşıdım — hangi kenar / açı?',
-          delayMs: 350,
-        },
       ];
     }
   }
+
+  const stageComplete = reply.stageComplete === true || forceReveal;
+  // Kademe açıklandıktan sonra çok adımlı soruda session devam edebilir
+  const sessionComplete = reply.sessionComplete === true;
 
   return {
     guidingQuestion,
@@ -267,10 +269,13 @@ export async function runSocraticTurn(
     detectedTopic:
       typeof reply.detectedTopic === 'string' ? reply.detectedTopic : null,
     offTopic: reply.offTopic === true,
-    sessionComplete: reply.sessionComplete === true || forceReveal,
+    sessionComplete,
+    stageComplete,
     encouragement:
       typeof reply.encouragement === 'string' ? reply.encouragement : '',
+    spokenNarration,
     forceRevealApplied: forceReveal,
     interactionTurnCount: turn,
+    questionStage: stage,
   };
 }

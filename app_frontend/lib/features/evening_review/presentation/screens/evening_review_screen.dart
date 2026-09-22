@@ -347,7 +347,10 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       final match = raw['topicMatch'] as Map<String, dynamic>?;
 
       if (socratic == null) {
-        notifier.setStatus('Fotoğraftan yanıt alınamadı.');
+        _resetPhotoAttempt(
+          notifier,
+          'Fotoğraftan yanıt alınamadı. Yeniden deneyebilirsin.',
+        );
         return;
       }
 
@@ -400,8 +403,28 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
       unawaited(notifier.refreshDueMistakes());
       unawaited(_speakGuidingQuestion(notifier));
     } catch (e) {
-      notifier.setStatus('Fotoğraf gönderilemedi: $e');
+      final msg = e.toString();
+      final isReadFail = msg.contains('OCR') ||
+          msg.contains('okunamad') ||
+          msg.contains('422') ||
+          msg.contains('Fotoğraf');
+      _resetPhotoAttempt(
+        notifier,
+        isReadFail
+            ? 'Fotoğraf okunamadı — sayfa sıfırlandı. Yeniden sorabilirsin.'
+            : 'Fotoğraf gönderilemedi: $e',
+      );
     }
+  }
+
+  void _resetPhotoAttempt(EveningReviewNotifier notifier, String message) {
+    _pendingPhotoBase64 = null;
+    _pendingPhotoMime = null;
+    _photoClarifications = const [];
+    _boardController.clearStudentPhoto();
+    _clearBoardFn?.call();
+    notifier.resetQuestionUi(statusMessage: message);
+    if (mounted) setState(() {});
   }
 
   Future<void> _onVoiceFinal(
@@ -468,7 +491,9 @@ class _EveningReviewScreenState extends ConsumerState<EveningReviewScreen> {
   }
 
   Future<void> _speakGuidingQuestion(EveningReviewNotifier notifier) async {
-    final guide = notifier.state.guidingQuestion;
+    final guide = notifier.state.spokenNarration ??
+        notifier.state.lastSocratic?.narrationText ??
+        notifier.state.guidingQuestion;
     if (guide == null || guide.isEmpty) return;
     final config = ref.read(apiConfigProvider);
     final tts = WarmNarration.instance;

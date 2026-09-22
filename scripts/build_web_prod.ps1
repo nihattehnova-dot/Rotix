@@ -41,5 +41,8 @@ flutter build web --release `
 $out = Join-Path $frontend 'build\web'
 Write-Host ""
 Write-Host "OK: $out"
-Write-Host "Netlify: https://app.netlify.com → Deploys → Deploy manually → bu klasörü sürükle."
-Write-Host "Sonra Render CORS: PUBLIC_WEB_URL + CORS_ORIGINS = Netlify URL"
+Write-Host "Netlify (canlı): https://quiet-mandazi-0ea7b4.netlify.app"
+Write-Host "Render Environment:"
+Write-Host "  PUBLIC_WEB_URL=https://quiet-mandazi-0ea7b4.netlify.app"
+Write-Host "  CORS_ORIGINS=https://quiet-mandazi-0ea7b4.netlify.app"
+Write-Host "Sonra Render: Manual Deploy → Deploy latest commit"

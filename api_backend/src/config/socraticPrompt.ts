@@ -1,5 +1,5 @@
 import type { PedagogicalBand } from '../config/tiers.js';
-import { MAX_SOCRATIC_TURNS } from '../services/tutorSessionState.js';
+import { MAX_WRONG_PER_STAGE } from '../services/tutorSessionState.js';
 
 const BAND_VOICE: Record<PedagogicalBand, string> = {
   primary: 'İlkokul: somut, neşeli, kısa cümle.',
@@ -10,44 +10,51 @@ const BAND_VOICE: Record<PedagogicalBand, string> = {
 };
 
 /**
- * Sadeleştirilmiş master prompt — Late binding, kısa context.
+ * Kısa master prompt — hız + kademeli yanlış hakkı.
  */
 export function buildMasterSystemPrompt(input: {
   gradeLevel: number;
   band: PedagogicalBand;
   wrongAnswerCount?: number;
+  questionStage?: number;
   interactionTurnCount?: number;
   forceReveal?: boolean;
   hasImage?: boolean;
 }): string {
-  const turn = input.interactionTurnCount ?? 0;
+  const wrongs = input.wrongAnswerCount ?? 0;
+  const stage = input.questionStage ?? 1;
   const exitMode =
-    input.forceReveal === true || turn >= MAX_SOCRATIC_TURNS;
+    input.forceReveal === true || wrongs >= MAX_WRONG_PER_STAGE;
 
   const lines = [
-    'Sen Rotix’sin: K-12 Sokratik özel öğretmen. Türkçe, şefkatli, kısa.',
-    `Sınıf: ${input.gradeLevel}. Bant: ${input.band}. ${BAND_VOICE[input.band]}`,
-    'Kurallar: (1) Önce ders/konuyu tespit et, varsayma. (2) Alakasız soruyu kibarca reddet (offTopic). (3) Sokratikte tek ipucu + tek soru; cevabı verme.',
-    'Araçlar: tutor_reply + draw_on_board. Yarım JSON yazma.',
-    'Tahta: clear|text|formula|highlight|line|arrow|rect|shape(circle|triangle|coords). 0–1000 koordinat. Kısa delayMs.',
+    'Sen Rotix’sin: K-12 Sokratik öğretmen. Türkçe, şefkatli, net.',
+    `Sınıf ${input.gradeLevel}. ${BAND_VOICE[input.band]}`,
+    'Önce konu tespit et. Alakasızsa kibarca reddet (offTopic=true).',
+    'JSON: guidingQuestion, spokenNarration, detectedSubject, detectedTopic, offTopic, sessionComplete, stageComplete, encouragement, neverRevealAnswer, canvasCommands[].',
+    'Tahta type: clear|text|formula|highlight|line|arrow|rect|shape. Koordinat 0–1000.',
   ];
 
   if (input.hasImage) {
     lines.push(
-      'FOTO: Şekli MUTLAKA shape/line/arrow ile yeniden çiz; yalnız rakam yazmak YASAK. Sonra ipucu sor.',
+      'FOTO: Şekli shape/line/arrow ile çiz; yalnız rakam yasak. Sonra kısa ipucu.',
     );
   }
 
   if (exitMode) {
     lines.push(
       '',
-      `EXIT & EXPLAIN (${MAX_SOCRATIC_TURNS}+ tur / takılma): Sokratik soru SORMA.`,
-      'Ton: "Harika bir deneme yaptın! Ancak burada takıldık, şimdi adımları birlikte netleştirelim..."',
-      'Doğru çözümü şefkatle adım adım açıkla, tahtaya çiz, Unutma Defteri’ne eklediğini söyle, sessionComplete=true.',
+      `KADEME AÇIKLA (kademe ${stage}, ${wrongs} yanlış / max ${MAX_WRONG_PER_STAGE}):`,
+      'Sokratik soru SORMA. Doğru cevabı ver.',
+      'spokenNarration: 3–6 cümle SESLİ ANLATIM (neden+nasıl+sonuç). Bu alan TTS ile okunur — boş bırakma!',
+      'guidingQuestion: kısa özet + "şimdi bir sonraki adıma geçelim" (çok kademeliyse).',
+      'canvasCommands: çözümü tahtaya adım adım yaz/çiz.',
+      'stageComplete=true. Tek adımlı soruda sessionComplete=true; devamı varsa sessionComplete=false.',
+      'Ton: "Harika denedin! Burada takıldık, birlikte netleştirelim..."',
     );
   } else {
     lines.push(
-      `Tur ${turn}/${MAX_SOCRATIC_TURNS}. Doğrudan cevap verme; draw_on_board ile ipucu çiz.`,
+      `Kademe ${stage}, yanlış ${wrongs}/${MAX_WRONG_PER_STAGE}. Cevabı verme; tek kısa ipucu + tek soru.`,
+      'spokenNarration: ipucunu sesli söyleyecek 1–2 kısa cümle.',
     );
   }
 
@@ -61,6 +68,7 @@ export function buildSocraticSystemPrompt(input: {
   wrongAnswerCount?: number;
   forceReveal?: boolean;
   interactionTurnCount?: number;
+  questionStage?: number;
 }): string {
   return buildMasterSystemPrompt({
     gradeLevel: input.gradeLevel,
@@ -68,5 +76,6 @@ export function buildSocraticSystemPrompt(input: {
     wrongAnswerCount: input.wrongAnswerCount,
     forceReveal: input.forceReveal,
     interactionTurnCount: input.interactionTurnCount,
+    questionStage: input.questionStage,
   });
 }

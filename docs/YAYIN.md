@@ -30,7 +30,7 @@ Yerel MVP çalışıyor. Bu dosya **ilk web yayını** için sırayı verir.
 | `SUPABASE_ANON_KEY` | anon |
 | `SUPABASE_SERVICE_ROLE_KEY` | service_role (gizli) |
 | `GEMINI_API_KEY` | AI Studio key |
-| `PUBLIC_WEB_URL` | Flutter web adresi (adım 2’den sonra) |
+| `PUBLIC_WEB_URL` | Flutter web adresi — örn. `https://quiet-mandazi-0ea7b4.netlify.app` |
 | `CORS_ORIGINS` | aynı adres; birden fazlaysa virgülle |
 | `ALLOW_HEADER_AUTH` | `false` |
 | `BILLING_GATE_ENABLED` | `true` (deneme kilidi) |

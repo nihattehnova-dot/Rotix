@@ -58,25 +58,40 @@ class SocraticResult {
     required this.canvasCommands,
     required this.pedagogicalBand,
     required this.tokensUsed,
+    this.spokenNarration,
     this.neverRevealAnswer = true,
     this.sessionComplete = false,
+    this.stageComplete = false,
     this.forceRevealApplied = false,
     this.interactionTurnCount,
+    this.questionStage,
   });
 
   final String guidingQuestion;
+  /** Sesli anlatım — TTS öncelikli metin */
+  final String? spokenNarration;
   final List<String> latexHints;
   final List<CanvasCommand> canvasCommands;
   final String pedagogicalBand;
   final int tokensUsed;
   final bool neverRevealAnswer;
   final bool sessionComplete;
+  final bool stageComplete;
   final bool forceRevealApplied;
   final int? interactionTurnCount;
+  final int? questionStage;
+
+  /// TTS için tercih edilen metin
+  String get narrationText {
+    final n = spokenNarration?.trim();
+    if (n != null && n.isNotEmpty) return n;
+    return guidingQuestion;
+  }
 
   factory SocraticResult.fromJson(Map<String, dynamic> json) {
     return SocraticResult(
       guidingQuestion: json['guidingQuestion'] as String? ?? '',
+      spokenNarration: json['spokenNarration'] as String?,
       latexHints: (json['latexHints'] as List<dynamic>?)
               ?.map((e) => e.toString())
               .toList() ??
@@ -90,8 +105,10 @@ class SocraticResult {
       tokensUsed: (json['tokensUsed'] as num?)?.toInt() ?? 0,
       neverRevealAnswer: json['neverRevealAnswer'] as bool? ?? true,
       sessionComplete: json['sessionComplete'] as bool? ?? false,
+      stageComplete: json['stageComplete'] as bool? ?? false,
       forceRevealApplied: json['forceRevealApplied'] as bool? ?? false,
       interactionTurnCount: (json['interactionTurnCount'] as num?)?.toInt(),
+      questionStage: (json['questionStage'] as num?)?.toInt(),
     );
   }
 }
@@ -128,10 +145,16 @@ class SocraticResponse {
         ...socraticRaw,
         'sessionComplete':
             socraticRaw['sessionComplete'] ?? json['sessionComplete'],
+        'stageComplete':
+            socraticRaw['stageComplete'] ?? json['stageComplete'],
         'forceRevealApplied':
             socraticRaw['forceRevealApplied'] ?? json['forceRevealApplied'],
         'interactionTurnCount': socraticRaw['interactionTurnCount'] ??
             json['interactionTurnCount'],
+        'spokenNarration':
+            socraticRaw['spokenNarration'] ?? json['spokenNarration'],
+        'questionStage':
+            socraticRaw['questionStage'] ?? json['questionStage'],
       }),
       mistakeId: mistake?['id'] as String?,
       costPath: json['costPath'] as String? ?? 'dynamic_gemini',

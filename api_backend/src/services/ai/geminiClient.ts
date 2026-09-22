@@ -235,7 +235,7 @@ export async function generateGeminiJsonTurn(input: {
       lastMessage = result.message;
       if (isRetryableGeminiError(result.status, result.message)) {
         console.warn(`[gemini-json] ${model} failed: ${result.message}`);
-        await new Promise((r) => setTimeout(r, 250));
+        await new Promise((r) => setTimeout(r, 80));
         continue;
       }
       throw new AppError(502, result.message, 'GEMINI_HTTP_ERROR');

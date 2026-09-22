@@ -126,6 +126,7 @@ class WhiteboardController {
   void applyCanvasCommands(List<Map<String, dynamic>> commands) =>
       _state?.enqueueCanvasCommands(commands);
   void setStudentPhoto(String? dataUrl) => _state?.setStudentPhoto(dataUrl);
+  void clearStudentPhoto() => _state?.setStudentPhoto(null);
 
   WhiteboardStroke? takeLastStroke() => _state?.takeLastStroke();
 }

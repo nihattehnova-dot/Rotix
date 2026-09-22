@@ -10,9 +10,10 @@ import {
   storeSemanticCache,
 } from '../services/semanticCache.js';
 import {
+  advanceQuestionStage,
   getRecentHistory,
   getTutorSession,
-  MAX_SOCRATIC_TURNS,
+  MAX_WRONG_PER_STAGE,
   pushTurnHistory,
   recordInteractionTurn,
   recordWrongAnswer,
@@ -130,24 +131,46 @@ async function main() {
   });
 
   clearTutorSession('t1');
-  await test('interaction turns force reveal at MAX', () => {
+  await test('3 wrongs per stage force reveal', () => {
     let s = getTutorSession('t1', 'u1');
     assert.equal(s.forceReveal, false);
-    for (let i = 0; i < MAX_SOCRATIC_TURNS; i++) {
-      s = recordInteractionTurn('t1', 'u1');
-    }
-    assert.equal(s.interactionTurnCount, MAX_SOCRATIC_TURNS);
+    assert.equal(MAX_WRONG_PER_STAGE, 3);
+    s = recordWrongAnswer('t1', 'u1');
+    s = recordWrongAnswer('t1', 'u1');
+    assert.equal(s.wrongAnswerCount, 2);
+    assert.equal(s.forceReveal, false);
+    s = recordWrongAnswer('t1', 'u1');
+    assert.equal(s.wrongAnswerCount, 3);
     assert.equal(s.forceReveal, true);
-    assert.equal(MAX_SOCRATIC_TURNS, 4);
+  });
+
+  await test('advanceQuestionStage resets wrongs, keeps progressing', () => {
+    clearTutorSession('t2');
+    recordWrongAnswer('t2', 'u1');
+    recordWrongAnswer('t2', 'u1');
+    recordWrongAnswer('t2', 'u1');
+    let s = advanceQuestionStage('t2', 'u1');
+    assert.equal(s.questionStage, 2);
+    assert.equal(s.wrongAnswerCount, 0);
+    assert.equal(s.forceReveal, false);
+  });
+
+  await test('interaction turns alone do NOT force reveal', () => {
+    clearTutorSession('t2b');
+    let s = getTutorSession('t2b', 'u1');
+    for (let i = 0; i < 5; i++) {
+      s = recordInteractionTurn('t2b', 'u1');
+    }
+    assert.equal(s.interactionTurnCount, 5);
+    assert.equal(s.forceReveal, false);
   });
 
   await test('wrong answer increments without early reveal at 2', () => {
-    clearTutorSession('t2');
-    let s = getTutorSession('t2', 'u1');
-    s = recordWrongAnswer('t2', 'u1');
-    s = recordWrongAnswer('t2', 'u1');
+    clearTutorSession('t2c');
+    let s = getTutorSession('t2c', 'u1');
+    s = recordWrongAnswer('t2c', 'u1');
+    s = recordWrongAnswer('t2c', 'u1');
     assert.equal(s.wrongAnswerCount, 2);
-    // Reveal artık tur sayısına bağlı; yanlış=2 tek başına yetmez
     assert.equal(s.forceReveal, false);
   });
 
@@ -159,6 +182,7 @@ async function main() {
     const s = recordCorrectOrReset('t3', 'u1');
     assert.equal(s.interactionTurnCount, 0);
     assert.equal(s.forceReveal, false);
+    assert.equal(s.questionStage, 1);
     assert.equal(getRecentHistory('t3', 'u1').length, 0);
   });
 

@@ -37,6 +37,7 @@ class EveningReviewState {
     this.dueMistakes = const [],
     this.lastSocratic,
     this.guidingQuestion,
+    this.spokenNarration,
     this.statusMessage,
     this.errorMessage,
     this.isOnlineAction = false,
@@ -60,6 +61,8 @@ class EveningReviewState {
   final List<UserMistake> dueMistakes;
   final SocraticResult? lastSocratic;
   final String? guidingQuestion;
+  /** TTS metni — çözüm anlatımı veya ipucu */
+  final String? spokenNarration;
   final String? statusMessage;
   final String? errorMessage;
   final bool isOnlineAction;
@@ -86,6 +89,8 @@ class EveningReviewState {
     SocraticResult? lastSocratic,
     String? guidingQuestion,
     bool clearGuiding = false,
+    String? spokenNarration,
+    bool clearSpoken = false,
     String? statusMessage,
     bool clearStatus = false,
     String? errorMessage,
@@ -116,6 +121,8 @@ class EveningReviewState {
       lastSocratic: lastSocratic ?? this.lastSocratic,
       guidingQuestion:
           clearGuiding ? null : (guidingQuestion ?? this.guidingQuestion),
+      spokenNarration:
+          clearSpoken ? null : (spokenNarration ?? this.spokenNarration),
       statusMessage:
           clearStatus ? null : (statusMessage ?? this.statusMessage),
       errorMessage: clearError ? null : (errorMessage ?? this.errorMessage),
@@ -270,6 +277,7 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
       phase: SessionPhase.socratic,
       lastSocratic: socratic,
       guidingQuestion: socratic.guidingQuestion,
+      spokenNarration: socratic.narrationText,
       pendingCanvasCommands: canvasCommands,
       canvasCommandSeq: state.canvasCommandSeq + 1,
       activeQuestionText: questionText ?? topic,
@@ -282,6 +290,25 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
       },
       statusMessage: 'Konu: $topic · yönlendirme hazır',
       clearError: true,
+    );
+  }
+
+  /// Fotoğraf okuma hatası / yeniden soru — tahta ve soru state sıfırla
+  void resetQuestionUi({String? statusMessage}) {
+    state = state.copyWith(
+      phase: SessionPhase.idle,
+      clearGuiding: true,
+      clearSpoken: true,
+      clearActiveQuestion: true,
+      clearCurriculum: true,
+      clearVideo: true,
+      pendingCanvasCommands: const [
+        {'type': 'clear', 'delayMs': 0},
+      ],
+      canvasCommandSeq: state.canvasCommandSeq + 1,
+      statusMessage: statusMessage ?? 'Yeniden soru sorabilirsin.',
+      clearError: true,
+      isOnlineAction: false,
     );
   }
 
@@ -482,6 +509,7 @@ class EveningReviewNotifier extends StateNotifier<EveningReviewState> {
         phase: SessionPhase.socratic,
         lastSocratic: response.socratic,
         guidingQuestion: response.socratic.guidingQuestion,
+        spokenNarration: response.socratic.narrationText,
         audioLevel: 0.45,
         pendingCanvasCommands: cmds,
         canvasCommandSeq: state.canvasCommandSeq + 1,

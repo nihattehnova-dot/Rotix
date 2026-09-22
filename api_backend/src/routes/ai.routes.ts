@@ -17,6 +17,7 @@ import {
 import { optimizeQuestionImage } from '../services/imageOptimize.js';
 import { suggestVideoCard } from '../services/videoCatalog.js';
 import {
+  advanceQuestionStage,
   getRecentHistory,
   getTutorSession,
   lockDetectedTopic,
@@ -140,9 +141,13 @@ async function executeSocraticTurn(input: {
     }
   }
 
-  // Topic match — konu zaten kilitliyse ATLA (büyük latency kazanımı)
+  // Topic match — konu kilitli / takip cevabı / reveal → ATLA (latency)
   let match = null as Awaited<ReturnType<typeof resolveQuestionTopic>>;
-  if (!tutorState.detectedTopic) {
+  const skipTopicMatch =
+    Boolean(tutorState.detectedTopic) ||
+    Boolean(body.studentAnswer?.trim()) ||
+    tutorState.forceReveal;
+  if (!skipTopicMatch) {
     try {
       match = await resolveQuestionTopic({
         questionText: body.questionText,
@@ -199,6 +204,7 @@ async function executeSocraticTurn(input: {
     outcomeCodes: match?.outcomeCodes,
     unitName: match?.unitName ?? undefined,
     wrongAnswerCount: tutorState.wrongAnswerCount,
+    questionStage: tutorState.questionStage,
     interactionTurnCount: tutorState.interactionTurnCount,
     forceReveal: tutorState.forceReveal,
     imageBase64,
@@ -206,7 +212,12 @@ async function executeSocraticTurn(input: {
     recentHistory: getRecentHistory(sessionKey, userId, 3),
   });
 
-  pushTurnHistory(sessionKey, userId, 'assistant', result.guidingQuestion);
+  pushTurnHistory(
+    sessionKey,
+    userId,
+    'assistant',
+    result.spokenNarration || result.guidingQuestion,
+  );
 
   if (result.offTopic) {
     return {
@@ -221,9 +232,17 @@ async function executeSocraticTurn(input: {
         wrongAnswerCount: tutorState.wrongAnswerCount,
         interactionTurnCount: tutorState.interactionTurnCount,
         forceRevealApplied: false,
+        spokenNarration: result.spokenNarration,
       },
       fromCache: false as const,
     };
+  }
+
+  // Kademe açıklandı → sonraki kademeye; oturum bittiyse tam sıfırla
+  if (result.sessionComplete) {
+    tutorState = recordCorrectOrReset(sessionKey, userId);
+  } else if (result.stageComplete || result.forceRevealApplied) {
+    tutorState = advanceQuestionStage(sessionKey, userId);
   }
 
   if (result.detectedSubject || result.detectedTopic) {
@@ -259,9 +278,12 @@ async function executeSocraticTurn(input: {
     video,
     costPath: 'dynamic_gemini',
     wrongAnswerCount: tutorState.wrongAnswerCount,
+    questionStage: tutorState.questionStage,
     interactionTurnCount: tutorState.interactionTurnCount,
     forceRevealApplied: result.forceRevealApplied,
+    stageComplete: result.stageComplete,
     sessionComplete: result.sessionComplete,
+    spokenNarration: result.spokenNarration,
   };
 
   // Kota + log arka planda — yanıt hızı öncelikli
@@ -289,9 +311,6 @@ async function executeSocraticTurn(input: {
           force_reveal: result.forceRevealApplied,
         },
       });
-    }
-    if (result.sessionComplete || result.forceRevealApplied) {
-      recordCorrectOrReset(sessionKey, userId);
     }
   }, 'socratic-post');
 

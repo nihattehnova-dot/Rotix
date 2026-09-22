@@ -40,6 +40,7 @@ void main() {
     test('parses canvas shape commands', () {
       final r = SocraticResult.fromJson({
         'guidingQuestion': 'Hangi açı?',
+        'spokenNarration': 'Şekilde şu açıya bak.',
         'canvasCommands': [
           {'type': 'clear'},
           {'type': 'shape', 'x': 10, 'y': 20, 'w': 100, 'h': 100},
@@ -47,12 +48,39 @@ void main() {
         ],
         'tokensUsed': 12,
         'interactionTurnCount': 2,
+        'stageComplete': false,
+        'forceRevealApplied': false,
       });
       expect(r.guidingQuestion, 'Hangi açı?');
+      expect(r.spokenNarration, 'Şekilde şu açıya bak.');
+      expect(r.narrationText, 'Şekilde şu açıya bak.');
       expect(r.canvasCommands.length, 3);
       expect(r.canvasCommands[1].type, 'shape');
       expect(r.canvasCommands[2].type, 'arrow');
       expect(r.interactionTurnCount, 2);
+    });
+
+    test('narrationText falls back to guidingQuestion', () {
+      final r = SocraticResult.fromJson({
+        'guidingQuestion': 'İpucu burada',
+        'canvasCommands': [],
+      });
+      expect(r.narrationText, 'İpucu burada');
+    });
+
+    test('SocraticResponse lifts spokenNarration from top level', () {
+      final res = SocraticResponse.fromJson({
+        'socratic': {
+          'guidingQuestion': 'özet',
+          'canvasCommands': [],
+        },
+        'spokenNarration': 'Şimdi çözümü anlatalım. Hipotenüs…',
+        'forceRevealApplied': true,
+        'stageComplete': true,
+      });
+      expect(res.socratic.spokenNarration, contains('Hipotenüs'));
+      expect(res.socratic.forceRevealApplied, isTrue);
+      expect(res.socratic.stageComplete, isTrue);
     });
 
     test('SocraticResponse reads video card', () {

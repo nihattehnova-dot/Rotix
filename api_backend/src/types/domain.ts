@@ -154,6 +154,8 @@ export type CanvasCommand =
 
 export type SocraticAiResult = {
   guidingQuestion: string;
+  /** TTS için sesli anlatım (ipucu veya çözüm açıklaması) */
+  spokenNarration?: string;
   latexHints: string[];
   canvasCommands: CanvasCommand[];
   pedagogicalBand: PedagogicalBand;
